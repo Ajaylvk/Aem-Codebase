@@ -1,0 +1,179 @@
+@import "../vendor/include-media";
+
+// region Media Queries
+// Width definitions
+$mq-phone-width: 55.9rem;
+$mq-phone-width-value: 599;
+$mq-tablet-width: 76.8rem;
+$mq-tablet-width-value: 768;
+$mq-desktop-width: 114rem;
+$mq-desktop-width-value: 1140;
+$mq-max-allowed-width: 100%;
+$mq-desktop-xl-width: 144rem;
+$mq-xl-desktop-width-value: 1440;
+
+$breakpoints: (
+  phone: 414px,
+  new_phone: 576px,
+  tablet: 768px,
+  new_desktop: 992px,
+  desktop: 1024px,
+  xl_desktop: 1140px,
+  new_xl_desktop: 1200px,
+  xxl_desktop: 1440px,
+  twok_desktop: 2000px,
+  twentyfivek_desktop: 2500px,
+);
+// Phone Portrait only
+@mixin mq-phone {
+  @include media("<=phone") {
+    @content;
+  }
+}
+
+@mixin mq-new-phone {
+  @include media("<=new_phone") {
+    @content;
+  }
+}
+
+// Phone upwards.
+@mixin mq-except-phone {
+  @include media(">phone") {
+    @content;
+  }
+}
+
+@mixin mq-new-except-phone {
+  @include media(">new_phone") {
+    @content;
+  }
+}
+
+// Tablet Portrait only
+@mixin mq-tablet {
+  @include media(">phone", "<=tablet") {
+    @content;
+  }
+}
+
+@mixin mq-tablet-all {
+  @include media(">phone", "<=desktop") {
+    @content;
+  }
+}
+
+// Smaller than/equal Tablet Portrait
+@mixin mq-until-tablet {
+  @include media("<=tablet") {
+    @content;
+  }
+}
+
+// Tablet Landscape only
+@mixin mq-tablet-landscape {
+  @include media(">tablet", "<=desktop") {
+    @content;
+  }
+}
+
+// Tablet Portrait upwards
+@mixin mq-from-tablet {
+  @include media(">tablet") {
+    @content;
+  }
+}
+
+// Everything except Desktop
+@mixin mq-except-desktop {
+  @include media("<=desktop") {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @include media(">tablet") {
+    @content;
+  }
+}
+
+@mixin mq-new_desktop {
+  @include media(">new_desktop") {
+    @content;
+  }
+}
+
+// Everything above Desktop
+@mixin mq-from-desktop {
+  @include media(">desktop") {
+    @content;
+  }
+}
+
+@mixin mq-from-new_desktop {
+  @include media(">new_desktop") {
+    @content;
+  }
+}
+
+// Everything above 1140
+@mixin mq-from-desktop-xl {
+  @include media(">xl_desktop") {
+    @content;
+  }
+}
+
+@mixin mq-from-new_desktop-xl {
+  @include media(">new_xl_desktop") {
+    @content;
+  }
+}
+
+@mixin mq-from-desktop-xxl {
+  @include media(">xxl_desktop") {
+    @content;
+  }
+}
+
+@mixin mq-from-desktop-2000 {
+  @include media(">twok_desktop") {
+    @content;
+  }
+}
+
+@mixin mq-from-desktop-2500 {
+  @include media(">twentyfivek_desktop") {
+    @content;
+  }
+}
+
+@mixin supports-hover {
+  @media not all and (hover: none),
+    (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin mq-ie-11-only {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin mq-ie-edge-only {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+//Supposedly IE browsers 11 until and including Edge
+@mixin mq-until-ie-edge {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+//endregion

@@ -1,0 +1,48 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html">
+    <sly data-sly-use.icons="softwareag/components/commons/svg/icons.html" />
+    <sly data-sly-use.regionChanger="com.softwareag.core.models.regionchanger.RegionChangerModel"></sly>
+
+    <div class="regionchanger pull-right">
+        <div class="regionchanger__container">
+            <button class="region__button">
+                <span class="region__button-title">${regionChanger.title ? regionChanger.title : "Region Changer"}</span>
+                <span class="region__globe-icon a-icon--global" data-sly-call="${icons.getIcon @ name='global'}"></span>
+            </button>
+
+            <div class="region__holder">
+                <div class="region__headline">
+                    <span class="region__globe-icon a-icon--global" data-sly-call="${icons.getIcon @ name='global'}"></span>
+                    <span class="region__headline-title">${regionChanger.introductoryText}</span>
+                    <span class="region__options-close a-icon--close" data-sly-call="${icons.getIcon @ name='close'}"></span>
+                </div>
+                <div class="region__options">
+                    <div class="region-items">
+                        <div class="a-copytext">
+                            <a href="${regionChanger.link.href}">${regionChanger.link.text}</a>
+                        </div>
+                    </div>
+                    <sly data-sly-list.tabItem="${regionChanger.tabItems}">
+                        <div class="region-items" data-sly-test="${tabItem.title}">
+                            <div class="region-items__container">
+                                <div class="a-copytext region-items__button">
+                                    ${tabItem.title}
+                                    <span class="region-items__button-icon region-items__button-icon--open"
+                                          data-sly-call="${icons.getIcon @ name='plus'}"></span>
+                                    <span class="region-items__button-icon region-items__button-icon--close"
+                                          data-sly-call="${icons.getIcon @ name='minus'}"></span>
+                                </div>
+                                <div class="region-items__content-container">
+                                    <div class="region-items__content" data-sly-list.linkItem="${tabItem.linkItems}">
+                                        <a href="${linkItem.href}">${linkItem.text}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

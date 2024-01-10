@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <image
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+            fieldLabel="Icon"
+            fieldDescription="An icon to display as the icon for the Social Media component."
+            name="./image"
+            required="{Boolean}true"
+            rootPath="/content/dam" />
+        <altText
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldDescription="Textual alternative of the meaning or function of the icon, for visually impaired readers."
+            fieldLabel="Alternative Text"
+            name="./altText"
+            required="{Boolean}true"/>
+        <href
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+            fieldDescription="Please add link destination here."
+            fieldLabel="Link Destination"
+            name="./link/href"
+            required="{Boolean}true"
+            rootPath="/content"/>
+        <utmParameter
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldDescription="Please add the UTM Parameter in the following manner: utm_source=facebook.com&amp;utm_medium=social&amp;utm_campaign=fs2017cat."
+            fieldLabel="UTM Parameter"
+            name="./link/utmParameter" />
+    </items>
+</jcr:root>

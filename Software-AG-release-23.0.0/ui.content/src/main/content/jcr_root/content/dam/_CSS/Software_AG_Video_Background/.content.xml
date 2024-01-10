@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:Folder"
+    sling:resourceType="sling:Folder"
+    hidden="true">
+    <jcr:content
+        dam:s7reprocess-start-time="{Date}2021-05-11T16:03:22.268Z"
+        dam:s7reprocess-submit-time="{Date}2021-05-11T16:03:22.270Z"
+        jcr:primaryType="nt:unstructured">
+        <folderThumbnail/>
+    </jcr:content>
+</jcr:root>

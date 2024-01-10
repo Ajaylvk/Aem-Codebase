@@ -1,0 +1,64 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Software AG Text Component Policy",
+    "policyResourceType": "softwareag/components/content/text",
+    "sling:resourceType": "wcm/core/components/policy/policy",
+    "styleGroups_disabled": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "cq:styleGroupLabel": "Background Color",
+            "cq:styles": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color1",
+                    "cq:styleId": "input__colorselect-background-color1",
+                    "cq:styleLabel": "White"
+                },
+                "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color2",
+                    "cq:styleId": "input__colorselect-background-color2",
+                    "cq:styleLabel": "Bright Pulse"
+                },
+                "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color3",
+                    "cq:styleId": "input__colorselect-background-color3",
+                    "cq:styleLabel": "Bright Sense"
+                },
+                "item3": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color4",
+                    "cq:styleId": "input__colorselect-background-color4",
+                    "cq:styleLabel": "Bright Life"
+                },
+                "item4": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color5",
+                    "cq:styleId": "input__colorselect-background-color5",
+                    "cq:styleLabel": "Deep Pulse"
+                },
+                "item5": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color6",
+                    "cq:styleId": "input__colorselect-background-color6",
+                    "cq:styleLabel": "Deep Sense"
+                },
+                "item6": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color7",
+                    "cq:styleId": "input__colorselect-background-color7",
+                    "cq:styleLabel": "Core Light"
+                },
+                "item7": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "cq:styleClasses": "input__colorselect-background-color8",
+                    "cq:styleId": "input__colorselect-background-color8",
+                    "cq:styleLabel": "Core Black"
+                }
+            }
+        }
+    }
+}

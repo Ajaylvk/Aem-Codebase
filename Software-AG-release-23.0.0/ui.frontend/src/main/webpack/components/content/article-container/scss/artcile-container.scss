@@ -1,0 +1,216 @@
+.articlecontainer {
+  //hero banner stylings
+  .articleherobanner[data-articleherobanner="true"] {
+    width: 100%;
+    &[data-size="size-large"] {
+      height: 60rem;
+      @include mq-until-tablet {
+        height: 36rem;
+      }
+
+      @include mq-phone {
+        height: 20rem;
+      }
+
+      .s7responsiveContainer {
+        height: 60rem;
+        @include mq-until-tablet {
+          height: 36rem;
+        }
+
+        @include mq-phone {
+          height: 20rem;
+        }
+        img {
+          height: 60rem;
+          @include mq-until-tablet {
+            height: 36rem;
+          }
+
+          @include mq-phone {
+            height: 20rem;
+          }
+          object-fit: cover;
+        }
+      }
+      .articleherobanner-svg-image {
+        height: 60rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &[data-size="size-medium"] {
+      height: 36rem;
+      @include mq-until-tablet {
+        height: 36rem;
+      }
+
+      @include mq-phone {
+        height: 20rem;
+      }
+
+      .s7responsiveContainer {
+        height: 36rem;
+        @include mq-until-tablet {
+          height: 36rem;
+        }
+
+        @include mq-phone {
+          height: 20rem;
+        }
+
+        img {
+          height: 36rem;
+          @include mq-until-tablet {
+            height: 36rem;
+          }
+
+          @include mq-phone {
+            height: 20rem;
+          }
+          object-fit: cover;
+        }
+      }
+      .articleherobanner-svg-image {
+        height: 36rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &[data-size="size-small"] {
+      height: 3.2rem;
+      .s7responsiveContainer {
+        height: 3.2rem;
+        img {
+          height: 3.2rem;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
+      .articleherobanner-svg-image {
+        height: 3.2rem;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    &.background-multi-gradient {
+      background: linear-gradient(99.14deg, #8e3cf7 6.93%, #3cc1b6 93.07%);
+    }
+
+    &.background-brightpulse-gradient {
+      background: linear-gradient(99.14deg, #3b2c5e 6.93%, #8e3cf7 93.07%);
+    }
+
+    &.background-coredark-gradient {
+      /* Core Dark Gradient */
+      background: linear-gradient(99.14deg, #011f3d 6.93%, #537393 93.07%);
+    }
+
+    &.background-brightSense-gradient {
+      /* Bright Sense Gradient */
+      background: linear-gradient(99.14deg, #1c5569 6.93%, #3cc1b6 93.07%);
+    }
+  }
+
+  // Article nav block with banner
+
+  .article-content[data-articleherobanner="true"] {
+    position: relative;
+    background: #fff;
+
+    @include mq-desktop {
+      padding: 6.4rem;
+    }
+  }
+  .article-content[data-articleherobanner="true"][data-size="size-large"] {
+    top: -60rem;
+    margin-bottom: -60rem;
+    @include mq-until-tablet {
+      top: 0rem;
+    }
+
+    @include mq-phone {
+      top: 0rem;
+    }
+  }
+
+  .article-content[data-articleherobanner="true"][data-size="size-medium"] {
+    top: -36rem;
+    margin-bottom: -36rem;
+    @include mq-until-tablet {
+      top: 0rem;
+    }
+
+    @include mq-phone {
+      top: 0rem;
+    }
+  }
+
+  .article-content[data-articleherobanner="true"][data-size="size-small"] {
+    top: 0;
+    padding: 0rem !important;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    padding-top: 6.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    @include mq-from-tablet {
+      max-width: 132rem; //110.6rem
+      margin: auto;
+    }
+
+    @include mq-tablet-all {
+      padding: 2.4rem;
+    }
+    @include mq-phone {
+      padding: 1.6rem;
+    }
+  }
+
+  .articleNavBlock {
+    width: 25rem;
+    position: sticky;
+    top: 120px;
+    height: 100%;
+    margin-right: 5.6rem;
+    display: block;
+
+    @include mq-until-tablet {
+      width: 100%;
+      position: static;
+      height: auto;
+      margin: 2.4rem 0;
+      padding-left: 1.8rem;
+    }
+
+    // &[data-articleherobanner="true"] {
+    //   @include mq-until-tablet {
+    //     display: none;
+    //   }
+    //}
+  }
+
+  .article-content {
+    width: 92.8rem;
+  }
+
+  .container > .article-content:first-child {
+    margin: auto;
+    width: 92.8rem;
+    @include mq-until-tablet {
+      width: 100%;
+    }
+  }
+}
+
+.aem-AuthorLayer-Edit {
+  .articleNavBlock {
+    height: auto;
+    position: unset;
+  }
+}

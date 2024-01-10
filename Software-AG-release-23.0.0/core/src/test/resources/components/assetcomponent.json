@@ -1,0 +1,153 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "AssetTest",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+        "cq:tags": [
+            "softwareag:asset-type/image",
+            "softwareag:product-capabilities/data-integration",
+            "softwareag:product-capabilities/design-and-strategy",
+            "softwareag:product-categories/integration",
+            "softwareag:product-brand-names/webmethods"
+        ],
+        "sling:resourceType": "softwareag/components/structure/basic-page",
+        "cq:lastModifiedBy": "admin",
+        "assetcomponent": {
+            "jcr:primaryType": "nt:unstructured",
+            "fontStyle": "input__colorselect-font-color0",
+            "jcr:lastModifiedBy": "admin",
+            "s7ViewerPreset": "||",
+            "target": "_self",
+            "copyText": "Integration concept description ( image )",
+            "tagsCapabilities": [
+                "softwareag:product-capabilities/data-integration",
+                "softwareag:product-capabilities/design-and-strategy"
+            ],
+            "tagProduct": "softwareag:product-brand-names/webmethods",
+            "title": "Integration concept ( image )",
+            "tagBusinessUnit": "softwareag:product-categories/integration",
+            "s7PresetType": "viewer",
+            "disableBreakpoints": "false",
+            "sling:resourceType": "softwareag/components/content/asset",
+            "backgroundStyle": "input__colorselect-background-color1",
+            "assetType": [
+                "softwareag:asset-type/image"
+            ],
+            "textIsRich": "true",
+            "editable": true,
+            "mediaorpdfparsys": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/parsys",
+                "media": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "videoserverurl": "http://localhost:4503/is/content/",
+                    "fileReference": "/content/dam/softwareag/global/image/products/integration-api/Integration-concept.jpg",
+                    "s7ViewerPreset": "",
+                    "altText": "Image alt text",
+                    "target": "_self",
+                    "imageServerUrl": "http://localhost:4503//is/image/",
+                    "assetID": "softwareagstage/Integration-concept",
+                    "jcr:created": "Wed May 26 2021 19:22:53 GMT+0300",
+                    "viewerPresetPath": "",
+                    "s7PresetType": "image",
+                    "disableBreakpoints": "false",
+                    "sling:resourceType": "softwareag/components/content/media",
+                    "assetType": "Image",
+                    "imageserverurl": "http://localhost:4503/is/image/",
+                    "s7ViewerPresetPath": "",
+                    "targetThisComponent": "false"
+                }
+            }
+        },
+        "relatedassetcomponent": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/relatedasset",
+            "editable": true
+        },
+        "media": {
+            "jcr:primaryType": "dam:Asset",
+            "jcr:content": {
+                "jcr:primaryType": "dam:AssetContent",
+                "cq:name": "Integration-concept.jpg",
+                "cq:parentPath": "/content/dam/softwareag/global/image/products/integration-api",
+                "renditions": {
+                    "jcr:primaryType": "nt:folder",
+                    "cq5dam.thumbnail.48.48.png": {
+                        "jcr:primaryType": "nt:file",
+                        "jcr:content": {
+                            "jcr:primaryType": "nt:resource",
+                            "jcr:mimeType": "image/png",
+                            ":jcr:data": 4456
+                        }
+                    },
+                    "cq5dam.thumbnail.140.100.png": {
+                        "jcr:primaryType": "nt:file",
+                        "jcr:content": {
+                            "jcr:primaryType": "nt:resource",
+                            "jcr:mimeType": "image/png",
+                            ":jcr:data": 30525
+                        }
+                    }
+                },
+                "related": {
+                    "jcr:primaryType": "nt:unstructured"
+                },
+                "metadata": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "exif:ExifOffset": 236,
+                    "jcr:title": "Integration-concept",
+                    "dam:Physicalheightininches": "3.5999999046325684",
+                    "dam:Physicalwidthininches": "5.400000095367432",
+                    "dam:Fileformat": "JPEG",
+                    "dam:Progressive": "no",
+                    "tiff:ImageLength": 1080,
+                    "tiff:YResolution": "300/1",
+                    "exif:ColorSpace": 65535,
+                    "jcr:lastModifiedBy": "admin",
+                    "xmp:CreatorTool": "Adobe Photoshop CC 2015",
+                    "dc:format": "image/jpeg",
+                    "dc:description": "Integration concept description ( image )",
+                    "dam:Bitsperpixel": 24,
+                    "exif:ExifVersion": "0221",
+                    "xmpMM:DocumentID": "adobe:docid:photoshop:74dba6be-260e-1179-a410-b2db021fd2b8",
+                    "dam:MIMEtype": "image/jpeg",
+                    "tiff:Orientation": 1,
+                    "dam:Physicalwidthindpi": 300,
+                    "dam:Physicalheightindpi": 300,
+                    "tiff:ResolutionUnit": 2,
+                    "xmpMM:OriginalDocumentID": "CF46A374E0DA48867093327C56F04AB8",
+                    "photoshop:ColorMode": 3,
+                    "dam:Numberofimages": 1,
+                    "tiff:XResolution": "300/1",
+                    "exif:PixelYDimension": 1920,
+                    "exif:PixelXDimension": 2880,
+                    "dam:Numberoftextualcomments": 0,
+                    "tiff:BitsPerSample_xmpArrayType": "rdf:Seq",
+                    "xmpMM:InstanceID": "xmp.iid:91c02c8a-dada-4527-a853-b7e7bc2bb680",
+                    "tiff:BitsPerSample": [
+                        "8",
+                        "8",
+                        "8"
+                    ],
+                    "tiff:ImageWidth": 1620,
+                    "dam:sha1": "3ea16e35ceeb4e6aed5bad0cb7639d043683e787",
+                    "dam:size": 333302,
+                    "dc:title": "Integration concept ( image )",
+                    "cq:tags": [
+                        "softwareag:asset-type/image",
+                        "softwareag:product-capabilities/data-integration"
+                    ]
+                }
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,67 @@
+.partnertable {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+
+    &__wrapper {
+        width: 100%;
+        overflow-x: auto;
+
+        @include mq-desktop {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: $mq-desktop-width;
+
+            @include spacing(padding-left, xxl);
+            @include spacing(padding-right, xxl);
+        }
+    }
+
+    &__table {
+        @include spacing(margin-top, l);
+        @include spacing(margin-bottom, l);
+        text-align: left;
+        border-spacing: 0;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    caption {
+        width: 100%;
+        text-align: center;
+
+        @include spacing(margin-bottom, m);
+        @include spacing(margin-top, xl);
+        @include mq-phone {
+            margin-top: $spacing-mobile-m;
+        }
+        @include mq-until-tablet {
+            width: 100vw;
+        }
+    }
+
+    thead {
+        background-color: #c194fb;
+
+        th {
+            @include spacing(padding, xxs);
+        }
+    }
+
+    tbody {
+        td {
+            @include spacing(padding, xxs);
+            @include a-copytext;
+            vertical-align: text-top;
+        }
+
+        ul {
+            padding: 0;
+        }
+    }
+}

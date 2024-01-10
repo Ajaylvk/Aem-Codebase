@@ -1,0 +1,47 @@
+@import '../../../../core/scss/base/atom/anchor-text-footer';
+
+$animation-time: 0.3s;
+
+.list__head {
+    @include keyboard-outline();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    background-color: transparent;
+    width: 100%;
+}
+
+.list__head-title {
+    outline: none;
+}
+
+.list__head-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    transition: all $animation-time ease-in-out;
+
+    .list__container--open.list__container--closing & {
+        transform: rotate(0deg);
+    }
+
+    .list__container--open & {
+        transform: rotate(180deg);
+    }
+}
+
+.list__linklist {
+    height: 0;
+    display: none;
+    overflow: hidden;
+    transition: all $animation-time ease-in-out;
+    margin-bottom: 0;
+
+    .list__container--open & {
+        height: auto;
+        display: block;
+    }
+}

@@ -1,0 +1,55 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.model="com.softwareag.core.models.download.DownloadModel"
+     data-sly-test.hasContent="${model.hasContent}"
+     class="download__container"
+     data-attrib-name="contentsection"
+     data-attrib-value="${model.dataAttribValue}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <div data-sly-test="${model.title}" class="download__header cmp-download__action">
+        <a href="${model.url}" class="${model.inline ? 'asset__inline' : 'asset__download'}" target="_blank" rel="noopener noreferrer">
+            <span class="a-cta__button-icon">
+                <sly data-sly-test="${!model.inline}" class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-down', width=30, height=30}" />
+                <sly data-sly-test="${model.inline}" class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}" />
+            </span>
+            <pre class="aem__textarea">
+                ${model.title}
+            </pre>
+        </a>
+    </div>
+
+    <div data-sly-test="${model.description}" class="download__text">
+        ${model.description @ context='html'}
+    </div>
+
+    <div class="download__props a-copytext">
+        <div data-sly-test="${model.filename}" data-sly-test="${model.displayFilename}" class="download__filename">
+            ${model.filename}
+        </div>
+        <div data-sly-test="${model.size}" data-sly-test="${model.displayFileSize}" class="download__size">
+            ${model.size}
+        </div>
+        <div data-sly-test="${model.format}" data-sly-test="${model.displayFileFormat}" class="download__format">
+            ${model.format}
+        </div>
+    </div>
+
+    <div data-sly-test="${model.actionText}" class="a-cta a-cta--design-dark-button cmp-download__action">
+        <a class="a-cta__button" href="${model.url}" target="_blank" rel="noopener noreferrer" data-attrib-type="asset"
+        data-attrib-name="${model.filename}">
+			<span class="a-cta__button-text">
+				${model.actionText}
+			</span>
+        </a>
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = !hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplateFoot="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplateFoot.targetscript @ integrationModel=integrationModel}"></sly>

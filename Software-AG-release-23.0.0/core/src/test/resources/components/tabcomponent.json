@@ -1,0 +1,35 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Tab component",
+        "cq:template": "/conf/softwareag-test/settings/wcm/templates/test",
+        "jcr:description": "General Test page for Tab Component",
+        "cq:conf": "/conf/softwareag-test",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "tabcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "design": "tab__container--dark",
+                "mbox": "softwareag:test/target/mbox1tag",
+                "sling:resourceType": "softwareag/components/content/tabcomponent",
+                "targetThisComponent": "true",
+                "tabPanels": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "title": "1st panel",
+                        "sling:resourceType": "softwareag/components/content/tabpanel"
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "title": "2nd panel",
+                        "sling:resourceType": "softwareag/components/content/tabpanel"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div data-sly-use.map="com.softwareag.core.models.map.Map"
+     data-initial-latitude="${map.latitude}"
+     data-initial-longitude="${map.longitude}"
+     data-initial-zoom="${map.zoomLevel}"
+     data-api-token="${map.apiKeyToken}"
+     class="map__container grid-container"
+     data-attrib-name="contentsection"
+     data-attrib-value="Map">
+
+    <div id="mapid">
+    </div>
+
+    <script type="application/json">
+        ${map.mapItemsJson @ context='unsafe'}
+    </script>
+</div>

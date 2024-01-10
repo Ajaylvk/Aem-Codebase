@@ -1,0 +1,114 @@
+.a-icon {
+  height: 100%;
+  width: 100%;
+}
+
+.a-icon--hover {
+  color: $color-bright-pulse;
+  transition: color 0.1s ease-in-out, fill 0.1s ease-in-out;
+}
+
+.a-icon--hover:hover,
+.a-icon--hover .a-icon:hover {
+  color: $color-core-black;
+  fill: $color-bright-pulse;
+}
+
+.svgicon {
+  width: 4.2rem;
+}
+
+.svgicon.input__colorselect-icon {
+  &-color1 {
+    filter: invert(100%) sepia(23%) saturate(102%) hue-rotate(219deg)
+      brightness(110%) contrast(100%);
+    //color-white #fff
+  }
+
+  &-color2 {
+    filter: invert(19%) sepia(81%) saturate(3006%) hue-rotate(258deg)
+      brightness(115%) contrast(94%);
+    //color-bright-pulse #8e3cf7
+  }
+
+  &-color3 {
+    filter: invert(76%) sepia(4%) saturate(6831%) hue-rotate(123deg)
+      brightness(95%) contrast(67%);
+    //color-bright-sense #3cc1b7
+  }
+
+  &-color4 {
+    filter: invert(82%) sepia(41%) saturate(853%) hue-rotate(15deg)
+      brightness(113%) contrast(85%);
+    //color-bright-life #d9ec27
+  }
+
+  &-color5 {
+    filter: invert(15%) sepia(57%) saturate(888%) hue-rotate(221deg)
+      brightness(94%) contrast(90%);
+    //color-deep-pulse #3b2c5e
+  }
+
+  &-color6 {
+    filter: invert(24%) sepia(82%) saturate(423%) hue-rotate(149deg)
+      brightness(95%) contrast(89%);
+    //color-deep-sense #1c5569
+  }
+
+  &-color7 {
+    filter: invert(94%) sepia(9%) saturate(253%) hue-rotate(26deg)
+      brightness(108%) contrast(90%);
+    //color-core-light #f2f2ea
+  }
+
+  &-color8 {
+    filter: invert(7%) sepia(32%) saturate(6745%) hue-rotate(198deg)
+      brightness(97%) contrast(99%);
+    //color-core-black #011f3d
+  }
+
+  &-color9 {
+    filter: invert(19%) sepia(47%) saturate(662%) hue-rotate(168deg)
+      brightness(94%) contrast(98%);
+    //color-core-dark-220 #193857
+  }
+  &-color10 {
+    filter: invert(100%) sepia(1%) saturate(2483%) hue-rotate(175deg)
+      brightness(98%) contrast(95%);
+    //color-core-dark-950 #f0f2f4
+  }
+  &-color11 {
+    filter: invert(34%) sepia(18%) saturate(5037%) hue-rotate(156deg) brightness(98%) contrast(96%);
+    //color-bright-sense-300 #058192
+    }
+  &-color12 {
+    filter: invert(46%) sepia(19%) saturate(809%) hue-rotate(169deg) brightness(89%) contrast(93%);
+    //color-core-dark-450 #537393
+  }
+  &-color13 {
+    filter: invert(60%) sepia(77%) saturate(3465%) hue-rotate(227deg) brightness(93%) contrast(111%);
+    // color-bright-pulse-700 #A96CF9
+  }
+  &-color14{
+    filter: invert(79%) sepia(58%) saturate(586%) hue-rotate(14deg) brightness(105%) contrast(93%);
+    // color-bright-life-540 #D9EC27
+
+  }
+  &-color15{
+    filter: invert(22%) sepia(41%) saturate(5695%) hue-rotate(341deg) brightness(88%) contrast(85%);
+    // color-error red #D22D3D
+  }
+  &-color16{
+    filter: invert(64%) sepia(42%) saturate(7430%) hue-rotate(10deg) brightness(97%) contrast(104%);
+    // warning orange #E07800
+  }
+  &-color17{
+    filter: invert(74%) sepia(49%) saturate(7003%) hue-rotate(47deg) brightness(96%) contrast(86%);
+    // color-success-green #71A112
+  }
+  &-color18{
+    filter: invert(63%) sepia(10%) saturate(885%) hue-rotate(169deg) brightness(91%) contrast(85%);
+    // color-core-dark-600 #7E96AE
+  }
+}
+

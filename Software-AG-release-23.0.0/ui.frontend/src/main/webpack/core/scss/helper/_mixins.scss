@@ -1,0 +1,67 @@
+/* stylelint-disable property-no-vendor-prefix */
+@import 'colors';
+@import 'font';
+@import 'mediaqueries';
+@import 'spacings';
+@import 'keyboard-outline';
+@import 'animations';
+@import 'grid';
+@import 'links';
+@import 'icons';
+
+@mixin link-like() {
+    cursor: pointer;
+
+    &:hover {
+        color: $color-button-blue;
+    }
+}
+
+@mixin clearfix() {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+@mixin hide-text() {
+    overflow: hidden;
+    text-indent: -201%;
+    white-space: nowrap;
+}
+
+@mixin hide {
+    display: none;
+}
+
+/// Adds three dots to elements.
+@mixin ellipsis() {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin flex-row{
+  display:flex;
+  flex-direction:row;
+}
+
+@mixin flex-col{
+    display:flex;
+    flex-direction:Column;
+}
+
+@mixin flex-text-center{
+    justify-content: center;
+    align-items:center;
+}
+
+@mixin noselect() {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}

@@ -1,0 +1,9 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${template.placeholder @ isEmpty=true}"></sly>
+
+<div class="article-container ${properties.noMarginLeft ? 'no-marginleft' : ''}">
+	<div class="article-row article-tile-layout-${properties.columnCount}">
+		<sly data-sly-resource="${'article--teaser-container' @ resourceType='wcm/foundation/components/parsys'}">
+		</sly>
+	</div>
+</div>

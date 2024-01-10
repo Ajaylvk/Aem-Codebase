@@ -1,0 +1,72 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+
+
+<div data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+data-sly-use.model="com.softwareag.core.models.secondarynav.SecondaryNavModel"
+    class="secondarynav__container ${model.backgroundColor} ${model.alignment}">
+<div class="secondarynav__containerwrapper">
+    <!-- model to be created by backend ,no folder created yet in core/models -->
+    <!-- add class dark-background or white-background dynamically -->
+
+
+    <div class="secondarynav-label-wrapper">
+        <div class="secondarynav-hamburger-menu">
+            <svg class="menu-core-dark120" alt="menu-core-dark120" xmlns="http://www.w3.org/2000/svg" height="30"
+                viewBox="0 0 24 24" width="30" fill="#011f3d">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </div>
+        <span class="secondarynav-title">
+           <!-- Single field Common title for the entire secondary navlist -->         
+        <a class="secondarynavtitle__link" href="${model.navLink @ extension = 'html'}">
+            ${model.navTitle}
+        </a>
+        </span>
+    </div>
+
+    <div class="secondarynav-dropdown-container">
+
+        <sly data-sly-repeat.secondarynavigationItem="${model.primaryNavList}">
+
+           <!-- Represents each navigation link irrespective of direct or with submenu -->
+            <div class="secondarynav-item" data-index="${secondarynavigationItemList.count}">
+                 <!-- if submenu absent /direct link only include 'a' tag-->
+				<sly data-sly-test.childNavItems="${secondarynavigationItem.childNavList}" /> 
+				<sly data-sly-test="${!childNavItems}">
+				<a class="secondarynav__link" href="${secondarynavigationItem.primaryNavLink}">
+                    ${secondarynavigationItem.primaryNavLabel @ context = 'html'}
+                </a>
+				</sly>
+                 <!-- if submenu present ,please change properties name accordingly-->
+                 
+				<sly data-sly-test="${childNavItems}">
+
+                    <div class="secondarynav-submenu">
+                    <span class="submenu-item-label">${secondarynavigationItem.primaryNavLabel @ context = 'html'}</span>
+                    <svg class="a-icon a-icon--to-top">
+                        <use xlink:href="#to-top"></use>
+                    </svg>
+                    <!-- Label of the submenu -->
+                    
+                    <!-- inner links of submenu item -->
+                    <div class="submenu-container">
+                        <!-- Multiple links can come here -->
+                        <sly data-sly-repeat.childNavItems="${secondarynavigationItem.childNavList}">
+                        <a class="secondarynav__innerlink" href="${childNavItems.ChildNavLink @ extension = 'html'}">
+                            ${childNavItems.ChildNavLabel}
+                        </a>
+                        </sly>
+                    </div>
+                   
+                    </div>
+
+                </sly>
+            </div>
+
+        </sly>
+    </div>
+</div>
+</div>

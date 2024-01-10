@@ -1,0 +1,9 @@
+<sly data-sly-use.model="com.softwareag.core.models.xf.XfModel"/>
+<h2 data-sly-test="${model.xfRemoteOfferLink}">Link for remote offer: ${model.xfRemoteOfferLink}</h2>
+<div class="container">
+    <div data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+         data-sly-repeat.child="${templatedContainer.structureResources}"
+         data-sly-resource="${child.path @ resourceType=child.resourceType}"></div>
+</div>
+<sly data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"></sly>
+<sly data-sly-include="footerlibs.html"></sly>

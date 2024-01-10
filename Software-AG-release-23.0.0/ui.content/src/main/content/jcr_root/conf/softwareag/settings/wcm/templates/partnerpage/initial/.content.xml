@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/softwareag/settings/wcm/templates/partnerpage"
+        jcr:primaryType="cq:PageContent"
+        hideInNav="{Boolean}true"
+        sling:resourceType="softwareag/components/structure/basic-page">
+        <partnerbanner
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/partnerbanner"
+            editable="{Boolean}true">
+        </partnerbanner>
+        <partnertable
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/partnertable"
+            editable="{Boolean}true">
+        </partnertable>
+    </jcr:content>
+</jcr:root>

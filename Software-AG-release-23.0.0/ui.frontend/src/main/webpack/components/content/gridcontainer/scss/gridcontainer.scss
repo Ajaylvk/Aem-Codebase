@@ -1,0 +1,170 @@
+.gridcontainer__wrapper {
+    position: relative;
+
+    .gridcontainer__background-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        min-width: 100%;
+        min-height: 100%;
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.gridcontainer__container {
+    //<------------- added in sprint 4 -for text component v2 dcoe 159 breakpoint change------------>
+    @include spacing(padding-left, xxl);
+    @include spacing(padding-right, xxl);
+    @include spacing(padding-top, m);
+    @include spacing(padding-bottom, xxl);
+    @include clearfix();
+
+    @include mq-phone {
+        padding: $spacing-mobile-s;
+    }
+
+    // Overriden in Edit mode. (below)
+    .parsys {
+        text-align: center;
+        vertical-align: top;
+        margin-bottom: gutter-calc() / 2;
+
+        @include mq-except-phone {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .parsys.parsys--no-padding {
+        position: relative;
+
+        @include mq-from-tablet {
+            margin: 0 -$spacing-tablet-s;
+        }
+    }
+
+    .productteaser,
+    .textmediabanner,
+    .textmedia,
+    .media,
+    .text,
+    // added in sprint 4 dcoe 159
+    .textmedia_v2,
+    .text_v2 {
+        border-radius: 0.5rem;
+    }
+
+    .media {
+        position: relative;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .textmediabanner,
+    .textmedia,
+    .media,
+    .text,
+    // NEWLY ADDED IN SPRINT 4
+    .textmedia_v2 {
+        width: 100%;
+        text-align: left;
+        @include clearfix();
+
+        &__container {
+            @include spacing(margin-top, l);
+            margin-bottom: 0;
+        }
+    }
+    // added in sprint 4
+    .text_v2{
+        width: 100%;
+        text-align: center;
+        @include clearfix();
+
+        &__container {
+            @include spacing(margin-top, l);
+            margin-bottom: 0;
+        }
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    > .a-h2,
+    // added in sprint 4 dcoe 159
+    > .textV2-a-h2,
+    > .a-copytext {
+        @include spacing(margin-bottom, m);
+
+        @include mq-except-phone {
+            width: 70%;
+        }
+
+        position: relative;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    > .a-h2 {
+        @include spacing(margin-top, xl);
+        @include mq-phone {
+            margin-top: $spacing-mobile-m;
+        }
+    }
+
+    > .a-copytext {
+        @include spacing(margin-top, m);
+    }
+
+    > .cta-container {
+        @include spacing(margin-top, xl);
+        text-align: center;
+    }
+
+    .text,
+    .textmedia,
+    // added in sprint 4 dcoe 159
+    .text_v2,
+    // added in sprint 4 dcoe 160
+    .textmedia_v2,
+    .textmediabanner,
+    .title,
+    .media {
+        position: relative;
+    }
+}
+
+// Override Authoring.
+/* stylelint-disable */
+.aem-AuthorLayer-Edit {
+    .gridcontainer__container .parsys {
+        text-align: center;
+        vertical-align: top;
+    }
+
+    // newly added (empty) productteasers in edit-mode should be 100% width
+    .parsys.parsys--no-padding > div:first-child:not([data-layout]),
+    .productteaser.cq-Editable-dom {
+        width: 100%;
+    }
+
+    .gridcontainer__container .newpar {
+        width: 100%;
+    }
+}
+/* stylelint-enable */

@@ -1,0 +1,8 @@
+@mixin keyboard-outline() {
+    &:focus {
+        [data-whatinput='mouse'] &,
+        [data-whatinput='touch'] & {
+            outline: none;
+        }
+    }
+}

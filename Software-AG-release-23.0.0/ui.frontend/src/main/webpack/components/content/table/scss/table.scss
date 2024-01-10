@@ -1,0 +1,182 @@
+/*TODO REFACTOR*/
+.table {
+    margin: 0 auto;
+
+    ul,
+    ol {
+        list-style-position: inside;
+    }
+
+    .a-h2 {
+        @include spacing(margin-bottom, m);
+    }
+
+    .table__container {
+        @include component-bottom-spacing();
+        @include spacing(padding, m);
+    }
+
+    .styled-table {
+        @include font-size-with-rem-line-height(2rem, 3.2rem);
+        border-collapse: collapse;
+        margin: 10px auto 25px;
+        font-family: sans-serif;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        @include mq-phone {
+            border: 0;
+        }
+
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .thead__row {
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+
+        .tableitem__text {
+            font-weight: bold;
+        }
+    }
+
+    .tableitem__text {
+        @include a-copytext();
+        line-height: 1.25 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .text__container {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .tableitem__container {
+        padding: 12px 15px;
+        @include mq-phone {
+            padding: 36px 10px 10px;
+        }
+    }
+
+    .tableitem__link_content.has-asset {
+        display: inline-block;
+
+        .a-cta__button {
+            padding: 0 1.5rem 0 0;
+        }
+    }
+
+    .a-cta--design-link {
+        position: relative;
+        padding: 0;
+        display: block;
+        height: 100%;
+    }
+
+    .a-cta__button-icon {
+        position: relative;
+        display: inline-flex;
+        top: auto;
+    }
+
+    .a-icon[class~='a-icon--file-svg'],
+    .a-icon[class~='a-icon--file-jpg'],
+    .a-icon[class~='a-icon--file-jpeg'],
+    .a-icon[class~='a-icon--file-ics'],
+    .a-icon[class~='a-icon--file-pdf'],
+    .a-icon[class~='a-icon--file-doc'],
+    .a-icon[class~='a-icon--file-docx'],
+    .a-icon[class~='a-icon--file-xls'],
+    .a-icon[class~='a-icon--file-xlsx'] {
+        margin-left: -20px;
+        height: 40px;
+        width: 40px;
+        top: 0;
+        position: relative;
+        left: 6px;
+    }
+
+    @include mq-phone {
+        width: 100%;
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        thead {
+            margin-bottom: 10px;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        td {
+            @include a-copytext();
+            border: 0;
+            position: relative;
+            white-space: normal;
+            text-align: left;
+            line-height: 1.25 !important;
+            margin-bottom: 0 !important;
+            padding: 0;
+        }
+
+        td::before {
+            position: absolute;
+            width: 45%;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+            top: 12px;
+            left: 10px;
+            content: attr(data-title);
+        }
+    }
+}
+
+.table__container--bright_sense {
+    .thead__row * {
+        background-color: $color-bright-sense;
+        color: $color-core-black;
+
+    }
+
+    @include mq-phone {
+        .styled-table {
+            border-top: 10px solid $color-bright-sense;
+        }
+    }
+}
+
+.table__container--bright_pulse {
+    .thead__row * {
+        background-color: $color-bright-pulse;
+        color: $color-core-black;
+    }
+
+    @include mq-phone {
+        .styled-table {
+            border-top: 10px solid $color-bright-pulse;
+        }
+    }
+}

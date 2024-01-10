@@ -1,0 +1,109 @@
+{
+    "search":
+    "Search",
+
+    "search_query":
+    "search query",
+
+    "query_enter_value":
+     "Please enter a query",
+
+    "please_query_enter_value":
+    "Please enter a query.",
+
+    "hits_for_search":
+    "Results {{first}} - {{last}} of {{count}} for \"{{query}}\"",
+
+    "open":
+    "Open",
+
+    "category":
+    "Category",
+
+    "source":
+    "source",
+
+    "order_by":
+    "Order by",
+
+    "sort_result_ranking_DESC":
+    "Ranking",
+
+    "sort_datetimeModified_DESC":
+    "Date (down)",
+
+    "sort_datetimeModified_ASC":
+    "Date (up)",
+
+    "sort_dc_title_ASC":
+    "Title (up)",
+
+    "sort_dc_title_DESC":
+    "Title (down)",
+
+    "sort_size_ASC":
+    "Size (up)",
+
+    "sort_size_DESC":
+    "Size (down)",
+
+    "sort_page_count_ASC":
+    "Pages (up)",
+
+    "sort_page_count_DESC":
+    "Pages (down)",
+
+    "of":
+    "of",
+
+    "number_of_results":
+    "Number of Results",
+
+    "filtered_search":
+    "The search is limited by the following criteria",
+
+    "remove_filters":
+    "Remove all criteria",
+
+    "dym":
+    "Did you mean",
+
+    "more":
+    "more",
+
+    "less":
+    "less",
+
+    "no_hits":
+    "Your search for \"{{query}}\" did not produce any hits.",
+
+    "no_hits_check_query":
+    "Please try again with a different query.",
+
+    "search_related_query":
+    "Search related to \"{{query}}\":",
+
+    "search_prev":
+    "prev",
+
+    "search_next":
+    "next",
+	
+	"search_ui_validation_msg":
+    "&apos; Looks like your search phrase has special characters. Use double quotes, example &quot; Aris:thirty years&quot; &apos;",
+
+    "Clear Filters":
+    "Clear Filters",
+
+    "Clear Search":
+    "Clear Search",
+
+    "No Results Found" :
+    "No Results Found",
+
+    "No Search Results Found":
+    "No Search Results Found",
+	
+	"Beim Abrufen der Ergebnisse ist ein Fehler aufgetreten. Bitte versuche es erneut!":
+	"Beim Abrufen der Ergebnisse ist ein Fehler aufgetreten. Bitte versuche es erneut!"
+}

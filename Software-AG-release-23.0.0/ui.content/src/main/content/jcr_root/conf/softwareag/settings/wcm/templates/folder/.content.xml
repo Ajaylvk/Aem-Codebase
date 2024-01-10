@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        allowedChildren="[/conf/softwareag/settings/wcm/templates/hero,/conf/softwareag/settings/wcm/templates/eventoverview,/conf/softwareag/settings/wcm/templates/pressoverview,/conf/softwareag/settings/wcm/templates/error]"
+        cq:templateType="/conf/softwareag/settings/wcm/template-types/empty-template"
+        jcr:description="Software AG Folder Page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Folder Page"
+        status="enabled" />
+</jcr:root>

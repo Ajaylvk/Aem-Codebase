@@ -1,0 +1,22 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div data-custom="${properties.customcolor}"
+    class="HTMLtable-item ${properties.bottomborderwidth} ${properties.rightborderwidth} ${properties.bottombordercolor} ${properties.rightbordercolor} ${properties.itembackgroundcolor}">
+
+    <div class="HTMLtableitem-container ${properties.fontcolor}  ${properties.alignment} ${properties.iconAlignment =='alignment-top'? 'HTMLtableIcon-center':''} ${properties.iconAlignment =='alignment-left'? 'HTMLtableIcon-leftside':''}
+    ${properties.iconAlignment =='alignment-right'? 'HTMLtableIcon-rightside':''}">
+        <div data-sly-test="${properties.fileReferencea}" class="${properties.iconAlignment =='alignment-left' && properties.text ? 'right-icon-padding':''}
+        ${properties.iconAlignment =='alignment-right' && properties.text ? 'left-icon-padding' : ''} ${properties.iconAlignment =='alignment-top' && properties.text ? 
+        'bottom-icon-padding' : ''}">
+            <img class="HTMLtable_icon svgicon ${properties.iconColor} ${properties.iconSize}"
+                src="${properties.fileReferencea}" alt="${properties.altTexta}" />
+        </div>
+        <div class="HTMLtable_text ${!properties.fileReferencea && properties.alignment == 'centerAlign' ? 'textAlignment' : ''}"
+            data-sly-test="${properties.text}">
+            ${properties.text @ context='html'}
+        </div>
+    </div>
+
+</div>

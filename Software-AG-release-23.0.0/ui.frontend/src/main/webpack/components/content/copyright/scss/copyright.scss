@@ -1,0 +1,52 @@
+$item-horizontal-padding-mobile: 0.3rem;
+$item-horizontal-padding-tablet: 0.5rem;
+$item-horizontal-padding: 0.75rem;
+
+.footer,.footer-v1{
+    
+    .copyright__container {
+        .copyright__list {
+            @include base-font;
+            @include spacing('margin-bottom', m);
+    
+            @include mq-phone {
+                @include font-size-with-rem-line-height(1.2rem, 2rem);
+            }
+            @include mq-tablet {
+                @include font-size-with-rem-line-height(1.4rem, 2rem);
+            }
+            @include mq-desktop {
+                @include font-size-with-rem-line-height(1.4rem, 3.8rem);
+            }
+            @include clearfix();
+        }
+    
+        .copyright__list__item {
+            display: inline-block;
+    
+            color: $color-white;
+    
+            @include mq-phone {
+                padding-left: $item-horizontal-padding-mobile;
+                padding-right: $item-horizontal-padding-mobile;
+            }
+            @include mq-tablet {
+                padding-left: $item-horizontal-padding-tablet;
+                padding-right: $item-horizontal-padding-tablet;
+            }
+            @include mq-desktop {
+                padding-left: $item-horizontal-padding;
+                padding-right: $item-horizontal-padding;
+            }
+    
+            &:last-child {
+                padding-right: 0;
+            }
+    
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+    
+} 

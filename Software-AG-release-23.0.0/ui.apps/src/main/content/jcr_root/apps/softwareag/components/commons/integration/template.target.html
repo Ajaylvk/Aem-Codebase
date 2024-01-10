@@ -1,0 +1,24 @@
+<template data-sly-template.targetscript="${@ integrationmodel}" data-sly-test="${integrationmodel.targetThisComponent}">
+    </div>
+
+    <script>
+        var el = document.getElementById('${integrationmodel.id @ context="scriptString"}');
+        if (el && typeof(adobe) != "undefined")
+        {
+            adobe.target.getOffer({
+                mbox: '${integrationmodel.mbox @ context="scriptString"}',
+                success: function (offer) {
+                    adobe.target.applyOffer({
+                        mbox: '${integrationmodel.mbox @ context="scriptString"}',
+                        selector: el,
+                        offer: offer
+                    });
+                },
+                error: function (error) {
+                    console.error(error);
+                    el.style.visibility = "visible";
+                }
+            });
+        }
+    </script>
+</template>

@@ -1,0 +1,19 @@
+<div class="list__container"
+     data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.list="com.softwareag.core.models.list.ListModel"
+     data-sly-test.hasContent="${list.hasContent}">
+
+    <button class="list__head">
+        <h2 class="list__head-title">${list.title}</h2>
+        <span class="list__head-icon" data-sly-call="${icons.getIcon @ name='angle-down', width=30, height=30}"></span>
+    </button>
+    <ul class="list__linklist" data-sly-list.link="${list.links}">
+        <li class="linklist__item">
+            <a class="linklist__link" href="${link.href}" target="${link.target}" data-attrib-type="asset" data-attrib-name="${link.text}">
+                ${link.text}
+            </a>
+        </li>
+    </ul>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

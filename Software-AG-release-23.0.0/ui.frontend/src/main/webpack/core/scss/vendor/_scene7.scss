@@ -1,0 +1,113 @@
+@import "../helper/mediaqueries";
+
+/* SCENE7 (Adobe Scene7 Publishing System)
+* This file contains overwrites for the CSS that is delivered by scene7.
+* The CSS that they deliver contains a lot of inline style, hence the !important.
+* Viewer presets can be created/maintained in tools -> assets -> viewer presets.
+* It is important that the name of viewer presets match with
+* the names below (e.g. Software_AG_Video_Cropped).
+*/
+
+// viewer-preset "Software_AG_Video_Cropped"
+[data-config*="Software_AG_Video_Cropped"] {
+  &.s7videoviewer {
+    height: auto !important;
+  }
+
+  .s7videoplayer {
+    position: static !important;
+    height: auto !important;
+    background-color: transparent !important;
+  }
+
+  video {
+    position: static !important;
+    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  .s7socialshare {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    display: block !important;
+  }
+}
+
+// viewer-preset "Software_AG_Video_Boackground"
+[data-config*="Software_AG_Video_Background"] {
+  video {
+    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  @include mq-until-ie-edge {
+    video {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      min-width: 100% !important;
+      min-height: 100% !important;
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+
+  .s7socialshare {
+    display: none !important;
+  }
+
+  .s7controlbar {
+    display: none !important;
+  }
+}
+
+// viewer-preset "media-preset-new"
+[data-config*="media-preset-new"] {
+  .s7videoplayer {
+    position: static !important;
+    @include mq-desktop {
+      height: 60rem !important;
+    }
+    background-color: transparent !important;
+  }
+
+  @include mq-desktop {
+    .video-js {
+      width: 100% !important;
+    }
+  }
+
+  &.s7videoviewer {
+    @include mq-desktop {
+      height: 60rem !important;
+    }
+  }
+
+  .s7socialshare {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    display: block !important;
+  }
+
+  video {
+    width: 100% !important;
+    @include mq-desktop {
+      height: 100% !important;
+    }
+    top: 0 !important;
+    left: 0 !important;
+    position: static !important;
+    object-fit: fill;
+  }
+}

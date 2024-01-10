@@ -1,0 +1,19 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Thank you for contacting us",
+        "sling:resourceType": "softwareag/components/structure/basic-page",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/hero",
+        "pageTitle": "Software AG Contact Us",
+        "navTitle": "contact_us",
+        "hideInNav": "true",
+        "campaignLandingPage": "true",
+        "productCategoryTag": "softwareag:asset-type",
+        "productNameTag": "softwareag:event-type",
+        "productCapabilityTags": [
+            "softwareag:industry"
+        ],
+        "productUsageLevelTag": "softwareag:industry/banking"
+    }
+}

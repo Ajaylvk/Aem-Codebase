@@ -1,0 +1,34 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html">
+  <sly data-sly-use.icons="softwareag/components/commons/svg/icons.html" />
+  <sly data-sly-use.headerModel="com.softwareag.core.models.link.HeaderSearch"></sly>
+  <sly data-sly-use.searchModel="com.softwareag.core.models.search.Search"
+    data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+    data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-attrib-campaign="${campaignModel.campaign}"
+    data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+    data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+    data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+  <div class="headerSearch-v1">
+
+    <div class="headerV1__icons">
+      <!--/* Search */-->
+      <div class="headerV1__icons-search">
+        <button class="headerV1__icons-search-open a-icon a-icon--hover" title="Search"
+          data-sly-call="${icons.getIcon @ name='search-core-dark120', width=30, height=30}"></button>
+      </div>
+    </div>
+    <div class="headerV1__search-form">
+      <form class="form-width" action="${searchModel.config.link.href}?cf%5B%5D=facet_sag_perspectives%3Aall"
+        target="_self">
+        <button class="input-field-search-icon headerV1__search-form-submit" type=submit
+          data-sly-call="${icons.getIcon @ name='search-core-dark120'}"></button>
+        <input class="headerV1__search-form-input" type="text" name="q" pattern='(^(".*")|[^:]+$)' oninput="this.setCustomValidity('')"
+          oninvalid="this.setCustomValidity(${'search_ui_validation_msg' @ i18n, context='html'})" id="searchfield" tabindex="0"
+          placeholder="${headerModel.text}">
+		<input type="hidden" name="cn" />
+        <button class="headerV1_Cross_icon a-icon a-icon--hover input-field-search-icon" type="button"
+          data-sly-call="${icons.getIcon @ name='close'}" tabindex="-1"></button>
+      </form>
+    </div>
+  </div>
+</sly>

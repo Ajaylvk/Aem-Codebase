@@ -1,0 +1,123 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Software AG"
+    },
+    "corporate": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Corporate"
+        },
+        "en_corporate": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "jcr:description": "Digital connections matter more than ever",
+                "pageTitle": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "navTitle": "Home"
+            },
+            "integration-apis": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "Integration & APIs",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/hero",
+                    "jcr:description": "Get best-in-class application integration solutions",
+                    "pageTitle": "Software AG Integration solutions",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "navTitle": "Integration & APIs"
+                }
+            },
+            "configuration": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "configuration",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+                    "sling:resourceType": "softwareag/components/structure/configurationpage",
+                    "parsys": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/parsys",
+                        "socialmedia": {
+                            "facebookSharingEnabled": true,
+                            "sling:resourceType": "softwareag/components/configs/socialmedia",
+                            "assetID": "softwareaglocaldevelop1/facebook-1",
+                            "imageserverurl": "https://softwareag.scene7.com/is/image/"
+                        }
+                    }
+                }
+            },
+            "configuration-unconfigured": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "configuration",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+                    "sling:resourceType": "softwareag/components/structure/configurationpage",
+                    "parsys": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/parsys",
+                        "socialmedia": {
+                            "sling:resourceType": "softwareag/components/configs/socialmedia"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ch": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Switzerland"
+        },
+        "ch_de": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "jcr:description": "Digital connections matter more than ever",
+                "pageTitle": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "navTitle": "Home"
+            }
+        }
+    },
+    "unknownland": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Switzerland"
+        },
+        "unknownland_de": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "jcr:description": "Digital connections matter more than ever",
+                "pageTitle": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "navTitle": "Home"
+            }
+        }
+    },
+    "page_no_config": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+            "jcr:description": "Digital connections matter more than ever",
+            "pageTitle": "Shift to Digital with Enterprise Integration & IoT by Software AG",
+            "sling:resourceType": "softwareag/components/structure/homepage",
+            "navTitle": "Home"
+        }
+    }
+}

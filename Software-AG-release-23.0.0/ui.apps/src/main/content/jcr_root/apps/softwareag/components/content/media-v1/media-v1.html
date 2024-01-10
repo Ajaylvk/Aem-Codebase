@@ -1,0 +1,25 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<div
+   class="media-v1__wrapper no-tab-media ${properties.assetAlignment=='media-v1-edgetoedge' ? 'media-v1-edgetoedge': ''} ${properties.backgroundStyle}">
+   <div class="media-v1__container ${properties.assetAlignment}">
+      <div class="dynamic-media__container ${properties.assetAlignment}">
+         <sly data-sly-test="${properties.type =='asset'}"
+            data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+         <sly data-sly-test="${properties.type =='svg'}">
+            <img src="${properties.image}" alt="${properties.altText2}" class="media-image">
+         </sly>
+      </div>
+      <div class="media-v1-content ${properties.assetAlignment}">
+         <div data-sly-test="${properties.description}">
+            <div class="media-description ${properties.assetAlignment}">
+               ${properties.description @ context='html'}
+            </div>
+            <div class="media-link__container ${properties.assetAlignment}"
+               data-sly-resource="${ @ path='media-links', resourceType='softwareag/components/content/links', decoration=true}">
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>

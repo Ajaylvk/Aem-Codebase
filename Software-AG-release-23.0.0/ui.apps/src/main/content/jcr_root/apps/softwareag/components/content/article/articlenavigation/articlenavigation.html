@@ -1,0 +1,70 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.navigation="com.softwareag.core.models.article.ArticleNavigation"></sly>
+
+
+<div class="article-sidebar">
+
+
+
+    <nav class="article-linkcontent">
+
+
+	<sly data-sly-test="${navigation.enableNumberlist}">
+        <ol>
+     </sly>
+	<sly data-sly-test="${!navigation.enableNumberlist}">
+        <ul>
+     </sly>
+
+
+            <!-- iterate this li for each field populated by author -->
+
+            <sly data-sly-list.item="${navigation.navItems}">
+
+
+
+                <!-- if <li> is first child.. add class active</li> -->
+
+                <li class="${itemList.first? 'active' : ''}">
+
+
+
+                    <!-- id will get populated here in href with # symbol -->
+
+
+
+                    <a class="scroll article-nav-link" href="#${item}">${navigation.navItems[item]}</a>
+
+
+
+
+                </li>
+
+
+
+            </sly>
+
+<sly data-sly-test="${navigation.enableNumberlist}">
+        </ol>
+     </sly>
+	<sly data-sly-test="${!navigation.enableNumberlist}">
+        </ul>
+     </sly>
+
+
+
+    </nav>
+
+</div>
+<script type="application/ld+json" data-sly-test="${navigation.enableFaqSchema}" >
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity":${navigation.faqArray @context="unsafe"}
+}
+</script>

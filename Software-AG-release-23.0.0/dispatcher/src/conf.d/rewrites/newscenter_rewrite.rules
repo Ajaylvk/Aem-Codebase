@@ -1,0 +1,37 @@
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+
+RewriteRule ^/$ /en.html [R=301,NC,L]
+RewriteRule ^/content/newscenter/[a-z]+/(.*)(\.html)?$ /$1 [NE,L,R=301]
+
+#Handle extensionless URLs + URLs without trailing slash
+RewriteCond %{REQUEST_URI} !^/content/dam/.*
+RewriteCond %{REQUEST_URI} !.*\..*$
+RewriteCond %{REQUEST_URI} !.*/$
+RewriteRule (.*)$ $1.html [R,QSA]
+
+#Resolve URLs ending with trailing slash
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^/([a-z]{2})(_[a-z]+)?(/.*)?/$ /content/newscenter/$1/$1$2$3.html [PT,L,QSA]
+
+# Don't allow valid but unshortened URLs
+#RewriteRule ^/content/newscenter/(.*)$ / [R=301,NC,L]
+
+# Handle root level
+#RewriteRule ^/$ /en.html [R=301,NC,L]
+
+# Rewrite trailing slashes to .html
+# e. g. /en/ to /en.html
+#RewriteRule ^/(.+)/$ /$1.html [R=301,NC,L]
+
+#standard URLs
+RewriteRule ^/([a-z]{2})(_[a-z]+)?(/.*)?\.(html|jpe?g|JPE?G|png|PNG|gif|GIF)$  /content/newscenter/$1/$1$2$3.$4 [PT,L,QSA]
+
+#sitemap
+RewriteRule ^/([a-z]{2})(_[a-z]+)?\.sitemap\.xml$  /content/newscenter/$1/$1$2.sitemap.xml [PT,L]

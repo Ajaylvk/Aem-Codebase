@@ -1,0 +1,38 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test Page",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "socialmediabar": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/socialmediabar",
+                "socialMediaItems": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Alternative Text 01",
+                        "image": "/content/dam/softwareag/test-image.jpg",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/softwareag/test-page"
+                        }
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Alternative Text 02",
+                        "image": "/content/dam/softwareag/test-image.jpg",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "http:\\\\www.google.pt"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

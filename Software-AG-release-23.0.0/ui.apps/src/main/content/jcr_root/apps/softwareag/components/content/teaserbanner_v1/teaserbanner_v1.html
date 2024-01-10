@@ -1,0 +1,71 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div class="herobanner-teaser ${properties.backgroundColor}">
+    <div class="herobanner-teaser_background-image">
+        <!-- <img src="/content/dam/sag/microservices-deep-sense-bg.svg" width="100%" height="100%"> -->
+
+        <div id="teaser-desktop" class="teaser-viewports">
+            <sly data-sly-test="${properties.backgroundImage =='asset'}"
+                data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+            <sly data-sly-test="${properties.backgroundImage =='svg'}">
+
+                <img src="${properties.desktopSvgImage}" width="100%" alt="${properties.imgAltText}">
+            </sly>
+        </div>
+
+        <div id="teaser-tablet" class="teaser-viewports">
+            <sly data-sly-test=${!properties.tabletImage}>
+                <sly data-sly-test="${properties.backgroundImage =='asset'}"><img src="${properties.fileReference}"
+                        width="100%" alt="${properties.altText}"></sly>
+                <sly data-sly-test="${properties.backgroundImage =='svg'}">
+                    <img src="${properties.desktopSvgImage}" width="100%" alt="${properties.imgAltText}">
+                </sly>
+            </sly>
+            <img src="${properties.tabletImage}" width="100%"
+                alt="${properties.backgroundImage =='asset'? properties.altText : properties.imgAltText}"
+                data-sly-test="${properties.tabletImage}">
+        </div>
+
+        <div id="teaser-phone" class="teaser-viewports">
+            <sly data-sly-test=${!properties.mobileImage}>
+                <sly data-sly-test="${properties.backgroundImage =='asset'}"><img src="${properties.fileReference}"
+                        width="100%" alt="${properties.altText}"></sly>
+                <sly data-sly-test="${properties.backgroundImage =='svg'}">
+                    <img src="${properties.desktopSvgImage}" width="100%" alt="${properties.imgAltText}">
+                </sly>
+            </sly>
+            <img src="${properties.mobileImage}" width="100%"
+                alt="${properties.backgroundImage =='asset'? properties.altText : properties.imgAltText }"
+                data-sly-test="${properties.mobileImage}">
+        </div>
+    </div>
+    <div class="herobanner-teaser_content ${properties.textAligment}">
+        <!-- if checkbox for text box is clicked add this class banner_only-text -->
+        <div
+            class="herobanner-teaser_text ${properties.fontColor} ${properties.textAligment} ${properties.textAligment == 'text-left' &&  properties.foregroundType == 'textbox' ? 'text-left_no-image' : ''} ${properties.foregroundType == 'textbox' ? 'banner_only-text' : '' } ${properties.foregroundType == 'textbox' ? properties.textboxColor : ''}">
+            <div data-sly-test="${properties.addDivider}" class="herobanner-teaser_divider">
+            </div>
+            <div data-sly-test="${properties.overlineText}" class="herobanner-teaser_overline">
+                ${properties.overlineText} 
+            </div>
+            <div data-sly-test="${properties.title}" class="herobanner-teaser_headline herobanner-teaser_desc-present">
+                ${properties.title @ context='html'}
+            </div>
+            <div data-sly-test="${properties.description}" class="herobanner-teaser_description">
+                ${properties.description @ context='html'}
+            </div>
+            <div class="herobanner-teaser_link">
+                <sly
+                    data-sly-resource="${ @ path='bannerteaser-cta', resourceType='softwareag/components/content/banner-cta', decoration=true}">
+                </sly>
+            </div>
+
+        </div>
+        <div data-sly-test="${properties.foregroundType == 'image'}"
+            class="herobanner_foreground-image ${properties.textAligment}"
+            data-sly-resource="${ @ path='teaser-foreground-img', resourceType='softwareag/components/content/image_v1'}">
+        </div>
+
+    </div>
+</div>

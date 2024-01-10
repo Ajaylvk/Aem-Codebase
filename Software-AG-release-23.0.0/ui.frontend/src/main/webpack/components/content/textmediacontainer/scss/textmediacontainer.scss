@@ -1,0 +1,243 @@
+.textmediacontainer_spacing {
+  @include spacing(padding-left, newm);
+  @include spacing(padding-right, newm);
+  @include mq-from-tablet {
+    max-width: 132rem;
+    margin: auto;
+  }
+
+  .column-layout__container {
+    @include spacing(padding-top, newxxl);
+    @include spacing(padding-bottom, newxxl);
+    // padding-left: 8rem;
+    // padding-right:8rem;
+    @include clearfix();
+
+    @include mq-tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include mq-phone {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .tile-layout-2,
+    .tile-layout-3 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+
+    .tile-layout-2 > div {
+      display: flex;
+      flex-direction: column;
+      width: calc((100% / 2) - 3.2rem);
+      min-height: 50px;
+      margin: 1.6rem;
+      text-align: left;
+      @include mq-tablet {
+        width: calc((100% / 2) - 1.6rem);
+        display: flex;
+        margin: 0.8rem;
+        text-align: left;
+      }
+      @include mq-phone {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1.6rem 0;
+        text-align: left;
+      }
+    }
+
+    .tile-layout-3 > div {
+      display: flex;
+      flex-direction: column;
+      width: calc((100% / 3) - 3.2rem);
+      margin: 1.6rem;
+      min-height: 50px;
+      text-align: left;
+
+      @include mq-tablet {
+        width: calc((100% / 2) - 1.6rem);
+        display: flex;
+        margin: 0.8rem;
+        text-align: left;
+      }
+
+      @include mq-phone {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1.6rem 0;
+        text-align: left;
+      }
+    }
+
+    // Overriden in Edit mode. (below)
+    // .parsys {
+    //     text-align: center;
+    //     vertical-align: top;
+    //     margin-bottom: gutter-calc() / 2;
+
+    //     @include mq-except-phone {
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         justify-content: center;
+    //     }
+    // }
+
+    // .parsys.parsys--no-padding {
+    //     position: relative;
+
+    //     @include mq-from-tablet {
+    //         margin: 0 -$spacing-tablet-s;
+    //     }
+    // }
+
+    .productteaser,
+    .productteaser_v1 .textmediabanner,
+    .textmedia,
+    .media,
+    .text {
+      border-radius: 0.5rem;
+    }
+
+    .media {
+      position: relative;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .textmediabanner,
+    .textmedia,
+    .media,
+    .text {
+      width: 100%;
+      text-align: left;
+      @include clearfix();
+
+      &__container {
+        @include spacing(margin-top, l);
+        margin-bottom: 0;
+      }
+    }
+
+    .table {
+      width: 100%;
+    }
+
+    > .a-h2-new,
+    > .a-bodycopy {
+      @include mq-desktop {
+        width: 70%;
+      }
+
+      @include mq-tablet-all {
+        width: 100%;
+      }
+
+      position: relative;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    > .a-h2-new.no-text-description {
+      @include spacing(margin-bottom, newxxl);
+    }
+
+    > .a-bodycopy {
+      @include spacing(margin-top, newheading);
+      @include spacing(margin-bottom, newxxl);
+    }
+
+    > .cta-container {
+      @include spacing(margin-top, xl);
+      text-align: center;
+    }
+
+    .text,
+    .textmedia,
+    .textmediabanner,
+    .title,
+    .media {
+      position: relative;
+    }
+  }
+}
+
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color3 {
+  .textmediacontainer_spacing {
+    .column-layout__container {
+      > .a-h2-new {
+        color: $color-white;
+      }
+
+      > .a-bodycopy {
+        color: $color-white;
+      }
+      .textMedia_v2_h3 {
+        color: $color-white;
+      }
+      .textmedia_v2-text {
+        color: $color-white;
+      }
+    }
+  }
+}
+.a-container__layout-section .textmedia-v2:not(:last-child) {
+  @include mq-desktop {
+    margin-bottom: 6.4rem !important;
+  }
+  @include mq-tablet {
+    margin-bottom: 4.8rem !important;
+  }
+  @include mq-phone {
+    margin-bottom: 4rem !important;
+  }
+}
+//    .a-container__layout-section .textmedia-v2:last-child {
+//     margin-bottom: 4rem;
+//       }
+.a-container__layout-section
+  .textmedia-v2:not(:last-child)
+  .textmedia_v2__container
+  .textmedia_v2_standalone {
+  padding-top: 0 rem !important;
+  padding-bottom: 6.4rem;
+  @include mq-tablet {
+    padding-bottom: 4.8rem;
+  }
+  @include mq-phone {
+    padding-bottom: 4rem;
+  }
+}
+.a-container__layout-section
+  .textmedia-v2:last-child
+  .textmedia_v2__container
+  .textmedia_v2_standalone {
+  padding-top: 0 rem !important;
+  // @media all and (max-width: 576px) {
+  //     padding-bottom: 4rem;
+
+  // }
+  // @media all and (min-width: 576px) {
+  //     padding-bottom: 4rem;
+  // }
+  // @media all and (min-width: 768px) {
+  //     padding-bottom: 4.8rem;
+  // }
+  // @media all and (min-width: 992px) {
+  //     padding-bottom: 6.4rem;
+  // }
+}
+
+// Override Authoring.
+/* stylelint-disable */
+
+/* stylelint-enable */

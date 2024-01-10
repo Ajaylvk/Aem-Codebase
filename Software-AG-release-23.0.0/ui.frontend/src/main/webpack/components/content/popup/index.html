@@ -1,0 +1,27 @@
+<!-- add class "sag-popup__open" and "data-popup-id" to any element to trigger popup -->
+<a class="sag-popup__open" data-popup-id="unique-id">Click here to show the popup</a>
+
+
+<!-- popup template should always have unique id same as attribute "data-popup-id" for ".sag-popup_open" -->
+<div class="sag-popup hide" id="unique-id">
+    <div class="sag-popup__grey-area"></div>
+    <span class="sag-popup__helper"></span>
+    <div class="sag-popup__container">
+        <button aria-label="close popup" class="sag-popup__cross-btn">&times;</button>
+        <div class="sag-popup__content-area">
+            <p>Do you to move outside the region</p>
+        </div>
+        <div class="sag-popup__btn-area">
+            <button class="a-cta a-cta--design-light-button">
+                <span class="a-cta__button">
+                    <span class="a-cta__button-text">Close</span>
+                </span>
+            </button>
+            <button class="a-cta a-cta--design-dark-button">
+                <span class="a-cta__button">
+                    <span class="a-cta__button-text">Redirect</span>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>

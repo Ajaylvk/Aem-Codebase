@@ -1,0 +1,90 @@
+/publishfarm {
+
+    # for help/comments see the default AMS 999_ams_publish_farm.any
+
+	/clientheaders {
+		$include "/etc/httpd/conf.dispatcher.d/clientheaders/ams_publish_clientheaders.any"
+		$include "/etc/httpd/conf.dispatcher.d/clientheaders/ams_common_clientheaders.any"
+	}
+
+	/virtualhosts {
+		$include "/etc/httpd/conf.dispatcher.d/vhosts/softwareag_publish_vhosts.any"
+	}
+
+	/renders {
+		$include "/etc/httpd/conf.dispatcher.d/renders/ams_publish_renders.any"
+	}
+
+	/filter {
+		$include "/etc/httpd/conf.dispatcher.d/filters/softwareag_publish_filters.any"
+	}
+
+	/vanity_urls {
+		/url    "/libs/granite/dispatcher/content/vanityUrls.html"
+		/file   "/tmp/vanity_urls"
+		/delay  300
+	}
+
+	/propagateSyndPost "0"
+
+	/cache {
+
+		/docroot "${PUBLISH_DOCROOT}"
+
+		# stat level 3 = /content/softwareag/country
+		/statfileslevel "3"
+
+        # need to allow authorized to that requests via the basic auth protection are cached.
+		/allowAuthorized "1"
+
+		/serveStaleOnError "1"
+
+		/rules {
+			$include "/etc/httpd/conf.dispatcher.d/cache/ams_publish_cache.any"
+			$include "/etc/httpd/conf.dispatcher.d/cache/softwareag_publish_cache.any"
+		}
+
+		/invalidate {
+			/0000 {
+				/glob "*"
+				/type "deny"
+			}
+			/0001 {
+				/glob "*.html"
+				/type "allow"
+			}
+			# invalidate sitemaps up to statfile level (language)
+            /0002 {
+                /glob "*.xml"
+                /type "allow"
+            }
+		}
+
+		/allowedClients {
+			/0000 {
+				/glob "*.*.*.*"
+				/type "deny"
+			}
+			$include "/etc/httpd/conf.dispatcher.d/cache/ams_publish_invalidate_allowed.any"
+		}
+
+        # ignore all URL params on the publisher (everything cached and params make no difference)
+
+		/ignoreUrlParams {
+			/0001 { /glob "*" /type "allow" }
+		}
+
+		/headers {
+			"Cache-Control"
+			"Content-Disposition"
+			"Content-Type"
+			"Expires"
+			"Last-Modified"
+			"X-Content-Type-Options"
+		}
+
+		#/gracePeriod "2"
+
+		#/enableTTL "1"
+	}
+}

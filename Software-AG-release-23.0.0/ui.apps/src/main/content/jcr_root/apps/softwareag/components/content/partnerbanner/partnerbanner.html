@@ -1,0 +1,53 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.model="com.softwareag.core.models.partner.PartnerBannerModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div class="partnerbanner__wrapper ${!properties.fileReference ? properties.backgroundStyle : ''} ${properties.fontStyle}"
+     data-attrib-name="contentsection">
+
+    <div class="partnerbanner__background-image"
+          data-sly-test="${properties.fileReference}"
+          data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+     </div>
+
+    <div class="content-width"
+         data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+         data-sly-test.hasContent="${properties.icon || properties.title || properties.text || properties.fileReference}">
+
+        <div data-position="${properties.position}"
+             class="partnerbanner__container  ${properties.enableBoxColor ? properties.boxColor : ''}">
+
+            <img class="partnerbanner__icon"
+                 data-sly-test="${properties.icon}"
+                 src="${properties.icon}"
+                 alt="${properties.iconAltText}"
+                 title="${properties.iconAltText}" />
+
+            <h2 class="a-h2" data-sly-test="${properties.title}">
+                <pre class="aem__textarea">
+                    ${properties.title}
+                </pre>
+            </h2>
+
+            <div class="partnerbanner__text partnerbanner__font_normal" data-sly-test="${properties.text}">${properties.text @ context='html'}</div>
+
+            <div class="partnerbanner__tags partnerbanner__font_normal" data-sly-test="${properties.displayTags}">
+                <span data-sly-test="${properties.globalPartner}">${model.globalTagTitle}</span>
+                <span data-sly-test="${properties.globalPartner && properties.partnerLevelTagName}"> :: </span>
+                <span data-sly-test="${properties.partnerLevelTagName}">${properties.partnerLevelTagName}</span>
+            </div>
+
+            <div class="partnerbanner__text partnerbanner__font_normal" data-sly-test="${model.industries}">${model.industries}</div>
+
+            <div class="${!properties.fileReference && properties.backgroundStyle == 'input__colorselect-background-color1' && properties.design == 'link' ? 'a-cta--default-link-color' : ''}"
+                 data-sly-resource="${ @ resourceType='softwareag/components/content/cta'}"></div>
+
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplateFoot="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplateFoot.targetscript @ integrationModel=integrationModel}"></sly>

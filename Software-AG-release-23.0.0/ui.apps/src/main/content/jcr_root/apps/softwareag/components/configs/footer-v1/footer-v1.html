@@ -1,0 +1,65 @@
+<p data-sly-use.footerModel="com.softwareag.core.models.footer.FooterModel_V1"
+   data-sly-test="${footerModel.notValid}"
+   class="message--error">
+    ${footerModel.validationMessage}
+</p>
+
+
+
+<div class="content-width-v2">
+    <div class="row">
+        <div class="col span12">
+            <!--/* Footer Logo */-->
+            <div class="pull-left" data-sly-resource="${ @path='logo', resourceType='softwareag/components/configs/logo'}"></div>
+            <!-- <div class="pull-right col span3">
+                <div data-sly-resource="${'regionorlanguagechangerparsys' @ resourceType='softwareag/components/content/parsys'}" data-sly-unwrap></div>
+            </div> -->
+        </div>
+    </div>
+    <hr class="hide-except-desktop">
+</div>
+
+
+
+<div class="content-width-v2">
+    <div class="row">
+        <!--/* Link Lists */-->
+        <div class="col span9">
+            <div class="row">
+                <div class="footer__list-container" data-sly-resource="${ 'linklistsparsys' @  resourceType='softwareag/components/content/parsys'}"></div>
+            </div>
+        </div>
+
+        <!--/* Blog Footer */-->
+        <div class="col span3" data-sly-resource="${ @path='blogfooter', resourceType='softwareag/components/content/blogfooter'}"></div>
+    </div>
+    <hr>
+</div>
+
+
+
+<!--/*new text component*/-->
+<div class="content-width-v2">
+    <div class="row">
+        <div class="col span12">
+            <div data-sly-resource="${ 'textparsys' @  resourceType='softwareag/components/content/parsys'}"></div>
+        </div>
+    </div>
+</div>
+
+<div class="content-width-v2">
+    <div class="row flex-reverse-order">
+        <!--/* Copyright */-->
+        <div class="col span8 span-copyright">
+            <div data-sly-resource="${ 'copyright' @ resourceType='softwareag/components/content/copyright'}"></div>
+        </div>
+
+        <!--/* Social Media Bar */-->
+        <div class="col span4 span-socialmediabar">
+            <div data-sly-resource="${ 'socialmediabar' @ resourceType='softwareag/components/content/socialmediabar'}"></div>
+        </div>
+    </div>
+</div>
+
+<!--/* Back to top */-->
+<sly data-sly-resource="${ 'back-to-top' @ resourceType='softwareag/components/content/back-to-top'}" />

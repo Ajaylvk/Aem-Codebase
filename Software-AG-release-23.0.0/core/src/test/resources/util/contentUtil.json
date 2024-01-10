@@ -1,0 +1,57 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "language-master",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+        "cq:redirectTarget": "/content/softwareag",
+        "sling:resourceType": "softwareag/components/structure/folder"
+    },
+    "homepage": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Test Homepage",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+            "sling:resourceType": "softwareag/components/structure/homepage"
+        },
+        "first-level-page": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "1st Level Test Page",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+                "sling:resourceType": "softwareag/components/structure/page"
+            },
+            "second-level-page": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "2nd Level Test Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+                    "sling:resourceType": "softwareag/components/structure/page"
+                },
+                "third-level-page": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "3rd Level Test Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+                        "sling:resourceType": "softwareag/components/structure/page"
+                    }
+                }
+            }
+        }
+    },
+    "non-homepage": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Test Non-Homepage",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "sling:resourceType": "softwareag/components/structure/folder",
+            "hideInNav": "true",
+            "cq:redirectTarget": "/content/softwareag"
+        }
+    }
+}

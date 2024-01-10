@@ -1,0 +1,16 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.heroCard="com.softwareag.core.models.KPIModel"></sly>
+<div class="herocard-wrapper">
+  <div class="herocard-animated-text">
+    <div id="herocardv1" data-hero-figure="${heroCard.productsCount}"
+      class="herocard-gradient-txt herocard-gradient-txt-lft"></div>
+    <div class="spchar">${heroCard.symbol @ context='html'}</div>
+  </div>
+  <div class="herocard-content">
+    <div class="herocard-text">${heroCard.description @ context='html'}</div>
+    <div class="herocard-link"
+       data-sly-resource="${'link_' @ resourceType='wcm/foundation/components/parsys'}">
+    </div>
+  </div>
+</div>

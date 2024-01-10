@@ -1,0 +1,156 @@
+// # latestnews CSS
+
+.newsandevents{
+
+    .a-h2-new{
+
+        margin-bottom:5.2rem;
+        @include mq-tablet{
+            margin-bottom:3.6rem;
+        }
+        
+        @include mq-phone{
+            margin-bottom:2.8rem;
+        }
+    }
+
+    .input__colorselect-background-color10{
+      background-color:  $color-core-dark-950; //fof2f4
+    }
+
+    .input__colorselect-background-color1{
+      background-color:$color-white;
+    }
+
+    .error-message-container {
+
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+     
+             @include base-font;
+     
+             text-align: center;
+     
+      }
+
+.newsandevents-v1 {
+    @include spacing(margin,news);
+}
+
+.newsandevents-v1__container{
+
+  flex-grow:1;
+  .newsandevent-item{
+    @include flex-col;
+    @include spacing(padding,newm);
+    color:$color-core-dark-220;
+    height:100%;
+    .a-bodycopy ul{
+      list-style-type: disc;
+      margin-left:3rem;
+    }
+   }
+
+
+ 
+ .newsandevent-item.input__colorselect-background-color7 {
+   background-color:$color-core-light; //Gray
+ }
+ 
+ .newsandevent-item.input__colorselect-background-color1 {
+   background-color:$color-white; //white
+ }
+
+
+
+
+ 
+
+ 
+ .a-h5{
+   @include a-h5-new;
+   @include spacing(margin-bottom,news);
+  }
+  
+  .a-h5,.a-distinction {
+         @include clearfix;
+         @include spacing(margin-bottom,news);
+     }
+     
+ .a-bodycopy{
+   @include  a-bodycopy;
+   flex:1;
+ }
+ 
+ .a-overline{
+   @include  a-overline;
+   color:$color-core-dark-350;
+   @include spacing(margin-bottom,news);
+ }
+
+ .teasercontent{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+ }
+
+
+
+ 
+ //   Link styling variant A
+   
+    .prodcmp-link {
+      display: inline-block;
+      position: relative;
+      font-weight: 700;
+      font-size:16px;
+    }
+   
+    .prodcmp-link__button-icon {
+      display: inline-flex;
+      align-self: center;
+    }
+   
+    .prodcmp-link__button-icon.svg-baseline{
+      display: inline-block;
+      width: 2.4rem;
+      height: 1.8rem;
+      position: absolute;
+     pointer-events: none;
+    }
+
+    .prodcmp-link__button-icon .a-icon.a-icon--to-top {
+      transform: rotate(90deg);
+    }
+   
+    .prodcmp-link__button {
+      text-decoration: none;
+    }
+
+   .prodcmp-link--design-links .prodcmp-link__button:hover .prodcmp-link__button-text {
+      border-bottom: 1px solid #011F3D;
+    }
+   .prodcmp-link--design-links .prodcmp-link__button:focus .prodcmp-link__button-text {
+     border-bottom: 1px solid #011F3D;
+   }
+   
+   .prodcmp-link--design-links .prodcmp-link__button:active .prodcmp-link__button-text{
+      color: #058192;
+      border-bottom: 1px solid #058192;
+    }
+
+
+}
+
+.newsandevents-v1.button.secondary-core-dark-large{
+width:max-content;
+margin:5.2rem auto 0rem auto;
+@include mq-tablet{
+    margin:3.6rem auto 0rem auto;
+}
+
+@include mq-phone{
+    margin:2.8rem auto 0rem auto;
+}
+}
+
+}

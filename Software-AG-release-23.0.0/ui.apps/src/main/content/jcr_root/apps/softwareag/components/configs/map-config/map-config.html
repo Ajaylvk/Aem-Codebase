@@ -1,0 +1,15 @@
+<div class="configuration__block" data-sly-use.mapModel="com.softwareag.core.models.map.Map">
+
+    <h2 class="a-h2" id="tabledesc">Map Configuration</h2>
+
+    <div class="property__block">
+        <dl>
+            <dt data-sly-test.latitude="${mapModel.latitude}">Configured default latitude value:</dt>
+            <dd ${latitude}>${latitude}</dd>
+            <dt data-sly-test.longitude="${mapModel.longitude}">Configured default longitude value:</dt>
+            <dd ${longitude}>${longitude}</dd>
+            <dt data-sly-test.zoomLevel="${mapModel.zoomLevel}">Configured map default zoom level:</dt>
+            <dd ${zoomLevel}>${zoomLevel}</dd>
+        </dl>
+    </div>
+</div>

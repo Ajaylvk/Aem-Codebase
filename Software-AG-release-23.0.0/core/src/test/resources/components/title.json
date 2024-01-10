@@ -1,0 +1,31 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test Page Title",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "title-without-property": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "title-with-property": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:title": "A Title Property",
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "title": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/title",
+                "jcr:title":"a title with \r\ntwo lines",
+                "position": "left",
+                "copyText": "A title with copyText",
+                "fontStyle": "input__colorselect-font-color0",
+                "backgroundStyle": "input__colorselect-background-color3"
+            }
+        }
+    }
+}

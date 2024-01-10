@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Tab Component v1"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <tabtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="The title of the tab component."
+                                        fieldLabel="Title"
+                                        name="./title">                 
+                                    </tabtitle>
+                                    <backgroundcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Choose the background color of the Tab component"
+                                        fieldLabel="Background Color"
+                                        name="./backgroundColor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <coredark120
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 120"
+                                                value="core-dark-120"/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="White"
+                                                value="white"/>
+                                            <coredark950
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 950"
+                                                value="core-dark-950"/>
+                                            <corelight
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Light"
+                                                value="core-light"/>
+                                        </items>
+                                    </backgroundcolor>
+                                    <alignment
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldDescription="Please select the alignment of Tabs list"
+                                    fieldLabel="Alignment"
+                                    name="./alignment">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <select
+                                            jcr:primaryType="nt:unstructured"
+                                            selected="{Boolean}true"
+                                            text="Select Tab list Alignment"
+                                            value=""/>
+                                        <center-aligned
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Center"
+                                            value="align-center"/>
+                                        <left-aligned
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Left"
+                                            value="align-left"/>
+                                    </items>
+                                </alignment>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <panel
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab Panels"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <panels
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./tabPanels">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <hiddenResourceType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="softwareag/components/commons/dialog/hiddenResourceType"
+                                                    name="./sling:resourceType"
+                                                    value="softwareag/components/content/tabpanel-v1"/>
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="The Label of the tab"
+                                                    fieldLabel="Label"
+                                                    name="./label"
+                                                    required="{Boolean}true"/>
+                                                <anchorName
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="An ID to jump to."
+                                                    fieldLabel="Anchor Name"
+                                                    name="./anchorName"/>   
+                                            </items>
+                                        </field>
+                                    </panels>
+                                </items>
+                            </column>
+                        </items>
+                    </panel>
+                    <targetTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_target"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

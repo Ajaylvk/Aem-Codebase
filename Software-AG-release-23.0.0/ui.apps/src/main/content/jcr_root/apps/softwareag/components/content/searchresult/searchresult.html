@@ -1,0 +1,21 @@
+<sly data-sly-use="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use="com.softwareag.core.models.search.Search" />
+   
+<!--/* Search result component start */-->
+<div class="searchresult__container">
+    <div class="text__text">
+        <div id="search_result">
+            <!--/* result tabs */-->
+            <span id="searchResultPrev" class="prev-item" data-sly-call="${icons.getIcon @ name='angle-left', width=30, height=30}" ></span>
+            <span id="searchResultNext" class="next-item" data-sly-call="${icons.getIcon @ name='angle-right', width=30, height=30}" ></span>
+            <div class="ig_facets">          
+            </div>
+            <!--/* intergator results */-->
+            <div class="ig_search">
+
+            </div>
+            <!--/* /intergator results */-->
+        </div>
+    </div>
+</div>

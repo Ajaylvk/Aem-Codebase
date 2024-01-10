@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        allowedPaths="[/content/experience-fragments/softwareag/[^/]+(/.*)target.*,/content/experience-fragments/techcommunity/[^/]+(/.*)target.*,/content/experience-fragments/investorrelation/[^/]+(/.*)target.*],/content/experience-fragments/newscenter/[^/]+(/.*)target.*]"
+        cq:templateType="/conf/softwareag/settings/wcm/template-types/empty-experience-fragment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Software AG XF Target Template"
+        status="enabled" />
+</jcr:root>

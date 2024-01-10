@@ -1,0 +1,1434 @@
+.herobannera-container {
+  width: 100%;
+  position: relative;
+}
+.herobanner_v2 {
+  .svgicon {
+    width: min-content;
+    max-width: 150px;
+    max-height: 50px;
+  }
+}
+
+//different height variations
+.herobannera-container.herobanner-small,
+.herobannera-container.herobanner-small .herobannera-background {
+  height: 360px;
+  @include mq-tablet {
+    height: 360px;
+  }
+  @include mq-phone {
+    height: 600px;
+  }
+}
+
+.herobannerb-container,
+.herobannerb-container.herobanner-small {
+  height: 360px;
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+}
+.herobannerb-container.herobanner-medium {
+  height: 600px;
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+}
+
+.herobannera-container.herobanner-medium,
+.herobannera-container.herobanner-medium .herobannera-background {
+  height: 600px;
+}
+
+.herobannerb-container.herobanner-large {
+  height: 780px;
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+}
+
+.herobannera-container.herobanner-large,
+.herobannera-container.herobanner-large .herobannera-background {
+  height: 780px;
+  @include mq-tablet {
+    height: 600px;
+  }
+  @include mq-phone {
+    height: 600px;
+  }
+}
+// container style for background color and gradient
+.herobannera-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.herobannerb-content {
+  @include mq-tablet {
+    height: max-content !important;
+  }
+}
+.herobannerb-content,
+.herobannera-content {
+  position: relative;
+  height: 100%;
+
+  @include mq-phone {
+    height: max-content;
+  }
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  @include mq-phone {
+    flex-direction: column;
+  }
+  top: 0;
+  padding: 0 2.4rem;
+  @include mq-phone {
+    padding: 0 1.6rem;
+  }
+  max-width: 132rem;
+  margin: auto;
+}
+.herobannera-text-container.middle {
+  @include mq-desktop {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  @include mq-tablet {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+.herobannerb-text-container.font-color-white,
+.herobannera-text-container.font-color-white {
+  color: #ffffff;
+}
+.herobannerb-text-container.font-core-dark,
+.herobannera-text-container.font-core-dark {
+  color: #011f3d;
+}
+.herobannerb-text-container.middle,
+.herobannera-text-container.middle {
+  @include mq-desktop {
+    height: max-content;
+  }
+  @include mq-tablet {
+    height: max-content;
+  }
+}
+.herobannerd-content {
+  height: 100%;
+  .caption {
+    @include base-font-bold();
+    @include font-size-with-rem-line-height(1.4rem, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  .caption:not(:last-child) {
+    padding-bottom: 1.6rem;
+  }
+  .title_d {
+    @include base-font;
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    letter-spacing: 0em;
+
+    // h1:not(:last-child) {
+    //   padding-bottom: 2.4rem;
+    // }
+  }
+  .title_d:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  .description_d {
+    @include base-font;
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    letter-spacing: 0em;
+
+    // p:not(:last-child) {
+    //   padding-bottom: 2.4rem;
+    // }
+
+    // .a-h4l-new:not(:last-child) {
+    //   padding-bottom: 2.4rem;
+    // }
+
+    // h4:not(:last-child) {
+    //   padding-bottom: 2.4rem;
+    // }
+  }
+}
+.herobannerd-content,
+.herobannerb-content,
+.herobannera-text-container {
+  h1:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  h2:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  h3:not(:last-child) {
+    padding-bottom: 1.2rem;
+    @include mq-phone {
+      padding-bottom: 0.8rem;
+    }
+  }
+  h4:not(:last-child) {
+    padding-bottom: 0.8rem;
+  }
+  h5:not(:last-child) {
+    padding-bottom: 0.4rem;
+  }
+  p:not(:last-child):not(:has(*)) {
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  p:not(:last-child) > span.a-display {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-bodycopy-small {
+    display: inline-block;
+    @include mq-desktop {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  p:not(:last-child) > span.a-h1l-new {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-h2l-new {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-h3l-new {
+    display: inline-block;
+    padding-bottom: 1.2rem;
+    @include mq-phone {
+      padding-bottom: 0.8rem;
+    }
+  }
+  p:not(:last-child) > span.a-h4l-new {
+    display: inline-block;
+    padding-bottom: 0.8rem;
+  }
+  p:not(:last-child) > span.a-h5l-new {
+    display: inline-block;
+    padding-bottom: 0.4rem;
+  }
+  p:not(:last-child) > span.a-subtitle-large {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-subtitle-small {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-overline {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-caption {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+.herobannerb-content,
+.herobannera-text-container {
+  height: 100%;
+  .caption {
+    @include base-font-bold();
+    @include font-size-with-rem-line-height(1.4rem, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  .caption:not(:last-child) {
+    padding-bottom: 1.6rem;
+  }
+  .title {
+    @include base-font;
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    letter-spacing: 0em;
+    margin-bottom: 0 !important;
+  }
+  .title:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  .description {
+    @include a-bodycopy;
+    margin-bottom: 0 !important;
+  }
+}
+
+.herobannera-text-container.image-text-40-60 {
+  @include mq-desktop {
+    padding-right: 6.6rem;
+    width: 38.7%;
+  }
+  @include mq-tablet {
+    padding-right: 5.4rem;
+    width: 60%;
+  }
+}
+@media (min-width: 690px) and (max-width: 768px) {
+  .herobannera-text-container.image-text-40-60 {
+    padding-right: 4rem !important;
+    width: 440px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .herobannera-text-container.image-text-40-60 {
+    padding-right: 8rem;
+    width: 493px;
+  }
+}
+.herobannerb-text-container {
+  @include mq-desktop {
+    width: 44%;
+  }
+}
+.herobannerb-text-container {
+  @include mq-desktop {
+    height: 100%;
+  }
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: max-content;
+  }
+}
+.herobannera-text-container.image-text-50-50 {
+  @include mq-desktop {
+    padding-right: 6.6rem;
+    width: 50%;
+  }
+  @include mq-tablet {
+    padding-right: 5.4rem;
+    width: 60%;
+  }
+}
+@media (min-width: 690px) and (max-width: 768px) {
+  .herobannera-text-container.image-text-50-50 {
+    padding-right: 4rem !important;
+    width: 440px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .herobannera-text-container.image-text-50-50 {
+    padding-right: 8rem !important;
+    width: 636px !important;
+  }
+}
+.herobannera-text-container.image-text-60-40 {
+  @include mq-desktop {
+    padding-right: 3rem;
+    width: 58%;
+  }
+  @include mq-tablet {
+    padding-right: 5.4rem;
+    width: 61%;
+  }
+}
+@media (min-width: 720px) and (max-width: 768px) {
+  .herobannera-text-container.image-text-60-40 {
+    padding-right: 4rem !important;
+    width: 438px !important;
+  }
+}
+
+//mobile
+.herobannerb-text-container,
+.herobannera-text-container {
+  @include mq-phone {
+    width: 100%;
+    height: max-content;
+  }
+}
+//desktop-40-60
+.herobannera-image,
+.herobannera-image.image-text-40-60 {
+  @include mq-desktop {
+    left: 40%;
+    width: 60%;
+  }
+  @include mq-tablet {
+    left: 60%;
+    width: 40%;
+  }
+}
+//large desktop-40-60
+@media (min-width: 1590px) and (max-width: 2200px) {
+  .herobannera-image.image-text-40-60 {
+    width: 57% !important;
+    left: 43% !important;
+  }
+}
+@media (min-width: 1590px) and (max-width: 2199px) {
+  .herobannera-background.image-text-40-60 {
+    width: 43.5% !important;
+  }
+}
+@media (min-width: 2200px) {
+  .herobannera-background.image-text-40-60 {
+    width: 45.5% !important;
+  }
+}
+
+// extra large desktop-40-60
+@media (min-width: 2200px) {
+  .herobannera-image.image-text-40-60 {
+    width: 55% !important;
+    left: 45% !important;
+  }
+}
+// desktop-50-50
+.herobannerb-image {
+  @include mq-desktop {
+    left: 48.9%;
+    width: 44.2%;
+  }
+  @include mq-tablet {
+    width: 100%;
+  }
+}
+.herobannera-image.image-text-50-50 {
+  @include mq-desktop {
+    left: 50%;
+    width: 50%;
+  }
+  @include mq-tablet {
+    left: 60%;
+    width: 40%;
+  }
+}
+// desktop-60-40
+.herobannera-image.image-text-60-40 {
+  @include mq-desktop {
+    left: 60%;
+    width: 40%;
+  }
+  @include mq-tablet {
+    left: 60%;
+    width: 40%;
+  }
+}
+// extra large desktop-60-40
+@media (min-width: 2130px) {
+  .herobannera-text-container.image-text-60-40 {
+    width: 69% !important;
+  }
+}
+@media (min-width: 2560px) {
+  .herobannera-text-container.image-text-60-40 {
+    padding-right: 7rem !important;
+  }
+}
+// tablet-50-50 default
+.herobannerb-image {
+  @include mq-tablet {
+    width: 100%;
+  }
+}
+.herobannera-image {
+  @include mq-tablet {
+    left: 40%;
+    width: 60%;
+  }
+}
+.herobannerb-image {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  @include mq-tablet {
+    position: relative;
+  }
+  @include mq-phone {
+    position: relative;
+  }
+  img {
+    // @include mq-desktop {
+    //   height: 330px;
+    // }
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    @include mq-tablet {
+      width: 100%;
+    }
+    @include mq-phone {
+      width: 100%;
+    }
+  }
+}
+.herobannera-image {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  @include mq-phone {
+    position: relative;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.herobannerb-image #herob-desktop {
+  @include mq-tablet {
+    margin: auto;
+    text-align: center;
+  }
+  @include mq-phone {
+    margin: auto;
+    text-align: center;
+  }
+}
+.herobannerb-container .herobannerb-image #herob-desktop,
+.herobannerb-container.herobanner-small .herobannerb-image #herob-desktop {
+  @include mq-desktop {
+    padding-top: 30px;
+  }
+}
+.herobannerb-container.herobanner-medium .herobannerb-image #herob-desktop {
+  @include mq-desktop {
+    padding-top: 0;
+  }
+}
+.herobannerb-container.herobanner-small .herobannerb-image,
+.herobannerb-container.herobanner-medium .herobannerb-image,
+.herobannerb-container.herobanner-large .herobannerb-image {
+  display: flex;
+}
+.herobannerb-container.herobanner-small .herobannerb-image #herob-desktop,
+.herobannerb-container.herobanner-medium .herobannerb-image #herob-desktop,
+.herobannerb-container.herobanner-large .herobannerb-image #herob-desktop {
+  @include mq-desktop {
+    align-self: center;
+  }
+}
+.herobannerb-container.herobanner-large .herobannerb-image #herob-desktop {
+  @include mq-desktop {
+    padding-top: 0;
+  }
+}
+.herobannerb-container.herobanner-small .herobannerb-image,
+.herobannerb-container.herobanner-medium .herobannerb-image,
+.herobannera-container.herobanner-large .herobannera-image {
+  // @include mq-tablet {
+  //   min-height: 240px;
+  // }
+}
+.herobannerb-text-container {
+  @include mq-desktop {
+    padding-right: 2.6rem;
+  }
+}
+.herobannerb-container.herobanner-small .herobannerb-image,
+.herobannera-container.herobanner-small .herobannera-image,
+.herobannerb-container.herobanner-medium .herobannerb-image,
+.herobannera-container.herobanner-medium .herobannera-image,
+.herobannerb-container.herobanner-large .herobannerb-image,
+.herobannera-container.herobanner-large .herobannera-image {
+  // @include mq-phone {
+  //   min-height: 240px;
+  // }
+}
+//background gradient and color desktop-40-60
+.herobannera-background,
+.herobannera-background.image-text-40-60 {
+  @include mq-desktop {
+    width: 43%;
+    height: 100%;
+  }
+  @include mq-tablet {
+    width: 60%;
+    height: 100%;
+  }
+}
+//background gradient and color desktop-60-40
+.herobannera-background.image-text-60-40 {
+  @include mq-desktop {
+    width: 60%;
+    height: 100%;
+  }
+  @include mq-tablet {
+    width: 60%;
+    height: 100%;
+  }
+}
+//background gradient and color desktop-50-50
+.herobannera-background.image-text-50-50 {
+  @include mq-desktop {
+    width: 50%;
+    height: 100%;
+  }
+  @include mq-tablet {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+//background gradient and color mobile
+.herobannera-background {
+  @include mq-phone {
+    width: 100%;
+    height: max-content;
+  }
+}
+.herobannerd-container.white,
+.herobannerd-container.corelight,
+.herobannerd-container.coredark-950 {
+  color: #011f3d;
+}
+.herobannerd-container.coredark-120 {
+  color: #ffffff;
+}
+.herobannerb-container.white,
+.herobannerd-container.white,
+.herobannera-background.white {
+  background-color: #ffffff;
+}
+.herobannerb-container.corelight,
+.herobannerd-container.corelight,
+.herobannera-background.corelight {
+  background-color: #f2f2ea;
+}
+.herobannerb-container.coredark-950,
+.herobannerd-container.coredark-950,
+.herobannera-background.coredark-950 {
+  background-color: #f0f2f4;
+}
+.herobannerb-container.coredark-120,
+.herobannerd-container.coredark-120,
+.herobannera-background.coredark-120 {
+  background-color: #011f3d;
+}
+.herobannerb-container.brightSense-600,
+.herobannera-background.brightSense-600 {
+  background-color: #8e3cf7;
+}
+.herobannerb-container.brightSense-300,
+.herobannera-background.brightSense-300 {
+  background-color: #058192;
+}
+.herobannerb-container.deepPulse-270,
+.herobannera-background.deepPulse-270 {
+  background-color: #3b2c5e;
+}
+.herobannerb-container.multicolor-gradient,
+.herobannerd-gradient-bar.multicolor-gradient,
+.herobannera-background.multicolor-gradient {
+  background: linear-gradient(
+    91.13deg,
+    #8e3cf7 1.93%,
+    #3cc1b7 105.47%,
+    rgba(255, 255, 255, 0) 105.48%,
+    rgba(255, 255, 255, 0) 105.49%
+  );
+}
+.herobannerb-container.brightPulse-gradient,
+.herobannerd-gradient-bar.brightPulse-gradient,
+.herobannera-background.brightPulse-gradient {
+  background: linear-gradient(
+    91.23deg,
+    #3b2c5e 2.09%,
+    #8f3df8 106.43%,
+    rgba(255, 255, 255, 0) 106.44%,
+    rgba(255, 255, 255, 0) 106.45%
+  );
+}
+.herobannerb-container.brightSense-gradient,
+.herobannerd-gradient-bar.brightSense-gradient,
+.herobannera-background.brightSense-gradient {
+  background: linear-gradient(
+    91.2deg,
+    #1c5569 2.05%,
+    #3cc1b7 106.14%,
+    rgba(255, 255, 255, 0) 106.15%,
+    rgba(255, 255, 255, 0) 106.16%
+  );
+}
+.herobannerb-container.coreDark-gradient,
+.herobannerd-gradient-bar.coreDark-gradient,
+.herobannera-background.coreDark-gradient {
+  background: linear-gradient(99.14deg, #011f3d 6.93%, #537393 93.07%);
+}
+.addbannerCTA,
+.herobannera-viewports {
+  display: none;
+}
+.herobannerb-container.herobanner-small .herobannerb-image img {
+  // @include mq-desktop {
+  //   height: 330px !important;
+  // }
+}
+.herobannera-container.herobanner-small .herobannera-image img {
+  @include mq-desktop {
+    height: 360px !important;
+  }
+  @include mq-tablet {
+    height: 360px !important;
+  }
+}
+.herobannerb-container.herobanner-medium .herobannerb-image img {
+  @include mq-desktop {
+    // height: calc(600px - 170px) !important;
+  }
+}
+.herobannera-container.herobanner-medium .herobannera-image img {
+  @include mq-desktop {
+    height: 600px !important;
+  }
+  @include mq-tablet {
+    height: 600px !important;
+  }
+}
+.herobannerb-container.herobanner-large .herobannerb-image img {
+  @include mq-desktop {
+    // height: calc(780px - 348px) !important;
+  }
+}
+.herobannera-container.herobanner-large .herobannera-image img {
+  @include mq-desktop {
+    height: 780px !important;
+  }
+  @include mq-tablet {
+    height: 600px !important;
+  }
+}
+.herobannerb-content-padding,
+.herobannerb-container.herobanner-small .herobannerb-content-padding,
+.herobannera-container.herobanner-small .herobannera-content-padding {
+  @include mq-desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+.herobannerb-container.herobanner-medium .herobannerb-content-padding,
+.herobannerb-container.herobanner-large .herobannerb-content-padding,
+.herobannera-container.herobanner-medium .herobannera-content-padding,
+.herobannera-container.herobanner-large .herobannera-content-padding {
+  @include mq-desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+.herobannerb-content-padding,
+.herobannera-content-padding {
+  @include mq-tablet {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+.herobannerb-content-padding,
+.herobannera-content-padding {
+  @include mq-phone {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+//KPI Styles
+.herobanner_card-container {
+  width: 100%;
+  position: absolute;
+  bottom: -18.8rem;
+  @include mq-tablet {
+    bottom: -19.5rem;
+  }
+  @include mq-phone {
+    position: relative;
+    bottom: 0;
+    margin-top: -7.2rem;
+  }
+  max-width: 132rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  @include mq-phone {
+    flex-direction: column;
+    padding: 0 1.6rem;
+  }
+  @include mq-tablet {
+    padding: 0 2.4rem;
+  }
+  padding: 0 1.2rem;
+  @include mq-tablet-landscape {
+    padding: 0 2.4rem;
+    bottom: -21rem;
+  }
+}
+.herocard-layout-2 > div {
+  @include mq-phone {
+    width: 100%;
+    margin: 0;
+  }
+  @include mq-tablet {
+    margin: 1.2rem 0.8rem;
+  }
+  width: calc((100% / 2));
+  min-height: 204px;
+  @include mq-phone {
+    min-height: 0;
+  }
+  margin: 1.2rem;
+  text-align: left;
+}
+.herocard-layout-2 > div:first-child {
+  @include mq-tablet {
+    margin-left: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-left: 0rem;
+  }
+}
+.herocard-layout-2 > div:last-child {
+  @include mq-tablet {
+    margin-right: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-right: 0rem;
+  }
+}
+.herocard-layout-3 > div {
+  @include mq-phone {
+    width: 100%;
+    margin: 0;
+  }
+  width: calc((100% / 3));
+  margin: 1.2rem;
+  @include mq-tablet {
+    margin: 1.2rem 0.4rem;
+  }
+  min-height: 204px;
+  @include mq-phone {
+    min-height: 0;
+  }
+  text-align: left;
+}
+.herocard-layout-3 > div:first-child {
+  @include mq-tablet {
+    margin-left: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-left: 0rem;
+  }
+}
+.herocard-layout-3 > div:last-child {
+  @include mq-tablet {
+    margin-right: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-right: 0rem;
+  }
+}
+.herobannerc-container.kpicard-present,
+.herobannerb-container.kpicard-present,
+.herobannera-container.kpicard-present {
+  @include mq-desktop {
+    margin-bottom: 18rem;
+  }
+  @include mq-tablet-landscape {
+    margin-bottom: 20rem;
+  }
+  @include mq-tablet {
+    margin-bottom: 21rem;
+  }
+  min-height: 204px;
+}
+.herobannera-container {
+  min-height: 204px;
+}
+//herobanner d styles
+.herobannerd-content-padding {
+  @include mq-desktop {
+    padding-top: 64px;
+    // padding-bottom: 64px;
+  }
+  @include mq-tablet {
+    padding-top: 48px;
+    // padding-bottom: 48px;
+  }
+  @include mq-phone {
+    padding-top: 40px;
+    // padding-bottom: 40px;
+  }
+}
+.herobannerd-gradient-bar {
+  height: 32px;
+  width: 100%;
+}
+.herobannerd-divider {
+  width: 28rem;
+  border-top: 2px solid #8e3cf7;
+  padding-bottom: 32px;
+}
+.herobannerd-divider.center-align {
+  margin: auto;
+}
+.herobannerd-content {
+  .caption.center-align,
+  .title_d.center-align,
+  .description_d.center-align {
+    text-align: center;
+    @include mq-desktop {
+      width: 72rem;
+      margin: auto;
+    }
+  }
+}
+.herobannerd-content {
+  height: max-content !important;
+  width: 100%;
+  max-width: 132rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  margin: auto;
+  @include mq-phone {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+.herobannerd-content .title_d,
+.herobannerd-content .description_d {
+  @include mq-desktop {
+    width: 95rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.herobannerb-content,
+.herobannerb-container {
+  position: relative;
+}
+.herobannerc-viewports,
+.herobannerb-viewports {
+  display: none;
+}
+.herobannerb-content {
+  @include mq-tablet {
+    height: max-content;
+  }
+  @include mq-phone {
+    height: max-content;
+  }
+}
+.herobannerb-text-container.middle {
+  height: max-content !important;
+  align-self: center;
+}
+
+.herobannerb-container #herob-desktop {
+  @include mq-phone {
+    width: 100%;
+  }
+}
+.herobannerb-container #herob-desktop {
+  @include mq-tablet {
+    width: 100%;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  @include mq-phone {
+    width: 100%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+.bannerb-background-image {
+  position: absolute;
+  width: 100%;
+}
+.herobannerb-container.herobanner-large .bannerb-background-image,
+.herobannerb-container.herobanner-large .bannerb-background-image img {
+  @include mq-desktop {
+    height: 780px;
+  }
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+}
+.herobannerb-container.herobanner-medium .bannerb-background-image,
+.herobannerb-container.herobanner-medium .bannerb-background-image img {
+  @include mq-desktop {
+    height: 600px;
+  }
+  height: 100%;
+}
+.herobannerb-container.herobanner-small .bannerb-background-image,
+.herobannerb-container.herobanner-small .bannerb-background-image img {
+  @include mq-desktop {
+    height: 360px;
+  }
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+}
+.herobannerb-container.herobanner-large .bannerb-background-image img,
+.herobannerb-container.herobanner-medium .bannerb-background-image img,
+.herobannerb-container.herobanner-small .bannerb-background-image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.herobannerd-container {
+  @include mq-desktop {
+    // min-height: 360px;
+  }
+  @include mq-tablet {
+    // min-height: 360px;
+  }
+}
+.no-title-padding {
+  padding-bottom: 0 !important;
+}
+
+@include mq-desktop {
+  .herobannerb-container .herobannerb-content {
+    display: flex;
+  }
+  .herobannerb-container .herobannerb-image {
+    position: relative;
+  }
+  .herobannerb-container .herobannerb-image {
+    width: 50%;
+  }
+  .herobannerb-container .herobannerb-image {
+    left: 0;
+  }
+  .herobannerb-container .herobannerb-image {
+    margin-left: 1.6rem;
+  }
+  .herobannerb-container .herobannerb-image img {
+    transform: scaleX(1);
+  }
+  .herobannerb-container .herobannerb-image img {
+    padding-left: 0;
+  }
+  .herobannerb-container .herobannerb-image #herob-desktop {
+    width: 100%;
+  }
+  .herobannerb-container .herobannerb-image #herob-desktop img {
+    vertical-align: middle;
+  }
+  .herobannerb-container .herobannerb-image img {
+    width: 100%;
+  }
+  .herobannerb-container .herobannerb-text-container {
+    margin-right: 1.6rem;
+  }
+  .herobannerb-container .herobannerb-text-container {
+    width: 50%;
+  }
+  .herobannerb-container .herobannerb-text-container {
+    padding-right: 4.8rem;
+  }
+}
+.herobannera-image,
+.herobannerb-image {
+  @include mq-phone {
+    .s7dm-dynamic-media {
+      height: 100%;
+      .s7responsiveContainer {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.herobannerb-image {
+  @include mq-phone {
+    #herob-desktop {
+      height: 100%;
+    }
+  }
+}
+.herobannerb-image {
+  @include mq-tablet {
+    #herob-desktop {
+      height: 100%;
+    }
+    .s7dm-dynamic-media {
+      height: 100%;
+      .s7responsiveContainer {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include mq-desktop {
+  .herobannerb-container.herobanner-small .herobannerb-image {
+    margin-left: 3.2rem !important;
+    width: 587px !important;
+    aspect-ratio: 16/9;
+    .s7dm-dynamic-media {
+      aspect-ratio: 16/9;
+    }
+    #herob-desktop {
+      img {
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+}
+@include mq-desktop {
+  .herobannerb-container.herobanner-large.option_1 .herobannerb-image,
+  .herobannerb-container.herobanner-medium.option_1 .herobannerb-image {
+    width: 50% !important;
+    aspect-ratio: 16/9;
+    .s7dm-dynamic-media {
+      aspect-ratio: 16 / 9;
+    }
+    #herob-desktop {
+      img {
+        aspect-ratio: 16 / 9;
+      }
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+      }
+    }
+  }
+  .herobannerb-container.herobanner-large.option_2 .herobannerb-image,
+  .herobannerb-container.herobanner-medium.option_2 .herobannerb-image {
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    .s7dm-dynamic-media {
+      aspect-ratio: 4 / 3;
+    }
+    #herob-desktop {
+      img {
+        aspect-ratio: 4 / 3;
+      }
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+      }
+    }
+  }
+  .herobannerb-container.herobanner-large.option_3 .herobannerb-image {
+    width: 50%;
+    aspect-ratio: 53 / 50;
+    .s7dm-dynamic-media {
+      aspect-ratio: 53 / 50;
+    }
+    #herob-desktop {
+      img {
+        aspect-ratio: 53 / 50;
+      }
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 53 / 50;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (width: 1024px) {
+  .herobannerb-container.herobanner-small .herobannerb-image {
+    margin-left: 0 !important;
+  }
+  .herobannerb-container.herobanner-small .herobannerb-text-container {
+    margin-right: 0 !important;
+  }
+}
+@media (width: 820px) {
+  .herobannerb-container.herobanner-small .herobannerb-text-container {
+    padding-right: 0rem;
+  }
+}
+// @media (min-width: 1080px) and (max-width: 1149px){
+// .herobannerb-container.herobanner-small .herobannerb-text-container {
+//     margin-right: 0 !important;
+// }
+// }
+
+.herobannerb-container #bannerb-desktop {
+  height: 100%;
+}
+
+.bannerb-background-image {
+  #herob-tablet,
+  #herob-phone {
+    height: 100%;
+  }
+}
+@include mq-phone {
+  .herobannerb-container.herobanner-small .herobannerb-image {
+    img {
+      aspect-ratio: 16/9;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 16 / 9;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-tablet {
+  .herobannerb-container.herobanner-small .herobannerb-image {
+    img {
+      aspect-ratio: 16/9;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 16 / 9;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-tablet {
+  .herobannerb-container.herobanner-large.option_1 .herobannerb-image,
+  .herobannerb-container.herobanner-medium.option_1 .herobannerb-image {
+    img {
+      aspect-ratio: 16/9;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 16 / 9;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-phone {
+  .herobannerb-container.herobanner-large.option_1 .herobannerb-image,
+  .herobannerb-container.herobanner-medium.option_1 .herobannerb-image {
+    img {
+      aspect-ratio: 16/9;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 16 / 9;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-tablet {
+  .herobannerb-container.herobanner-large.option_2 .herobannerb-image,
+  .herobannerb-container.herobanner-medium.option_2 .herobannerb-image {
+    img {
+      aspect-ratio: 4/3;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 4 / 3;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-phone {
+  .herobannerb-container.herobanner-large.option_2 .herobannerb-image,
+  .herobannerb-container.herobanner-medium.option_2 .herobannerb-image {
+    img {
+      aspect-ratio: 4/3;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 4/3;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-tablet {
+  .herobannerb-container.herobanner-large.option_3 .herobannerb-image {
+    img {
+      aspect-ratio: 53/50;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 53/50;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 53/50;
+        width: 100%;
+      }
+    }
+  }
+}
+@include mq-phone {
+  .herobannerb-container.herobanner-large.option_3 .herobannerb-image {
+    img {
+      aspect-ratio: 53/50;
+    }
+    .s7dm-dynamic-media {
+      aspect-ratio: 53/50;
+    }
+    .s7videoplayer {
+      video {
+        aspect-ratio: 53/50;
+        width: 100%;
+      }
+    }
+  }
+}
+.herobannerb-container .herobannerb-image #herob-desktop {
+  // @include mq-tablet {
+  //   margin-bottom: -3px;
+  // }
+  // @include mq-phone {
+  //   margin-bottom: -3px;
+  // }
+}
+.herobannerb-container.herobanner-small
+  .herobannerb-image
+  #herob-desktop
+  > div
+  > img {
+  @include mq-tablet {
+    margin-bottom: -3px;
+  }
+  @include mq-phone {
+    margin-bottom: -3px;
+  }
+}
+.addDropshadow {
+  .s7dm-dynamic-media {
+    @include mq-desktop {
+      box-shadow: 15px 15px 30px rgba(1, 31, 61, 0.25);
+    }
+    @include mq-tablet {
+      box-shadow: 10px 10px 20px rgba(1, 31, 61, 0.25);
+    }
+    @include mq-phone {
+      box-shadow: 10px 10px 20px rgba(1, 31, 61, 0.25);
+    }
+  }
+  img {
+    @include mq-desktop {
+      box-shadow: 15px 15px 30px rgba(1, 31, 61, 0.25);
+    }
+    @include mq-tablet {
+      box-shadow: 10px 10px 20px rgba(1, 31, 61, 0.25);
+    }
+    @include mq-phone {
+      box-shadow: 10px 10px 20px rgba(1, 31, 61, 0.25);
+    }
+  }
+}
+.herobannerb-container.herobanner-medium.option_1
+  .herobannerb-image
+  #herob-desktop
+  > div
+  > img,
+.herobannerb-container.herobanner-large.option_1
+  .herobannerb-image
+  #herob-desktop
+  > div
+  > img {
+  @include mq-tablet {
+    margin-bottom: -3px;
+  }
+  @include mq-phone {
+    margin-bottom: -3px;
+  }
+}
+.herobannerb-container.herobanner-medium.option_2
+  .herobannerb-image
+  #herob-desktop
+  > div
+  > img,
+.herobannerb-container.herobanner-large.option_2
+  .herobannerb-image
+  #herob-desktop
+  > div
+  > img {
+  @include mq-tablet {
+    margin-bottom: -3px;
+  }
+  @include mq-phone {
+    margin-bottom: -2px;
+  }
+}
+.herobannerb-container.herobanner-large.option_3
+  .herobannerb-image
+  #herob-desktop
+  > div
+  > img {
+  @include mq-tablet {
+    margin-bottom: -3px;
+  }
+  @include mq-phone {
+    margin-bottom: -3px;
+  }
+}
+.add-center-style {
+  margin: auto;
+  text-align: center;
+}

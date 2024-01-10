@@ -1,0 +1,44 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetScriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetScriptTemplateTop.targetScript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.table="com.softwareag.core.models.table.Table"
+     class="table__container ${table.design}"
+     data-attrib-name="contentsection"
+     data-sly-attribute.id="${table.anchorName}">
+    <div class="content-width" style="text-align: center">
+        <h2 class="a-h2 a-text-centered" data-sly-test="${properties.title}">${properties.title}</h2>
+
+        <div class="table-wrapper">
+            <table class="styled-table" aria-describedby="table content">
+                <thead>
+                <tr class="thead__row">
+                    <sly data-sly-list.headCellItem="${table.headRow.rowCells}">
+                        <th scope="col" data-sly-attribute="${headCellItem.dataAttributes}"
+                            class="thead__cell"
+                            style="width: ${headCellItem.colWidthPercentageStr @ context='styleToken'}"
+                            data-sly-resource="${headCellItem.path @ resourceType=headCellItem.resourceType}"></th>
+                    </sly>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-sly-repeat.bodyRow="${table.bodyRows}">
+                    <sly data-sly-list.bodyCellItem="${bodyRow.rowCells}">
+                        <td class="${bodyCellItem.backgroundStyle}"
+                            data-sly-attribute="${bodyCellItem.dataAttributes}"
+                            data-colWidth="${bodyCellItem.colWidthPercentageStr @ context='styleToken'}"
+                            data-colsTotal="${bodyCellItemList.count @ context='styleToken'}"
+                            data-sly-resource="${bodyCellItem.path @ resourceType=bodyCellItem.resourceType}">
+                        </td>
+                    </sly>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+        </div>
+
+    </div>
+</div>
+
+<sly data-sly-use.targetScriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetScriptTemplate.targetScript @ integrationModel=integrationModel}"></sly>

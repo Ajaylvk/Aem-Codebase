@@ -1,0 +1,164 @@
+$animation-time: 0.5s;
+
+.languagechanger {
+    color: $color-white;
+    position: relative;
+
+
+    .region__button {
+        @include font-size-with-rem-line-height(1.3rem, 2rem);
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        .region__globe-icon {
+            margin: auto;
+            width: 1.8rem;
+            height: 1.8rem;
+            display: inline-block;
+            margin-left: 0.5rem;
+            margin-top: 0;
+            color: $color-white;
+        }
+    }    
+
+}  
+
+.region__holder {
+    @include font-size-with-rem-line-height(1.2rem, 3rem);
+    color: $color-core-black;
+    background-color: $color-core-light;
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    width: 35rem;
+    display: none;
+    z-index: 100;
+    box-shadow: 0 0 7px #999;
+    animation-name: animatebottom;
+    animation-duration: $animation-time;
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: 3rem;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 3rem;
+        opacity: 1;
+    }
+}
+
+.region__holder--active {
+    display: block;
+}
+
+.region__headline {
+    @include spacing(padding-left, xs);
+    @include spacing(padding-right, xl);
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: $color-white;
+
+    .region__headline-title {
+        @include font-size-with-rem-line-height(1.2rem, 1.5rem);
+        @include spacing(padding, xxs);   
+        @include spacing(padding-left, xxs);
+    }
+
+    .region__globe-icon {
+        float: left;
+        width: 3.5rem;
+        height: 5rem;
+    }
+    
+    .region__options-close {
+        position: absolute;
+        right: $spacing-desktop-xs;
+        top: $spacing-desktop-xs;
+        width: 2.5rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+
+}
+
+.region__options {
+    width: 100%;
+    display: block;
+}
+
+.lang-items {
+    padding: 0;
+
+    .a-copytext {
+        @include base-font-bold;
+        @include spacing(padding-left, s);
+        @include spacing(padding-right, s);
+        @include spacing(padding-top, xxs);
+        @include spacing(padding-bottom, xxs);
+        border-bottom: 1px solid $color-white;
+        margin-bottom: 0;
+        display: block;
+        width: 100%;        
+    }
+}
+
+@include mq-until-tablet {
+    .region__headline {
+        @include spacing(padding-left, m);
+        @include spacing(padding-right, xl);
+        @include spacing(padding-top, xs);
+        @include spacing(padding-bottom, xs);
+        
+        .region__options-close {
+            right: $spacing-desktop-s;
+            top: $spacing-desktop-s;
+        }
+        
+    }
+
+    .region__holder {
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        position: fixed;
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+
+    .region__button-title {
+        display: none;
+    }
+ 
+    .languagechanger .region__button {
+        .region__globe-icon {
+            width: 4rem;
+            height: 4rem;
+        }        
+    }
+
+    .static-region {
+        z-index: -1;
+        position: static;
+        overflow: hidden;
+    }
+}
+
+@include mq-desktop {
+    .static-region {
+        overflow: auto;
+    }
+}

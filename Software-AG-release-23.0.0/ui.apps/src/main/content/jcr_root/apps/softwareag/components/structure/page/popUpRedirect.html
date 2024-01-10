@@ -1,0 +1,48 @@
+<div data-sly-use.model="com.softwareag.core.models.popup.PopUpRedirectModel">
+    <div class="sag-popup hide redirect-popup"
+         id="redirect-popup"
+         data-labels='{
+            "external": {
+                "show": "${model.config.enableRedirectPopUp}",
+                "msg": "${model.config.externalPopUpMessage}",
+                "closeBtnTxt": "${model.config.externalLabelClose}",
+                "redirectBtnTxt": "${model.config.externalLabelRedirect}"
+            },
+            "regional": {
+                "show": "${model.config.enableRegionalPopUp}",
+                "msg": "${model.config.regionalPopUpMessage}",
+                "closeBtnTxt": "${model.config.regionalLabelClose}",
+                "redirectBtnTxt": "${model.config.regionalLabelRedirect}"
+            }
+        }'>
+        <div class="sag-popup__grey-area"></div>
+        <span class="sag-popup__helper"></span>
+        <div class="sag-popup__container" data-template-id="redirect-popup-template">
+            <!-- Template area-->
+        </div>
+
+        <script id="redirect-popup-template" type="text/x-handlebars-template">
+            <button aria-label="close popup" class="sag-popup__cross-btn">&times;</button>
+            <div class="sag-popup__content-area">
+                <p class="a-copytext">{{msg}}</p>
+            </div>
+            <div class="sag-popup__btn-area redirect-popup__btn-area">
+                <button class="redirect-popup__redirect-btn a-cta a-cta--design-dark-button">
+                    <span class="a-cta__button">
+                        <span class="a-cta__button-text">{{redirectBtnTxt}}</span>
+                        <span class="a-cta__button-icon">
+                            <svg class="a-icon a-icon--arrow-up-right">
+                                <use xlink:href="#arrow-up-right"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </button>
+                <button class="redirect-popup__close-btn sag-popup__close-btn a-cta">
+                    <span class="a-cta__button">
+                        <span class="a-cta__button-text">{{closeBtnTxt}}</span>
+                    </span>
+                </button>
+            </div>
+        </script>
+    </div>
+</div>

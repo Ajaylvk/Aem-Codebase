@@ -1,0 +1,90 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.eventOverview="com.softwareag.core.models.event.EventOverviewModel"
+     data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+     data-sly-test.hasContent="${eventOverview.title}">
+    <div class="eventoverview__wrapper"
+         data-attrib-name="contentsection"
+         data-attrib-value="${campaignModel.title}"
+         data-attrib-campaign="${campaignModel.campaign}">
+        <div class="eventoverview__container content-width">
+            <h2 class="eventoverview__title a-h2">${eventOverview.title}</h2>
+            <p class="eventoverview__description a-intro-small">${eventOverview.copyText}</p>
+
+            <div class="eventoverview__filter">
+                <div class="eventoverview__type-filter-wrapper">
+                    <label>
+                        <select class="eventoverview__type-filter select-item" data-sly-list.eventTypeTag="${eventOverview.eventTypeTagList}">
+                            <option class="eventoverview__type-filter-option"
+                                    value=""
+                                    data-sly-test="${eventTypeTagList.first}">${eventOverview.labelEventFilterOptionOne}
+                            </option>
+                            <option class="eventoverview__type-filter-option" value="${eventTypeTag}">${eventTypeTag}</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="eventoverview__type-filter-wrapper">
+                    <label>
+                        <select class="eventoverview__region-filter select-item" data-sly-list.countryTag="${eventOverview.countryTagList}">
+                            <option class="eventoverview__region-filter-option"
+                                    value=""
+                                    data-sly-test="${countryTagList.first}">${eventOverview.labelEventFilterOptionTwo}
+                            </option>
+                            <option class="eventoverview__region-filter-option" value="${countryTag}">${countryTag}</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <ul class="eventoverview__list"
+                data-load-more-items="${eventOverview.amountOfMoreLoadedEventItems}"
+                data-sly-list.eventItem="${eventOverview.eventItems}">
+                <li class="eventoverview__list-item ${eventItemList.index >= eventOverview.amountOfListedEventItems ? 'eventoverview__list-item--hidden' : ''}"
+                    data-sly-test="${!eventItem.hideEventInEventOverview}"
+                    data-event-type="${eventItem.eventType}"
+                    data-event-country="${eventItem.eventCountry}">
+                    <div class="eventoverview__list-item-link">
+                        <div class="eventoverview__list-item-content">
+                            <a class="eventoverview__list-item-link-accessibility"
+                               href="${eventItem.link.href}"
+                               target="${eventItem.link.target}"
+                               data-attrib-type="asset"
+                               data-attrib-name="${eventItem.eventTitle}"></a>
+                            <div class="eventoverview__list-item-country a-distinction">${eventItem.eventType} :: ${eventItem.eventCountry}</div>
+                            <div class="eventoverview__list-item-date a-copytext"
+                                 data-sly-use.startDate="${'com.softwareag.core.models.DateTimeModel' @ input=eventItem.eventStartDate, format=eventOverview.getGeneralConfigDateFormat}"
+                                 data-sly-use.endDate="${'com.softwareag.core.models.DateTimeModel' @ input=eventItem.eventEndDate, format=eventOverview.getGeneralConfigDateFormat}"
+                                 data-sly-use.config="com.softwareag.core.models.GeneralConfigModel">
+                                ${startDate.output}
+                                <sly data-sly-test="${endDate.output}">- ${endDate.output}</sly>
+                            </div>
+                            <h4 class="eventoverview__list-item-title a-h4">${eventItem.eventTitle @ context='html'}</h4>
+                            <div class="eventoverview__list-item-description a-copytext">
+                                ${eventItem.eventDescription @ context='html'}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="eventoverview__load-more a-cta a-cta--design-dark-button">
+                <span class="a-cta__button">
+                    <span class="a-cta__button-text">
+                        ${eventOverview.labelLoadMore}
+                    </span>
+                </span>
+            </button>
+
+            <label>
+                <input class="eventoverview__currently-shown-items" value="${eventOverview.amountOfListedEventItems}">
+            </label>
+        </div>
+    </div>
+</sly>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventPage",
+  "mainEntity":${eventOverview.JsonString @context="unsafe"}
+}
+</script>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <latitude
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldLabel="Latitude"
+            fieldDescription="The latitude of the office location."
+            name="./latitude"
+            required="{Boolean}true" />
+        <longitude
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldLabel="Longitude"
+            fieldDescription="The longitude of the office location."
+            name="./longitude"
+            required="{Boolean}true" />
+        <officeText
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+            fieldLabel="Office Text"
+            fieldDescription="Text for the popup of the office."
+            name="./text" />
+        <linkLabel
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldLabel="Link Label"
+            fieldDescription="To configure the link label."
+            name="./link/text"
+            required="{Boolean}true" />
+        <linkUrl
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+            fieldLabel="Link Destination"
+            fieldDescription="To configure the link destination."
+            name="./link/href"
+            rootPath="/content"
+            required="{Boolean}true" />
+    </items>
+</jcr:root>
+

@@ -1,0 +1,366 @@
+.herobanner-teaser {
+  position: relative;
+  .herobanner-teaser_overline {
+    @include base-font-bold();
+    @include font-size-with-rem-line-height(1.4rem, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding-bottom: 1.6rem;
+  }
+  .herobanner-teaser_headline,
+  .herobanner-teaser_headline h2 {
+    @include base-font-light;
+    @include mq-desktop {
+      @include font-size-with-rem-line-height(4.2rem, 5rem);
+    }
+    @include mq-tablet {
+      @include font-size-with-rem-line-height(3.4rem, 4.2rem);
+    }
+    @include mq-phone {
+      @include font-size-with-rem-line-height(2.8rem, 3.4rem);
+    }
+  }
+  .herobanner-teaser_text.text-top,
+  .herobanner-teaser_text.text-bottom {
+    text-align: center;
+    width: 800px;
+    @include mq-tablet {
+      width: 100%;
+    }
+    @include mq-phone {
+      width: 100%;
+    }
+    margin: 0 auto;
+    .herobanner-teaser_divider {
+      margin: 0 auto;
+    }
+  }
+  .herobanner-teaser_text.text-left {
+    text-align: left;
+    width: 60%;
+    padding-right: 15.8rem;
+    margin-right: 1.6rem;
+  }
+  // add this only when we select text box and no image on herobanner-teaser_text for text-top and text-bottom
+
+  // if there is no image for text-left
+  .text-left_no-image {
+    width: 95rem !important;
+  }
+  .herobanner-teaser_text.text-left.banner_only-text {
+    margin-right: 0 !important;
+  }
+  // add this only when we select text box and no image on herobanner-teaser_text for text-left, text-bottom or text-top
+
+  .banner_only-text {
+    padding: 2.4rem !important;
+    @include mq-tablet {
+      width: 100% !important;
+    }
+    @include mq-phone {
+      width: 100% !important;
+      padding: 1.6rem !important;
+    }
+  }
+  .herobanner-teaser_description {
+    @include base-font;
+    @include mq-phone {
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    }
+    @include mq-tablet {
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    }
+    @include mq-desktop {
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    }
+    h3 {
+      @include base-font-bold;
+      @include mq-desktop {
+        @include font-size-with-rem-line-height(3.2rem, 4rem);
+      }
+      @include mq-tablet {
+        @include font-size-with-rem-line-height(2.8rem, 3.4rem);
+      }
+      @include mq-phone {
+        @include font-size-with-rem-line-height(2.4rem, 3rem);
+      }
+    }
+    h3:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+    h4 {
+      @include base-font-bold;
+      @include mq-desktop {
+        @include font-size-with-rem-line-height(2.4rem, 3rem);
+      }
+      @include mq-tablet {
+        @include font-size-with-rem-line-height(2.4rem, 3rem);
+      }
+      @include mq-phone {
+        @include font-size-with-rem-line-height(2.2rem, 2.8rem);
+      }
+    }
+    h4:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+    h5 {
+      @include mq-phone {
+        @include font-size-with-rem-line-height(2rem, 2.6rem);
+      }
+      @include mq-tablet {
+        @include font-size-with-rem-line-height(2rem, 2.6rem);
+      }
+      @include mq-desktop {
+        @include font-size-with-rem-line-height(2rem, 2.6rem);
+      }
+      @include base-font-bold;
+    }
+    h5:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+    h6 {
+      @include base-font-light;
+      @include mq-desktop {
+        @include font-size-with-rem-line-height(2.4rem, 3.4rem);
+      }
+      @include mq-tablet {
+        @include font-size-with-rem-line-height(2.4rem, 3.4rem);
+      }
+      @include mq-phone {
+        @include font-size-with-rem-line-height(2.2rem, 2.8rem);
+      }
+    }
+    h6:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+  }
+  //if description present that add the padding bottom else it will take the padding top from the link
+  .herobanner-teaser_desc-present {
+    padding-bottom: 2.4rem;
+  }
+}
+.herobanner-teaser_background-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  #teaser-desktop,
+  #teaser-tablet,
+  #teaser-phone {
+    height: 100%;
+  }
+  #teaser-desktop,
+  #teaser-tablet,
+  #teaser-phone {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .s7dm-dynamic-media {
+    height: 100%;
+    width: 100%;
+    .s7responsiveContainer {
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.herobanner_foreground-image {
+  width: 492px;
+  img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+  }
+  .s7dm-dynamic-media {
+    height: 100%;
+    width: 100%;
+  }
+  .s7responsiveContainer {
+    img {
+      object-fit: cover;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  .s7videoplayer {
+    video {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .herobanner_foreground-image.text-top,
+  .herobanner_foreground-image.text-bottom {
+    width: 100%;
+  }
+}
+.herobanner-teaser_content.text-top .herobanner_foreground-image {
+  margin: 0 auto;
+}
+.herobanner-teaser_content.text-bottom .herobanner_foreground-image {
+  margin: 0 auto;
+}
+.herobanner-teaser_content.text-left .herobanner_foreground-image {
+  width: 40%;
+  margin-left: 1.6rem;
+  @include mq-tablet {
+    width: 76%;
+  }
+  @include mq-phone {
+    width: 100%;
+  }
+}
+.herobanner-teaser_content.text-top
+  div.herobanner_foreground-image:nth-child(2) {
+  @include mq-desktop {
+    padding-top: 48px;
+  }
+  @include mq-tablet {
+    padding-top: 40px;
+  }
+  @include mq-phone {
+    padding-top: 32px;
+  }
+}
+
+.herobanner-teaser_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include mq-desktop {
+    padding: 8rem 2.4rem;
+  }
+  @include mq-tablet {
+    padding: 6.4rem 2.4rem;
+  }
+  @include mq-phone {
+    padding: 5.6rem 2.4rem;
+  }
+}
+
+.herobanner-teaser_content.text-left {
+  flex-direction: row;
+  max-width: 132rem;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  @include mq-tablet {
+    flex-direction: column;
+  }
+  @include mq-phone {
+    flex-direction: column;
+  }
+  .herobanner_foreground-image {
+    @include mq-tablet {
+      margin-left: 0;
+      padding-top: 4.8rem;
+    }
+    @include mq-phone {
+      margin-left: 0;
+      padding-top: 3.2rem;
+    }
+  }
+  .herobanner-teaser_text {
+    @include mq-tablet {
+      padding-right: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+    @include mq-phone {
+      padding-right: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+.herobanner-teaser_content.text-top {
+  flex-direction: column;
+}
+.herobanner-teaser_content.text-bottom {
+  flex-direction: column-reverse;
+  div.herobanner_foreground-image {
+    @include mq-desktop {
+      padding-bottom: 48px;
+      padding-top: 0;
+    }
+    @include mq-tablet {
+      padding-bottom: 40px;
+      padding-top: 0;
+    }
+    @include mq-phone {
+      padding-bottom: 32px;
+      padding-top: 0;
+    }
+  }
+}
+.herobanner-teaser_divider {
+  padding-bottom: 3.2rem;
+  border-top: 2px solid #8e3cf7;
+  width: 28rem;
+}
+.teaser-white {
+  background-color: #ffff;
+}
+.teaser-corelight {
+  background-color: #f2f2ea;
+}
+.teaser-coreDark-950 {
+  background-color: #f0f2f4;
+}
+.teaser-coreDark-120 {
+  background-color: #011f3d;
+}
+.teaser-brightSense-600 {
+  background-color: #8e3cf7;
+}
+.teaser-brightSense-300 {
+  background-color: #058192;
+}
+.teaser-deepPulse-270 {
+  background-color: #3b2c5e;
+}
+.teaser-multiGradient {
+  background: linear-gradient(99.14deg, #8e3cf7 6.93%, #3cc1b6 93.07%);
+}
+.teaser-brightPulseGradient {
+  background: linear-gradient(99.14deg, #3b2c5e 6.93%, #8e3cf7 93.07%);
+}
+.teaser-brightSenseGradient {
+  background: linear-gradient(99.14deg, #1c5569 6.93%, #3cc1b6 93.07%);
+}
+.teaser-coreDarkGradient {
+  background: linear-gradient(99.14deg, #011f3d 6.93%, #537393 93.07%);
+}
+.herobanner-teaser_text.white {
+  color: #ffff;
+}
+.herobanner-teaser_text.coreDark {
+  color: #011f3d;
+}
+.herobanner-teaser_content.text-left,
+.herobanner-teaser_text.text-left {
+  @include mq-desktop {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+.herobanner_foreground-image.text-left {
+  @include mq-tablet {
+    align-self: flex-start;
+  }
+}
+.teaser-viewports {
+  display: none;
+}
+
+// .herobanner-teaser_link
+// .banner-cta .bannercta__wrapper .bannercta__grid.center-align>div{
+// margin-top:32px !important;
+// }

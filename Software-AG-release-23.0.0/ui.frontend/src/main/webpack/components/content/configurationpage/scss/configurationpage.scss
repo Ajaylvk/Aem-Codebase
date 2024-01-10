@@ -1,0 +1,59 @@
+// Config page
+.configuration__block {
+    padding: 2rem 4rem;
+
+    .header & {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include clearfix();
+}
+
+.property__block {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 4rem;
+    @include clearfix();
+
+    .a-h2 {
+        margin-bottom: 2rem;
+
+    }
+
+    .a-h4 {
+        color: $color-deep-sense;
+    }
+
+    img {
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    p {
+        @include font-size-with-rem-line-height(1.6rem, 1.25);
+    }
+
+    .message--error {
+        color: $color-red;
+    }
+
+    dl {
+        @include font-size-with-rem-line-height(1.6rem, 1.25);
+        text-align: left;
+        @include clearfix();
+    }
+
+    dt {
+        float: left;
+        clear: left;
+        width: 35rem;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    dd {
+        margin: 0 0 0 15rem;
+        padding: 0 0 0.5em;
+    }
+}

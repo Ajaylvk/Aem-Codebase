@@ -1,0 +1,29 @@
+<sly data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.accordionPanel="com.softwareag.core.models.accordion.AccordionPanel">
+
+    <sly data-sly-test.isEdit="${wcmmode.edit}">
+        <sly data-sly-call="${innerContent @ icons=icons, accordionPanel=accordionPanel, expandedClass=' accordion-item--open'}"></sly>
+    </sly>
+    <sly data-sly-test="${!isEdit}">
+        <sly data-sly-call="${innerContent @ icons=icons, accordionPanel=accordionPanel, expandedClass=''}"></sly>
+    </sly>
+
+</sly>
+
+
+<sly data-sly-template.innerContent="${@ icons, accordionPanel, expandedClass}">
+    <div class="accordion-item__container${expandedClass}">
+        <button class="accordion-item__button" data-attrib-type="asset" data-attrib-name="${accordionPanel.titlePanel}">
+            <div class="accordion-item__button-title">${accordionPanel.titlePanel}</div>
+            <div class="accordion-item__button-subtitle">${accordionPanel.subtitle}</div>
+            <span class="accordion-item__button-icon accordion-item__button-icon--open" data-sly-call="${icons.getIcon @ name='plus'}"></span>
+            <span class="accordion-item__button-icon accordion-item__button-icon--close" data-sly-call="${icons.getIcon @ name='minus'}"></span>
+        </button>
+
+        <div class="accordion-item__content-container">
+            <div class="accordion-item__content"
+                 data-sly-resource="${'parsys' @ resourceType='softwareag/components/content/parsys'}">
+            </div>
+        </div>
+    </div>
+</sly>

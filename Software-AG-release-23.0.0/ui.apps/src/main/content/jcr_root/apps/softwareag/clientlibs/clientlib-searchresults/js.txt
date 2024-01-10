@@ -1,0 +1,7 @@
+#base=js
+handlebars.min.js
+handlebars-helper.js
+jQuery.igSearch.js
+jQuery.igSuggestions.js
+handleArrowTabs.js
+

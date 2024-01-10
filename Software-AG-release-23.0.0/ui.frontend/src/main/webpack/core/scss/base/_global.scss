@@ -1,0 +1,309 @@
+@import "../helper/mixins";
+
+html {
+  font-size: 10px;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include base-font;
+
+  background-color: $color-core-light;
+  color: $color-core-black;
+  min-height: 100%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .xf-content-height {
+    margin: 0;
+    min-height: 40px !important;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  @include mq-until-tablet {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+#sag__content {
+  background: $color-white;
+
+  // Components with max screen width and restricted content container inside.
+  .homepagebanner,
+  .herobanner,
+  .gridcontainer,
+  .eventoverview,
+  .eventitem,
+  .pressoverview,
+  .pressitem,
+  .download,
+  .title,
+  .inpagenavigation,
+  .searchresult,
+  .inpagenavigation {
+    max-width: $mq-max-allowed-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__container {
+      @include mq-desktop {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $mq-desktop-width;
+      }
+    }
+  }
+
+  // Regular components
+  .carousel,
+  .customerbanner,
+  .text,
+  .textmedia,
+  .textmediabanner,
+  .marketoform,
+  .media {
+    max-width: $mq-desktop-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // full-width components
+  /* stylelint-disable */
+  > div.header,
+  > div.footer {
+    @include mq-from-desktop {
+      max-width: none;
+    }
+  }
+
+  /* stylelint-enable */
+}
+
+.footer > row {
+  position: relative;
+}
+
+.jump_to {
+  scroll-margin-top: 15rem;
+
+  @include mq-phone {
+    scroll-margin-top: 10rem;
+  }
+}
+
+/* stylelint-disable selector-no-vendor-prefix */
+::-webkit-input-placeholder {
+  // This fixes a bug in Microsoft Edge which has been fixed in Creator's Update: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/3901363/
+  // Placeholders with opacity < 1.0 will be hidden
+  opacity: 1;
+}
+/* stylelint-enable */
+
+/*  Below CSS for layouts 33.3%, 50%, 66.6%, 100%  */
+.parsys {
+  [data-layout] {
+    padding: $spacing-mobile-xs 0;
+    height: auto;
+    width: 100%;
+
+    @include mq-from-tablet {
+      padding: $spacing-tablet-xs;
+    }
+  }
+
+  @include mq-from-tablet {
+    [data-layout="small"],
+    [data-layout="medium"],
+    [data-layout="large"] {
+      width: 50%;
+    }
+
+    [data-layout="fullSize"] {
+      width: 100%;
+    }
+  }
+
+  @include mq-from-desktop {
+    [data-layout="small"] {
+      width: 33.3%;
+    }
+
+    [data-layout="medium"] {
+      width: 50%;
+    }
+
+    [data-layout="large"] {
+      width: 66.6%;
+    }
+
+    [data-layout="fullSize"] {
+      width: 100%;
+    }
+  }
+}
+.articlemedia .article-media__text,
+.herobannera-text-container .title,
+.herobannera-text-container .description,
+.herobannerb-text-container .title,
+.herobannerb-text-container .description,
+.herobannerc-text-container .title,
+.herobannerc-text-container .description,
+.herobannerd-content .title,
+.herobannerd-content .description,
+.hero-text .hero-text-container .hero-description,
+.text_V4-wrapper.core-light-930 .text_V4-description,
+.text_V4-wrapper.core-dark-950 .text_V4-description,
+.text_V4-wrapper.white .text_V4-description,
+.text_V3-wrapper.core-light-930 .text_V3-description,
+.text_V3-wrapper.core-dark-950 .text_V3-description,
+.text_V3-wrapper.white .text_V3-description,
+.media-v1__wrapper.tab-media .media-content .tab-subheading,
+.media-v1__wrapper.tab-media .media-content .tab-heading,
+.media-v1__wrapper.no-tab-media.media-core-dark-950 .media-description,
+.media-v1__wrapper.no-tab-media.media-core-light-930 .media-description,
+.media-v1__wrapper.no-tab-media.media-white .media-description,
+.accordion-wrapper .accordion-content,
+.contactus-whitewrapper .a-bodycopy,
+.contactus-tile-container .form-tile-item .a-bodycopy,
+.productteaserd.input__colorselect-background-color1 .a-bodycopy,
+.productteaserd.input__colorselect-background-color10 .a-bodycopy,
+.productteaserd.input__colorselect-background-color7 .a-bodycopy,
+.productteaserc.input__colorselect-background-color1 .a-bodycopy,
+.productteasera.input__colorselect-background-color7 .a-bodycopy,
+.productteasera.input__colorselect-background-color10 .a-bodycopy,
+.productteasera.input__colorselect-background-color1 .a-bodycopy,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color2
+  .a-bodycopy,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color1
+  .a-bodycopy,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color4
+  .a-bodycopy,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color2
+  .textmedia_v2__container
+  .textmedia_v2-text,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color1
+  .textmedia_v2__container
+  .textmedia_v2-text,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color4
+  .textmedia_v2__container
+  .textmedia_v2-text,
+.text_v2__container.input__colorselect-text-background-text-component-color1
+  .textV2-text,
+.text_v2__container.input__colorselect-text-background-text-component-color2
+  .textV2-text,
+.text_v2__container.input__colorselect-text-background-text-component-color4
+  .textV2-text,
+.layoutcontainer-wrapper.input__colorselect-background-color1
+  .layoutcontainer_spacing
+  .layoutcontainer__text,
+.layoutcontainer-wrapper.input__colorselect-background-color10
+  .layoutcontainer_spacing
+  .layoutcontainer__text,
+.layoutcontainer-wrapper.input__colorselect-background-color7
+  .layoutcontainer_spacing
+  .layoutcontainer__text,
+.input__colorselect-background-color10 .article-teasercontent .a-bodycopy,
+.input__colorselect-background-color1 .article-teasercontent .a-bodycopy,
+.input__colorselect-background-color7 .article-teasercontent .a-bodycopy,
+.article-emphasis-text.corelight,
+.article-emphasis-text.core-light-950,
+.article-text .article-text-summary,
+.articlequote .quote,
+.article-intro-text {
+  a[href] {
+    letter-spacing: 0em;
+    text-align: center;
+    color: #058192;
+    border-bottom: 1px solid #058192;
+  }
+  a[href]:visited {
+    color: #5b25a7 !important;
+    border-bottom: 1px solid #5b25a7 !important;
+  }
+  a[href]:focus {
+    letter-spacing: 0em;
+    text-align: center;
+    color: #058192;
+    border-bottom: 1px solid #058192;
+  }
+  a[href]:hover {
+    letter-spacing: 0em;
+    text-align: center;
+    color: #058192;
+    border-bottom: 1px solid #058192;
+  }
+  a[href]:active {
+    color: #1c5569;
+    border-bottom: 1px solid #1c5569;
+  }
+  a[href]:disabled {
+    color: #011f3d;
+    border-bottom: 1px solid #011f3d;
+    opacity: 50%;
+  }
+}
+.article-emphasis-text.core-dark-220,
+.bottomRibbon-width .btmRibbon .bottomRibbon-txt,
+.text_V3-wrapper.core-dark-220 .text_V3-description,
+.text_V3-wrapper.core-dark-120 .text_V3-description,
+.text_V4-wrapper.core-dark-220 .text_V4-description,
+.text_V4-wrapper.core-dark-120 .text_V4-description,
+.media-v1__wrapper.no-tab-media.media-core-dark-120 .media-description,
+.articleteaserb.input__colorselect-background-color8
+  .articleBBodyColumn
+  .a-bodycopy,
+.productteaserb.input__colorselect-background-color9 .a-bodycopy,
+.productteaserb.input__colorselect-background-color8 .a-bodycopy,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color3
+  .a-bodycopy,
+.textmediacontainer-wrapper.input__colorselect-text-background-text-component-color3
+  .textmedia_v2__container
+  .textmedia_v2-text,
+.text_v2__container.input__colorselect-text-background-text-component-color3
+  .textV2-text,
+.layoutcontainer-wrapper.input__colorselect-background-color8
+  .layoutcontainer_spacing
+  .layoutcontainer__text,
+.articleteaserb.input__colorselect-background-color9
+  .articleBBodyColumn
+  .a-bodycopy,
+.input__colorselect-background-color9 .article-teasercontent .a-bodycopy,
+.input__colorselect-background-color9
+  .article-teasercontent
+  .articleBBodyColumn
+  .a-bodycopy {
+  a[href] {
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3cc1b7;
+    border-bottom: 1px solid #3cc1b7;
+  }
+  a[href]:visited {
+    color: #dabffc !important;
+    border-bottom: 1px solid #dabffc !important;
+  }
+  a[href]:focus {
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3cc1b7;
+    border-bottom: 1px solid #3cc1b7;
+  }
+  a[href]:hover {
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3cc1b7;
+    border-bottom: 1px solid #3cc1b7;
+  }
+  a[href]:active {
+    color: #8adbd5;
+    border-bottom: 1px solid #8adbd5;
+  }
+  a[href]:disabled {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    opacity: 50%;
+  }
+}

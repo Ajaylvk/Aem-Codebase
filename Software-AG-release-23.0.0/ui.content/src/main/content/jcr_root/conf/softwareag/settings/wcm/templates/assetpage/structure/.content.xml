@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/softwareag/settings/wcm/templates/assetpage"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="softwareag/components/structure/basic-page">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/header">
+        </header>
+        <assetcomponent
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/asset"
+            editable="{Boolean}true">
+        </assetcomponent>
+        <topparsys
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/parsys"
+            editable="{Boolean}true">
+        </topparsys>
+        <relatedassetcomponent
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/relatedasset"
+            editable="{Boolean}true">
+        </relatedassetcomponent>
+        <bottomparsys
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/parsys"
+            editable="{Boolean}true">
+        </bottomparsys>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/footer">
+        </footer>
+    </jcr:content>
+</jcr:root>

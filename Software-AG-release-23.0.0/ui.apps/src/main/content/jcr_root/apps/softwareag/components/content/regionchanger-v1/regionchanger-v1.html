@@ -1,0 +1,35 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html">
+    <sly data-sly-use.icons="softwareag/components/commons/svg/icons.html" />
+    <sly data-sly-use.regionChangerNew="com.softwareag.core.models.regionchanger.RegionChangerModelNew"></sly>
+
+    <div class="regionchanger-v1 pull-right">
+        <div class="regionchanger-v1__container">
+            <button class="region-v1__button"
+                title="${regionChangerNew.title}"><span class="region-v1__globe-icon a-icon--global"
+                    data-sly-call="${icons.getIcon @ name='language-core-dark120'}"></span>
+            </button>
+            <div id="region-container" class="region-v1__holder">
+                <div class="region-v1__headline">
+                    <span class="region-v1__headline-title">${regionChangerNew.introductoryText}</span>
+                    <span class="region-v1__options-close a-icon--close"
+                        data-sly-call="${icons.getIcon @ name='close'}"></span>
+                </div>
+                <div class="region-v1__options">
+                    <ul data-sly-list.item=${regionChangerNew.mapRegion}
+                        class="fontStyle region-v1-list region-v1-option-item region-item-background-color">
+                        <a href="${regionChangerNew.mapRegion[item][1]}">
+                        <li id="${item}" data-regionLanguage="${regionChangerNew.mapRegion[item][2]}" class="region-v1-items">
+                            ${item}<span data-sly-test="${!itemList.first}" style="color: #7E96AE;"> | </span>
+                            <span style="color: #7E96AE;" data-sly-test="${itemList.first}">(</span
+                            ><span style="color: #7E96AE;">${regionChangerNew.mapRegion[item][0]}</span
+                            ><span style="color: #7E96AE;" data-sly-test="${itemList.first}">)</span>
+                        </li>
+                        </a>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

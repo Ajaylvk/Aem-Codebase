@@ -1,0 +1,28 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.blogFooter="com.softwareag.core.models.blog.BlogFooterModel">
+    <sly data-sly-test="${blogFooter.link.href}">
+        <a href="${blogFooter.link.href}" target="${blogFooter.link.target}">
+            <div class="blogfooter__container">
+                <h2 data-sly-test="${blogFooter.title}" class="a-h5-new">
+                    ${blogFooter.title}
+                </h2>
+                <p data-sly-test="${blogFooter.copyText}" class="a-bodycopy">
+                    ${blogFooter.copyText}
+                </p>
+                <img data-sly-test="${blogFooter.image}" class="a-responsive-image" src="${blogFooter.image}" alt="${blogFooter.blogAltText}" title="${blogFooter.blogAltText}" />
+            </div>
+        </a>
+    </sly>
+    <sly data-sly-test="${!blogFooter.link.href}">
+        <div class="blogfooter__container">
+            <h2 data-sly-test="${blogFooter.title}" class="a-h4-new">
+                ${blogFooter.title}
+            </h2>
+            <p data-sly-test="${blogFooter.copyText}" class="a-bodycopy">
+                ${blogFooter.copyText}
+            </p>
+            <img data-sly-test="${blogFooter.image}" class="a-responsive-image" src="${blogFooter.image}" alt="${blogFooter.blogAltText}" title="${blogFooter.blogAltText}" />
+        </div>
+    </sly>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !blogFooter.hasContent}"></sly>

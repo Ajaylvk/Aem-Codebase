@@ -1,0 +1,105 @@
+.contentitem {
+    height: 100%;
+}
+
+.contentitem__container {
+    height: 100%;
+    margin-bottom: 2rem;
+
+    .s7dm-dynamic-media {
+        overflow: hidden;
+        height: 17.5rem;
+    }
+
+    img {
+        position: relative;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.contentitem__link {
+    display: block;
+    height: 100%;
+
+    &:hover {
+        box-shadow: 1rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+}
+
+.contentitem__content {
+    @include link-hover();
+
+    background-color: $color-white;
+    height: 100%;
+
+    .a-distinction {
+        color: $color-core-black-55;
+    }
+
+    .a-h4,
+    .a-copytext,
+    .a-distinction {
+        @include clearfix;
+        @include spacing(margin-bottom, s);
+    }
+
+    .a-copytext {
+        overflow: hidden;
+        flex-grow: 1;
+        @include mq-phone {
+            margin-bottom: $spacing-mobile-m;
+        }
+
+        p:last-child,
+        ul:last-child,
+        ol:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &[data-fullsize=true] .s7dm-dynamic-media {
+        @include mq-phone {
+            margin-left: -$spacing-mobile-m;
+            margin-right: -$spacing-mobile-m;
+            margin-top: -$spacing-mobile-m;
+        }
+        @include mq-tablet {
+            margin-left: -$spacing-tablet-m;
+            margin-right: -$spacing-tablet-m;
+            margin-top: -$spacing-tablet-m;
+        }
+        @include mq-desktop {
+            margin-left: -$spacing-desktop-m;
+            margin-right: -$spacing-desktop-m;
+            margin-top: -$spacing-desktop-m;
+        }
+    }
+}
+
+.contentitem__content-wrapper {
+    @include spacing(padding-top, m);
+    @include spacing(padding-bottom, m);
+    @include spacing(padding-left, s);
+    @include spacing(padding-right, s);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+}
+
+// only do that if image or video is provided
+.s7dm-dynamic-media + .contentitem__content-wrapper {
+    height: calc(100% - 17.5rem);
+}
+
+// Content Item layout attribute
+.filtercontainer .parsys {
+    .hidden,
+    .filtered {
+        display: none;
+    }
+}

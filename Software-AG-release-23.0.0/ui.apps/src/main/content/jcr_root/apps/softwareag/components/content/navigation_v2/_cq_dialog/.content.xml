@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header Navigation Component v2"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[showhidemulti.clientlibs]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                        <alignment
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Please select the alignment of header"
+                        fieldLabel="Alignment"
+                        name="./alignment">
+                        <items jcr:primaryType="nt:unstructured">
+                            <right-aligned
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="justify-right"/>
+                            <center-aligned
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="justify-center"/>
+                            <left-aligned
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="justify-left"/>
+                        </items>
+                    </alignment>
+									<menu
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Navigation Menu">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./navmenu">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <menuitemtitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Menu Title"
+                                                    fieldLabel="Menu Title"
+                                                    name="./menuitemtitle"/>
+                                                <linkenabler
+                                                    granite:class="cq-dialog-dropdown-showhide-multi"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    cq-dialog-dropdown-showhide-target=".nav-showhide-target"
+                                                    fieldLabel="Link Type"
+                                                    name="./linkType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <directlink
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Direct"
+                                                            value="dlink"/>
+                                                        <multilevellink
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Multi Level"
+                                                            value="mlink"/>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        cq-dialog-dropdown-showhide-target=".nav-showhide-target"/>
+                                                </linkenabler>
+                                                <dlink
+                                                    granite:class="nav-showhide-target"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="dlink"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <menuitemlinkdestination
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldDescription="Menu Item Link Destination"
+                                                                    fieldLabel="Menu Item Link Destination"
+                                                                    name="./menuitemlinkdestination"
+                                                                    rootPath="/content"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </dlink>
+                                                <mlink
+                                                    granite:class="nav-showhide-target"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="mlink"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <templateselector
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldDescription="Select the template for Multilevel Link"
+                                                                    fieldLabel="Select Template"
+                                                                    name="./templateType">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <select
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Select a template"
+                                                                            value=""/>																	    
+                                                                        <templatea
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Template A"
+                                                                            value="templateA"/>
+                                                                        <templateb
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Template B"
+                                                                            value="templateB"/>             
+                                                                    </items>
+                                                                </templateselector>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </mlink>
+                                            </items>
+                                        </field>
+                                    </menu>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                </items>
+            </layout>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,197 @@
+<sly data-sly-use.headerModel="com.softwareag.core.models.header.HeaderModel" data-sly-use.searchModel="com.softwareag.core.models.search.Search">
+<sly data-sly-test="${headerModel.config && headerModel.config.configured}">
+<header
+        class="header__container content-width" 
+        data-sly-use.icons="softwareag/components/commons/svg/icons.html" >
+    <!--/* Logo */-->
+    <div class="logo__section">
+        <div class="header__logo" data-sly-test="${headerModel.config && headerModel.config.configured}">
+            <a href="${headerModel.config.logo.href}"
+            target="${headerModel.config.logo.target}"
+            aria-label="${headerModel.config.logo.altText}"
+            title="${headerModel.config.logo.altText}"
+            data-attrib-type="image"
+            data-attrib-name="${headerModel.config.logo.altText}">
+                <img src="${headerModel.config.logo.image}" alt="${headerModel.config.logo.altText}" title="${headerModel.config.logo.altText}" />
+            </a>
+        </div>
+
+        <div class="header__logo_title" data-sly-test="${headerModel.config.title}">
+            <a href="${headerModel.config.link.href}">${headerModel.config.title}</a>
+        </div>
+    </div>
+
+    <!--/* Navigation Items */-->
+    <nav class="header__nav">
+        <ul class="header__nav-1-level" data-sly-list.firstLevelItem="${headerModel.firstLevelNavItems}">
+            <li class="header__nav-1-level-item header__nav-1-level-item--has-children" data-sly-test="${firstLevelItem.secondLevelNavItems}" tabindex="0">
+                <span class="header__nav-1-level-item-title">${firstLevelItem.link.text}</span>
+                <span class="header__nav-1-level-item-has-more"
+                      data-sly-call="${icons.getIcon @ name='angle-right', width=30, height=30}"
+                      data-sly-test="${firstLevelItem.secondLevelNavItems}"></span>
+                <div class="header__nav-2-container">
+                    <div class="content-width">
+                        <button class="header__nav-2-close a-icon a-icon--hover" data-sly-call="${icons.getIcon @ name='close', width=30, height=30}"></button>
+                        <button class="header__nav-2-back">
+                            <sly data-sly-call="${icons.getIcon @ name='angle-left', width=30, height=30}" />
+                            ${headerModel.labelBack}
+                        </button>
+                        <a class="header__nav-2-level-item-overview-title"
+                           href="${firstLevelItem.link.href}"
+                           target="${firstLevelItem.link.target}"
+                           data-sly-test="${firstLevelItem.overviewTitle}">
+                            <span class="header__nav-2-level-item-overview-title-desktop">
+                                ${firstLevelItem.overviewTitle}
+                                <span class="header__nav-2-level-item-overview-title-desktop-icon"
+                                      data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}"></span>
+                            </span>
+                            <span class="header__nav-2-level-item-overview-title-mobile">${firstLevelItem.link.text}</span>
+                        </a>
+                        <span class="header__nav-2-level-item-overview-title-mobile"
+                              data-sly-test="${!firstLevelItem.overviewTitle}">${firstLevelItem.link.text}</span>
+                        <ul class="header__nav-2-level content-width" data-sly-list.secondLevelItem="${firstLevelItem.secondLevelNavItems}">
+                            <div class="list list--single-item list--mobile-only">
+                                <div class="list__container">
+                                    <li class="header__nav-2-level-item ${!secondLevelItem.thirdLevelNavItems ? 'header__nav-2-level-item--no-children' : ''} ${!secondLevelItem.overviewTitle ? 'header__nav-2-level-item--no-overview-page' : ''}">
+                                        <a class="header__nav-2-level-item-title list__head"
+                                           href="${secondLevelItem.link.href}"
+                                           target="${secondLevelItem.link.target}"
+                                           data-sly-test="${secondLevelItem.overviewTitle}">
+                                            <span class="list__head-title">${secondLevelItem.link.text}</span>
+                                            <span class="header__nav-2-level-item-icon list__head-icon"
+                                                  data-sly-test="${secondLevelItem.thirdLevelNavItems}"
+                                                  data-sly-call="${icons.getIcon @ name='angle-down', width=30, height=30}"></span>
+                                        </a>
+                                        <span class="header__nav-2-level-item-title list__head" data-sly-test="${!secondLevelItem.overviewTitle}">
+                                            <span class="list__head-title">${secondLevelItem.link.text}</span>
+                                            <span class="header__nav-2-level-item-icon list__head-icon"
+                                                  data-sly-test="${secondLevelItem.thirdLevelNavItems}"
+                                                  data-sly-call="${icons.getIcon @ name='angle-down', width=30, height=30}"></span>
+                                        </span>
+                                        <ul class="header__nav-3-level list__linklist" data-sly-list.thirdLevelItem="${secondLevelItem.thirdLevelNavItems}">
+                                            <li class="header__nav-3-level-item header__nav-3-level-item--overview"
+                                                data-sly-test="${thirdLevelItemList.first && secondLevelItem.overviewTitle}">
+                                                <a href="${secondLevelItem.link.href}">
+                                                    ${secondLevelItem.overviewTitle}
+                                                </a>
+                                            </li>
+                                            <li class="header__nav-3-level-item">
+                                                <a href="${thirdLevelItem.link.href}" target="${thirdLevelItem.link.target}">
+                                                    ${thirdLevelItem.link.text}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li data-sly-test="${!firstLevelItem.secondLevelNavItems}">
+                <a class="header__nav-1-level-item" href="${firstLevelItem.link.href}" target="${firstLevelItem.link.target}">
+                    ${firstLevelItem.link.text}
+                    <span class="header__nav-1-level-item--arrow a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}"></span>
+                </a>
+            </li>
+            <!--/* First Icon Mobile */-->
+            <li class="header__nav-1-level-item header__nav-1-level-item--first-icon"
+                data-sly-test="${headerModel.config && headerModel.config.firstIcon.image && firstLevelItemList.last}">
+                <a href="${headerModel.config.firstIcon.href}"
+                   aria-label="${headerModel.config.firstIcon.link.text}"
+                   title="${headerModel.config.firstIcon.link.text}"
+                   data-attrib-type="image"
+                   data-attrib-name="${headerModel.config.firstIcon.link.text}">
+                    <img src="${headerModel.config.firstIcon.image}"
+                         alt="${headerModel.config.firstIcon.altText}"
+                         title="${headerModel.config.firstIcon.altText}" />
+                    <span class="header__nav-1-level-item--first-icon-text">
+                        ${headerModel.config.firstIcon.link.text}
+                    </span>
+                </a>
+            </li>
+            <!--/* Second Icon Mobile */-->
+            <li class="header__nav-1-level-item header__nav-1-level-item--second-icon"
+                data-sly-test="${headerModel.config && firstLevelItemList.last}">
+                <a href="${headerModel.config.secondIconLink.href}"
+                   target="${headerModel.config.secondIconLink.target}"
+                   aria-label="${headerModel.config.secondIconLink.text}"
+                   title="${headerModel.config.secondIconLink.text}"
+                   data-attrib-type="image"
+                   data-attrib-name="${headerModel.config.secondIconLink.text}">
+                    <img src="${headerModel.config.secondIcon.image}"
+                         alt="${headerModel.config.secondIconAltText}"
+                         title="${headerModel.config.secondIconAltText}" />
+                    <span class="header__nav-1-level-item--second-icon-text">
+                        ${headerModel.config.secondIconLink.text}
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <form class="header__search-form" action="${searchModel.config.link.href}?cf%5B%5D=facet_sag_perspectives%3Aall" target="_self">
+        <input class="header__search-form-input" type="text" name="q" id="searchfield" tabindex="-1" />
+        <input type="hidden" name="cn" />
+
+        <button class="header__search-form-submit a-icon a-icon--hover"
+                type="submit"
+                data-sly-call="${icons.getIcon @ name='search', width=30, height=30}"
+                tabindex="-1"
+                aria-label="${headerModel.config.startSearchAltText}"
+                title="${headerModel.config.startSearchAltText}"></button>
+    </form>
+
+    <div class="header__icons">
+        <!--/* Search */-->
+        <div class="header__icons-search">
+            <button class="header__icons-search-open a-icon a-icon--hover"
+                    data-sly-call="${icons.getIcon @ name='search', width=30, height=30}"
+                    aria-label="${headerModel.config.openSearchAltText}"
+                    title="${headerModel.config.openSearchAltText}"></button>
+            <button class="header__icons-search-close a-icon a-icon--hover"
+                    style="display: none;"
+                    data-sly-call="${icons.getIcon @ name='close', width=30, height=30}"
+                    aria-label="${headerModel.config.closeSearchAltText}"
+                    title="${headerModel.config.closeSearchAltText}"></button>
+        </div>
+
+        <!--/* First Icon */-->
+        <div class="header__icons-first" data-sly-test="${headerModel.config && headerModel.config.firstIcon.image}">
+            <a href="${headerModel.config.firstIcon.link.href}"
+               target="${headerModel.config.firstIcon.target}"
+               aria-label="${headerModel.config.firstIcon.link.text}"
+               title="${headerModel.config.firstIcon.link.text}"
+               data-attrib-type="image"
+               data-attrib-name="${headerModel.config.firstIcon.link.text}">
+                <img src="${headerModel.config.firstIcon.image}"
+                     alt="${headerModel.config.firstIcon.altText}"
+                     title="${headerModel.config.firstIcon.altText}" />
+            </a>
+        </div>
+
+        <!--/* Second Icon */-->
+        <div class="header__icons-second" data-sly-test="${headerModel.config}">
+            <a href="${headerModel.config.secondIconLink.href}"
+               target="${headerModel.config.secondIconLink.target}"
+               aria-label="${headerModel.config.secondIconLink.text}"
+               title="${headerModel.config.secondIconLink.text}"
+               data-attrib-type="image"
+               data-attrib-name="${headerModel.config.secondIconLink.text}">
+                <img src="${headerModel.config.secondIcon.image}"
+                     alt="${headerModel.config.secondIconAltText}"
+                     title="${headerModel.config.secondIconAltText}" />
+            </a>
+        </div>
+
+        <!--/* Burger Menu */-->
+        <button class="header__icons-menu" data-sly-test="${headerModel.config && headerModel.config.configured}" role="navigation">
+            <div class="header__icons-menu-open a-icon a-icon--hover" data-sly-call="${icons.getIcon @ name='menu', width=30, height=30}"></div>
+            <div class="header__icons-menu-close a-icon a-icon--hover"
+                 style="display: none;"
+                 data-sly-call="${icons.getIcon @ name='close', width=30, height=30}"></div>
+        </button>
+    </div>
+</header>
+</sly>
+</sly>

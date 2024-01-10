@@ -1,0 +1,205 @@
+.resourcebanner {
+    background-color: $color-core-black;
+    .arrow-right {
+        border: solid $color-white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    .resourcebanner-inner-container {
+    padding-left:2.4rem;
+    padding-right:2.4rem;
+    @include mq-desktop {
+        padding-top:6.4rem;
+        padding-bottom:6.4rem;
+    }
+    @include mq-tablet {
+        padding-top:4.8rem;
+        padding-bottom:4.8rem;
+    }
+    @include mq-phone {
+        padding-top:4rem;
+        padding-bottom:4rem;
+    }
+    @include mq-from-tablet {
+        max-width: 132rem;
+        margin: auto;
+    }
+
+    @include mq-phone {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+
+    @include mq-tablet {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+    .resource-library-description {
+        @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+        @include base-font;
+        color: $color-white;
+    }
+
+    .resource-banner-bottom-padding {
+        padding-bottom: 2.4rem;
+    }
+
+    .resource-banner-description-bottom-padding {
+        @include mq-desktop {
+            padding-bottom: 5.6rem;
+        }
+        @include mq-tablet {
+            padding-bottom: 4rem;
+        }
+        @include mq-phone {
+            padding-bottom: 3.2rem
+        }
+    }
+
+    .resource-library-link {
+        @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+        @include base-font-bold;
+        color: $color-white;
+        .linkLabel{
+            padding-right:0.8rem;
+        }
+        svg {
+            fill: $color-white;
+        }
+
+        a:active,
+        a:focus,
+        a:hover {
+            text-decoration: underline;
+            color: inherit;
+        }
+    }
+
+    .a-icon {
+        width: 1.2rem;
+        height: 10.79px;
+        margin-bottom: -0.1rem;
+    }
+
+    .resource-library-heading {
+        @include mq-desktop {
+            @include font-size-with-rem-line-height(4.8rem, 5.6rem);
+        }
+        @include mq-tablet {
+            @include font-size-with-rem-line-height(4rem, 4.8rem);
+        }
+        @include mq-phone {
+            @include font-size-with-rem-line-height(4rem, 4.8rem);
+        }
+
+        @include base-font-bold;
+        color: $color-white;
+    }
+
+    .resource-library-banner-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include mq-phone {
+            display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+    }
+
+    .resource-library-divider {
+        border-top: 8px solid $color-bright-pulse;
+        @include mq-desktop {
+        padding-top: 2.4rem;
+        }
+        @include mq-tablet {
+            padding-top: 1.6rem;
+        }
+        @include mq-phone {
+            padding-top: 1.6rem;
+        }
+    }
+
+    .resource-library-sub-caption-1 {
+        color: $color-core-dark-450;
+        @include font-size-with-rem-line-height(1.4rem, 2rem);
+        @include base-font-bold;
+        padding-bottom: 2.4rem;
+        @include mq-tablet{
+            padding-bottom:1.6rem;
+        }
+        @include mq-phone{
+            padding-bottom:1.6rem;
+        }
+        letter-spacing: 0.06em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .resource-library-column-2 {
+        padding-left: 2rem;
+        @include mq-phone {
+            padding-left: 0rem;
+        }
+    }
+
+    .resource-library-column-1 {
+        padding-right: 2rem;
+        @include mq-phone {
+            padding-right: 0rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .resource-library-column-2,
+    .resource-library-column-1 {
+        width: 50%;
+        @include mq-phone {
+            width: 100%;
+        }
+    }
+
+    .resource-library-sub-caption-2 {
+        @include mq-desktop {
+        @include font-size-with-rem-line-height(3.2rem, 4rem);
+        }
+        @include mq-tablet {
+            @include font-size-with-rem-line-height(2.4rem, 3rem);
+            }
+            @include mq-phone {
+                @include font-size-with-rem-line-height(2.4rem, 3rem);
+                }
+        @include base-font-bold;
+        letter-spacing: 0px;
+        text-align: left;
+        color: $color-white;
+        padding-bottom: 2.4rem;
+        @include mq-tablet{
+            padding-bottom:1.6rem;
+        }
+        @include mq-phone{
+            padding-bottom:1.6rem;
+        }
+    }
+
+    .resource-library-sub-caption-3 {
+        display: block;
+        @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+        @include mq-tablet{
+            display:none;
+        }
+        @include mq-phone{
+            display:none;
+        }
+        @include base-font;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-bottom: 2.4rem;
+        color: $color-white;
+
+    }
+}
+}

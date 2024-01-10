@@ -1,0 +1,186 @@
+.forum {
+    width: 100%;
+     @include mq-phone {
+         padding: 4rem 0;
+    }
+    @include mq-tablet {
+        padding: 4.8rem 0;
+     }
+     @include mq-desktop {
+         padding: 6.4rem 0;
+ }
+ .no-padding-forum {
+     padding-bottom:0rem !important;
+ }
+ .no-padding-top-forum {
+    padding-top:0rem !important;
+}
+.no-padding-top-forum-item-3 {
+    @include mq-desktop {
+        padding-top: 0rem !important;
+    }
+}
+ .error-message-container {
+ @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+        @include base-font;
+        text-align: center;
+ }
+ .error-message-container {
+    @include mq-phone {
+        padding: 0 1.6rem;
+        }
+        @include mq-tablet {
+            padding: 0 2.4rem;
+        }
+        @include mq-desktop {
+            padding: 0 2.4rem;
+            max-width:132rem;
+            margin:auto;
+         }
+         @include mq-from-desktop-xxl{
+            max-width:132rem;
+            margin:auto;
+            // padding-left:8rem;
+            // padding-right:8rem;
+        }
+ }
+    .forum-data-list {
+        @include mq-phone {
+        padding: 0 1.6rem;
+        padding-bottom: 4rem;
+
+        }
+        @include mq-tablet {
+            padding: 0 2.4rem;
+            padding-bottom: 4.8rem;
+        }
+        @include mq-desktop {
+            padding: 0 2.4rem;
+            padding-bottom: 6.4rem;
+            max-width:132rem;
+            margin:auto;
+         }
+         @include mq-from-desktop-xxl{
+            max-width:132rem;
+            margin:auto;
+            // padding-left:8rem;
+            // padding-right:8rem;
+        }
+    }
+.forum-headline {
+    width: 100%;
+    @include mq-phone {
+    padding-bottom: 4rem;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    }
+    @include mq-tablet {
+        padding-bottom: 4.8rem;
+        font-size: 3.4rem;
+        line-height: 4.2rem;
+        }
+        @include mq-desktop {
+            padding-bottom: 6.4rem;
+            font-size: 4.2rem;
+            line-height: 5rem;
+            }
+    text-align: center;
+    @include base-font-light;
+    font-style: normal;
+    letter-spacing: 0rem;
+}
+.forum-button {
+    text-align: center;
+ .cmp-button {
+    border: 2px solid #011F3D;
+    height: 4.8rem;
+    border-radius: 0px;
+    padding: 1.2rem 2.4rem;
+    justify-content: center;
+    background-color: white;
+    margin: 0rem;
+    &:hover {
+        color: white;
+        background-color: #011F3D;
+    }
+    &:focus {
+        color: white;
+        background-color: #011F3D;
+    }
+    &:active {
+        color:#011F3D;
+        background-color:#D2D9E0;
+        border: 2px solid #011F3D;
+    }
+    &:disabled {
+        color:#011F3D;
+        opacity: 0.5 !important;
+        border: 2px solid #011F3D;
+    }
+}
+ }
+ .forum-item {
+     display: flex;
+     border-bottom: 0.5px solid #537393;;
+     padding-bottom: 2.4rem;
+     @include mq-phone {
+     flex-direction: column;
+     .second-set {
+         display: flex;
+         flex-direction: column;
+     }
+     }
+     @include mq-tablet {
+        flex-direction: column;
+        .second-set {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+        @include mq-desktop {
+            flex-direction: column;
+            .second-set {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+     .item {
+         @include mq-tablet{
+         padding:1.2rem 0;
+         }
+         @include mq-phone{
+            padding:1.2rem 0;
+            }
+            @include mq-desktop{
+                padding-top:1.2rem;
+                }
+     }
+     .forum-data-item-1 {
+        @include font-size-with-rem-line-height(1.2rem, 1.8rem);
+        @include base-font;
+        color: #537393;
+     }
+     .forum-data-item-2 {
+        @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+        @include base-font-bold;
+        &:hover {
+            text-decoration: underline;
+        }
+
+     }
+     .forum-data-item-3 {
+        @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+        @include base-font;
+        &:hover {
+            text-decoration: underline;
+        }
+        @include mq-desktop {
+            padding-top: 1.2rem;
+        }
+     }
+ }
+ .forum-data-list  .forum-item:not(:first-child) {
+    padding-top: 2.4rem !important;
+ }
+}

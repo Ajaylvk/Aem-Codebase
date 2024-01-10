@@ -1,0 +1,15 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div data-sly-test="${properties.enableIcon}" class="article-intro-icon">
+      <img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+            class="svgicon ${properties.iconBackgroundColor}" />
+</div>
+<div
+      class="article-intro-caption ${properties.fileReferencea && properties.enableIcon ? 'article-intro-top-spacing':''}">
+      ${properties.caption}
+</div>
+<div class="article-intro-text">
+      ${properties.text @ context='html'}
+
+</div>

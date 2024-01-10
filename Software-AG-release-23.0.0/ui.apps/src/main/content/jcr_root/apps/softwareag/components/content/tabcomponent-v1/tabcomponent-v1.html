@@ -1,0 +1,30 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetScriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetScriptTemplateTop.targetScript @ integrationModel=integrationModel}"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"></sly>
+
+<div data-sly-use.tabModel="com.softwareag.core.models.tab.TabModelV1"
+     class="tab-V1__container ${tabModel.backgroundColor} jump_to"
+     data-sly-use.template="softwareag/components/commons/templates.html">
+
+     <!--/* Tab Component Title */-->
+     <h2 class="tabcomponent__headline a-h2" data-sly-test="${tabModel.title}">${tabModel.title @ context = 'html'}</h2>
+
+     <div class="content-width">
+          <button class="tab__arrow tab__arrow--left" data-sly-call="${icons.getIcon @ name='to-top'}"></button>
+          <div class="tab__item-list ${tabModel.alignment ? tabModel.alignment : 'align-left'}">
+               <sly data-sly-repeat.panelResource="${tabModel.panelResources}"
+                    data-sly-resource="${panelResource.path @ resourceType=panelResource.resourceType}">
+                    <div class="abc--${panelResource.path} ++ ${panelResource.resourceType}">23</div>
+               </sly>
+          </div>
+          <button class="tab__arrow tab__arrow--right" data-sly-call="${icons.getIcon @ name='to-top'}"></button>
+          <div class="tab__content-list">
+          </div>
+     </div>
+</div>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!tabModel.hasContent}"></sly>
+
+<sly data-sly-use.targetScriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetScriptTemplate.targetScript @ integrationModel=integrationModel}"></sly>

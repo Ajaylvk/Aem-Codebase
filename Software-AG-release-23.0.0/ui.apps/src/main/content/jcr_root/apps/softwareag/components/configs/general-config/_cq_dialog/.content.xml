@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="General Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <dateformat
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        required="{Boolean}true"
+                                        fieldDescription="Defines the date format, that should be used."
+                                        fieldLabel="Date Format"
+                                        name="./dateFormat">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <default jcr:primaryType="nt:unstructured" text="Default - MM/dd/yyyy" value="MM/dd/yyyy" />
+                                            <custom jcr:primaryType="nt:unstructured" text="Custom - MMM dd, yyyy" value="MMM dd, yyyy" />
+                                            <europe jcr:primaryType="nt:unstructured" text="----- Europe -----" disabled="{Boolean}true" />
+                                            <german jcr:primaryType="nt:unstructured" text="Austria / Germany / Poland / Switzerland - dd.MM.yyyy" value="dd.MM.yyyy" />
+                                            <france jcr:primaryType="nt:unstructured" text="France - dd/MM/yyyy" value="dd/MM/yyyy" />
+                                            <uk jcr:primaryType="nt:unstructured" text="UK - dd/MM/yyyy" value="dd/MM/yyyy" />
+                                            <spain jcr:primaryType="nt:unstructured" text="Spain - d/MM/yyyy" value="d/MM/yyyy" />
+                                            <northamerica jcr:primaryType="nt:unstructured" text="----- North America -----" disabled="{Boolean}true" />
+                                            <usa jcr:primaryType="nt:unstructured" text="United States - M/d/yyyy" value="M/d/yyyy" />
+                                            <canada-en jcr:primaryType="nt:unstructured" text="Canada / English - dd/MM/yyyy" value="dd/MM/yyyy" />
+                                            <canada-fr jcr:primaryType="nt:unstructured" text="Canada / French - yyyy-MM-dd" value="yyyy-MM-dd" />
+                                            <southamerica jcr:primaryType="nt:unstructured" text="----- South America -----" disabled="{Boolean}true" />
+                                            <brazil jcr:primaryType="nt:unstructured" text="Brazil - dd/MM/yyyy" value="dd/MM/yyyy" />
+                                            <asiapacific jcr:primaryType="nt:unstructured" text="----- Asia Pacific -----" disabled="{Boolean}true" />
+                                            <australia jcr:primaryType="nt:unstructured" text="Australia - d/MM/yyyy" value="d/MM/yyyy" />
+                                            <china jcr:primaryType="nt:unstructured" text="China - yyyy-M-d" value="yyyy-M-d" />
+                                            <japan jcr:primaryType="nt:unstructured" text="Japan - yyyy/MM/dd" value="yyyy/MM/dd" />
+                                            <russia jcr:primaryType="nt:unstructured" text="Russia - dd.MM.yyyy" value="dd.MM.yyyy" />
+                                            <southkorea jcr:primaryType="nt:unstructured" text="South Korea - yyyy.M.d" value="yyyy.M.d" />
+                                            <middle-east-and-africa jcr:primaryType="nt:unstructured" text="----- Middle East and Africa -----" disabled="{Boolean}true" />
+                                            <israel jcr:primaryType="nt:unstructured" text="Israel - dd/MM/yyyy" value="dd/MM/yyyy" />
+                                            <southafrica jcr:primaryType="nt:unstructured" text="South Africa - yyyy/MM/dd" value="yyyy/MM/dd" />
+                                            <turkey jcr:primaryType="nt:unstructured" text="Turkey - dd.MM.yyyy" value="dd.MM.yyyy" />
+                                        </items>
+                                    </dateformat>
+                                    <timeformat
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        required="{Boolean}true"
+                                        fieldDescription="Defines the time format, that should be used (used for Event Items only)."
+                                        fieldLabel="Time Format"
+                                        name="./timeFormat">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <default jcr:primaryType="nt:unstructured" text="Default - h:mm a (6:40 AM)" value="h:mm a" />
+                                            <empty-line jcr:primaryType="nt:unstructured" text="----- Custom time formats -----" disabled="{Boolean}true" />
+                                            <custom jcr:primaryType="nt:unstructured" text="HH:mm:ss a (06:40:32 AM)" value="HH:mm:ss a" />
+                                            <custom-24h jcr:primaryType="nt:unstructured" text="HH:mm (14:40)" value="HH:mm" />
+                                        </items>
+                                    </timeformat>
+                                </items>
+                            </column>
+                        </items>
+                    </general>
+                    <utm
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="UTM Parameters"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <enableUtm
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        checked="{Boolean}false"
+                                        fieldDescription="To enable UTM parameters functionality"
+                                        name="./enableUtm"
+                                        text="Enable UTM parameters"
+                                        uncheckedValue="{Boolean}false"
+                                        value="{Boolean}true"/>
+                                    <prefix
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Parameters for prefix"
+                                        fieldLabel="Prefix parameters"
+                                        name="./paramPrefix"
+                                        required="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </utm>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

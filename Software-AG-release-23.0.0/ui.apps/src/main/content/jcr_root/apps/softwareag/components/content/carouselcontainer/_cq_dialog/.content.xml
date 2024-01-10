@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Carousel Container"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[showhidetab.clientlibs]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <basic
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Basic"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <carouselvariation
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select the variation of Carousel"
+                                fieldLabel="Carousel Variation"
+                                name="./carouselVariation">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <selectdropdown
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Select Carousel Variation"
+                                        value="select"/>
+                                    <bullets
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bullets"
+                                        value="bullets"/>
+                                    <logos
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Logo"
+                                        value="logo"/>
+                                </items>
+                            </carouselvariation>
+                            <carouselmode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                class="cq-dialog-dropdown-showhide"
+                                cq-dialog-dropdown-showhide-target=".timer-hide-show"
+                                fieldLabel="Carousel Mode"
+                                name="./carouselMode">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <select
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Select Carousel Mode"
+                                        value=""/>
+                                    <autoplay
+                                        jcr:primaryType="nt:unstructured"
+                                        class="hide title-url-hide-show"
+                                        showhidetargetvalue="autoplay"
+                                        text="Autoplay"
+                                        value="autoplay"/>
+                                    <manual
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual"
+                                        value="manual"/>
+                                </items>
+                            </carouselmode>
+                            <timer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                class="hide timer-hide-show"
+                                showhidetargetvalue="autoplay">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <well
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <autoplay
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Enter a time in milliseconds to pause the carousel"
+                                                fieldLabel="Timer(in milliseconds)"
+                                                name="./timer"/>
+                                        </items>
+                                    </well>
+                                </items>
+                            </timer>
+                            <carouselposition
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select the position of Carousel"
+                                fieldLabel="Carousel Position"
+                                name="./carouselPosition">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <selectdropdown
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Select Carousel Position"
+                                        value="select"/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="carousel-left"/>
+                                    <edgetoedge
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Edge to Edge"
+                                        value="carousel-edgetoedge"/>
+                                    <center
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Center"
+                                        value="carousel-center"/>
+                                </items>
+                            </carouselposition>
+                            <backgroundcolor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="The Background color of the component."
+                                fieldLabel="Background Color"
+                                name="./backgroundColor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <select
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="Select Teaser Background Color"
+                                        value=""/>
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="input__colorselect-background-color1"/>
+                                    <coredark
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Core dark 950"
+                                        value="input__colorselect-background-color10"/>
+                                    <coredark120
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Core dark 120"
+                                        value="input__colorselect-background-color8"/>
+                                    <corelight
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Core Light"
+                                        value="input__colorselect-background-color7"/>
+                                </items>
+                            </backgroundcolor>
+                        </items>
+                    </column>
+                </items>
+            </basic>
+        </items>
+    </content>
+</jcr:root>

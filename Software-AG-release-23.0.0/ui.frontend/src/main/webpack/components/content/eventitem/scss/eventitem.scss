@@ -1,0 +1,81 @@
+$height-of-counter: 12.5rem;
+$icon-size: 1.6rem;
+
+.eventitem__container {
+    @include spacing(padding, m);
+    @include component-bottom-spacing();
+    position: relative;
+
+    .eventitem__back {
+        @include link-hover();
+        @include spacing(margin-bottom, l);
+        display: flex;
+        align-items: center;
+        color: $color-bright-sense;
+        cursor: pointer;
+
+        @include mq-from-tablet {
+            position: absolute;
+            top: $spacing-desktop-m;
+            right: $spacing-desktop-m;
+        }
+
+        &:hover {
+            color: $color-deep-sense;
+        }
+    }
+
+    &.eventitem__container--has-counter .eventitem__back {
+        @include mq-from-tablet {
+            top: $height-of-counter;
+        }
+    }
+
+    .eventitem__back-icon {
+        margin-right: $spacing-mobile-s;
+        width: $icon-size;
+        height: $icon-size;
+    }
+
+    &.eventitem__container--has-counter .eventitem__counter {
+        @include spacing(margin-bottom, m);
+    }
+
+    .eventitem__counter-stats-column {
+        @include spacing(margin-right, l);
+        @include mq-phone {
+            margin-right: $spacing-mobile-s;
+        }
+        color: $color-core-black-55;
+
+        .a-h3 {
+            color: $color-bright-pulse;
+        }
+    }
+
+    .eventitem__counter-stats {
+        display: none;
+        flex-wrap: wrap;
+    }
+
+    .eventitem__title {
+        @include spacing(margin-bottom, m);
+        text-align: left;
+        clear: both;
+    }
+
+    .eventitem__text {
+        @include spacing(margin-bottom, m);
+        text-align: left;
+    }
+
+    .eventitem__country {
+        text-transform: uppercase;
+        color: $color-core-black-55;
+    }
+
+    .eventitem__date {
+        @include spacing(margin-bottom, l);
+        color: $color-bright-pulse;    
+    }
+}

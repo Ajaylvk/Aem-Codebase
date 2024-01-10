@@ -1,0 +1,10 @@
+<div data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.logoModel="com.softwareag.core.models.link.ImageLinkModel"
+     data-sly-test.hasContent="${logoModel.href && logoModel.image && logoModel.altText}">
+
+    <a href="${logoModel.href}" title="${logoModel.altText}" target="${logoModel.target}" data-attrib-type="image"
+    data-attrib-name="${logoModel.altText}">
+        <img src="${logoModel.image}" alt="${logoModel.altText}" srcset="" class="footer__logo">
+    </a>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

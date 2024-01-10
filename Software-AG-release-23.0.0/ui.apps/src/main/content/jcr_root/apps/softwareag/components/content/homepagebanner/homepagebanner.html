@@ -1,0 +1,136 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.model="com.softwareag.core.models.homepagebanner.HomepageBannerModel"
+     data-sly-test.hasContent="${model.valid}"
+     class="homepagebanner__container"
+     data-attrib-name="contentsection"
+     data-attrib-value="${model.teaserBox.campaignTitle}">
+
+    <!--/* Background Image */-->
+    <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+
+    <div class="homepagebanner__contents">
+        <!--/* Teaser Box */-->
+        <a href="${model.teaserBox.cta.link.href}"
+           class="box__main ${model.teaserBox.backgroundStyle} ${model.teaserBox.fontStyle}"
+           title="${model.teaserBox.cta.link.text}"
+           data-attrib-type="asset"
+           data-attrib-name="${model.teaserBox.campaignTitle}"
+           data-attrib-campaign="${model.teaserBox.campaign}"
+           data-attrib-asset-type="${model.teaserBox.cta.link.assetType}"
+           data-attrib-asset-link="${model.teaserBox.cta.link.href}">
+            <div class="homepagebanner__teaserbox">
+                <h1 class="a-h1">
+                    <pre class="aem__textarea">
+                        ${model.teaserBox.title @ context = 'html'}
+                    </pre>
+                </h1>
+                <div class="cta-container">
+                    <div class="a-cta a-cta--design-link">
+                        <span class="a-cta__button" title="${model.teaserBox.cta.link.text}">
+                            <span class="a-cta__button-text">
+                                ${model.teaserBox.cta.link.text}
+                            </span>
+                            <span class="a-cta__button-icon">
+                                <sly class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right'}" />
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <div class="box__secondary">
+            <div class="box__secondary__wrapper">
+
+                <!--* Solution Box 1 */-->
+                <a href="${model.solutionBox1.cta.link.href}"
+                   class="homepagebanner__solutionbox homepagebanner__solutionbox1"
+                   title="${model.solutionBox1.cta.link.text}"
+                   data-attrib-type="asset"
+                   data-attrib-name="${model.solutionBox1.campaignTitle}"
+                   data-attrib-campaign="${model.solutionBox1.campaign}"
+                   data-attrib-asset-type="${model.solutionBox1.cta.link.assetType}"
+                   data-attrib-asset-link="${model.solutionBox1.cta.link.href}">
+                    <div class="smallerteaser__box ${model.solutionBox1.backgroundStyle} ${model.solutionBox1.fontStyle}">
+                        <h5 data-sly-test="${model.solutionBox2.upperTitle}" class="a-distinction">
+                            ${model.solutionBox1.upperTitle}
+                        </h5>
+                        <h4 class="a-h4">
+                            <pre class="aem__textarea">
+                                ${model.solutionBox1.title @ context = 'html'}
+                            </pre>
+                        </h4>
+                        <div class="cta-container">
+                            <div class="a-cta a-cta--design-link">
+                                <span class="a-cta__button" title="${model.solutionBox1.cta.link.text}">
+                                    <span class="a-cta__button-text">
+                                        ${model.solutionBox1.cta.link.text}
+                                    </span>
+                                    <span class="a-cta__button-icon">
+                                        <sly class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right'}" />
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="smallerteaser__image">
+                        <img data-sly-test="${model.solutionBox1.image}"
+                             src="${model.solutionBox1.image}"
+                             alt="${model.solutionBox1.altText}"
+                             title="${model.solutionBox1.altText}" />
+                    </div>
+                </a>
+
+                <!--* Solution Box 2 */-->
+                <a href="${model.solutionBox2.cta.link.href}"
+                   class="homepagebanner__solutionbox homepagebanner__solutionbox2"
+                   title="${model.solutionBox2.cta.link.text}"
+                   data-attrib-type="asset"
+                   data-attrib-name="${model.solutionBox2.campaignTitle}"
+                   data-attrib-campaign="${model.solutionBox2.campaign}"
+                   data-attrib-asset-type="${model.solutionBox2.cta.link.assetType}"
+                   data-attrib-asset-link="${model.solutionBox2.cta.link.href}">
+                    <div class="smallerteaser__box ${model.solutionBox2.fontStyle} ${model.solutionBox2.backgroundStyle}">
+                        <h5 data-sly-test="${model.solutionBox2.upperTitle}" class="a-distinction">
+                            ${model.solutionBox2.upperTitle}
+                        </h5>
+                        <h4 class="a-h4">
+                            <pre class="aem__textarea">
+                                ${model.solutionBox2.title @ context = 'html'}
+                            </pre>
+                        </h4>
+                        <div class="cta-container">
+                            <div class="a-cta a-cta--design-link">
+                                <span class="a-cta__button" title="${model.solutionBox2.cta.link.text}">
+                                    <span class="a-cta__button-text">
+                                        ${model.solutionBox2.cta.link.text}
+                                    </span>
+                                    <span class="a-cta__button-icon">
+                                        <sly class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right'}" />
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="smallerteaser__image">
+                        <img data-sly-test="${model.solutionBox2.image}"
+                             src="${model.solutionBox2.image}"
+                             alt="${model.solutionBox2.altText}"
+                             title="${model.solutionBox2.altText}" />
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationmodel=integrationmodel}"></sly>

@@ -1,0 +1,6 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+        data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<div data-sly-test="${properties.sectiontitle}" class="section-label a-overline">
+        ${properties.sectiontitle}
+</div>

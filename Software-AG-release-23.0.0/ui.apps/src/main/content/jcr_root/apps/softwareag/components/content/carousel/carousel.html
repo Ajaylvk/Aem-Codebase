@@ -1,0 +1,45 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.carousel="com.adobe.cq.wcm.core.components.models.Carousel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     class="carousel__container"
+     role="group"
+     aria-label="${carousel.accessibilityLabel}"
+     aria-roledescription="carousel"
+     data-cmp-is="carousel"
+     data-sly-attribute.data-cmp-autoplay="${carousel.autoplay}"
+     data-cmp-delay="${carousel.delay}"
+     data-cmp-autopause-disabled="${carousel.autopauseDisabled}"
+     data-wcmmode="${wcmmode.edit ? 'edit' : 'non-edit'}"
+     data-attrib-name="contentsection"
+     data-attrib-value="${properties.title}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <div data-sly-test="${carousel.items && carousel.items.size > 0}">
+        <h2 class="a-h2 a-text-centered" data-sly-test="${properties.title}">${properties.title}</h2>
+
+        <div class="carousel-loader" data-sly-test="${!wcmmode.edit}"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper rtewrapper">
+                <sly data-sly-list.item="${carousel.items}">
+                    <div class="swiper-slide">
+                        <sly data-sly-resource="${item.name }"
+                             role="tabpanel"
+                             aria-label="${'Slide {0} of {1}' @ format=[itemList.count, carousel.items.size], i18n}"
+                             data-cmp-hook-carousel="item"></sly>
+                    </div>
+                </sly>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <sly data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/parsys/newpar', appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+         data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+</div>
+
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationmodel=integrationmodel}"></sly>

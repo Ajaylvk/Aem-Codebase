@@ -1,0 +1,68 @@
+.button-link-row {
+  .btnlink-row__wrapper {
+    width: 100%;
+
+    .btnlink-row__layout {
+      @include spacing(padding-left, newm);
+      @include spacing(padding-right, newm);
+      //desktop - 3.2,tab-2.4rem,mob-1.6
+      // @include spacing(padding-bottom, newl);
+      @include mq-from-tablet {
+        max-width: 132rem;
+        margin: auto;
+      }
+    }
+
+    .btnlink-row__grid {
+      display: flex;
+      flex-wrap: wrap;
+      &.center-align {
+        justify-content: center;
+        > div {
+          margin-right: 2.4rem;
+          @include mq-phone {
+            margin-left: 1.6rem;
+            margin-right: 1.6rem;
+          }
+        }
+      }
+
+      &.left-align {
+        justify-content: left;
+        > div {
+          margin-right: 2.4rem;
+        }
+      }
+
+      > div {
+        align-items: center;
+        display: flex;
+        @include spacing(padding-top, newl);
+      }
+
+      .links {
+        min-width: 6rem;
+      }
+
+      .cmp-link {
+        padding: 0;
+      }
+      .cmp-button {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.aem-AuthorLayer-Edit {
+  .button-alignment {
+    min-width: 17rem;
+
+    .cmp-button {
+      min-width: 17rem;
+    }
+  }
+  .button-link-row .btnlink-row__wrapper .btnlink-row__grid > div {
+    margin-top: 3.2rem;
+  }
+}

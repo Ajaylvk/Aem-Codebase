@@ -1,0 +1,145 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Event Overview",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/eventoverview",
+        "sling:resourceType": "softwareag/components/structure/basic-page",
+        "eventoverview": {
+            "jcr:primaryType": "nt:unstructured",
+            "maxNumberOfPages": "300",
+            "copyText": "Event Overview Copy Text",
+            "amountOfListedEventItems": "10",
+            "title": "Event Overview Title",
+            "amountOfMoreLoadedEventItems": "10",
+            "sling:resourceType": "softwareag/components/content/eventoverview"
+        }
+    },
+    "event-folder": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Event Folder 01",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "Event Folder 01",
+            "sling:resourceType": "softwareag/components/structure/folder",
+            "cq:lastModifiedBy": "admin"
+        },
+        "event-01": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 01",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "false",
+                    "eventStartDate": "2019-01-20T00:00:00",
+                    "eventEndDate": "2019-01-21T00:00:00",
+                    "eventTitle": "Event Item 01",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/england",
+                    "eventType": "softwareag:event-type/conference",
+                    "eventDescription": "<b><i>Event Item 01</i></b>"
+                }
+            }
+        },
+        "event-02": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 02",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "true",
+                    "eventStartDate": "2090-01-13",
+                    "eventEndDate": "2090-01-15",
+                    "eventTitle": "Event Item 02",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/france",
+                    "eventType": "softwareag:event-type/conference",
+                    "eventDescription": "<b><i>Event Item 02</i></b>"
+                }
+            }
+        },
+        "event-03": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 03",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "false",
+                    "eventStartDate": "2091-01-19",
+                    "eventEndDate": "2091-01-23",
+                    "eventTitle": "Event Item 03",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/germany",
+                    "eventType": "softwareag:event-type/conference",
+                    "eventDescription": "<b><i>Event Item 03</i></b>"
+                }
+            }
+        },
+        "event-folder-02": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event Folder 02",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+                "cq:redirectTarget": "Event Folder 02",
+                "sling:resourceType": "softwareag/components/structure/folder",
+                "cq:lastModifiedBy": "admin"
+            },
+            "event-02-01": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "Event 01",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                    "sling:resourceType": "softwareag/components/structure/eventpage",
+                    "eventitem": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "hideEventInEventOverview": "false",
+                        "eventStartDate": "2090-01-20T00:00:00",
+                        "eventEndDate": "2090-01-21T00:00:00",
+                        "eventTitle": "Event Item 02-01",
+                        "sling:resourceType": "softwareag/components/content/eventitem",
+                        "textIsRich": "true",
+                        "eventCountry": "softwareag:countries/france",
+                        "eventType": "softwareag:event-type/concert",
+                        "eventDescription": "<b><i>Event Item 02-01</i></b>"
+                    }
+                }
+            }
+        },
+        "event-04": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 04",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "false",
+                    "eventStartDate": "2089-01-01T00:00:00",
+                    "eventEndDate": "2089-01-01T00:00:00",
+                    "eventTitle": "Event Item 04",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/england",
+                    "eventType": "softwareag:event-type/sport",
+                    "eventDescription": "<b><i>Event Item 04</i></b>"
+                }
+            }
+        }
+    }
+}

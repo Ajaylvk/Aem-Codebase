@@ -1,0 +1,44 @@
+<!--/* Data layer JavaScript object: */-->
+<script data-sly-use.page="com.softwareag.core.models.PageModel">
+    var en_corp= "/en_corporate"; 
+    var pageURL= window.location.href;
+    if(pageURL.includes(en_corp)){
+        var pagelocale = "en-US"; //if en-corporate,then locale is default en-US
+    }
+    else{
+        var pagelocale = '${page.language @context="scriptString"}';
+    }
+   
+    window.digitalData = window.digitalData || {};
+    window.digitalData.page = window.digitalData.page || {};
+    window.digitalData.page.attributes = window.digitalData.page.attributes || {};
+    window.digitalData = {
+        page: {
+            pageInfo: {
+                pageName: '${currentPage.title @context="scriptString"}',
+                pageURL: window.location.href,
+                pageRef: document.referrer
+            },
+            category: {
+                productCategory: '${page.productCategory @context="scriptString"}',
+                productName: '${page.productName @context="scriptString"}',
+                productCapabilities: '${page.productCapabilities @context="scriptString"}',
+                productUsageLevel: '${page.productUsageLevel @context="scriptString"}',
+                campaignLandingPage: '${page.campaignLandingPage @context="scriptString"}',
+                pageType: '${page.templateName @context="scriptString"}'
+            },
+            attributes: {
+                locale: pagelocale,
+                domain: window.location.hostname,
+                language: pagelocale.split("-")[0],
+                country: pagelocale.split("-")[1],
+                source: 'aem',
+                version: '${page.bundleVersion @context="scriptString"}'
+            },
+            components: []
+
+        }
+    }
+</script>
+
+

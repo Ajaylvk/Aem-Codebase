@@ -1,0 +1,221 @@
+$dots-width: 1.5rem;
+
+.carousel__container {
+    position: relative;
+
+    @include component-bottom-spacing();
+    @include spacing(padding, m);
+
+    .s7dm-dynamic-media {
+        position: relative;
+    }
+
+    .s7dm-dynamic-media img {
+        width: 100%;
+        object-fit: cover;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    .s7dm-dynamic-media video {
+        max-width: 100%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper-container {
+        width: 100%;
+    }
+
+    .a-h2 {
+        @include spacing(margin-bottom, m);
+    }
+
+    .slick-track {
+        display: flex;
+    }
+
+    .swiper-slide {
+        height: auto;
+        justify-self: stretch;
+        align-self: stretch;
+        flex-grow: 2;
+        display: flex;
+
+        > * {
+            align-self: center;
+        }
+    }
+
+    .swiper-container {
+        opacity: 0;
+        min-height: 60.8rem;
+        transition: opacity 1.2s cubic-bezier(0.245, 0.495, 0, 0.99);
+
+        &.is-visible {
+            min-height: auto;
+            opacity: 1;
+        }
+    }
+
+    // Override AEM video styles inside Dynamic Media container
+    .media__container {
+        width: 100%;
+
+        .s7videoplayer {
+            width: 100% !important;
+        }
+
+        .s7controlbar {
+            width: 100% !important;
+        }
+
+        .s7iconeffect {
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* stylelint-disable */
+    .carousel-loader {
+        opacity: 0;
+        display: inline-block;
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -125%);
+        transition: all .7s ease;
+
+        &.slide-in {
+            opacity: 1;
+        }
+    }
+
+    .carousel-loader div {
+        animation: carousel-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+    }
+
+    .carousel-loader div:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: $color-bright-sense;
+        margin: -4px 0 0 -4px;
+    }
+
+    .carousel-loader div:nth-child(1) {
+        animation-delay: -0.036s;
+    }
+
+    .carousel-loader div:nth-child(1):after {
+        top: 63px;
+        left: 63px;
+    }
+
+    .carousel-loader div:nth-child(2) {
+        animation-delay: -0.072s;
+    }
+
+    .carousel-loader div:nth-child(2):after {
+        top: 68px;
+        left: 56px;
+    }
+
+    .carousel-loader div:nth-child(3) {
+        animation-delay: -0.108s;
+    }
+
+    .carousel-loader div:nth-child(3):after {
+        top: 71px;
+        left: 48px;
+    }
+
+    .carousel-loader div:nth-child(4) {
+        animation-delay: -0.144s;
+    }
+
+    .carousel-loader div:nth-child(4):after {
+        top: 72px;
+        left: 40px;
+    }
+
+    .carousel-loader div:nth-child(5) {
+        animation-delay: -0.18s;
+    }
+
+    .carousel-loader div:nth-child(5):after {
+        top: 71px;
+        left: 32px;
+    }
+
+    .carousel-loader div:nth-child(6) {
+        animation-delay: -0.216s;
+    }
+
+    .carousel-loader div:nth-child(6):after {
+        top: 68px;
+        left: 24px;
+    }
+
+    .carousel-loader div:nth-child(7) {
+        animation-delay: -0.252s;
+    }
+
+    .carousel-loader div:nth-child(7):after {
+        top: 63px;
+        left: 17px;
+    }
+
+    .carousel-loader div:nth-child(8) {
+        animation-delay: -0.288s;
+    }
+
+    .carousel-loader div:nth-child(8):after {
+        top: 56px;
+        left: 12px;
+    }
+
+    @keyframes carousel-loader {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    /* stylelint-enable */
+}
+
+// Show slides stacked in edit mode.
+/* stylelint-disable-next-line */
+.aem-AuthorLayer-Edit {
+    .swiper-wrapper {
+        display: block;
+    }
+
+    .slide-container {
+        opacity: 1;
+    }
+}
+
+// Overriding other component behaviors
+.swiper-slide .textmedia__container {
+    height: 100%;
+
+    > .row {
+        height: 95%;
+    }
+}
+
+.swiper-slide .textmediabanner__container {
+    padding: 0;
+    width: 100%;
+}

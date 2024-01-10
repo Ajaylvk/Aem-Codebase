@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+  xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+  jcr:primaryType="cq:Page">
+  <jcr:content
+    jcr:primaryType="nt:unstructured"
+    cq:policy="softwareag/components/structure/demo-page"
+    sling:resourceType="wcm/core/components/policies/mappings">
+    <parsys
+      cq:policy="softwareag/components/content/parsys/sag-default"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="wcm/core/components/policies/mapping">
+      <softwareag jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+          <content jcr:primaryType="nt:unstructured">
+            <textimage
+              jcr:primaryType="nt:unstructured"
+              cq:policy="softwareag/components/content/textimage/textimage"
+              sling:resourceType="wcm/core/components/policies/mapping">
+              <image
+                  jcr:primaryType="nt:unstructured"
+                  cq:policy="softwareag/components/content/textimage/textimage_image_policy"
+                  sling:resourceType="wcm/core/components/policies/mapping"/>
+            </textimage>
+          </content>
+        </components>
+      </softwareag>
+    </parsys>
+  </jcr:content>
+</jcr:root>

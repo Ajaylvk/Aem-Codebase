@@ -1,0 +1,12 @@
+<sly data-sly-use.layout="com.softwareag.core.models.LayoutContainer"
+    data-sly-use.template="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!layout.columnCount}"></sly>
+
+<div class="resource-container">
+    <div class="resourcse-parsys">
+        <sly data-sly-resource="${'parsys-container' @ resourceType='softwareag/components/content/parsys'}"></sly>
+    </div>
+
+</div>
+

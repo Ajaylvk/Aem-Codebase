@@ -1,0 +1,207 @@
+.a-h1 {
+  @include a-h1;
+}
+
+.a-h2 {
+  @include a-h2;
+}
+
+.a-h3 {
+  @include a-h3;
+}
+
+.a-h4 {
+  @include a-h4;
+}
+
+.a-h5 {
+  @include a-h5;
+}
+
+.a-intro {
+  @include a-intro;
+}
+
+.a-intro-small {
+  @include a-intro-small;
+}
+
+.a-copytext {
+  @include a-copytext;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.a-distinction {
+  @include a-distinction;
+}
+
+.a-bodycopy {
+  @include a-bodycopy;
+}
+
+.a-h2-new {
+  @include a-h2-new;
+}
+.a-h3-new {
+  @include a-h3-new; //article banner
+}
+
+.a-h4-new {
+  @include a-h4-new; //article banner
+}
+
+.a-h5-new {
+  @include a-h5-new; //added for blogcontainer in footer first
+}
+
+.a-overline {
+  @include a-overline; //article banner
+}
+
+.a-bodycopy-small {
+  @include a-bodycopy-small; //added for blogcontainer in footer first
+}
+
+pre {
+  font-family: inherit;
+}
+.text_v4,
+.tableitem-v2,
+.articlemedia,
+.accordion,
+.navteaser,
+.navlist,
+.navitem,
+.articleemphasis,
+.herobanner_v2,
+.articleintro,
+.articletext,
+.articlequote {
+  h1 {
+    @include a-h1-new;
+  }
+  // h1:not(:last-child) {
+  //   padding-bottom: 2.4rem;
+  // }
+
+  h2 {
+    @include a-h2-new;
+  }
+  // h2:not(:last-child) {
+  //   padding-bottom: 2.4rem;
+  // }
+  h3 {
+    @include a-h3-new;
+  }
+  // h3:not(:last-child) {
+  //   padding-bottom: 2.4rem;
+  // }
+  h4 {
+    @include a-h4-new;
+  }
+  // h4:not(:last-child) {
+  //   padding-bottom: 2.4rem;
+  // }
+  h5 {
+    @include a-h5-new;
+  }
+
+  // h5:not(:last-child) {
+  //   padding-bottom: 2.4rem;
+  // }
+
+  p {
+    @include a-bodycopy;
+  }
+
+  // p:not(:last-child) {
+  //   padding-bottom: 2.4rem;
+  // }
+  //Styles
+
+  // span.a-h1l-new:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-h2l-new:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-h3l-new:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-h4l-new:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-h5l-new:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-subtitle-large:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-subtitle-small:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-overline:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+  // span.a-caption:not(:last-child) {
+  //   display: inline-block;
+  //   padding-bottom: 2.4rem;
+  // }
+}
+
+.a-caption {
+  @include a-caption;
+}
+.a-caption-bold {
+  @include a-caption-bold;
+}
+
+.a-subtitle-small {
+  @include a-subtitle-small;
+}
+
+.a-subtitle-large {
+  @include a-subtitle-large;
+}
+
+.a-display {
+  @include a-display;
+}
+
+.a-h1l-new {
+  @include a-h1l-new;
+}
+
+.a-h2l-new {
+  @include a-h2l-new;
+}
+
+.a-h3l-new {
+  @include a-h3l-new;
+}
+
+.a-h4l-new {
+  @include a-h4l-new;
+}
+
+.a-h5l-new {
+  @include a-h5l-new;
+}
+
+.a-overline {
+  @include a-overline;
+}
+.a-bodycopy-regular {
+  @include a-bodycopy-regular;
+}

@@ -1,0 +1,48 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.navitem="com.softwareag.core.models.navigation_v2.NavigationV2Model"></sly>
+<nav class="navlistcontainer ">
+	<ul data-sly-list="${navitem.navlist}" class="listitems-container ${properties.alignment}">
+		<li class="listitem ${item.linkType=='mlink' ? 'nav-mlink' : '' }">
+			<div class="listitem-wrapper">
+				<span class="listlabel ">
+					<a class="nav-directlink" data-sly-test="${item.linkType=='dlink'}" href="${item.link}"
+						target="${item.linkOpenIn}">${item.linklabel}</a>
+					<sly data-sly-test="${item.linkType=='mlink'}">${item.linklabel}
+						<svg class="a-icon a-icon--to-top">
+							<use xlink:href="#to-top"></use>
+						</svg>
+					</sly>
+				</span>
+			</div>
+
+
+			<div data-sly-test="${item.linkType=='mlink'}" class="template" id="${item.template}">
+				<sly data-sly-test="${item.template!=''}">
+					<div class="nav-back-mobile">
+
+						<svg class="a-icon a-icon--to-top">
+							<use xlink:href="#to-top"></use>
+						</svg>Back
+
+					</div>
+				</sly>
+				<sly data-sly-test.newPath="${'navitem-container{0}' @ format = itemList.index}">
+					<sly data-sly-test="${item.template=='templateA'}">
+						<sly data-sly-resource="${newPath @ resourceType='softwareag/components/configs/navigation-v2-components/templateA'}"
+							decoration=true />
+					</sly>
+					<sly data-sly-test="${item.template=='templateB'}">
+						<sly data-sly-resource="${newPath @ resourceType='softwareag/components/configs/navigation-v2-components/templateB'}"
+							decoration=true />
+					</sly>
+					<sly data-sly-test="${item.template=='templateC'}">
+						<sly data-sly-resource="${newPath @ resourceType='softwareag/components/configs/navigation-v2-components/templateC'}"
+							decoration=true />
+					</sly>
+				</sly>
+			</div>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,126 @@
+.article-text {
+  //spacings - heading
+  h2 {
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  .article-text-summary > *:last-child {
+    padding-bottom: 0 !important;
+  }
+  .article-text-summary,
+  p {
+    @include base-font;
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .article-text-summary,
+  p:not(:last-child) {
+    @include mq-desktop {
+      margin-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      margin-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      margin-bottom: 2rem;
+    }
+  }
+
+  //RTE spacings
+  .article-text-summary {
+    .a-caption {
+      @include a-caption;
+    }
+    .a-caption:not(:last-child) {
+      padding-bottom: 1.6rem;
+    }
+
+    h3 {
+      @include mq-desktop {
+        padding-bottom: 1.2rem;
+      }
+      @include mq-tablet {
+        padding-bottom: 1.2rem;
+      }
+      @include mq-phone {
+        padding-bottom: 0.8rem;
+      }
+    }
+
+    h4 {
+      padding-bottom: 0.8rem;
+    }
+    h5 {
+      padding-bottom: 0.4rem;
+    }
+    ul {
+      @include mq-phone {
+        padding-left: 2.6rem;
+      }
+      @include mq-tablet {
+        padding-left: 4.6rem;
+      }
+      @include mq-desktop {
+        padding-left: 4.6rem;
+      }
+      list-style-type: disc;
+      list-style-position: outside;
+      li:not(:last-child) {
+        padding-bottom: 1rem;
+      }
+      @include mq-phone {
+        padding-bottom: 2rem;
+      }
+      @include mq-tablet {
+        padding-bottom: 2.4rem;
+      }
+      @include mq-desktop {
+        padding-bottom: 3.2rem;
+      }
+    }
+    ol {
+      list-style-type: decimal;
+      list-style-position: outside;
+      @include mq-phone {
+        padding-left: 2.6rem;
+      }
+      @include mq-tablet {
+        padding-left: 4.6rem;
+      }
+      @include mq-desktop {
+        padding-left: 4.6rem;
+      }
+      @include mq-phone {
+        padding-bottom: 2rem;
+      }
+      @include mq-tablet {
+        padding-bottom: 2.4rem;
+      }
+      @include mq-desktop {
+        padding-bottom: 3.2rem;
+      }
+      li:not(:last-child) {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+.articletext {
+  @include mq-phone {
+    padding-top: 2rem;
+  }
+  @include mq-tablet {
+    padding-top: 2.4rem;
+  }
+  @include mq-desktop {
+    padding-top: 3.2rem;
+  }
+}

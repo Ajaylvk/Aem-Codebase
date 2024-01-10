@@ -1,0 +1,64 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.carouselContainer="${'com.softwareag.core.models.carousel.CarouselModel'}"></sly>
+<div
+  class="carouselcontainer-background ${properties.backgroundColor ? properties.backgroundColor : 'input__colorselect-background-color1'}">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+
+  <div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    class="carousel-a-v1__container hidecarouselonload ${carouselContainer.carouselPosition}" role="group"
+    aria-label="${carousel.accessibilityLabel}" aria-roledescription="carousel" data-cmp-is="carousel-a-v1"
+    data-wcmmode="${wcmmode.edit ? 'edit' : 'non-edit'}" data-attrib-name="contentsection">
+
+    <!-- ${properties.backgroundColor} -->
+
+    <!-- Carousel Bullet variation -->
+    <sly data-sly-test="${carouselContainer.carouselVariation=='bullets'}">
+      <!-- bullet slider -->
+      <div class="slider slider-bullet fade carousel-scroll-identifier"
+        data-slidervaritation="${carouselContainer.carouselVariation}"
+        data-autoplay="is${carouselContainer.carouselMode}"
+        data-slick='{"autoplaySpeed":${carouselContainer.carouselMode ? carouselContainer.timer : 0} ,"arrows" :false,"dots": true,"fade" :true}'>
+        <!-- parsys -->
+        <sly data-sly-resource="${'container' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+        <!-- parsys ends-->
+      </div>
+      <!-- bullet slider ends-->
+    </sly>
+
+    <!-- Carousel Logo variation -->
+    <sly data-sly-test="${carouselContainer.carouselVariation=='logo'}">
+      <!-- background slider -->
+      <div class="slider-for fade carousel-scroll-identifier" data-autoplay='is${carouselContainer.carouselMode}'
+        data-slidervaritation='${carouselContainer.carouselVariation}'
+        data-slick='{"autoplaySpeed" : ${carouselContainer.carouselMode ? carouselContainer.timer : 0}, "arrows :false"}'>
+
+        <!-- parsys background logo-->
+        <sly data-sly-resource="${'container' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+        <!-- parsys background logo ends-->
+
+      </div>
+      <!-- background slider ends -->
+
+      <!-- logo slider -->
+      <div class="slider-nav fade carousel-scroll-identifier" data-autoplay='is${carouselContainer.carouselMode}'
+        data-slick='{"autoplaySpeed" : ${carouselContainer.carouselMode ? carouselContainer.timer : 0}}'>
+        <!-- parsys  logo-->
+        <sly
+          data-sly-resource="${ @ path='carousel-logo', resourceType='softwareag/components/content/carousellogo', decoration=false}">
+        </sly>
+        <!-- parsys logo ends-->
+      </div>
+      <!-- logo slider ends-->
+
+
+
+
+
+    </sly>
+
+  </div>
+</div>

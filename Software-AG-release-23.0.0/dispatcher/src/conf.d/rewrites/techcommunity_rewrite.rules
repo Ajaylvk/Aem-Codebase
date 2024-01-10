@@ -1,0 +1,15 @@
+# Don't allow valid but unshortened URLs
+RewriteRule ^/content/techcommunity/(.*)$ / [R=301,NC,L]
+
+# Handle root level
+RewriteRule ^/$ /en_en.html [R=301,NC,L]
+
+# Rewrite trailing slashes to .html
+# e. g. /en_corporate/ to /en_corporate.html
+RewriteRule ^/(.+)/$ /$1.html [R=301,NC,L]
+
+#standard URLs
+RewriteRule ^/([a-z]{2}_)([a-z]+)(/.*)?\.(html|jpe?g|JPE?G|png|PNG|gif|GIF)$  /content/techcommunity/$2/$1$2$3.$4 [PT,L]
+
+#sitemap
+RewriteRule ^/([a-z]{2}_)([a-z]+)\.sitemap\.xml$  /content/techcommunity/$2/$1$2.sitemap.xml [PT,L]

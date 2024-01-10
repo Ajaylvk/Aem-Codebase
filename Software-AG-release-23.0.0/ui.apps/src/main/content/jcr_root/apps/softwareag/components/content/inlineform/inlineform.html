@@ -1,0 +1,36 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+
+
+<sly data-sly-use.inlineForm="com.softwareag.core.models.inlineform.InLineFormModel">
+
+    <div class="inlineform__wrapper ${!properties.fileReference ? inlineForm.backgroundColor : ''} ">
+        <!-- background color to be populated above in case background image not provided -->
+
+        <div class="inlineform__background-image" data-sly-test="${properties.fileReference}"
+            data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+            <!-- background image coming from dynamic media -->
+        </div>
+
+        <div class="content-width-v1" data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html">
+
+            <div data-position="${inlineForm.position}" class="inlineform__container">
+                <!-- position property will decide middle,left or right alignement of the content -->
+
+                <div class="inlineform-divider" data-sly-test="${inlineForm.greyLine}"> </div>
+                <!-- optional divider -->
+
+
+                <div data-sly-resource="${'text-v2-cmp' @resourceType='softwareag/components/content/text-v2'}"></div>
+
+                <div
+                    data-sly-resource="${'marketo-form' @ resourceType='softwareag/components/content/marketo-form_v1'}">
+                </div>
+
+                <div class="links standalone-primary-core-dark"
+                    data-sly-resource="${'links-cmp' @resourceType='softwareag/components/content/links',decoration=true}">
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>

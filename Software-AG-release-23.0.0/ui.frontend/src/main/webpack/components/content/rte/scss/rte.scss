@@ -1,0 +1,71 @@
+.rtewrapper {
+    [class$='__text'],
+    .cmp-text {
+        @include a-copytext;
+
+        h2,
+        h3,
+        p {
+            @include spacing(margin-bottom, m);
+        }
+
+        h2 {
+            @include a-h2;
+        }
+
+        h3 {
+            @include a-h3;
+        }
+
+        p {
+            @include a-copytext;
+        }
+
+        a:not(.a-cta__button) {
+            @include a-anchor;
+        }
+
+        ul,
+        ol {
+            list-style-position: inside;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+        
+        ol {
+            list-style-type: decimal;
+        }
+    }
+}
+
+[class$='__text'],
+.cmp-text {
+    ul,
+    ol {
+        @include spacing(margin-bottom, m);
+    }
+
+    li > ul,
+    li > ol {
+        margin-bottom: 0;
+    }
+
+    ul > li {
+        padding-left: 2rem;
+        list-style-type: none;
+        background-repeat: no-repeat;
+        background-position: 0 0.6rem;
+        background-size: 1.6rem 1.6rem;
+        background-image: $arrow-dark;
+    }
+}
+
+.input__colorselect-font-color0 ul li {
+    background-image: $arrow-dark;
+}
+
+.input__colorselect-font-color1 ul li {
+    background-image: $arrow-light;
+}

@@ -1,0 +1,28 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Config",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+        "cq:redirectTarget": "/content/softwareag",
+        "sling:redirect": true,
+        "sling:redirectStatus": 302,
+        "sling:resourceType": "softwareag/components/structure/configurationpage",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "search-config": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/configs/search-config",
+                "searchUiLanguage": "de",
+                "searchLanguage" : "en",
+                "link":
+                {
+                    "jcr:primaryType": "nt:unstructured",
+                    "href": "search-result.html"
+                }
+            }
+        }
+    }
+}
+

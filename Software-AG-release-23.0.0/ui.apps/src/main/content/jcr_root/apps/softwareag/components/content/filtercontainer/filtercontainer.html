@@ -1,0 +1,96 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div class="filtercontainer__wrapper"
+     data-sly-use.defaultTemplate="softwareag/components/commons/templates.html"
+     data-sly-use.filterContainer="com.softwareag.core.models.filtercontainer.FilterContainerModel"
+     data-attrib-name="contentsection"
+     data-attrib-value="${filterContainer.dataAttribValue}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <div class="filtercontainer__container content-width"
+         data-load-default-items="${properties.amountOfListedContentItems}"
+         data-load-more-items="${properties.amountOfMoreLoadedContentItems}">
+        <h2 class="filtercontainer__title a-h2">${properties.title}</h2>
+        <p class="filtercontainer__copytext a-intro-small">${properties.copyText @ context = 'html'}</p>
+
+        <div class="filtercontainer__filters">
+            <div class="filtercontainer__filter-wrapper" data-sly-test="${filterContainer.filterOption1Exists}">
+                <label>
+                    <select class="filtercontainer__filter-1 select-item" data-template-id="filter-option-template" id="selectBox1">
+                    </select>
+                </label>
+            </div>
+            <div class="filtercontainer__filter-wrapper" data-sly-test="${filterContainer.filterOption2Exists}">
+                <label>
+                    <select class="filtercontainer__filter-2 select-item" data-template-id="filter-option-template" id="selectBox2">
+                    </select>
+                </label>
+            </div>
+            <div class="filtercontainer__filter-wrapper" data-sly-test="${filterContainer.filterOption3Exists}">
+                <label>
+                    <select class="filtercontainer__filter-3 select-item" data-template-id="filter-option-template" id="selectBox3">
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <!-- Template for Asset/Partner dropdown filters -->
+        <script id="filter-option-template" type="text/x-handlebars-template">
+            {{#each result}}
+            {{#if selected}}
+            <option value="{{value}}" class="filtercontainer__filter-option" data-key-title="{{title}}" selected>{{title}}</option>
+            {{else}}
+            <option value="{{value}}" class="filtercontainer__filter-option" data-key-title="{{title}}">{{title}}</option>
+            {{/if}}
+            {{else}}
+            <option value="" class="filtercontainer__filter-option" data-key-title="-">-</option>
+            {{/each}}
+        </script>
+
+        <div class="filtercontainer__list">
+            <div data-sly-resource="${'container' @ resourceType='softwareag/components/content/parsys'}"
+                 data-sly-use.gridContainerParsysModel="${'com.softwareag.core.models.gridcontainer.GridContainerParsysModel' @ parsysResourcePath='container'}"
+                 class="parsys${gridContainerParsysModel.additionalClasses}">
+            </div>
+        </div>
+
+        <button class="filtercontainer__load-more a-cta a-cta--design-dark-button">
+            <span class="a-cta__button">
+                <span class="a-cta__button-text">
+                    Load more
+                </span>
+            </span>
+        </button>
+
+        <form>
+            <label>
+                <input class="filtercontainer__currently-shown-items" value="${properties.amountOfListedContentItems}">
+            </label>
+            <label>
+                <input class="filtercontainer__filter1-input">
+            </label>
+            <label>
+                <input class="filtercontainer__filter2-input">
+            </label>
+            <label>
+                <input class="filtercontainer__filter3-input">
+            </label>
+
+            <input data-sly-test="${properties.filterOptionOne}"
+                   data-title="${filterContainer.option1TagTitle}" id="filter1_ref" type="hidden" value="${properties.filterOptionOne}" />
+            <input data-sly-test="${properties.filterOptionTwo}"
+                   data-title="${filterContainer.option2TagTitle}" id="filter2_ref" type="hidden" value="${properties.filterOptionTwo}" />
+            <input data-sly-test="${properties.filterOptionThree}"
+                   data-title="${filterContainer.option3TagTitle}" id="filter3_ref" type="hidden" value="${properties.filterOptionThree}" />
+
+        </form>
+    </div>
+</div>
+
+<sly data-sly-call="${defaultTemplate.placeholder @ isEmpty = !filterContainer.hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationmodel=integrationModel}"></sly>

@@ -1,0 +1,321 @@
+<sly data-sly-use.searchModel="com.softwareag.core.models.search.Search"
+    data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.js @ categories=['softwareag.searchresults']}"></sly>
+
+<sly data-sly-use.searchModel="com.softwareag.core.models.search.Search"
+    data-sly-use.clientlib="/apps/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories=['softwareag.site',
+'cq.dam.components.scene7.common.viewer',
+'cq.dam.components.scene7.dynamicmedia',
+'cq.dam.components.scene7.common.i18n'
+] ,loading='defer'
+}"></sly>
+
+<script type="text/javascript">
+    function hidefooter() {
+        if (!$('.footer').children().length) {
+            $('.footer').css("padding", "0");
+        }
+
+    }
+
+    function removeHeaderZindex() {
+
+        if (!$('.header-v1').children().length) {
+            $('.header-v1').css("z-index", "unset");
+        }
+    }
+
+    if (document.readyState === 'loading') {
+
+        document.addEventListener('DOMContentLoaded', hidefooter);
+        document.addEventListener('DOMContentLoaded', removeHeaderZindex);
+    }
+    else {
+
+        hidefooter();
+        removeHeaderZindex();
+    }
+
+</script>
+
+
+<!-- script for collab page -->
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function () {
+
+        var anchorTag = document.querySelector('.logo-title a[title]');
+
+        if (anchorTag != null) {
+            var title = anchorTag.getAttribute('title');
+            var lowercaseTitle = title.toLowerCase();
+            if (lowercaseTitle.includes('colab')) {
+
+                $(".cq-placeholder").css("display", "none");
+
+                $(".cq-placeholder").css("display", "none");
+
+                var searchIcon = document.querySelector('.headerV1__icons-search');
+                if (searchIcon) {
+                    searchIcon.style.display = 'none';
+                }
+
+
+                if (window.innerWidth <= 768 && $("div").hasClass("accordion")) {
+                    document.querySelectorAll('a.dev-center-level0-link').forEach(function (link) {
+                        link.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            var existingHref = link.getAttribute('href');
+                            var newHref = 'https://www.softwareag.com/en_corporate/colab.html' + existingHref;
+                            link.setAttribute('href', newHref);
+                            window.open(newHref, '_blank');
+                        });
+                    });
+                }
+
+
+            }
+        }
+    });
+</script>
+
+<script name="ig_query" type="text/x-handlebars-template">
+<!--Begin: ig/query-->
+<form class="header__search-form" action="{{searchModel.config.link.href}}" target="_self">
+    <input class="header__search-form-input" type="text" tabindex="-1" placeholder="{{i18n 'query_enter_value'}}"
+        name="q" id="searchfield" value="{{searchParams.parameters.query}}" />
+    <input type="hidden" name="cn" />
+    <button class="header__search-form-submit a-icon a-icon--hover" type="submit" tabindex="-1">
+        <svg class="a-icon a-icon--search">
+            <use xlink:href="#search"></use>
+        </svg>
+    </button>
+</form>
+<!--End: ig/query-->
+</script>
+
+<!-- search result output -->
+<script name="ig_search" type="text/x-handlebars-template">
+<!--Begin: ig/search-->
+{{#if values.length}}
+{{#if correctedQuery}}
+<p class="proposed-query">{{i18n 'dym'}}:&nbsp;<i><a data-action="change" data-name="q"
+            data-value="{{correctedQuery}}">{{correctedQuery}}</a></i></p>
+{{/if}}
+
+<div class="counter">{{i18n 'hits_for_search' query=searchParams.parameters.query count=matchingDocumentCount
+    first=@root.pager.firstPageHit last=@root.pager.lastPageHit}}</div>
+
+<br clear="all" />
+
+{{#each values}}
+{{>result}}
+{{/each}}
+
+{{>related}}
+
+{{>pager}}
+{{else}}
+{{#if searchParams.parameters.query}}
+<p>
+    {{i18n 'no_hits' query=searchParams.parameters.query}}<br>
+    {{i18n 'no_hits_check_query'}}
+</p>
+{{#if correctedQuery}}
+<p class="proposed-query">{{i18n 'dym'}}:&nbsp;<i><a data-action="change" data-name="q"
+            data-value="{{correctedQuery}}">{{correctedQuery}}</a></i></p>
+{{/if}}
+{{else}}
+<p>{{i18n 'please_query_enter_value'}}</p>
+{{/if}}
+{{/if}}
+<!--End: ig/search-->
+</script>
+
+<!-- related searches -->
+<script name="related" partial-name="related" type="text/x-handlebars-template">
+<div class="related-items">
+   <span class="a-copytext">{{i18n 'search_related_query' query=searchParams.parameters.query}}</span>
+   <div class="related-terms">
+       {{#each suggestions}}
+       <a href="{{searchModel.config.link.href}}?q={{value}}">{{{label}}}</a>
+       {{/each}}
+   </div>
+</div>
+</script>
+
+<!-- search results -->
+<script name="result" partial-name="result" type="text/x-handlebars-template">
+<div class="search-item">
+   <a title="{{i18n 'open'}}: {{[common.title].0.formatted}}" href="{{url.0.formatted}}" data-attr-type="searchLink" data-attr-value="{{[common.title].0.formatted}}">
+       <span class="a-intro-small">{{{marked [common.title] 'match'}}}</span>
+       {{#if path}}
+       <br />
+       <span class="a-copytext light">{{path.0.formatted}}</span>
+       {{/if}}
+   </a>
+   <p class="a-copytext">{{{marked content 'match'}}}</p>
+</div>
+</script>
+
+<!-- select: number of search results / page -->
+<script name="rsmax" partial-name="rsmax" type="text/x-handlebars-template">
+<div class="rsmax">
+   <label for="more">{{i18n 'number_of_results'}}:</label>
+   <select name="limit">
+       {{#each @root.pageSize}}
+       {{#if selected}}
+       <option selected="selected">{{label}}</option>
+       {{else}}
+       <option>{{label}}</option>
+       {{/if}}
+       {{/each}}
+   </select>
+</div>
+</script>
+
+<!-- Pager -->
+<script name="pager" partial-name="pager" type="text/x-handlebars-template">
+<div class="pager a-copytext">
+   {{#each @root.pager}}
+   {{#ifcond type '==' 'prev'}}
+   <a class="next-page" title="{{i18n 'search_prev'}}" alt="{{i18n 'search_prev'}}" data-action="change" data-name="of" data-value="{{offset}}" data-is-active="{{is_active}}" href="#">
+       <svg class="a-icon a-icon--angle-left">
+           <use xlink:href="#angle-left"></use>
+       </svg>
+   </a>
+   {{else ifcond type '==' 'next'}}
+   <a class="next-page" title="{{i18n 'search_next'}}" alt="{{i18n 'search_next'}}" data-action="change" data-name="of" data-value="{{offset}}" data-is-active="{{is_active}}" href="#">
+       <svg class="a-icon a-icon--angle-right">
+           <use xlink:href="#angle-right"></use>
+       </svg>
+   </a>
+   {{else ifcond type '==' 'page'}}
+   {{#if hasPrevPage}}  {{/if}}
+   {{#if is_active}}
+   <a class="active">{{title}}</a>
+   {{else}}
+   <a href="#" data-action="change" data-name="of" data-value="{{offset}}">{{title}}</a>
+   {{/if}}
+   {{else ifcond type '==' 'separator'}}
+   {{title}}
+   {{/ifcond}}
+   {{/each}}
+
+   {{>rsmax}}
+</div>
+</script>
+
+<!-- facets -->
+<script name="search_facets" type="text/x-handlebars-template">
+<!--Begin: search/facets-->
+{{#each searchFacets.facets}}
+{{#ifcond categories.length '>' 0}}
+<!-- only show facets configured to be displayed -->
+{{#with (lookup @root.facetsConfig [name])~}}
+<!-- <h4>{{../label}}</h4> -->
+
+{{#ifcond view '==' 'tree'}}
+{{> facet_tree ../.}}
+{{else ifcond view '==' 'cloud'}}
+{{> facet_cloud ../.}}
+{{else ifcond view '==' 'perspective'}}
+{{> facet_perspective ../.}}
+{{else}}
+{{> facet_list ../.}}
+{{/ifcond}}
+{{/with}}
+{{/ifcond}}
+{{/each}}
+<!--End: search/facets-->
+</script>
+
+<!-- facet listview -->
+<script name="facet_list" partial-name="facet_list" type="text/x-handlebars-template">
+<ul>
+   {{#each categories}}
+   <li>
+       {{#isFilterActive name @root.searchParams.parameters.categoryFilters}}
+       <a data-action="remove" data-name="cf" data-value="{{name}}" style="font-weight:bold;">{{label}} ({{matchingDocumentCount}})</a>
+       {{else}}
+       <a data-action="add" data-name="cf" data-value="{{name}}">{{label}} ({{matchingDocumentCount}})</a>
+       {{/isFilterActive}}
+   </li>
+   {{/each}}
+</ul>
+</script>
+
+<!-- facet perspective view -->
+<script name="facet_perspective" partial-name="facet_perspective" type="text/x-handlebars-template">
+<div class="ig_facets">
+   <div class="perspectives a-copytext">
+       {{#each (getPerspectives @root name)}}
+       {{#isFilterActive name @root.searchParams.parameters.categoryFilters}}
+       <a data-action="remove" data-name="cf" {{#ifcond matchingDocumentCount '==' 0}} class="no-result" {{/ifcond}} data-value="{{name}}" style="font-weight:bold;" class="active">{{label}} ({{matchingDocumentCount}})</a>
+       {{else}}
+       <a class="cat_count_{{matchingDocumentCount}} {{#ifcond matchingDocumentCount '==' 0}}no-result{{/ifcond}}" {{#ifcond matchingDocumentCount '==' 0}}no-result{{/ifcond}} data-action="change" data-name="cf" data-value="{{name}}">{{label}} ({{matchingDocumentCount}})</a>
+       {{/isFilterActive}}
+       {{/each}}
+   </div>
+</div>
+</script>
+
+<!-- facet treeview -->
+<script name="facet_tree" partial-name="facet_tree" type="text/x-handlebars-template">
+<ul>
+   {{#each (getSortedTree categories name @root.searchParams.parameters.categoryFilters)}}
+   {{#if display}}
+   <li>
+       {{#isFilterActive name @root.searchParams.parameters.categoryFilters}}
+       {{#if ancestor}}
+       <a data-action="change" data-name="cf" data-value="{{ancestor}}" style="margin-left:{{marginLeft}}px;font-weight:bold;">{{label}} ({{matchingDocumentCount}})</a>
+       {{else}}
+       <a data-action="remove" data-name="cf" data-value="{{name}}" style="margin-left:{{marginLeft}}px;font-weight:bold;">{{label}} ({{matchingDocumentCount}})</a>
+       {{/if}}
+       {{else}}
+       <a data-action="change" data-name="cf" data-value="{{name}}" style="margin-left:{{marginLeft}}px;">{{label}} ({{matchingDocumentCount}})</a>
+       {{/isFilterActive}}
+   </li>
+   {{/if}}
+   {{/each}}
+</ul>
+</script>
+
+<!-- facet wordcloud -->
+<script name="facet_cloud" partial-name="facet_cloud" type="text/x-handlebars-template">
+<div class="cloud">
+   {{#each categories}}
+   {{#isFilterActive name @root.searchParams.parameters.categoryFilters}}
+   <a data-action="remove" data-name="cf" data-value="{{name}}" style="font-size:{{getKeywordWeight matchingDocumentCount @root.matchingDocumentCount}}%; font-weight:bold;">{{label}}</a>&nbsp;&nbsp;
+   {{else}}
+   <a data-action="add" data-name="cf" data-value="{{name}}" style="font-size:{{getKeywordWeight matchingDocumentCount @root.matchingDocumentCount}}%;">{{label}}</a>&nbsp;&nbsp;
+   {{/isFilterActive}}
+   {{/each}}
+</div>
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('body').igGlobalSearch({
+            "uiLang": "${searchModel.config.searchUiLanguage @context='scriptString'}",
+            "searchLang": "${searchModel.config.searchLanguage @context='scriptString'}",
+            "url": "${searchModel.searchUri @context='uri'}",
+            "suggestUrl": "${searchModel.suggestionUri @context='uri'}",
+            "timeZoneId": Intl.DateTimeFormat().resolvedOptions().timeZone,
+            "searchResultUrl": "${searchModel.config.link.href @context='uri'}"
+        });
+
+        $(document).on("click", function () {
+            $('input#searchfield').igSuggestions({
+                "suggestUrl": "${searchModel.suggestionUri @context='uri'}",
+                "searchLang": "${searchModel.config.searchLanguage @context='scriptString'}"
+            });
+        });
+
+    });
+</script>
+<!-- /search-relevant scripts -->
+
+<!--/*
+Inclusion of SVG fonts. Fonts are styled by CSS.
+Please refer to /apps/softwareag/components/commons/svg/icons.html */-->
+<sly data-sly-include="/apps/softwareag/components/commons/svg/icons-markup.html"></sly>

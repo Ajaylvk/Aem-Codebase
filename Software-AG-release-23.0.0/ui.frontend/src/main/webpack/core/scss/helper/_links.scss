@@ -1,0 +1,22 @@
+@mixin a-anchor-text-footer {
+    @include link-hover();
+    color: $color-core-dark-850;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-white;
+        text-decoration: underline;
+    }
+}
+
+@mixin a-anchor {
+    @include link-hover();
+    font-weight: bold;
+    cursor: pointer;
+   
+    @include supports-hover {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

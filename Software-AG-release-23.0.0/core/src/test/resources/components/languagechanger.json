@@ -1,0 +1,36 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Region Changer",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/page",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "languagechanger": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/languagechanger",
+                "general": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "introductoryText": "Language Changer introductory text",
+                    "title": "Language Changer title"
+                },
+                "language": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "title": "Language",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "href": "/content/softwareag/corporate/en_corporate",
+                        "text": "EN"
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "href": "/content/softwareag/corporate/en_corporate",
+                        "text": "DE"
+                    }
+                }
+            }
+        }
+    }
+}

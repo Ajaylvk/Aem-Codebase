@@ -1,0 +1,207 @@
+// Font is included via inline tag in head.
+@mixin base-font {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+@mixin base-font-bold {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@mixin base-font-light {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+@mixin font-size-with-rem-line-height($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+// Display
+@mixin a-display {
+  @include base-font-bold;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(6rem, 6.8rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(5.2rem, 6rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(4.2rem, 5rem);
+  }
+}
+// H1
+@mixin a-h1 {
+  @include base-font-bold;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(4.8rem, 5.6rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(4rem, 4.8rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(3.2rem, 3.8rem);
+  }
+
+  + .a-h2 {
+    margin-top: 5rem;
+  }
+
+  + .a-bodycopy {
+    @include spacing(margin-top, m);
+  }
+}
+// H2
+@mixin a-h2 {
+  @include base-font-light;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(4.2rem, 5rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(3.4rem, 4.2rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(2.8rem, 3.4rem);
+  }
+
+  + .a-bodycopy {
+    @include spacing(margin-top, m);
+  }
+}
+// H3
+@mixin a-h3 {
+  @include base-font-bold;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(3.2rem, 4rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(2.8rem, 3.4rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(2.4rem, 3rem);
+  }
+
+  + .a-bodycopy {
+    @include spacing(margin-top, m);
+    @include spacing(margin-bottom, s);
+  }
+}
+// H4
+@mixin a-h4 {
+  @include base-font-bold;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(2.4rem, 3rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(2.4rem, 3rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(2.2rem, 2.8rem);
+  }
+}
+// H5
+@mixin a-h5 {
+  @include mq-phone {
+    @include font-size-with-rem-line-height(2rem, 2.6rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(2rem, 2.6rem);
+  }
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(2rem, 2.6rem);
+  }
+  @include base-font-bold;
+}
+// H4L
+@mixin a-h4l {
+  @include base-font-light;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(2.4rem, 3.4rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(2.4rem, 3.4rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(2.2rem, 2.8rem);
+  }
+}
+// Subtitle Large
+@mixin a-subtitle-large {
+  @include base-font-bold;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+}
+// Subtitle Small
+@mixin a-subtitle-small {
+  @include base-font-bold;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+  }
+}
+// Bodycopy
+@mixin a-bodycopy {
+  @include base-font;
+  // @include spacing(margin-bottom, newm);
+
+  @include mq-phone {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+}
+// Bodycopy Small
+@mixin a-bodycopy-small {
+  @include base-font;
+  @include spacing(margin-bottom, m);
+
+  @include mq-phone {
+    @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+  }
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+  }
+}
+// Overline- formerly known as distinction
+@mixin a-overline {
+  @include base-font-bold();
+  @include font-size-with-rem-line-height(1.4rem, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: $color-bright-pulse-55;
+}
+// Caption
+@mixin a-caption {
+  @include base-font;
+  @include mq-desktop {
+    @include font-size-with-rem-line-height(1.2rem, 1.8rem);
+  }
+  @include mq-tablet {
+    @include font-size-with-rem-line-height(1.2rem, 1.8rem);
+  }
+  @include mq-phone {
+    @include font-size-with-rem-line-height(1.2rem, 1.8rem);
+  }
+}
+
+//----------------------------------------------------------------------------------------------//

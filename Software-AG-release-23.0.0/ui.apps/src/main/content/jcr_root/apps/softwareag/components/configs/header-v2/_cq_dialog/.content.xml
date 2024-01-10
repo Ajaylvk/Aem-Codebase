@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header v2"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <backgroundColor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Please select the Header Background Color"
+                        fieldLabel="Header Background Color"
+                        name="./backgroundColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Background Color"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="Primary White"
+                                value="input__colorselect-text-background-text-component-color2"/>
+                            <coredark
+                                jcr:primaryType="nt:unstructured"
+                                text="Core Dark 950"
+                                value="input__colorselect-text-background-text-component-color3"/>
+                        </items>
+                    </backgroundColor>
+                    <logoenabler
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}false"
+                        fieldDescription="Check to Enable Logo Component"
+                        name="./logoenabler"
+                        text="Enable Logo Component"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <searchiconenabler
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}false"
+                        fieldDescription="Check to Enable Search Component"
+                        name="./searchiconenabler"
+                        text="Enable Search Icon"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <regionchangerenabler
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}false"
+                        fieldDescription="Check to Enable Region Changer Component"
+                        name="./regionchangerenabler"
+                        text="Enable Region Changer"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <primarybuttonenabler
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}false"
+                        fieldDescription="Check to Enable Primary Button Component"
+                        name="./primarybuttonenabler"
+                        text="Enable Primary Button"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <secondarybuttonenabler
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}false"
+                        fieldDescription="Check to Enable Secondary Button Component"
+                        name="./secondarybuttonenabler"
+                        text="Enable Secondary Button"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <navigationenabler
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                        level="3"
+                        text="Navigation is embedded by default with header"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Advanced"
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <section1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Settings"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <noIndex
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            fieldDescription="Prevent page indexing on search engines."
+                            name="./noIndex"
+                            text="No Index"
+                            value="true">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="noIndex"/>
+                        </noIndex>
+                        <redirect
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Redirect"
+                            name="./cq:redirectTarget"
+                            rootPath="/content">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="cq:redirectTarget"/>
+                        </redirect>
+                        <alias
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Alias"
+                            name="./sling:alias"
+                            renderReadOnly="{Boolean}true">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="sling:alias"/>
+                        </alias>
+                        <redirecttype
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Redirect Type"
+                            name="./redirectType">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="redirectType"/>
+                            <items jcr:primaryType="nt:unstructured">
+                                <select
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Select Redirect Type"
+                                    value=""/>
+                                <permanent
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Permanent Redirect 301"
+                                    value="301"/>
+                                <temporary
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Temporary Redirect 302"
+                                    value="302"/>
+                            </items>
+                        </redirecttype>
+                    </items>
+                </section1>
+            </items>
+        </column>
+    </items>
+</jcr:root>

@@ -1,0 +1,17 @@
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.model="com.softwareag.core.models.inpagenavigation.InPageNavigationModel"
+     class="inpagenavigation__container">
+    <span class="prev-item" data-sly-call="${icons.getIcon @ name='angle-left', width=30, height=30}" ></span>
+    <div class="inpagenavigation-item"
+         data-sly-repeat.navigationItem="${model.navigationItems}">
+
+        <a href="${navigationItem.jumpDestination}" class="inpagenavigation__link">
+            ${navigationItem.title @ context = 'html'}
+        </a>
+
+    </div>
+    <span class="next-item" data-sly-call="${icons.getIcon @ name='angle-right', width=30, height=30}" ></span>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!model.hasContent}"></sly>

@@ -1,0 +1,62 @@
+  /* stylelint-disable */
+.logo-v1 {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    @include mq-phone {
+        margin-right:0;
+    }
+    .logoImage {
+        padding-top: 0.6rem;
+            cursor: pointer;
+    }
+    
+    
+    .logo-separator {
+     border-left : 0.5px solid #011F3D;
+     margin-right: 1.6rem;
+     height: 2.4rem;
+     margin-top: 0.7rem;
+    }
+    .logo-title {
+        @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+        @include base-font;
+        padding-top:9px;
+        width:max-content;
+        cursor: pointer;
+    }
+}
+.margin-16 {
+    margin-right: 1.6rem;
+}
+
+.headerv1__logo {
+  height: 2.4rem;
+}
+.header-v1 {
+    .input__colorselect-text-background-text-component-color3 {
+        .child-div-1 {
+            .logo-v1 {
+                .logo-separator {
+                    border-left : 0.5px solid white;
+                }
+                .logo-title {
+                    color: white;
+                }
+            }
+        }
+    }
+    .input__colorselect-text-background-text-component-color2 {
+        .child-div-1 {
+            .logo-v1 {
+                .logo-separator {
+                    border-left : 0.5px solid #011F3D;
+                }
+                .logo-title {
+                    color: #011F3D;
+                }
+            }
+        }
+    }
+}
+  /* stylelint-enable */

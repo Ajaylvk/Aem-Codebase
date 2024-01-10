@@ -1,0 +1,99 @@
+.filtercontainer {
+    @include spacing(padding-bottom, xxl);
+
+    .filtercontainer__wrapper {
+        background-color: $color-core-light;
+        @include spacing(padding-top, xxl);
+        @include spacing(padding-bottom, xxl);
+
+        @include mq-from-tablet {
+            @include spacing(padding-left, m);
+            @include spacing(padding-right, m);
+        }
+    }
+}
+
+.filtercontainer__container {
+    position: relative;
+
+    .filtercontainer__title {
+        @include spacing(margin-bottom, m);
+        text-align: center;
+    }
+
+    .filtercontainer__copytext {
+        @include spacing(margin-bottom, xl);
+        text-align: center;
+    }
+
+    .filtercontainer__filters {
+        @include spacing(margin-bottom, s);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filtercontainer__filter-wrapper {
+        @include spacing(margin-bottom, s);
+        position: relative;
+        width: 100%;
+
+        @include mq-tablet-landscape {
+            padding: 0 1rem;
+        }
+
+        @include mq-from-desktop {
+            max-width: 26rem;
+
+            &:not(:last-child) {
+                margin-right: $spacing-mobile-m;
+            }
+        }
+    }
+
+    .filtercontainer__list {
+        margin-bottom: $spacing-mobile-m;
+
+        .parsys {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .filtercontainer__load-more {
+        @include keyboard-outline();
+        display: block;
+        margin: 0 auto 2rem;
+        cursor: pointer;
+    }
+
+    .contentitem__container--hidden,
+    .filtercontainer__load-more--hidden,
+    .filtercontainer__currently-shown-items,
+    .filtercontainer__filter1-input,
+    .filtercontainer__filter2-input,
+    .filtercontainer__filter3-input {
+        display: none;
+    }
+}
+
+// Override Authoring.
+/* stylelint-disable */
+.aem-AuthorLayer-Edit {
+    .filtercontainer__container .parsys {
+        text-align: center;
+        vertical-align: top;
+    }
+
+    // newly added (empty) productteasers in edit-mode should be 100% width
+    .parsys.parsys--no-padding > div:first-child:not([data-layout]),
+    .productteaser.cq-Editable-dom {
+        width: 100%;
+    }
+
+    .filtercontainer__container .newpar {
+        width: 100%;
+    }
+}
+/* stylelint-enable */

@@ -1,0 +1,67 @@
+/*
+ * Colors according to https://frontify.namics.com/screens/94920
+ */
+
+// core light
+$color-core-light: #f2f2ea;
+
+// core black
+$color-core-black: #011f3d;
+$color-core-black-75: #41576e;
+$color-core-black-55: #738494;
+$color-core-black-35: #a6b1bb;
+$color-core-black-15: #d9dde2;
+
+// core dark
+
+$color-core-dark-220:#193857;
+$color-core-dark-350: #36597D;
+$color-core-dark-850:#D2D9E0;
+$color-core-dark-950: #F0F2F4;
+$color-core-dark-600:#7E96AE;
+$color-core-dark-220: #193857;
+$color-core-dark-350: #36597d;
+$color-core-dark-600: #7e96ae;
+$color-core-dark-850: #d2d9e0;
+$color-core-dark-950: #f0f2f4;
+$color-core-dark-450: #537393;
+
+
+// bright pulse
+$color-bright-pulse: #8e3cf7;
+$color-bright-pulse-55: #c194fb;
+$color-bright-pulse-15: #eee2fe;
+
+// bright sense
+$color-bright-sense: #3cc1b7;
+$color-bright-sense-55: #94ddd7;
+$color-bright-sense-15: #e2f6f4;
+$color-bright-sense-300: #058192;
+
+// bright life
+$color-bright-life: #d9ec27;
+$color-bright-life-55: #eaf588;
+$color-bright-life-15: #f9fcdf;
+
+// deep pulse / deep sense
+$color-deep-pulse: #3b2c5e;
+$color-deep-sense: #1c5569;
+
+// green
+$color-green: #1cd469;
+$color-green-55: #82e7ad;
+$color-green-15: #ddf9e9;
+
+// red
+$color-red: #e53764;
+$color-red-55: #f191aa;
+$color-red-15: #fbe1e8;
+
+// white
+$color-white: #fff;
+
+// system message colors
+$color-error-red-500: #d22d3d;
+$color-success-green-350: #71a112;
+$color-warning-orange-440: #e07800;
+$color-info-blue-400: #0366c9;

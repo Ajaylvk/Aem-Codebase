@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Logo Wall"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <properties
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Select the desired columns for the wall"
+                                        fieldLabel="Logo Wall Columns"
+                                        name="./columns">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <_x0034_
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="4 Columns"
+                                                value="4"/>
+                                            <_x0035_
+                                                jcr:primaryType="nt:unstructured"
+                                                text="5 Columns"
+                                                value="5"/>
+                                            <_x0036_
+                                                jcr:primaryType="nt:unstructured"
+                                                text="6 Columns"
+                                                value="6"/>
+                                        </items>
+                                    </columns>
+                                    <rows
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Select the desired rows for the wall"
+                                        fieldLabel="Logo Wall Rows"
+                                        name="./rows">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <_x0031_
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="1 Row"
+                                                value="1"/>
+                                            <_x0032_
+                                                jcr:primaryType="nt:unstructured"
+                                                text="2 Rows"
+                                                value="2"/>
+                                            <_x0033_
+                                                jcr:primaryType="nt:unstructured"
+                                                text="3 Rows"
+                                                value="3"/>
+                                            <_x0034_
+                                                jcr:primaryType="nt:unstructured"
+                                                text="4 Rows"
+                                                value="4"/>
+                                        </items>
+                                    </rows>
+                                    <bgcolors
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Select the desired background color of the Wall"
+                                        fieldLabel="Background Color"
+                                        name="./backgroundColor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <selectdropdown
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select Background Color"
+                                                value=""/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="white"/>
+                                            <corelight
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Light"
+                                                value="corelight"/>
+                                            <coredark120
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark (120)"
+                                                value="coredark-120"/>
+                                            <coredark950
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark (950)"
+                                                value="coredark-950"/>
+                                        </items>
+                                    </bgcolors>
+                                </items>
+                            </properties>
+                        </items>
+                    </basic>
+                </items>
+            </layout>
+        </items>
+    </content>
+</jcr:root>

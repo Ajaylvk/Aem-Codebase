@@ -1,0 +1,97 @@
+$class: 's7dm';
+
+.media__container {
+    @include component-bottom-spacing();
+    @include clearfix();
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.#{$class} {
+    &--no-scroll {
+        overflow: hidden !important;
+    }
+
+    &__black-area {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    &__placeholder {
+        width: 100%;
+    }
+
+    &__component {
+        position: relative;
+    }
+
+    &--overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+        background-color: rgba($color-core-black, 0.75);
+        display: flex;
+
+        .#{$class}__container {
+            width: 100%;
+            max-width: 90%;
+            margin: auto;
+
+            @include mq-from-tablet { 
+                max-width: 65%;
+            }
+        }
+
+        .s7container {
+            max-height: 75vh !important;
+        }
+    }
+
+    &__container {
+        position: relative;
+        margin: auto;
+    }
+
+    &__head-area {
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        color: $color-white;
+        padding-right: 16px;
+    }
+
+    &__close-popup {
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 8px;
+        color: $color-white;
+        font-size: 14px;
+        background: transparent;
+        z-index: 1;
+        
+        span {
+            display: inline-block;
+            margin-left: 6px;
+            width: 26px;
+            height: 26px;
+        }
+
+        svg {
+            fill: $color-white;
+        }
+    }
+}
+
+
+

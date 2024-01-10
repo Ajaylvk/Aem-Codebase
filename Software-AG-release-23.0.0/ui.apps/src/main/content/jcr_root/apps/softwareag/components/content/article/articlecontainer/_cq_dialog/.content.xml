@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article Container"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    categories="[cq.authoring.dialog]"
+    extraClientlibs="[showhidetab.clientlibs]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                granite:class="productType-showhide-target"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <navigation
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                        fieldLabel="Enable Article Navigation"
+                                        name="./enableNavigation"
+                                        text="Enable Article Navigation"
+                                        value="{Boolean}true"/>
+                                    <articlehero
+                                        granite:class="productType-showhide-target"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <enablehero
+                                                granite:class="cq-dialog-checkbox-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}false"
+                                                name="./enablearticleHero"
+                                                text="Enable Article Hero Banner"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-checkbox-showhide-target=".articlehero"/>
+                                            </enablehero>
+                                            <articlecontainer
+                                                granite:class="articlehero"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <type
+                                                        granite:class="linksection"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/select"
+                                                        class="cq-dialog-tab-showhide"
+                                                        cq-dialog-tab-showhide-target=".image-video-tab-showhide-target"
+                                                        fieldLabel="Image selection options"
+                                                        name="./type">
+                                                        <items jcr:primaryType="cq:WidgetCollection">
+                                                            <selectdropdown
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Select Media Type"
+                                                                value="select"/>
+                                                            <svg
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="SVG"
+                                                                value="svg"/>
+                                                            <asset
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Non-SVG"
+                                                                value="asset"/>
+                                                        </items>
+                                                        <granite:data
+                                                            granite:class="linksection"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                    </type>
+                                                    <backgroundStyle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldDescription="The background color of Article Banner"
+                                                        fieldLabel="Background Color"
+                                                        name="./backgroundStyle">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <selectdropdown
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Select Background Color"
+                                                                value="select"/>
+                                                            <white
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="White"
+                                                                value="input__colorselect-background-color1"/>
+                                                            <corelight
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Core Light"
+                                                                value="input__colorselect-background-color7"/>
+                                                            <coredark950
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Core Dark (950)"
+                                                                value="input__colorselect-background-color10"/>
+                                                            <multigradient
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Multi Gradient "
+                                                                value="background-multi-gradient"/>
+                                                            <brightpulsegradient
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bright Pulse Gradient "
+                                                                value="background-brightpulse-gradient"/>
+                                                            <brightsensegradient
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bright Sense Gradient"
+                                                                value="background-brightSense-gradient"/>
+                                                            <coredarkgradient
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Core Dark Gradient"
+                                                                value="background-coredark-gradient"/>
+                                                            <coredark120
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Core Dark (120)"
+                                                                value="input__colorselect-background-color8"/>
+                                                            <brightpulse600
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bright Pulse (600)"
+                                                                value="input__colorselect-background-color2"/>
+                                                            <brightsense300
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bright Sense (300)"
+                                                                value="input__colorselect-background-color11"/>
+                                                            <deeppulse270
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Deep Pulse (270)"
+                                                                value="input__colorselect-background-color5"/>
+                                                        </items>
+                                                    </backgroundStyle>
+                                                    <bannersize
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Banner Size"
+                                                        name="./bannerSize">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <selectdropdown
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Select Banner Size"
+                                                                value="select"/>
+                                                            <small
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Small"
+                                                                value="size-small"/>
+                                                            <medium
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Medium"
+                                                                value="size-medium"/>
+                                                            <large
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Large"
+                                                                value="size-large"/>
+                                                        </items>
+                                                    </bannersize>
+                                                </items>
+                                                <granite:data
+                                                    granite:class="articlehero"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </articlecontainer>
+                                        </items>
+                                        <granite:data jcr:primaryType="nt:unstructured"/>
+                                    </articlehero>
+                                </items>
+                            </select>
+                        </items>
+                    </basic>
+                    <asset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Non-SVG"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:hideChildren="[title,height,width]">
+                                    <file
+                                        granite:id="dmFileReference"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fieldDescription="Please add image here."
+                                        fieldLabel="Banner Image"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./fileReference"
+                                        mimeTypes="[image/.*,video/*,Multipart/Related;type=application/x-SpinSet,Multipart/Related;type=application/x-ImageSet,Multipart/Related;type=application/x-MixedMediaSet]"
+                                        multiple="{Boolean}false"
+                                        name="./file"
+                                        title="Asset"
+                                        useHTML5="{Boolean}true"/>
+                                    <alt
+                                        granite:id="dmAltText"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        fieldLabel="Alternative Text"
+                                        name="./altText"
+                                        validation="imageAlternativeText"/>
+                                </items>
+                            </column>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target asset"/>
+                    </asset>
+                    <svg
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SVG"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <file
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fieldDescription="Please add image here."
+                                        fieldLabel="SVG Image Field"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./image"
+                                        mimeTypes="[image/svg+xml]"
+                                        multiple="{Boolean}false"
+                                        name="./filesvg"
+                                        title="SVG Image Field"
+                                        useHTML5="{Boolean}true"/>
+                                    <alt
+                                        granite:id="dmAltText"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        fieldLabel="Alternative Text"
+                                        name="./altText2"
+                                        validation="imageAlternativeText"/>
+                                </items>
+                            </column>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target svg"/>
+                    </svg>
+                    <settings
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Dynamic Media Settings"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <dmpresettypecontainer
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <presettype
+                                                granite:id="s7PresetType"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                                fieldLabel="Preset Type"
+                                                id="s7PresetType"
+                                                name="./s7PresetType"
+                                                text="Preset Type">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <option1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        checked="{Boolean}true"
+                                                        name="./s7PresetType"
+                                                        text="Image Preset"
+                                                        value="image"/>
+                                                    <option2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        name="./s7PresetType"
+                                                        text="Viewer Preset"
+                                                        value="viewer"/>
+                                                </items>
+                                            </presettype>
+                                        </items>
+                                        <granite:rendercondition
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="dam/gui/components/s7dam/common/rendercondition/dm"/>
+                                    </dmpresettypecontainer>
+                                    <dms7presettypecontainer
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <presettype
+                                                granite:id="s7PresetType"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                                fieldLabel="Preset Type"
+                                                id="s7PresetType"
+                                                name="./s7PresetType"
+                                                text="Preset Type">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <option1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        checked="{Boolean}true"
+                                                        name="./s7PresetType"
+                                                        text="Image Preset"
+                                                        value="image"/>
+                                                    <option2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        name="./s7PresetType"
+                                                        text="Viewer Preset"
+                                                        value="viewer"/>
+                                                    <option3
+                                                        jcr:primaryType="nt:unstructured"
+                                                        name="./s7PresetType"
+                                                        text="Smart Crop"
+                                                        value="smartCrop"/>
+                                                </items>
+                                            </presettype>
+                                        </items>
+                                        <granite:rendercondition
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="dam/gui/components/s7dam/common/rendercondition/dms7"/>
+                                    </dms7presettypecontainer>
+                                    <imagepreset
+                                        granite:id="imagePreset"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        class="cq-dialog-dropdown-showhide"
+                                        cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"
+                                        fieldDescription="Image Preset to use when rendering image. It cannot be set when viewer preset is set."
+                                        fieldLabel="Image Preset"
+                                        id="imagePreset"
+                                        name="./s7ImagePreset">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="dam/components/scene7/common/imagepresetdatasource"/>
+                                    </imagepreset>
+                                    <viewerpreset
+                                        granite:id="viewerPreset"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        class="cq-dialog-dropdown-showhide"
+                                        cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"
+                                        fieldDescription="Viewer Preset to use when rendering dynamic asset. For images, it cannot be set when image preset is set."
+                                        fieldLabel="Viewer Preset"
+                                        id="viewerPreset"
+                                        name="./s7ViewerPreset">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="dam/components/scene7/common/viewerpresetdatasource"/>
+                                    </viewerpreset>
+                                    <urlModifiers
+                                        granite:id="s7URLModifiers"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Additional S7 image commands separated by '&amp;'.Field gives complete flexibility to change image effects."
+                                        fieldLabel="Image Modifiers"
+                                        id="s7URLModifiers"
+                                        name="./urlModifiers"/>
+                                    <assetType
+                                        granite:id="s7AssetType"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                        id="s7AssetType"
+                                        name="./assetType"/>
+                                    <viewermodifiers
+                                        granite:id="s7ViewerModifiers"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Extra Viewer Modifiers as name=value pair with &amp; delimiter ( i.e. posterimage=img.jpg&amp;caption=txt.vtt,1 )"
+                                        fieldLabel="Viewer Modifiers"
+                                        id="s7ViewerModifiers"
+                                        name="./viewermodfiers"/>
+                                    <disableResponsive
+                                        granite:id="disableBreakpoints"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Disable responsive breakpoints. Fixed width image can be defined in Image Presets"
+                                        id="disableBreakpoints"
+                                        name="./disableBreakpoints"
+                                        text="Disable breakpoints"
+                                        uncheckedValue="{Boolean}false"
+                                        value="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target asset"/>
+                    </settings>
+                </items>
+            </layout>
+        </items>
+    </content>
+</jcr:root>

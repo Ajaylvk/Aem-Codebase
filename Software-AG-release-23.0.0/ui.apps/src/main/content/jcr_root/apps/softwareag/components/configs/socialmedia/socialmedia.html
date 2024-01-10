@@ -1,0 +1,23 @@
+<div
+    data-sly-use.model="com.softwareag.core.models.page.SocialMediaConfigModel"
+    class="configuration__block">
+
+    <h2 class="a-h2" id="tabledesc">Social Media Configuration</h2>
+
+    <div class="property__block">
+        <dl>
+            <dt>Facebook sharing enabled:</dt>
+            <dd>${model.enabledFacebook}</dd>
+        </dl>
+        <dl>
+            <dt>Facebook shared page image:</dt>
+            <dl>
+                <div style="width: 300px">
+                    <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+                </div>
+            </dl>
+            <dt>${model.imagePresetWarning}</dt>
+        </dl>
+
+    </div>
+</div>

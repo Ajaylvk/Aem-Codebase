@@ -1,0 +1,21 @@
+<div data-sly-use.model="com.softwareag.core.models.GeneralConfigModel"
+     class="configuration__block">
+
+    <h2 class="a-h2">General Configuration</h2>
+
+    <div class="property__block">
+        <dl>
+            <dt>Configured date format:</dt>
+            <dd>${model.dateFormat}</dd>
+            <dt>Configured time format:</dt>
+            <dd>${model.timeFormat}</dd>
+        </dl>
+
+        <dl>
+            <dt>Enable UTM parameters</dt>
+            <dd>${model.enableUtm}</dd>
+            <dt>UTM prefix parameters</dt>
+            <dd>${model.paramPrefix}</dd>
+        </dl>
+    </div>
+</div>

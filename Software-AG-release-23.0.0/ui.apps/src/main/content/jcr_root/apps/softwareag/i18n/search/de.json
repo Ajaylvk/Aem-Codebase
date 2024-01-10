@@ -1,0 +1,134 @@
+{
+    "search":
+    "Suche",
+
+    "search_query":
+    "Suchbegriff",
+
+    "query_enter_value":
+    "Suchbegriff hier eingeben",
+
+    "please_query_enter_value":
+    "Bitte geben Sie einen Suchbegriff ein.",
+
+    "hits_for_search":
+    "Suchergebnis für \"{{query}}\": {{count}} Treffer",
+
+    "open":
+    "Öffnen",
+
+    "category":
+    "Kategorie",
+
+    "source":
+    "Quelle",
+
+    "order_by":
+    "Ergebnisse sortiert nach:",
+
+    "sort_result_ranking_DESC":
+    "Relevanz",
+
+    "sort_datetimeModified_DESC":
+    "Datum (ab)",
+
+    "sort_datetimeModified_ASC":
+    "Datum (auf)",
+
+    "sort_dc_title_ASC":
+    "Titel (auf)",
+
+    "sort_dc_title_DESC":
+    "Titel (ab)",
+
+    "sort_size_ASC":
+    "Größe (auf)",
+
+    "sort_size_DESC":
+    "Größe (ab)",
+
+    "sort_page_count_ASC":
+    "Seiten (auf)",
+
+    "sort_page_count_DESC":
+    "Seiten (ab)",
+
+    "of":
+    "von",
+
+    "number_of_results":
+    "Anzahl Einträge",
+
+    "filtered_search":
+    "Die Suche wurde auf folgende Kriterien eingegrenzt",
+
+    "remove_filters":
+    "Alle Kriterien entfernen",
+
+    "dym":
+    "Meinten Sie",
+
+    "more":
+    "mehr",
+
+    "less":
+    "weniger",
+
+    "no_hits":
+    "Ihre Suche nach \"{{query}}\" hat keine Ergebnisse erbracht.",
+
+    "no_hits_check_query":
+    "Vergewissern Sie sich, dass alle Wörter richtig geschrieben sind oder probieren Sie andere, allgemeinere Suchbegriffe.",
+
+    "search_related_query":
+    "Suche im Zusammenhang mit \"{{query}}\":",
+
+    "search_prev":
+    "zurück",
+
+    "search_next":
+    "vorwärts",
+	
+	"search_ui_validation_msg":
+    "&apos;Anscheinend enthält Ihr Suchausdruck Sonderzeichen. Verwenden Sie doppelte Anführungszeichen, Beispiel &quot;Aris: dreißig&quot;&apos;",
+	
+	"Search":
+	"Suchen",
+	
+	"Please enter some text":
+	"Bitte Text eingeben",
+	
+	"Content type":
+	"Art des Inhalts",
+	
+	"Topic":
+	"Thema",
+	
+	"Clear Filters":
+	"Filter entfernen",
+	
+	"Clear Search":
+	"Suchbegriff entfernen",
+	
+	"Filter resources":
+	"Ressourcen filtern",
+	
+	"Load More":
+	"Mehr laden",
+	
+	"Industry":
+	"Industrie",
+	
+	"Popular and/or Important Resources":
+	"Beliebte und/oder wichtige Ressourcen",
+
+    "No Search Results Found" : 
+    "Keine Suchergebnisse gefunden",
+
+    "No Results Found":
+    "keine Ergebnisse gefunden", 
+      
+    "Error occurred in fetching the results. Please try again!":
+    "Beim Abrufen der Ergebnisse ist ein Fehler aufgetreten. Bitte versuche es erneut!"
+	
+}

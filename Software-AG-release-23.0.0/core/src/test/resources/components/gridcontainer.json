@@ -1,0 +1,108 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "softwareag/components/content/parsys",
+    "gridcontainer": {
+        "jcr:primaryType": "nt:unstructured",
+        "text": "Software AG today announced that Forrester Research Inc., a leading industry analyst firm, has named Software AG a ‘Leader’ in The Forrester Wave™: Strategic Portfolio Management for Agile Organizations, Q4 2019 (published on November 5, 2019)1 for its Alfabet solution. ",
+        "title": "Software ag cited as a leader in strategic portfolio management by independent research firm",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "anchorName": "test",
+        "fileReference": "/content/dam/softwareag-test/images/hero-banner/creativecloud_wallpaper_1920x1200.jpg",
+        "fontStyle": "input__colorselect-font-color1",
+        "design": "dark-button",
+        "gridLayout": "grid--100",
+        "backgroundStyle": "input__colorselect-background-color2",
+        "link": {
+            "jcr:primaryType": "nt:unstructured",
+            "target": "_blank",
+            "href": "http://2050.softwareag.com/",
+            "text": "Learn More"
+        },
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "productteaser": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/productteaser",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "href": "https://www.softwareag.com/us/products/data_analytics/default.html",
+                    "text": "Read more"
+                }
+            }
+        }
+    },
+    "gridcontainer-empty": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys"
+        }
+    },
+    "gridcontainer-hastitle": {
+        "jcr:primaryType": "nt:unstructured",
+        "title": "Software ag cited as a leader in strategic portfolio management by independent research firm",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys"
+        }
+    },
+    "gridcontainer-hastext": {
+        "jcr:primaryType": "nt:unstructured",
+        "text": "Software ag cited as a leader in strategic portfolio management by independent research firm",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys"
+        }
+    },
+    "gridcontainer-haslink": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "link": {
+            "jcr:primaryType": "nt:unstructured",
+            "target": "_blank",
+            "href": "http://2050.softwareag.com/",
+            "text": "Learn More"
+        },
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys"
+        }
+    },
+    "gridcontainer-hassubcomponent": {
+        "jcr:primaryType": "nt:unstructured",
+        "text": "Software ag cited as a leader in strategic portfolio management by independent research firm",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "link": {
+            "jcr:primaryType": "nt:unstructured",
+            "target": "_blank",
+            "href": "http://2050.softwareag.com/",
+            "text": "Learn More"
+        },
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "productteaser": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/productteaser",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "href": "https://www.softwareag.com/us/products/data_analytics/default.html",
+                    "text": "Read more"
+                }
+            }
+        }
+    },
+    "gridcontainer-hasanchorname": {
+        "jcr:primaryType": "nt:unstructured",
+        "anchorName": "AnchorName",
+        "sling:resourceType": "softwareag/components/content/gridcontainer",
+        "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys"
+        }
+    }
+}

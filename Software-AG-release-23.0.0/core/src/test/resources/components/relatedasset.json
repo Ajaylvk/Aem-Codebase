@@ -1,0 +1,438 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Assets",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+        "cq:redirectTarget": "/content/softwareag",
+        "sling:resourceType": "softwareag/components/structure/folder"
+    },
+    "assetimage": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "campaignLandingPage": "false",
+            "jcr:title": "AssetImage",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+            "id": "d79906cc-0d82-49f8-bd0b-bd29025c7433",
+            "tags": [
+                "softwareag:asset-type/article",
+                "softwareag:product-categories/company",
+                "softwareag:product-capabilities/data-integration"
+            ],
+            "cq:tags": [
+                "softwareag:product-categories/company",
+                "softwareag:asset-type/image",
+                "softwareag:product-brand-names/webmethods"
+            ],
+            "sling:resourceType": "softwareag/components/structure/basic-page",
+            "assetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "fileReference": "/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/surfer-wave-02.jpg",
+                "fontStyle": "input__colorselect-font-color0",
+                "s7ViewerPreset": "||",
+                "target": "_self",
+                "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                "copyText": "Maria Image description",
+                "tagsCapabilities": [
+                    "softwareag:product-capabilities/cloud-transformation",
+                    "softwareag:product-capabilities/data-integration"
+                ],
+                "tagProduct": "softwareag:product-brand-names/webmethods",
+                "title": "MariaImage",
+                "tagBusinessUnit": "softwareag:product-categories/company",
+                "s7PresetType": "viewer",
+                "disableBreakpoints": "false",
+                "sling:resourceType": "softwareag/components/content/asset",
+                "backgroundStyle": "input__colorselect-background-color1",
+                "assetType": "softwareag:asset-type/article",
+                "textIsRich": "true",
+                "editable": true,
+                "mediaorpdfparsys": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "pdfviewer": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "showPrintPdf": "true",
+                        "dockPageControls": "true",
+                        "documentPath": "/content/dam/softwareag/global/image/mariyatest/MariaPdf.pdf",
+                        "defaultViewMode": "FIT_PAGE",
+                        "type": "FULL_WINDOW",
+                        "showPageControls": "true",
+                        "showLeftHandPanel": "true",
+                        "showFullScreen": "true",
+                        "showDownloadPdf": "true",
+                        "showAnnotationTools": "false",
+                        "sling:resourceType": "softwareag/components/content/pdfviewer",
+                        "borderless": "false"
+                    }
+                }
+            },
+            "relatedassetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "breakpoints": "",
+                "videoserverurl": "undefined",
+                "fileReference": "",
+                "s7ImagePreset": "",
+                "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                "s7ViewerPreset": "",
+                "assetID": "",
+                "urlModifiers": "",
+                "path": "/content/softwareag/test/asset",
+                "title": "Related Asset",
+                "s7PresetType": "undefined",
+                "sling:resourceType": "softwareag/components/content/relatedasset",
+                "assetType": "",
+                "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                "editable": true,
+                "s7ViewerPresetPath": ""
+            }
+        }
+    },
+    "assetpdf": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "campaignLandingPage": "false",
+            "jcr:title": "AssetPdf",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+            "id": "b58881c2-c151-4c23-b6b6-7e1f17fa08ee",
+            "tags": [
+                "softwareag:product-categories/customers",
+                "softwareag:product-brand-names/natural"
+            ],
+            "cq:tags": [
+                "softwareag:asset-type/image/structure"
+            ],
+            "sling:resourceType": "softwareag/components/structure/basic-page",
+            "assetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "fontStyle": "input__colorselect-font-color0",
+                "s7ViewerPreset": "||",
+                "target": "_self",
+                "copyText": "Asser pdf viewer copy text",
+                "tagsCapabilities": [
+                    "softwareag:product-capabilities/api-connectivity",
+                    "softwareag:product-capabilities/api-management"
+                ],
+                "tagProduct": "softwareag:product-brand-names/natural",
+                "title": "Asset pdf viewer title",
+                "tagBusinessUnit": "softwareag:product-categories/customers",
+                "s7PresetType": "viewer",
+                "disableBreakpoints": "false",
+                "sling:resourceType": "softwareag/components/content/asset",
+                "backgroundStyle": "input__colorselect-background-color1",
+                "assetType": "softwareag:asset-type/article",
+                "textIsRich": "true",
+                "editable": true,
+                "mediaorpdfparsys": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "pdfviewer": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "showPrintPdf": "true",
+                        "dockPageControls": "true",
+                        "documentPath": "/content/dam/softwareag/global/image/mariyatest/MariaPdf.pdf",
+                        "defaultViewMode": "FIT_PAGE",
+                        "type": "FULL_WINDOW",
+                        "showPageControls": "true",
+                        "showLeftHandPanel": "true",
+                        "showFullScreen": "true",
+                        "showDownloadPdf": "true",
+                        "showAnnotationTools": "false",
+                        "sling:resourceType": "softwareag/components/content/pdfviewer",
+                        "borderless": "false"
+                    }
+                }
+            },
+            "relatedassetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/relatedasset",
+                "editable": true
+            }
+        }
+    },
+    "innerassetfolder": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "InnerAssetFolder",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "/content/softwareag",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "innerassetimage": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "InnerAssetImage",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+                "id": "ac714f3d-e9f7-42e7-b833-2094bac4a418",
+                "tags": [
+                    "softwareag:asset-type/video",
+                    "softwareag:product-categories/company",
+                    "softwareag:product-brand-names/aris",
+                    "softwareag:product-capabilities/cloud-transformation",
+                    "softwareag:product-capabilities/data-integration"
+                ],
+                "sling:resourceType": "softwareag/components/structure/basic-page",
+                "assetcomponent": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "fileReference": "/content/dam/we-retail/en/experiences/fly-fishing-the-amazon/fly-fishing-the-amazon-1.jpg",
+                    "fontStyle": "input__colorselect-font-color0",
+                    "s7ViewerPreset": "||",
+                    "target": "_self",
+                    "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                    "copyText": "Inner Asser Copy text",
+                    "tagsCapabilities": [
+                        "softwareag:product-capabilities/cloud-transformation",
+                        "softwareag:product-capabilities/data-integration"
+                    ],
+                    "tagProduct": "softwareag:product-brand-names/aris",
+                    "title": "Inner Asset Title",
+                    "tagBusinessUnit": "softwareag:product-categories/company",
+                    "s7PresetType": "viewer",
+                    "disableBreakpoints": "false",
+                    "sling:resourceType": "softwareag/components/content/asset",
+                    "backgroundStyle": "input__colorselect-background-color1",
+                    "assetType": "softwareag:asset-type/video",
+                    "textIsRich": "true",
+                    "editable": true,
+                    "mediaorpdfparsys": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/parsys",
+                        "media": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "breakpoints": "",
+                            "videoserverurl": "https://softwareag.scene7.com/is/content/",
+                            "fileReference": "/content/dam/softwareag/global/image/mariyatest/SampleVideo_1280x720_1mb.mp4",
+                            "s7ImagePreset": "",
+                            "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                            "s7ViewerPreset": "||",
+                            "target": "_self",
+                            "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                            "assetID": "softwareaglocaldevelop1/SampleVideo_1280x720_1mb",
+                            "urlModifiers": "",
+                            "s7PresetType": "viewer",
+                            "disableBreakpoints": "false",
+                            "sling:resourceType": "softwareag/components/content/media",
+                            "assetType": "Asset",
+                            "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                            "s7ViewerPresetPath": "||",
+                            "targetThisComponent": "false"
+                        }
+                    }
+                },
+                "relatedassetcomponent": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/relatedasset",
+                    "editable": true
+                }
+            }
+        }
+    },
+    "assetimage0": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "AssetImage",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+            "id": "fd101d85-fb76-4fc8-8b89-dff9385bb426",
+            "tags": [
+                "softwareag:asset-type/article",
+                "softwareag:product-categories/company",
+                "softwareag:product-brand-names/webmethods",
+                "softwareag:product-capabilities/cloud-transformation",
+                "softwareag:product-capabilities/data-integration"
+            ],
+            "sling:resourceType": "softwareag/components/structure/basic-page",
+            "assetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "fileReference": "/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/surfer-wave-02.jpg",
+                "fontStyle": "input__colorselect-font-color0",
+                "s7ViewerPreset": "||",
+                "target": "_self",
+                "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                "copyText": "Asset copy text",
+                "tagsCapabilities": [
+                    "softwareag:product-capabilities/cloud-transformation",
+                    "softwareag:product-capabilities/data-integration"
+                ],
+                "tagProduct": "softwareag:product-brand-names/webmethods",
+                "title": "Asset title",
+                "tagBusinessUnit": "softwareag:product-categories/company",
+                "s7PresetType": "viewer",
+                "disableBreakpoints": "false",
+                "sling:resourceType": "softwareag/components/content/asset",
+                "backgroundStyle": "input__colorselect-background-color1",
+                "assetType": "softwareag:asset-type/article",
+                "textIsRich": "true",
+                "editable": true,
+                "mediaorpdfparsys": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "pdfviewer": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "showPrintPdf": "true",
+                        "dockPageControls": "true",
+                        "documentPath": "/content/dam/softwareag/global/image/mariyatest/MariaPdf.pdf",
+                        "defaultViewMode": "FIT_PAGE",
+                        "type": "FULL_WINDOW",
+                        "showPageControls": "true",
+                        "showLeftHandPanel": "true",
+                        "showFullScreen": "true",
+                        "showDownloadPdf": "true",
+                        "showAnnotationTools": "false",
+                        "sling:resourceType": "softwareag/components/content/pdfviewer",
+                        "borderless": "false"
+                    }
+                }
+            },
+            "relatedassetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/relatedasset",
+                "editable": true
+            }
+        }
+    },
+    "myvideo": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "MyVideo",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+            "id": "655ca64b-b851-4045-ad66-155494ff2ffb",
+            "tags": [
+                "softwareag:asset-type/video",
+                "softwareag:product-categories/home",
+                "softwareag:product-brand-names/aris",
+                "softwareag:product-capabilities/cloud-transformation",
+                "softwareag:product-capabilities/data-integration"
+            ],
+            "sling:resourceType": "softwareag/components/structure/basic-page",
+            "assetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "fileReference": "/content/dam/we-retail/en/people/womens/women_6.jpg",
+                "fontStyle": "input__colorselect-font-color1",
+                "s7ViewerPreset": "||",
+                "target": "_self",
+                "imageMap": "[poly(1594,909,1604,909,1604,899,1594,899,1594,909)\"quickview:sku=eqrusufle&reservedVal_productPath=/var/commerce/products/we-retail/en/eq/running/eqrusufle&reservedVal_productThumbnail=http://localhost:4502/content/dam/we-retail/en/products/apparel/footwear/source/Fleet%20Shoe%20Bottom.jpg\"|\"\"|\"Hotspot 1\"][poly(948,898,958,898,958,888,948,888,948,898)\"quickview:sku=116138647&reservedVal_productPath=/var/commerce/products/we-retail/en/wo/pants/faba_running_pants&reservedVal_productThumbnail=http://localhost:4502/var/commerce/products/we-retail/en/wo/pants/faba_running_pants/image.thumbnail.319.png/1456183932115.png\"|\"\"|\"Hotspot 2\"]",
+                "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                "copyText": "Resident happiness and visitor experience are top priorities for Dubai. So when the pandemic took the world by surprise, Smart Dubai and webMethods kept government services running smoothly and safely at the tap of a mobile screen.",
+                "tagsCapabilities": [
+                    "softwareag:product-capabilities/cloud-transformation",
+                    "softwareag:product-capabilities/data-integration"
+                ],
+                "tagProduct": "softwareag:product-brand-names/aris",
+                "title": "My video title",
+                "tagBusinessUnit": "softwareag:product-categories/home",
+                "s7PresetType": "viewer",
+                "disableBreakpoints": "false",
+                "sling:resourceType": "softwareag/components/content/asset",
+                "backgroundStyle": "input__colorselect-background-color3",
+                "assetType": "softwareag:asset-type/video",
+                "textIsRich": "true",
+                "editable": true,
+                "mediaorpdfparsys": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "media": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "breakpoints": "",
+                        "videoserverurl": "https://softwareag.scene7.com/is/content/",
+                        "fileReference": "/content/dam/softwareag/global/image/mariyatest/SampleVideo_1280x720_1mb.mp4",
+                        "s7ImagePreset": "",
+                        "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                        "s7ViewerPreset": "||",
+                        "target": "_self",
+                        "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                        "assetID": "softwareaglocaldevelop1/SampleVideo_1280x720_1mb",
+                        "urlModifiers": "",
+                        "s7PresetType": "viewer",
+                        "disableBreakpoints": "false",
+                        "sling:resourceType": "softwareag/components/content/media",
+                        "assetType": "Asset",
+                        "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                        "s7ViewerPresetPath": "||",
+                        "targetThisComponent": "false"
+                    }
+                }
+            },
+            "relatedassetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/relatedasset",
+                "editable": true
+            }
+        }
+    },
+    "myvideo0": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "MyVideo",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/assetpage",
+            "id": "f58862b4-f319-44ba-9466-2705a6c25161",
+            "tags": [
+                "softwareag:asset-type/video",
+                "softwareag:product-categories/home",
+                "softwareag:product-brand-names/aris",
+                "softwareag:product-capabilities/cloud-transformation",
+                "softwareag:product-capabilities/data-integration"
+            ],
+            "cq:tags": [
+                "softwareag:asset-type/video"
+            ],
+            "sling:resourceType": "softwareag/components/structure/basic-page",
+            "assetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "fontStyle": "input__colorselect-font-color0",
+                "s7ViewerPreset": "||",
+                "target": "_self",
+                "copyText": "A little knowledge can go a long way. Dive into Software AG products with free training that makes you more marketable and helps you develop your next proof of concept faster.",
+                "tagsCapabilities": [
+                    "softwareag:product-capabilities/cloud-transformation",
+                    "softwareag:product-capabilities/data-integration"
+                ],
+                "tagProduct": "softwareag:product-brand-names/aris",
+                "title": "My viewo title",
+                "tagBusinessUnit": "softwareag:product-categories/home",
+                "s7PresetType": "viewer",
+                "disableBreakpoints": "false",
+                "sling:resourceType": "softwareag/components/content/asset",
+                "backgroundStyle": "input__colorselect-background-color1",
+                "assetType": "softwareag:asset-type/video",
+                "textIsRich": "true",
+                "editable": true,
+                "mediaorpdfparsys": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "media": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "breakpoints": "",
+                        "videoserverurl": "https://softwareag.scene7.com/is/content/",
+                        "fileReference": "/content/dam/softwareag/global/image/mariyatest/SampleVideo_1280x720_1mb.mp4",
+                        "s7ImagePreset": "",
+                        "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                        "s7ViewerPreset": "||",
+                        "target": "_self",
+                        "imageServerUrl": "https://softwareag.scene7.com/is/image/",
+                        "assetID": "softwareaglocaldevelop1/SampleVideo_1280x720_1mb",
+                        "urlModifiers": "",
+                        "s7PresetType": "viewer",
+                        "disableBreakpoints": "false",
+                        "sling:resourceType": "softwareag/components/content/media",
+                        "assetType": "Asset",
+                        "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                        "s7ViewerPresetPath": "||",
+                        "targetThisComponent": "false"
+                    }
+                }
+            },
+            "relatedassetcomponent": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/relatedasset",
+                "editable": true
+            }
+        }
+    }
+}

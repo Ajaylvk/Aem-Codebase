@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Blog Footer Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                granite:class="cq-RichText-FixedColumn-column">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="A title to display as the headline for the Blog Footer Component."
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <copytext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="A copy text to display as the description for the Blog Footer Component."
+                        fieldLabel="Copy Text"
+                        name="./copyText" />
+                    <file
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fileNameParameter="./image"
+                        fileReferenceParameter="./image"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        fieldDescription="Please add image here."
+                        fieldLabel="Image"
+                        multiple="{Boolean}false"
+                        name="./file"
+                        title="Image"
+                        allowUpload="{Boolean}false"
+                        useHTML5="{Boolean}true"/>
+                    <altText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                        fieldLabel="Alternative Text"
+                        validation="imageAlternativeText"
+                        name="./blogAltText"/>
+                    <link
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldDescription="Please add link destination here."
+                        fieldLabel="Link Destination"
+                        name="./link/href"
+                        rootPath="/content"/>
+                    <open_in
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="The link target to use."
+                        fieldLabel="Open in"
+                        name="./link/target">
+                        <items jcr:primaryType="nt:unstructured">
+                            <same
+                                jcr:primaryType="nt:unstructured"
+                                selected="{Boolean}true"
+                                text="Same Window"
+                                value=""/>
+                            <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        </items>
+                    </open_in>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,139 @@
+$icon-width-max: 30rem;
+$color-box-width-max: 75rem;
+
+.partnerbanner__wrapper {
+    position: relative;
+    width: 100%;
+
+    .partnerbanner__background-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        min-width: 100%;
+        min-height: 100%;
+        height: 100%;
+
+        .s7dm-dynamic-media {
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    } 
+
+    .content-width {
+        @include spacing(padding, l);
+        margin-bottom: 0;
+    }
+}
+
+.partnerbanner__container {
+    @include spacing(padding, l);
+    position: relative;
+    margin: auto;
+
+    // selector is applied if any color class is present
+    &[class*=' input__colorselect-background-color'] {
+        @include spacing(padding, m);
+        max-width: $color-box-width-max;
+    }
+
+    @include mq-phone {
+        padding: 0;
+    }
+
+    .a-h2,
+    .partnerbanner__icon,
+    .partnerbanner__text {
+        position: relative;
+    }
+
+    .partnerbanner__icon {
+        max-width: 100%;
+
+        @include mq-except-phone {
+            max-width: $icon-width-max;
+        }
+    }
+
+    &[data-position=left] {
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto;
+
+        .s7dm-dynamic-media,
+        .a-h2 {
+            text-align: left;
+        }
+
+        @include mq-until-tablet {
+            margin: 0 auto;
+        }
+    }
+
+    &[data-position=middle] {
+        text-align: center;
+        margin: 0 auto;
+
+        .s7dm-dynamic-media,
+        .a-h2 {
+            text-align: center;
+        }
+    }
+
+    &[data-position=right] {
+        text-align: right;
+        margin-right: 0;
+        margin-left: auto;
+
+        .s7dm-dynamic-media,
+        .a-h2 {
+            text-align: right;
+        }
+
+        @include mq-until-tablet {
+            margin: 0 auto;
+        }
+    }
+
+    .a-h2,
+    .partnerbanner__icon {
+        @include spacing(margin-bottom, m);
+    }
+
+    .a-h2 {
+        font-weight: normal;
+    }
+
+    .partnerbanner__font_normal {
+        font-size: initial;
+        line-height: 2.2rem;
+    }
+
+    .partnerbanner__text {
+        @include spacing(margin-bottom, xl);
+    }
+
+    .s7dm-dynamic-media {
+        height: 100%;
+    }
+
+    .partnerbanner__tags {
+        @include spacing(margin-bottom, m);
+        color: #8e3cf7;
+        text-transform: uppercase;
+    }
+}
+
+.swiper-slide .partnerbanner__container {
+    @include spacing(padding, l);
+    width: auto;
+}

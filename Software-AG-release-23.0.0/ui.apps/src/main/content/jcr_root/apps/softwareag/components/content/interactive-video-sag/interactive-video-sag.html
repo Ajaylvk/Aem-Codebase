@@ -1,0 +1,128 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-test= "${!wcmmode.disabled && !properties.enableVideo}">
+	<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+</sly>
+
+<sly data-sly-test= "${properties.enableVideo}">
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"/>
+    <clientlib data-sly-call="${clientLib.all @ categories='poc.sag.clientlib'}" data-sly-unwrap/>
+
+
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+      <title>Alfabet Fastlane — Software AG</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+      <link rel="preconnect" href="https://www.softwareag.com">
+   </head>
+   <body style="align-items:center;background-color:#01172e;display:flex;flex-direction:column;overflow:hidden">
+      <template id="bgvideo-template">
+         <video preload="metadata" muted loop id="loopvideo">
+            <slot name="loopsrc"></slot>
+         </video>
+         <video preload="auto" muted id="introvideo">
+            <slot name="introsrc"></slot>
+         </video>
+         <handlers>
+            <slot name="handlers"></slot>
+         </handlers>
+         <style>video{left:0;position:absolute;top:0;width:100%}#introvideo{opacity:1}#loopvideo{opacity:0}</style>
+      </template>
+      <script>class BackgroundVideo extends HTMLElement{constructor(){super();let e=document.getElementById("bgvideo-template").content;const t=this.attachShadow({mode:"closed"});t.appendChild(e.cloneNode(!0));let n=t.getElementById("introvideo"),r=t.getElementById("loopvideo");t.addEventListener("slotchange",(e=>{let o,a=e.target,d=Array.from(a.assignedNodes());switch(a.name){case"handlers":o=t.querySelector("handlers");break;case"introsrc":o=n;break;case"loopsrc":o=r}void 0!==o&&(o.innerHTML="",d.forEach((e=>{o.append(e)})))}));let o=!0,a=function(){o=!1,n.removeEventListener("ended",a),r.currentTime=.04,r.play(),n.style.opacity=0,r.style.opacity=1},d=()=>{r.muted=!0,r.removeEventListener("canplaythrough",d)},l=()=>{n.muted=!0,n.play();let e=r.duration-(n.duration-n.currentTime+0)%r.duration;isNaN(e)||(r.currentTime=e);let o=t.querySelector("handlers");Array.from(t.querySelectorAll('script[on="play"]')).forEach((e=>{let t=document.createElement("script");t.text=e.text,o.removeChild(e),o.appendChild(t)})),n.removeEventListener("canplaythrough",l),4===r.readyState?d():r.addEventListener("canplaythrough",d)};n.addEventListener("ended",a),n.addEventListener("canplaythrough",l),n.load(),r.load()}}customElements.define("background-video",BackgroundVideo);</script> 
+      <template id="info-template">
+         <div id="info-panel" class="expand-to-viewport info-panel" style="font-size:min(1.5vw,2.7vh);visibility:hidden">
+            <div id="animatable">
+               <video id="info-video" controls> </video>
+               <div id="headline-overlay">
+                  <div style="height:100%;pointer-events:all;position:absolute;width:100%"> <button id="close-panel" class="close color-yellow"> <img class="back" src="/content/dam/softwareag/global/image/interactive-images/icon_back.svg"><span class="text">Cockpit</span> </button> </div>
+                  <h2>Alfabet Fastlane</h2>
+                  <h3 id="info-headline">Headline</h3>
+               </div>
+               <div id="next-overlay">
+                  <button class="bg-darkcyan close" style="opacity:1;overflow:hidden;position:relative">
+                     <div id="close-progress" class="next-progress" style="position:absolute"></div>
+                     <div style="position:relative" class="caption">Cockpit</div>
+                  </button>
+                  <button class="bg-darkcyan next" style="opacity:1;overflow:hidden;position:relative">
+                     <div id="nextvid-progress" class="next-progress" style="position:absolute"></div>
+                     <div style="position:relative" class="caption">▶ Next Video</div>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <style>@import url(index.css);button,button>div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.info-panel{color:#fff;overflow:hidden}.next-progress{background-color:#9a50f8;height:100%;left:0;top:0;width:0}#info-video{height:100%}#headline-overlay,#info-video{left:0;position:absolute;top:0;width:100%}#headline-overlay{background-image:linear-gradient(rgba(0,0,0,.75),transparent);font-size:100%;height:40%;opacity:1;overflow:visible;padding-top:3%;pointer-events:none;text-align:center}#close-panel{background-color:transparent;border:none;font-size:max(min(3.2vh,1.8vw),12.8px);font-weight:700;height:12%;left:2.5%;min-height:20px;min-width:67px;overflow:visible;padding:0;position:absolute;text-shadow:0 0 .125em rgba(0,0,0,.25);top:0;width:10%}#next-overlay{align-items:center;bottom:50px;display:flex;flex-direction:row;height:15%;justify-content:flex-end;left:0;min-height:24px;pointer-events:none;position:absolute;visibility:hidden;width:100%}#next-overlay>button{border:1px solid #ffffff15;color:#fff;font-size:max(min(2.5vh,1.41vw),10px);font-weight:lighter;margin-right:2.5%;padding:.35em .75em;pointer-events:all}#animatable{background-color:#2e6270;height:100%;left:0;position:inherit;top:0;width:100%}h2,h3{margin:0!important}h2{font-size:max(160%,16px)!important;font-weight:700!important;text-transform:uppercase}h3{font-size:max(140%,14px)!important;font-weight:300!important;text-transform:capitalize}img.back{height:95%;vertical-align:middle}#close-panel .text{padding-left:.25em;vertical-align:middle}.fadeout-d2{animation:fadeoutOverlay .5s ease-out 2s forwards}.fadeout-d5{animation:fadeoutOverlay .5s ease-out 5s forwards}@keyframes fadeoutOverlay{0%{opacity:1}to{opacity:0}}</style>
+      </template>
+      <script>const CONTENT_ID="content-id",NEXT_DELAY="next-delay",NEXT_ACTION="next-action",beforeend=new Event("beforeend"),next=new Event("next"),waitTicks=(e,t)=>{"number"!=typeof e||0===e?t():requestAnimationFrame((()=>{waitTicks(e-1,t)}))},nextTick=e=>{requestAnimationFrame(e)},lerp=(e,t,o)=>(1-o)*e+o*t;class InfoPanel extends HTMLElement{static get observedAttributes(){return[CONTENT_ID,NEXT_DELAY]}static cockpit_config={};static getConfigVideoSource(e){let t=InfoPanel.cockpit_config[e];if(void 0!==t){let e=t["video-sources"];if(void 0!==e)return e[0].src}return""}static getConfigVideoSources(e){let t=InfoPanel.cockpit_config[e];if(void 0!==t){let e=t["video-sources"];if(void 0!==e)return e}return[]}set breakAnimation(e){this._breakAnimation=e}get breakAnimation(){return"boolean"==typeof this._breakAnimation&&this._breakAnimation}close(e,t=!0){let o=e.getElementById("info-panel"),i=e.getElementById("animatable"),n=e.getElementById("headline-overlay"),s=e.getElementById("info-video"),a=e.getElementById("next-overlay");return()=>{t&&setTimeout((()=>{o.style.visibility="hidden"}),216),i.style.animation=t?"infoPanelOut ease-out .25s":"",n.style.animation="",s.pause(),s.innerHTML="",this.setProgress(0,e),s.controls=!0,a.style.visibility="hidden",this.breakAnimation=!0,this.actionState.closing()}}setProgress(e,t,o=!1){Array.from(t.querySelectorAll(".next-progress")).forEach((t=>{const i=t.style.width;var n,s,a;!o&&i.includes("%")&&(n=parseFloat(i.replace(/%/,"")),s=parseFloat(e),e=(1-(a=.05))*n+a*s),t.style.width=e+"%"}))}infoVideo(e){let t=this.myShadowRoot.getElementById("info-panel"),o=this.myShadowRoot.getElementById("animatable"),i=this.myShadowRoot.getElementById("info-video"),n=this.myShadowRoot.getElementById("headline-overlay"),s=this.myShadowRoot.getElementById("info-headline"),a=this.myShadowRoot.getElementById("next-overlay");this.breakAnimation=!1,s.innerText=InfoPanel.cockpit_config[e].headline,this[NEXT_ACTION]=InfoPanel.cockpit_config[e].next,this.actionState[this[NEXT_ACTION]].start&&(this[NEXT_ACTION]="");let r=!0;for(;"string"==typeof this[NEXT_ACTION]&&""!==this[NEXT_ACTION]&&r;)r=this.actionState[this[NEXT_ACTION]].played,r&&(this[NEXT_ACTION]=InfoPanel.cockpit_config[this[NEXT_ACTION]].next,this[NEXT_ACTION]===e&&(this[NEXT_ACTION]=InfoPanel.cockpit_config[this[NEXT_ACTION]].next));"string"==typeof this[NEXT_ACTION]&&""!==this[NEXT_ACTION]?(this.myShadowRoot.getElementById("close-progress").classList.remove("next-progress"),this.myShadowRoot.getElementById("nextvid-progress").classList.add("next-progress"),this.myShadowRoot.querySelector("#next-overlay > button.next").style.display="inline",this.myShadowRoot.querySelector("#next-overlay > button.close").style.display="none",this.myShadowRoot.querySelector("#next-overlay > button.next > .caption").innerHTML='▶ Next Video: <span style="font-weight: normal;">'+InfoPanel.cockpit_config[this[NEXT_ACTION]].headline+"</span>"):(this.myShadowRoot.getElementById("nextvid-progress").classList.remove("next-progress"),this.myShadowRoot.getElementById("close-progress").classList.add("next-progress"),this.myShadowRoot.querySelector("#next-overlay > button.close").style.display="inline",this.myShadowRoot.querySelector("#next-overlay > button.next").style.display="none");let l=e=>{e="number"==typeof e?e:2,n.classList.remove("fadeout-d2","fadeout-d5"),waitTicks(4,(()=>{n.classList.add("fadeout-d"+e)}))};InfoPanel.getConfigVideoSources(e).forEach((e=>{if("object"==typeof e&&"string"==typeof e.src){const t=document.createElement("source");t.src=e.src,e.type&&(t.type=e.type),i.appendChild(t)}})),i.load();let d=()=>{window.dispatchEvent(new Event("info-playing")),i.removeEventListener("canplaythrough",d),i.play(),i.currentTime=0;const e=()=>{i.controls=!1,l(5),i.removeEventListener("ended",e)};i.addEventListener("ended",e),l();let t=1e3*this[NEXT_DELAY],o=-1,n=!1,s=()=>{if(this.breakAnimation)return;let e=i.duration+this[NEXT_DELAY]/2;if(i.currentTime>e-this[NEXT_DELAY]){let a;if(n||(this.dispatchEvent(beforeend),n=!0),i.currentTime<i.duration?a=100*(1-(e-i.currentTime)/this[NEXT_DELAY]):(o<0&&(o=Date.now()-t/2),a=100*(Date.now()-o)/t,a=a<0?0:a>100?100:a),this.setProgress(a,this.myShadowRoot),!(a<100))return void this.dispatchEvent(next);requestAnimationFrame(s)}else n?(n=!1,this.setProgress(0,this.myShadowRoot,!0),a.style.visibility="hidden",this.addEventListener("beforeend",h),requestAnimationFrame(s)):requestAnimationFrame(s)};s()};t.style.visibility="visible",this.actionState[e].start&&(o.style.animation="infoPanel ease-out .5s"),i.addEventListener("canplaythrough",d),i.addEventListener("mousemove",l);let c=()=>{this.removeEventListener("next",c),i.removeEventListener("mousemove",l);const e=this[NEXT_ACTION],t="string"==typeof e&&""!==e;this.close(this.myShadowRoot,!t)(),waitTicks(4,(()=>{t&&$$("info-panel").setAttribute("content-id",e)}))},h=()=>{a.style.visibility="visible";const e=this.actionState[this[CONTENT_ID]];"object"==typeof e&&(e.played=!0),this.removeEventListener("beforeend",h),this.addEventListener("next",c)};this.addEventListener("beforeend",h),Array.from(this.myShadowRoot.querySelectorAll("button.next")).forEach((e=>{e.onclick=()=>{c()}})),Array.from(this.myShadowRoot.querySelectorAll("button.close")).forEach((e=>{e.onclick=this.close(this.myShadowRoot)}))}constructor(){super(),this[CONTENT_ID]=void 0,this[NEXT_DELAY]=10,fetch("/content/dam/softwareag/global/video/interactive-videos/cockpit.json").then((e=>e.json())).then((e=>InfoPanel.cockpit_config=e));let e=document.getElementById("info-template").content;const t=this.attachShadow({mode:"closed"});t.appendChild(e.cloneNode(!0)),this.myShadowRoot=t}get actionState(){return this._actionState||{}}set actionState(e){this._actionState=e}attributeChangedCallback(e,t,o){this[e]=o,e===CONTENT_ID&&null!=o&&this.infoVideo(o)}}customElements.define("info-panel",InfoPanel);</script> 
+      <svg viewBox="0 0 600 400" width="0" height="0">
+         <defs>
+            <filter id="activeFilter">
+               <feColorMatrix values="1 0 0 0 -.055 0 1 0 0 -.167 0 0 1 0 -.206 0 0 0 1 0"/>
+               <feColorMatrix values="1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 1 0"/>
+               <feComponentTransfer color-interpolation-filters="sRGB">
+                  <feFuncR type="table" tableValues=".11 1.0"/>
+                  <feFuncG type="table" tableValues=".333 1.0"/>
+                  <feFuncB type="table" tableValues=".412 1.0"/>
+               </feComponentTransfer>
+            </filter>
+            <filter id="visitedFilter">
+               <feColorMatrix values="1 0 0 0 -.055 0 1 0 0 -.167 0 0 1 0 -.206 0 0 0 1 0"/>
+               <feColorMatrix values="1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 1 0"/>
+               <feComponentTransfer color-interpolation-filters="sRGB">
+                  <feFuncR type="table" tableValues=".11 .286 .286 .235"/>
+                  <feFuncG type="table" tableValues=".333 .467 .467 .757"/>
+                  <feFuncB type="table" tableValues=".412 .529 .529 .718"/>
+               </feComponentTransfer>
+            </filter>
+         </defs>
+      </svg>
+      <style>.played{filter:url(#visitedFilter)!important}cockpit-element:active{filter:url(#activeFilter)!important}</style>
+
+      <div id="cockpitwrapper" class="expand-to-viewport" style="overflow:hidden">
+         <background-video>
+            <source slot="introsrc" src="/content/dam/softwareag/global/video/interactive-videos/SAGinteraktiv_3DLandschaft_Intro_V01_hvenc.mp4" type="video/mp4; codecs=hevc">
+            <source slot="introsrc" src="/content/dam/softwareag/global/video/interactive-videos/SAGinteraktiv_3DLandschaft_Intro_V01_vp9.webm" type="video/webm; codecs=vp9">
+            <source slot="introsrc" src="/content/dam/softwareag/global/video/interactive-videos/SAGinteraktiv_3DLandschaft_Intro_V01_h264.mp4" type="video/mp4">
+            <source slot="loopsrc" src="/content/dam/softwareag/global/video/interactive-videos/SAGinteraktiv_3DLandschaft_Loop_V01_hvenc.mp4" type="video/mp4; codecs=hevc">
+            <source slot="loopsrc" src="/content/dam/softwareag/global/video/interactive-videos/SAGinteraktiv_3DLandschaft_Loop_V01_vp9.webm" type="video/webm; codecs=vp9">
+            <source slot="loopsrc" src="/content/dam/softwareag/global/video/interactive-videos/SAGinteraktiv_3DLandschaft_Loop_V01_h264.mp4" type="video/mp4">
+            <script slot="handlers" type="text/inactive" on="play">
+               const showCockpitElements = () => {
+                   const cockpitElements = document.getElementById('cockpit-elements');
+                   if (typeof (cockpitElements) !== 'undefined') {
+                       cockpitElements.style.opacity = '1';
+                       cockpitElements.style.animation = 'fadein .5s';
+                   }
+               }
+               
+               if (!Object.entries(window['actionState']).filter(([k,v]) => typeof v.ready !== 'undefined').find(([k, v]) => v.ready === false)) {
+                   showCockpitElements();
+               } else {
+                   window.addEventListener('elements-ready', showCockpitElements);
+               }
+            </script> 
+         </background-video>
+         <div id="cockpit" style="height:100%;left:0;opacity:1;position:absolute;top:0;width:100%">
+            <image class="cockpit-transform" style="position:absolute" src="/content/dam/softwareag/global/image/interactive-images/SAG_Cockpit_Background.svg"> </image>
+            <div id="cockpit-elements" style="opacity:0">
+               <cockpit-element data-content-id="rationalization" style="bottom:11.5%;left:4.8%;position:absolute;width:24.75%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_Rationalization_V01.lottie"></cockpit-element>
+               <cockpit-element data-content-id="risk" style="bottom:19.5%;left:15.6%;position:absolute;width:16.5%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_Risk_V01.lottie"></cockpit-element>
+               <cockpit-element data-content-id="governance" style="bottom:24.5%;left:26.5%;position:absolute;width:20%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_Governance_V01.lottie"></cockpit-element>
+               <cockpit-element data-content-id="roadmapping" style="bottom:44.75%;left:45.8%;position:absolute;width:21%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_Roadmapping_V01.lottie"></cockpit-element>
+               <cockpit-element data-content-id="transparency" style="bottom:29%;left:48%;position:absolute;width:16.4%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_Transparency_V01.lottie"></cockpit-element>
+               <cockpit-element data-content-id="cloud-migration" style="bottom:24.5%;position:absolute;right:11%;width:21.4%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_CloudMigration_V01.lottie" player-style=""> </cockpit-element>
+               <cockpit-element data-content-id="investment-portfolio-management" style="bottom:11.75%;position:absolute;right:-1.3%;width:19.8%" player-src="/content/dam/softwareag/global/lottiefiles/SAGinteraktiv_ANIM_InvestmentPortfolioManagement_V01.lottie"> </cockpit-element>
+            </div>
+         </div>
+         <div id="cockpit-foreground" style="height:100%;left:0;opacity:1;pointer-events:none;position:absolute;top:0;width:100%">
+            <image class="cockpit-transform" style="position:absolute" src="/content/dam/softwareag/global/image/interactive-images/SAG_Cockpit_Foreground.svg"> </image>
+            <image class="logo-transform" style="position:absolute" src="/content/dam/softwareag/global/image/interactive-images/sag-primary-logo-light-1-color-rgb.svg"> </image>
+         </div>
+         <button id="free-trial">Free Trial</button> 
+      </div>
+      <info-panel></info-panel>
+      <script>window.addEventListener("config-loaded",(()=>{const t=$$("#free-trial");t&&cockpitConfig&&(cockpitConfig["free-trial"].text!==t.innerText&&(t.innerText=cockpitConfig["free-trial"].text),t.onclick=()=>{window.open(cockpitConfig["free-trial"].url,"_blank")},t.style.opacity="1",t.style.animation="fadein .5s")})),$$("info-panel").actionState=window.actionState,Array.from($$$("cockpit-element")).forEach((t=>{const e=t.dataset.contentId;t.onclick=()=>{window.actionState[e].start=!0;for(const t in window.actionState)e!=t&&Object.hasOwnProperty.call(window.actionState,t)&&void 0!==window.actionState[t].start&&(window.actionState[t].start=!1);$$("info-panel").setAttribute("content-id",e)},t.elementState=window.actionState[e]})),window.addEventListener("update-ready-state",(()=>{Object.entries(window.actionState).find((([t,e])=>!1===e.ready))||(window.dispatchEvent(new Event("elements-ready")),window.elementsReady=!0)})),window.addEventListener("update-play-state",(()=>{Array.from($$$("cockpit-element")).forEach((t=>{Object.entries(this.actionState).filter((([t,e])=>void 0!==e.played)).find((([t,e])=>!1===e.played))||Object.entries(this.actionState).filter((([t,e])=>void 0!==e.played)).forEach((([t,e])=>e.played=!1));const e=t.dataset.contentId;window.actionState[e].played?t.classList.add("played"):t.classList.remove("played")}))})),window.addEventListener("info-playing",(()=>{setTimeout((()=>$$("#cockpitwrapper").style.opacity=0),250)})),window.addEventListener("info-closing",(()=>{$$("#cockpitwrapper").style.opacity=1}));</script> 
+   </body>
+</html>
+
+</sly>

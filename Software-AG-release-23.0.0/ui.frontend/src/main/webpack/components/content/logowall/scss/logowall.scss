@@ -1,0 +1,86 @@
+// css for authoring mode
+.aem-AuthorLayer-Edit {
+  .logowall {
+    grid-auto-rows: minmax(84px, auto);
+    grid-auto-columns: minmax(80px, auto);
+  }
+  .logowall-item {
+    min-width: 17.4rem;
+    min-height: 7.7rem;
+  }
+}
+
+.logowall-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  justify-content: center;
+  max-width: 132rem;
+  margin: auto;
+  padding: 64px 24px;
+  @include mq-tablet {
+    padding: 48px 24px;
+  }
+  @include mq-phone {
+    padding: 40px 16px;
+  }
+  // .logowall-item {
+  //   padding: 12px 24px;
+  // }
+  @include mq-phone {
+    grid-template-columns: repeat(2, calc((100% / 2) - 0.8rem));
+  }
+}
+.logowall-container[data-noOfColumns="4"] {
+  @include mq-desktop {
+    grid-template-columns: repeat(4, calc((100% / 4) - 0.8rem));
+  }
+  @include mq-tablet {
+    grid-template-columns: repeat(3, calc((100% / 3) - 0.8rem));
+  }
+}
+.logowall-container[data-noOfColumns="5"] {
+  @include mq-tablet {
+    grid-template-columns: repeat(3, calc((100% / 3) - 0.8rem));
+  }
+  @include mq-desktop {
+    grid-template-columns: repeat(5, calc((100% / 5) - 0.8rem));
+  }
+}
+.logowall-container[data-noOfColumns="6"] {
+  @include mq-tablet {
+    grid-template-columns: repeat(3, calc((100% / 3) - 0.8rem));
+  }
+  @include mq-desktop {
+    grid-template-columns: repeat(6, calc((100% / 6) - 0.8rem));
+  }
+}
+.logowall-wrapper.corelight {
+  background-color: #f2f2ea;
+}
+.logowall-wrapper.coredark-950 {
+  background-color: #f0f2f4;
+}
+.logowall-wrapper.white {
+  background-color: #ffffff;
+}
+.logowall-wrapper.coredark-120 {
+  background-color: #011f3d;
+}
+.logo-width {
+  padding: 12px 24px;
+}
+.logowall-wrapper{
+  img{
+    width:100%;
+    height:auto;
+    max-width: 300px;
+    max-height: 75px;
+    transition: transform .25s ease-in-out;
+  }
+  a:hover img{
+    transform: scale(1.1);
+  }
+}

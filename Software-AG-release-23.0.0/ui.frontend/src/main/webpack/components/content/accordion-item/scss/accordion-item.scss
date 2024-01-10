@@ -1,0 +1,122 @@
+$animation-time: 0.3s;
+
+.accordion-item:not(:last-child) {
+    margin-bottom: $spacing-mobile-xs;
+}
+
+.accordion-item__button {
+    @include keyboard-outline();
+    position: relative;
+    padding: $spacing-mobile-xs $spacing-mobile-m;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        color: $color-white;
+        fill: $color-white;
+        background-color: $color-bright-pulse;
+    }
+}
+
+.accordion-item__button-title {
+    @include base-font-bold();
+    @include font-size-with-rem-line-height(2rem, 2.6rem);
+    padding-right: $spacing-mobile-l;
+}
+
+.accordion-item__button-subtitle {
+    @include base-font-light();
+    @include font-size-with-rem-line-height(1.6rem, 2.6rem);
+    padding-right: $spacing-mobile-l;
+}
+
+.accordion-item__button-icon {
+    position: absolute;
+    margin: auto;
+    width: 3rem;
+    height: 3rem;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity $animation-time ease-in-out;
+}
+
+.accordion-item__button-icon--close {
+    opacity: 0;
+}
+
+.accordion-item--open.accordion-item--closing {
+    .accordion-item__button-icon--open {
+        opacity: 1;
+    }
+
+    .accordion-item__button-icon--close {
+        opacity: 0;
+    }
+}
+
+.accordion-item--open {
+    .accordion-item__button-icon--open {
+        opacity: 0;
+    }
+
+    .accordion-item__button-icon--close {
+        opacity: 1;
+    }
+}
+
+.accordion-item__content-container {
+    height: 0;
+    display: none;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: all $animation-time ease-in-out;
+
+    .accordion-item--open & {
+        display: block;
+        height: auto;
+    }
+}
+
+.accordion-item__content {
+    padding: 1rem 2rem 2rem;
+
+    img {
+        max-width: 100%;
+    }
+
+    &:last-child,
+    &:last-child .media__container {
+        margin-bottom: 0;
+    }
+
+    .accordionitem,
+    .media {
+        margin-bottom: $spacing-desktop-m;
+    }
+
+    .accordionitem:last-child,
+    .media:last-child {
+        margin-bottom: 0;
+    }
+    
+}
+
+.accordion-item__content .rtewrapper .accordion-item__text {
+    margin-bottom: 0;
+}
+
+.accordion-item__content .a-cta {
+    margin-top: 2rem;
+}
+
+/* stylelint-disable */
+.accordionitem.cq-Editable-dom,
+.media.cq-Editable-dom {
+    min-height: 30px;
+}
+/* stylelint-enable */

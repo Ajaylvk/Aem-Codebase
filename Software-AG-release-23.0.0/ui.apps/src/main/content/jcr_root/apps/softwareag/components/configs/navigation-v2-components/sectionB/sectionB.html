@@ -1,0 +1,17 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.sectionb="com.softwareag.core.models.navigation_v2.Section" />
+<section id="sectionb" class="template-section">
+	<div data-sly-test="${sectionb.sectionTitle}" class="section-label a-overline">
+		${sectionb.sectionTitle}
+	</div>
+	<div data-sly-list=${sectionb.elements} class="linklist-wrapper">
+		<div class="linklistcol">
+			<sly data-sly-test.newPath="${'linklist-item{0}' @ format = itemList.index}">
+				<sly data-sly-resource="${newPath @ resourceType='wcm/foundation/components/responsivegrid'}"
+					decoration=true />
+			</sly>
+		</div>
+	</div>
+</section>

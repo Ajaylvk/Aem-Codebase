@@ -1,0 +1,26 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test Page",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "blogfooter": {
+                "jcr:primaryType": "nt:unstructured",
+                "blogAltText": "Sync your Mainframe Data to the Cloud for Insights",
+                "copyText": "The cloud offers innovations for the future.",
+                "image": "/content/dam/softwareag-test/images/text-image/softwareag_hq_1000x667.png",
+                "title": "Sync your Mainframe Data to the Cloud for Insights",
+                "sling:resourceType": "softwareag/components/content/blogfooter",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "href": "https://softwareag.zoom.us/webinar/register/8615784921278/WN_2xmZH2tHRz-RJqcjxHEe0g",
+                    "target": "_self"
+                }
+            }
+        }
+    }
+}

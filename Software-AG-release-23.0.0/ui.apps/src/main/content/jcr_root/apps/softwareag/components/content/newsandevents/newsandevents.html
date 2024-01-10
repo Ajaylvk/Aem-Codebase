@@ -1,0 +1,92 @@
+<sly data-sly-use.newsorEvents = "com.softwareag.core.models.newsandevents.NewsAndEventsModel" data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+data-sly-test.hasContent="${!newsorEvents.isEmpty}" > 
+<!-- This is the wrapper of news and event tile -->
+<div class="layoutcontainer">
+  <!-- This color below has to be dynamic -->
+  <div class="layoutcontainer-wrapper ${newsorEvents.cardType=='news'? 'input__colorselect-background-color10' : 'input__colorselect-background-color1'}"> 
+     <div class="layoutcontainer_spacing">
+        <div class="column-layout__container">
+
+           <!-- Title for container -->
+           <h2 class="a-h2-new">
+              <pre class="aem__textarea">${newsorEvents.title}</pre>
+           </h2>
+
+           <section class="a-container">
+              <div class="container">
+               
+               <sly data-sly-test="${newsorEvents.newsAndEventsResponse.status || newsorEvents.newsAndEventsResponse.size == 0 }">
+               <!-- Display this if error is thrown -->
+               <div class="error-message-container">
+                  ${newsorEvents.errormessage}
+               </div> 
+               <!-- Display this if error is thrown ends -->
+               </sly>
+
+               <sly data-sly-test="${newsorEvents.newsAndEventsResponse.cardBean}">
+               <!-- else display this -->
+               <div class="row a-container__layout-section tile-layout-3">
+
+                    <!--News and events Tile  -->
+                          <!-- This section needs to come 3 times -->
+
+                  <sly data-sly-list.latestNewsData="${newsorEvents.newsAndEventsResponse.cardBean}">
+                                    <div class="newsandevents-v1">
+
+                                       <div class="newsandevents-v1__container">
+
+
+                                          <!-- This color needs to be dynamic for tile background -->
+                                          <article class="newsandevent-item ${newsorEvents.cardType=='news' ? 'input__colorselect-background-color1' : 'input__colorselect-background-color7'}">
+                                             <div class=" teasercontent">
+                                                <h6 class="a-overline">${newsorEvents.cardType=='news' ? latestNewsData.last_posted_at : latestNewsData.start_date}</h6>
+                                                <h5 class="a-h5">
+                                                   <pre class="aem__textarea">${latestNewsData.title}</pre>
+                                                </h5>
+
+                                                <div class="prodcmp-link prodcmp-link--design-links">
+                                                   <a class="prodcmp-link__button" href="${latestNewsData.url}" target="_blank">
+                                                      <span class="prodcmp-link__button-text">Read More</span> 
+                                                      <!-- <span class="prodcmp-link__button-icon svg-baseline">
+                                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="10 5 18 18">
+                                                            <g id="icomoon-ignore">
+                                                            </g>
+                                                            <path d="M19.159 16.767l0.754-0.754-6.035-6.035-0.754 0.754 5.281 5.281-5.256 5.256 0.754 0.754 3.013-3.013z" fill="currentColor"></path>
+                                                         </svg>
+                                                      </span> -->
+
+                                                   <span class="prodcmp-link__button-icon svg-baseline">
+                                                      <svg class="a-icon a-icon--to-top">
+                                                            <use xlink:href="#to-top"></use>
+                                                      </svg>
+                                                   </span>
+
+                                                   </a>
+                                                </div>
+                                             </div>
+                                          </article>
+
+                                          <!--Tile over !-->
+
+                                       </div>
+                                    </div>
+                  </sly>
+               </div>
+               <!-- else display this ends-->
+               </sly>
+
+
+              </div>
+           </section>
+
+        <!-- CTA for layout-->
+        <div class="newsandevents-v1 button secondary-core-dark-large"> 
+         <sly data-sly-resource="${ 'card-button' @ resourceType='softwareag/components/content/button'}"></sly>
+         </div>
+
+        </div>
+     </div>
+  </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=hasContent}"></sly>
+</sly>

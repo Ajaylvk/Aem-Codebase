@@ -1,0 +1,28 @@
+.redirect-popup {
+    .sag-popup {
+        &__container {
+            max-width: 624px;
+
+            @include mq-from-tablet { 
+                padding: 64px;
+            }
+        }
+    }
+
+    &__btn-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button:nth-child(n+2) {
+            margin-top: 16px;
+        }
+    }
+
+    &__redirect-btn {
+        .a-cta__button-icon {
+            position: static;
+            margin-top: -4px;
+        }
+    }
+}

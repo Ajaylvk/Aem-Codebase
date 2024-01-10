@@ -1,0 +1,46 @@
+.accordion__container {
+    @include spacing(padding-top, l);
+    @include spacing(padding-bottom, l);
+
+    @include mq-except-phone {
+        @include spacing(padding-left, l);
+        @include spacing(padding-right, l);
+    }
+
+    > .content-width {
+        margin-bottom: 0;
+
+        @include mq-phone {
+            padding-left: $spacing-mobile-s;
+            padding-right: $spacing-mobile-s;
+        }
+
+        @include mq-tablet {
+            padding-left: $spacing-tablet-m;
+            padding-right: $spacing-tablet-m;
+        }
+    }
+}
+
+.accordion__container--light {
+    background-color: $color-white;
+
+    .accordion-item__button,
+    .accordion-item__content {
+        background-color: $color-core-light;
+    }
+}
+
+.accordion__container--dark {
+    background-color: $color-core-light;
+
+    .accordion-item__button,
+    .accordion-item__content {
+        background-color: $color-white;
+    }
+}
+
+.accordion__title {
+    margin-bottom: $spacing-desktop-m;
+    text-align: center;
+}

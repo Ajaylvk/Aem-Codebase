@@ -1,0 +1,59 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.herocontainer="com.softwareag.core.models.HeroBannerContainer"></sly>
+
+
+
+<div
+    class="herobanner-img-gradient herocard-${herocontainer.heroCards} ${herocontainer.heroBannerBackground == 'backgroundcolor' ? herocontainer.backgroundColor : ''} ${herocontainer.heroBannerVariation}">
+    <!-- data-gradient-width="${properties.gradientWidth}" -->
+    <div data-transparency="${herocontainer.transparencyLevel}" data-gradient-color="${herocontainer.gradientColor}">
+        <!-- src="${properties.svgImage}" -->
+        <!-- condition check for Background image or color -->
+        <sly data-sly-test="${herocontainer.heroBannerVariation == 'herobannerb'}">
+            <sly data-sly-test="${herocontainer.heroBannerBackground == 'backgroundimage'}">
+                <!-- Background Image start -->
+                <sly data-sly-test="${properties.backgroundImageb =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+                <img data-sly-test="${properties.backgroundImageb == 'svg'}" src="${herocontainer.svgImage}"
+                    width="100%" alt="${herocontainer.altText}">
+                <!-- image end -->
+            </sly>
+        </sly>
+        <sly data-sly-test="${herocontainer.heroBannerVariation == 'herobannera'}">
+            <div id="heroa-desktop" class="herobannera-display">
+                <!-- Background Image start -->
+                <sly data-sly-test="${properties.backgroundImagea =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+                <img data-sly-test="${properties.backgroundImagea == 'svg'}" src="${herocontainer.svgImage}"
+                    width="100%" alt="${herocontainer.altText}">
+                <!-- image end -->
+            </div>
+            <div id="heroa-tablet" class="herobannera-display">
+                <!-- Background Image start -->
+                <img src="${herocontainer.tabletImage}" width="100%" alt="${herocontainer.tabletAltText}">
+                <!-- image end -->
+            </div>
+            <div id="heroa-phone" class="herobannera-display">
+                <!-- Background Image start -->
+                <img src="${herocontainer.mobileImage}" width="100%" alt="${herocontainer.mobileAltText}">
+                <!-- image end -->
+            </div>
+
+        </sly>
+    </div>
+    <sly data-sly-resource="${'herobanner-v1' @ resourceType='/apps/softwareag/components/content/herobanner_v1'}">
+    </sly>
+    <!-- Hero Cards section -->
+    <sly data-sly-test="${herocontainer.heroCards}">
+        <section class="desktop-herocardcontainer herobanner_card-container herocard-layout-${herocontainer.heroCards}">
+            <sly data-sly-list.cardsList="${herocontainer.cards}">
+                <div class="kpi"
+                    data-sly-resource="${cardsList @ resourceType='/apps/softwareag/components/content/kpi'}">
+                </div>
+            </sly>
+        </section>
+    </sly>
+
+    <!-- Hero cards section end -->
+</div>

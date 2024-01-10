@@ -1,0 +1,100 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "List Page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "empty_static_list": {
+                "jcr:primaryType": "nt:unstructured",
+                "title": "Empty Static List",
+                "sling:resourceType": "softwareag/components/content/list",
+                "listFrom": "static"
+            },
+            "invalid_list": {
+                "jcr:primaryType": "nt:unstructured",
+                "title": "Invalid List",
+                "sling:resourceType": "softwareag/components/content/list",
+                "listFrom": "abc"
+            },
+            "static_list": {
+                "jcr:primaryType": "nt:unstructured",
+                "title": "Static List",
+                "sling:resourceType": "softwareag/components/content/list",
+                "listFrom": "static",
+                "listItems": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "text": "Link Title",
+                            "href": "/content/test"
+                        }
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured"
+                    },
+                    "item2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/test"
+                        }
+                    },
+                    "item3": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "text": "Test"
+                        }
+                    },
+                    "item4": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    }
+                }
+            },
+            "children_list": {
+                "jcr:primaryType": "nt:unstructured",
+                "title": "Children List",
+                "sling:resourceType": "softwareag/components/content/list",
+                "listFrom": "children",
+                "parentPage": "/content/test"
+            }
+        }
+    },
+    "children": {
+        "page_without_title": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent"
+            }
+        },
+        "page_with_title": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Title"
+            }
+        },
+        "page_with_pageTitle": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "pageTitle": "Page Title"
+            }
+        },
+        "page_with_navTitle": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "navTitle": "Nav Title"
+            }
+        }
+    }
+}
+

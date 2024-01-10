@@ -1,0 +1,16 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<!-- Template B -->
+<sly data-sly-test="${!properties.sectionaremover}">
+<div data-sly-unwrap="${!wcmmode.edit}">
+	<sly data-sly-resource="${'sectiona' @ resourceType='softwareag/components/configs/navigation-v2-components/templateB-sections/sectionA'}"
+		decoration=true />
+</div>
+</sly>
+<sly data-sly-test="${!properties.sectionbremover}">
+<div data-sly-unwrap="${!wcmmode.edit}">
+	<sly data-sly-resource="${'sectionb' @ resourceType='softwareag/components/configs/navigation-v2-components/templateB-sections/sectionB'}"
+		decoration=true />
+</div>
+</sly>

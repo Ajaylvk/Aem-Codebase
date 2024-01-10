@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:templateType="/conf/softwareag/settings/wcm/template-types/empty-template"
+        allowedPaths="[/content/softwareag/test(?:/.*)?]"
+        jcr:description="Software AG Basic Page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Software AG Demo Page"
+        status="enabled" />
+</jcr:root>

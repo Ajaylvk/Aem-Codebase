@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Thumbnail"
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <thumbnailimage
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Thmubnail"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <thumbnail
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/common/wcm/pagethumbnail"
+                            page="${empty param.item ? requestPathInfo.suffix : param.item}"
+                            quiet="{Boolean}true"
+                            rootPath="/content/dam/softwareag">
+                            <assetpicker
+                                granite:class="js-browse-activator"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/button"
+                                rootPath="/content/dam/softwareag"
+                                text="Select Image">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    cq-msm-lockable="./image"/>
+                            </assetpicker>
+                            <preview
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/siteadmin/admin/pagepreview"/>
+                        </thumbnail>
+                    </items>
+                </thumbnailimage>
+            </items>
+        </column>
+    </items>
+</jcr:root>

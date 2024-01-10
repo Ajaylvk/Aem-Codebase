@@ -1,0 +1,66 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "pageTitle": "Test Page Title",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "homepagebanner": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/homepagebanner",
+            "solutionBox1": {
+                "jcr:primaryType": "nt:unstructured",
+                "upperTitle": "Our Solutions",
+                "fontStyle": "input__colorselect-font-color0",
+                "altText": "Box 1 Image",
+                "image": "/content/dam/softwareag-test/images/header/logo.png",
+                "title": "Hybrid Integration Solutions",
+                "backgroundStyle": "input__colorselect-background-color3",
+                "campaign": "softwareag:event-type/conference",
+                "cta": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "link": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "href": "https://www.softwareag.com",
+                        "text": "More"
+                    }
+                }
+            },
+            "solutionBox2": {
+                "jcr:primaryType": "nt:unstructured",
+                "upperTitle": "Our Solutions",
+                "fontStyle": "input__colorselect-font-color0",
+                "altText": "Box 2 Image",
+                "image": "/content/dam/softwareag-test/images/header/logo.png",
+                "title": "IoT & Analytics Solutions",
+                "backgroundStyle": "input__colorselect-background-color4",
+                "campaign": "softwareag:event-type/conference",
+                "cta": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "link": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "href": "https://www.softwareag.com",
+                        "text": "More"
+                    }
+                }
+            },
+            "teaserBox": {
+                "jcr:primaryType": "nt:unstructured",
+                "fontStyle": "input__colorselect-font-color0",
+                "title": "We give business the power to instantly see, decide and act.",
+                "backgroundStyle": "input__colorselect-background-color2",
+                "campaign": "softwareag:event-type/conference",
+                "cta": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "link": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "href": "https://www.softwareag.com",
+                        "text": "About Software AG"
+                    }
+                }
+            }
+        }
+    }
+}
+

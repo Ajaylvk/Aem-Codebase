@@ -1,0 +1,16 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.logowall="com.softwareag.core.models.logo.LogoWallModel"></sly>
+<div class="logowall-wrapper  ${properties.backgroundColor}">
+    <div data-noOfRows="${properties.rows}" data-noOfColumns="${properties.columns}"
+    class="logowall-container">
+    <!-- overall container -->
+    <sly data-sly-list="${logowall.placeHolderList}">
+        <sly data-sly-test.newPath="${'logowall-item{0}' @ format = itemList.index}">
+            <sly
+                data-sly-resource="${ newPath @ resourceType='softwareag/components/content/logowall-item', decoration=true}">
+            </sly>
+        </sly>
+</div>
+</div>

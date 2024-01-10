@@ -1,0 +1,122 @@
+.tab__container {
+    @include spacing(padding-top, xl);
+    @include spacing(padding-bottom, xl);
+
+    @include mq-from-tablet {
+        @include spacing(padding-left, m);
+        @include spacing(padding-right, m);
+    }
+
+    .tabcomponent__headline {
+        @include spacing(margin-bottom, xl);
+
+        text-align: center;
+    }
+
+    &.tab__container--light {
+        background-color: $color-white;
+
+        .tab__arrow--left {
+            background: linear-gradient(to left, transparent, $color-white 50%, $color-white);
+        }
+
+        .tab__arrow--right {
+            background: linear-gradient(to right, transparent, $color-white 50%, $color-white);
+        }
+    }
+
+    &.tab__container--dark {
+        background-color: $color-core-light;
+
+        .tab__arrow--left {
+            background: linear-gradient(to left, transparent, $color-core-light 50%, $color-core-light);
+        }
+
+        .tab__arrow--right {
+            background: linear-gradient(to right, transparent, $color-core-light 50%, $color-core-light);
+        }
+    }
+
+    .content-width {
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .tab__item-list {
+        display: flex;
+        flex-wrap: nowrap;
+        border-bottom: 1px solid $color-core-black-75;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .tab__button {
+        @include keyboard-outline();
+        @include font-size-with-rem-line-height(1.6rem, 3rem);
+        border-bottom: 0.5rem solid transparent;
+        background-color: transparent;
+        white-space: nowrap;
+        margin: 0 2rem;
+        padding: 1rem 0 0.5rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .tab__button.tab__button--active {
+        @include base-font-bold();
+        color: $color-bright-pulse;
+        border-bottom: 5px solid $color-bright-pulse;
+    }
+
+    .tab__button:hover {
+        color: $color-bright-pulse;
+    }
+
+    .tab__content {
+        display: none;
+        margin-top: 0.6rem;
+        width: 100%;
+    }
+
+    .tab__content.tab__content--active {
+        display: block;
+    }
+
+    .tab__arrow {
+        @include keyboard-outline();
+        position: absolute;
+        top: 0;
+        width: 4rem;
+        height: 5.1rem;
+        cursor: pointer;
+    }
+
+    .tab__arrow--left {
+        left: 1rem;
+        padding-right: 2rem;
+        @include mq-from-tablet {
+            left: 0;
+        }
+    }
+
+    .tab__arrow--right {
+        right: 1rem;
+        padding-left: 2rem;
+        @include mq-from-tablet {
+            right: 0;
+        }
+    }
+}

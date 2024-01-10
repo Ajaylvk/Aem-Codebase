@@ -1,0 +1,12 @@
+<sly data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.accordionItem="com.softwareag.core.models.accordion.AccordionItem"
+     data-sly-attribute.id="${accordionItem.anchorName}"
+     class="jump_to">
+
+    <div class="rtewrapper" id="${accordionItem.anchorName}">
+        <div class="accordion-item__text">
+            ${accordionItem.text @ context='html'}
+        </div>
+        <sly class="cta-container" data-sly-resource="${ @ resourceType='softwareag/components/content/cta'}"></sly>
+    </div>
+</sly>

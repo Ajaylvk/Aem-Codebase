@@ -1,0 +1,80 @@
+.inpagenavigation {
+    background-color: $color-white;
+    box-shadow: 1rem 0.5rem 1.5rem -1.5rem rgba(0, 0, 0, 0.1);
+    
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .prev-item,
+    .next-item {
+        width: 4rem;
+        height: 6rem;
+        padding: 1.2rem;
+        cursor: pointer;
+        display: none;
+        position: absolute;
+    }
+
+    .prev-item {
+        left: 0;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .next-item {
+        right: 0;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%);
+    }
+}
+
+.scroll-right {
+    .next-item {
+        display: block;
+    }
+}
+
+.scroll-left {
+    .prev-item {
+        display: block;
+    }
+}
+
+.inpagenavigation-item {
+    display: inline-block;
+    @include spacing(margin-right, s);    
+    @include font-size-with-rem-line-height(1.6rem, 3rem);
+
+    a {
+        padding: 1.5rem;
+        display: flex;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    a:hover,
+    a:active {
+        padding-bottom: 1rem;
+        border-bottom: 0.5rem solid $color-bright-pulse;
+        font-weight: bold;
+        color: $color-bright-pulse;
+    }
+}
+
+.innav__btn--active {
+    display: block;
+}
+
+@include mq-until-tablet {
+    .inpagenavigation {
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .inpagenavigation__container {
+        justify-content: left;
+        overflow: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE 10+ */
+    }
+}

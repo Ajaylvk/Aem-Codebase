@@ -1,0 +1,30 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div class="article-banner-container">
+     <div class="article-banner-wrapper ${properties.backgroundStyle}">
+          <div class="article-banner-content">
+               <div data-sly-test="${properties.articleBannerCaption}" class="article-banner-caption">
+                    ${properties.articleBannerCaption}
+               </div>
+               <div data-sly-test="${properties.articleBannerTitle}" class="article-banner-main-title">
+                    ${properties.articleBannerTitle @ context='html'}
+               </div>
+               <!-- For description -->
+               <div class="article-banner-main-summary">
+                    ${properties.summary @ context='html'}
+               </div>
+               <div>
+                    <sly class="article-banner-secondary-button"
+                         data-sly-resource="${ @ path='article-button', resourceType='softwareag/components/content/button', decoration=true}">
+                    </sly>
+               </div>
+          </div>
+          <div class="article-image-container">
+               <sly data-sly-test="${properties.type =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+               <img data-sly-test="${properties.type == 'svg'}" src="${properties.image}" alt="${properties.altText2}"
+                    class="article-banner-image">
+          </div>
+     </div>
+</div>

@@ -1,0 +1,130 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Event Overview",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/eventoverview",
+        "sling:resourceType": "softwareag/components/structure/basic-page",
+        "eventoverview": {
+            "jcr:primaryType": "nt:unstructured",
+            "maxNumberOfPages": "300",
+            "copyText": "Event Overview Component",
+            "amountOfListedEventItems": "10",
+            "title": "Event Overview Component",
+            "amountOfMoreLoadedEventItems": "10",
+            "sling:resourceType": "softwareag/components/content/eventoverview"
+        }
+    },
+    "event-folder-01": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Event Folder 01",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "Event Folder 01",
+            "sling:resourceType": "softwareag/components/structure/folder",
+            "cq:lastModifiedBy": "admin"
+        },
+        "event-01": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 01",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "true",
+                    "enableCounter": "true",
+                    "eventStartDate": "2020-01-20T00:00:00",
+                    "eventEndDate": "2020-01-21T00:00:00",
+                    "eventTitle": "Event Title 01",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/england",
+                    "eventType": "softwareag:event-type/conference",
+                    "eventDescription": "<b><i>Event Title 01</i></b>",
+                    "eventTimeZone": "GMT",
+                    "campaign": "softwareag:event-type/conference"
+                }
+            }
+        },
+        "event-02": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "cq:redirectTarget": "https://www.google.com",
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 02",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "true"
+                }
+            }
+        },
+        "event-03": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "cq:redirectTarget": "/content/softwareag",
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 03",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "true"
+                }
+            }
+        },
+        "event-04": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 04",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "true",
+                    "enableCounter": "true",
+                    "eventStartDate": "2020-01-20T00:00:00",
+                    "eventEndDate": "2020-01-21T00:00:00",
+                    "eventTitle": "Event Title 04",
+                    "externalEventLink": "https://www.bbc.com",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/england",
+                    "eventType": "softwareag:event-type/conference",
+                    "eventDescription": "<b><i>Event Title 04</i></b>",
+                    "eventTimeZone": "GMT"
+                }
+            }
+        },
+        "event-05": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Event 05",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/event",
+                "sling:resourceType": "softwareag/components/structure/eventpage",
+                "cq:redirectTarget": "https://shouldbeignored.com",
+                "eventitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "hideEventInEventOverview": "true",
+                    "enableCounter": "true",
+                    "eventStartDate": "2020-01-20T00:00:00",
+                    "eventEndDate": "2020-01-21T00:00:00",
+                    "eventTitle": "Event Title 05",
+                    "externalEventLink": "https://www.bbc.com",
+                    "sling:resourceType": "softwareag/components/content/eventitem",
+                    "textIsRich": "true",
+                    "eventCountry": "softwareag:countries/england",
+                    "eventType": "softwareag:event-type/conference",
+                    "eventDescription": "<b><i>Event Title 05</i></b>",
+                    "eventTimeZone": "GMT"
+                }
+            }
+        }
+    }
+}

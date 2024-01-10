@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/softwareag/settings/wcm/templates/pressoverview"
+        jcr:primaryType="cq:PageContent"
+        cq:lastReplicated="{Date}2019-12-01T00:00:00.001Z"
+        cq:lastReplicationAction="Activate"
+        sling:resourceType="softwareag/components/structure/basic-page">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/header">
+        </header>
+        <herobanner
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/herobanner"
+            editable="{Boolean}true">
+        </herobanner>
+        <topparsys
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/parsys"
+            editable="{Boolean}true">
+        </topparsys>
+        <pressoverview
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/pressoverview"
+            editable="{Boolean}true">
+        </pressoverview>
+        <bottomparsys
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/parsys"
+            editable="{Boolean}true">
+        </bottomparsys>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="softwareag/components/content/footer">
+        </footer>
+    </jcr:content>
+</jcr:root>

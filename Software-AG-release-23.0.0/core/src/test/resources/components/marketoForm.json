@@ -1,0 +1,55 @@
+{
+	"jcr:primaryType": "cq:Page",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:title": "Software AG",
+		"redirectTarget": "/content/softwareag/landing-page",
+		"sling:redirect": true,
+		"sling:redirectStatus": 302,
+		"cq:deviceGroups": [
+			"mobile/groups/responsive"
+		],
+		"sling:resourceType": "foundation/components/redirect",
+		"cq:allowedTemplates": [
+			"/conf/softwareag/settings/wcm/templates/.*"
+		]
+	},
+	"test": {
+		"jcr:primaryType": "cq:Page",
+		"jcr:content": {
+			"jcr:primaryType": "cq:PageContent",
+			"jcr:title": "Test Page",
+			"cq:template": "/conf/softwareag/settings/wcm/templates/base",
+			"sling:resourceType": "softwareag/components/structure/page",
+			"parsys": {
+				"jcr:primaryType": "nt:unstructured",
+				"sling:resourceType": "softwareag/components/content/parsys",
+				"marketo-form": {
+					"jcr:primaryType": "nt:unstructured",
+					"sling:resourceType": "softwareag/components/content/marketo-form"
+				}
+			}
+		}
+	},
+	"config-page": {
+		"jcr:primaryType": "cq:Page",
+		"jcr:content": {
+			"jcr:primaryType": "cq:PageContent",
+			"jcr:title": "Config Page",
+			"cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+			"sling:redirect": true,
+			"sling:redirectStatus": 302,
+			"sling:resourceType": "softwareag/components/structure/page",
+			"parsys": {
+				"jcr:primaryType": "nt:unstructured",
+				"sling:resourceType": "softwareag/components/content/parsys",
+				"marketo-form": {
+					"jcr:primaryType": "nt:unstructured",
+					"sling:resourceType": "softwareag/components/configs/marketo-form",
+					"marketoEndpoint": "http://app-sj28.marketo.com",
+					"munchkinAccountId": "884-CHG-357"
+				}
+			}
+		}
+	}
+}

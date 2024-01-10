@@ -1,0 +1,318 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "corporate": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "corporate",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "/none",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "en_corporate": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Home",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "sling:resourceType": "softwareag/components/structure/homepage"
+            },
+            "firstlevelpage": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "1st Level Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "teaserbanner": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/teaserbanner",
+                        "editable": true
+                    }
+                },
+                "2ndlevelpage": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "de": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Germany",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "/none",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "de_de": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Home",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "homepagebanner": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/homepagebanner",
+                    "editable": true
+                }
+            },
+            "firstlevelpage": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "1st Level Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "teaserbanner": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/teaserbanner",
+                        "editable": true
+                    }
+                },
+                "2ndlevelpage": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Software AG",
+        "redirectTarget": "/content/softwareag/en_us",
+        "sling:redirect": true,
+        "sling:redirectStatus": 302,
+        "cq:conf": "/conf/softwareag/SoftwareAGLaunch",
+        "sling:resourceType": "foundation/components/redirect"
+    },
+    "language-master": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "language-master",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "/none",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "en_us": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Home",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "homepagebanner": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/homepagebanner",
+                    "editable": true
+                }
+            },
+            "firstlevelpage": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "1st Level Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "teaserbanner": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/teaserbanner",
+                        "editable": true
+                    }
+                },
+                "2ndlevelpage": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ch": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Switzerland",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "/none",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "de_ch": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Home",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "homepagebanner": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/homepagebanner",
+                    "editable": true
+                }
+            },
+            "firstlevelpage": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "1st Level Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "teaserbanner": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/teaserbanner",
+                        "editable": true
+                    }
+                },
+                "2ndlevelpage": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                },
+                "2ndlevelpage2": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page 2",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                }
+            }
+        },
+        "fr_ch": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Home",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "sling:resourceType": "softwareag/components/structure/homepage",
+                "homepagebanner": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/homepagebanner",
+                    "editable": true
+                }
+            },
+            "firstlevelpage": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "1st Level Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "teaserbanner": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/teaserbanner",
+                        "editable": true
+                    }
+                },
+                "2ndlevelpage": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "junk": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "junk",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "/none",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "junklanguage": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Home",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+                "sling:resourceType": "softwareag/components/structure/homepage"
+            },
+            "firstlevelpage": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "1st Level Page",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "teaserbanner": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/teaserbanner",
+                        "editable": true
+                    }
+                },
+                "2ndlevelpage": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:title": "2nd Level Page",
+                        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                        "sling:resourceType": "softwareag/components/structure/basic-page",
+                        "teaserbanner": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/teaserbanner",
+                            "editable": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

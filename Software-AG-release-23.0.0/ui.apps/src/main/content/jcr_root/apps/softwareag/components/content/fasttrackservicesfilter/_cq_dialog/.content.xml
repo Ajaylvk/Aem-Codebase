@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Fast Track Services Filters/Search"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <filteroptions
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Filter Options"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <filtelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text for Filter Label"
+                                                fieldLabel="Filter Label"
+                                                name="./filterlabel"/>
+                                            <sourcepath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Select Source Root Path, the pages under this folder/page will be considered for listing resultant pages"
+                                                fieldLabel="Source Page Path"
+                                                name="./sourcePath"
+                                                rootPath="/content"/>
+                                            <filter1label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Label of Filter 1"
+                                                fieldLabel="Filter 1 Label"
+                                                name="./filter1label"/>
+                                            <filter1tags
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                fieldDescription="Select appropriate tags for Filter 1 label"
+                                                fieldLabel="Select Filter1 Tags"
+                                                multiple="{Boolean}true"
+                                                name="./filter1tags"
+                                                rootPath="/content/cq:tags/softwareag/service-type"/>
+                                            <filter2label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Label of Filter 2"
+                                                fieldLabel="Filter 2 Label"
+                                                name="./filter2label"/>
+                                            <filter2tags
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                fieldDescription="Select appropriate tags for Filter 2 label"
+                                                fieldLabel="Select Filter2 Tags"
+                                                multiple="{Boolean}true"
+                                                name="./filter2tags"
+                                                rootPath="/content/cq:tags/softwareag/topic"/>
+                                            <loadmorectatext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text for Load more CTA"
+                                                fieldLabel="Load More CTA Text"
+                                                name="./loadmorectatext"/>
+                                            <clearfilter
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text for clear filter bubble"
+                                                fieldLabel="Clear Search Filter Text"
+                                                name="./clearfilter"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </filteroptions>
+                    <searchoptions
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search Options"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <searchlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text for search placeholder"
+                                                fieldLabel="Search Placeholder"
+                                                name="./searchplaceholder"/>
+                                            <searchtooltip
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Tool tip for search"
+                                                fieldLabel="Search Tool Tip"
+                                                name="./searchtooltip"/>
+                                            <searcherror
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text for no results"
+                                                fieldLabel="Error Message"
+                                                name="./searcherror"/>
+                                            <clearsearch
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text for clear search bubble"
+                                                fieldLabel="Clear Search Bubble Text"
+                                                name="./clearsearch"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </searchoptions>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

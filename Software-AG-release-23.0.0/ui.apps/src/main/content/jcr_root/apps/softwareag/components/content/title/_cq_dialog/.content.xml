@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Title"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Title text needs to be configured here."
+                                        fieldLabel="Title"
+                                        name="./jcr:title"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePluginsOnlySubsuperscript" />
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettingsOnlySubsuperscript" />
+                                    </title>
+                                    <position
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Position of the text area of the Title Component. Selections are 'Left', 'Middle' or 'Right'."
+                                        fieldLabel="Position"
+                                        name="./position">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Left"
+                                                value="left" />
+                                            <middle
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Middle"
+                                                value="middle" />
+                                            <right
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Right"
+                                                value="right" />
+                                        </items>
+                                    </position>
+                                    <copytext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="A copy text to display as the description for the Title component."
+                                        fieldLabel="Copy Text"
+                                        name="./copyText"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePlugins" />
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettings" />
+                                    </copytext>
+                                    <fontStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                                        path="/apps/softwareag/components/commons/dialog/color/font" />
+                                    <backgroundStyle
+                                        granite:class="cq-dialog-background-color-select"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Color that can be chosen for the background of the component."
+                                        fieldLabel="Background Color"
+                                        name="./backgroundStyle">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="softwareag/datasources/backgroundcolors"
+                                            name="datasource" />
+                                    </backgroundStyle>
+                                </items>
+                            </column>
+                        </items>
+                    </properties>
+                    <targetTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_target" />
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

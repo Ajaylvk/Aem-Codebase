@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Software AG Article Teaser V1 Policy"
+          policyResourceType="softwareag/components/content/articleteaser"
+          sling:resourceType="wcm/core/components/policy/policy">
+    <styleGroups_disabled jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Background Color"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="input__colorselect-icon-color8"
+                                    cq:styleId="input__colorselect-icon-color8"
+                                    cq:styleLabel="Core dark 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="input__colorselect-icon-color2"
+                                    cq:styleId="input__colorselect-icon-color2"
+                                    cq:styleLabel="Bright Pulse 600"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="input__colorselect-icon-color11"
+                                    cq:styleId="input__colorselect-icon-color11"
+                                    cq:styleLabel="Bright Sense 300"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="input__colorselect-icon-color3"
+                                    cq:styleId="input__colorselect-icon-color3"
+                                    cq:styleLabel="Bright Sense 500 "
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="input__colorselect-icon-color1"
+                                    cq:styleId="input__colorselect-icon-color1"
+                                    cq:styleLabel="White"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </styleGroups_disabled>
+</jcr:root>

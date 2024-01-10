@@ -1,0 +1,14 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.carouselobj="${'com.softwareag.core.models.carousel.CarouselLogo'}">
+
+    <sly data-sly-list.item="${carouselobj.logosList}">
+
+        <div class="carousel-logos">
+            <img class="slick-image" src="${item.logo}" alt="${item.altText}" title="${item.altText}" />
+        </div>
+    </sly>
+
+
+</sly>

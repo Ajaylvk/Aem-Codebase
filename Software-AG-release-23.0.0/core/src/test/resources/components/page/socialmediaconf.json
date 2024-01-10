@@ -1,0 +1,19 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "nt:unstructured",
+        "dam:lastS7SyncStatus": "success",
+        "dam:extramodifiers": "",
+        "printres": "72",
+        "fmt": "jpeg",
+        "qlt": "75",
+        "wid": "1260",
+        "resmode": "bisharp",
+        "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "dam:scene7ID": "i|26229|83496",
+            "dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+            "dam:scene7RootID": "softwareaglocaldevelop1"
+        }
+    }
+}

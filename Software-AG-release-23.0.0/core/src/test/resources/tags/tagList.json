@@ -1,0 +1,136 @@
+{
+    "jcr:primaryType": "cq:Tag",
+    "sling:resourceType": "cq/tagging/components/tag",
+    "industry": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Industry",
+        "jcr:description": "Industry Tags",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "banking": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Banking",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    },
+    "asset-type": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Asset-type",
+        "jcr:description": "Asset-type Tags",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "image": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Image",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "video": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Video",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    },
+    "countries": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Countries",
+        "jcr:description": "Countries Tags",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "england": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "England",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "france": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "France",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "germany": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Germany",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    },
+    "event-type": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Event Type",
+        "jcr:description": "",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "conference": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Conference",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "sport": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Sport",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "concert": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Concert",
+            "jcr:description": "",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    },
+    "product-categories": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Website Categories",
+        "jcr:description": "Overall navigation topics and products mapped to Business Lines",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "iot": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "IoT & Analytics",
+            "jcr:description": "Content related to IoT",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "integration": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Integration and APIs",
+            "jcr:description": "Content related to Integration",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    },
+    "product-brand-names": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Product Brand names",
+        "jcr:description": "Product names",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "webMethods": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "webMethods",
+            "jcr:description": "Content related to webMethods",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "natural": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Natural",
+            "jcr:description": "Content related to Natural",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    },
+    "product-capabilities": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:title": "Product Capabilities",
+        "jcr:description": "These keywords represent the product capabilities which are mostly shown for each BU in the Platform navigation",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "agile-devops": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Agile DevOps",
+            "jcr:description": "Agile Development Operations, Adabas-Natural",
+            "sling:resourceType": "cq/tagging/components/tag"
+        },
+        "microservices": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:title": "Microservices",
+            "jcr:description": "Microservices, webMethods",
+            "sling:resourceType": "cq/tagging/components/tag"
+        }
+    }
+}

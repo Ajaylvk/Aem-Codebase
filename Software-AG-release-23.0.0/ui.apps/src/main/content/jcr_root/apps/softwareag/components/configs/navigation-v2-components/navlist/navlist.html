@@ -1,0 +1,20 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+	data-sly-use.navItemModel="com.softwareag.core.models.navigation_v2.NavItem" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div
+	class="nav-list-wrapper ${properties.iconsize} ${properties.description ? 'nav-list-with-desc' : 'nav-list-without-desc'} ">
+	<div data-sly-test="${properties.fileReferencea}" class="navList_col-A">
+		<img src="${properties.fileReferencea}" alt="${properties.altTexta}" class="svgicon" />
+	</div>
+	<div class="navList_col-B">
+		<div data-sly-test="${properties.title}"
+			class="navList-headline ${properties.description ? 'nav-list_title-space' : ''}">
+			<a href="${navItemModel.link}" target="${navItemModel.openIn}">${properties.title @ context='html'}</a>
+		</div>
+		<div data-sly-test="${properties.description}" class="navList_description">
+			${properties.description @ context='html'}
+		</div>
+	</div>
+</div>

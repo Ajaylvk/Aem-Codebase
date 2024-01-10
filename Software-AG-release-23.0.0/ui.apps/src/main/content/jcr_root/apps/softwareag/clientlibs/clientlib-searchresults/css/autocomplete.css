@@ -1,0 +1,61 @@
+/*
+ * jQuery UI Menu 1.8.10
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+
+.ui-corner-all {
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+
+.ui-menu {
+    list-style:none;
+    padding: 2px;
+    margin: 0;
+    display:block;
+    float: left;
+    background-color:white;
+}
+
+.ui-menu.ui-autocomplete {
+    border:     1px solid #999999;
+    overflow: hidden;
+}
+
+.ui-menu .ui-menu {
+    margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
+}
+.ui-menu .ui-menu-item a {
+    text-decoration:none;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+    font-weight:bold;
+    color:#666;
+}
+
+.ui-menu .ui-menu-item a strong{
+    font-weight:normal;
+}
+
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+    background:none repeat scroll 0 0 rgb(228, 228, 228);
+    color:#666;
+    border:none;
+}

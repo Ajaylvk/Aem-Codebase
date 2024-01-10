@@ -1,0 +1,24 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<!-- component content -->
+<sly data-sly-use.articleEmphasis="com.softwareag.core.models.article.ArticleEmphasisModel"></sly>
+<div data-sly-test="${articleEmphasis.emphasisText}"
+	class="article-emphasis-text ${properties.backgroundStyle} ${articleEmphasis.ctaLabel && !articleEmphasis.fileReference && articleEmphasis.enableLinks ? 'article_content-link':''}">
+	${articleEmphasis.emphasisText @ context="html"}
+</div>
+<div data-sly-test="${!articleEmphasis.fileReference && articleEmphasis.enableLinks && articleEmphasis.ctaLabel}"
+	class="article-emphasis-link ${properties.backgroundStyle}"><a class="emphasis-text-link"
+		href="${articleEmphasis.ctaDestinationLink}" target="${articleEmphasis.linkOpenIn}">
+		<span class="article-emp-text">${articleEmphasis.ctaLabel}</span>
+		<i class="arrow-right"></i>
+	</a>
+</div>
+<div data-sly-test="${properties.type =='asset' || properties.type =='svg'}"
+	class="article-emphasis-image ${properties.backgroundStyle} ${articleEmphasis.emphasisText ? 'article-image-padding-summary': 'article-image-padding' }">
+	<sly data-sly-test="${properties.type =='asset'}"
+		data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+	<sly data-sly-test="${properties.type =='svg'}">
+		<img src="${properties.image}" alt="${properties.altText2}" class="article-emphasis-svg">
+	</sly>
+</div>

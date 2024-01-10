@@ -1,0 +1,129 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Root Page",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/page",
+        "sling:resourceType": "softwareag/components/structure/page"
+    },
+    "config-page": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Config Page",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+            "sling:redirect": true,
+            "sling:redirectStatus": 302,
+            "sling:resourceType": "softwareag/components/structure/page",
+            "parsys": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/parsys",
+                "map-config": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/configs/map-config",
+                    "latitude": "43.6514973",
+                    "longitude": "-79.3806597",
+                    "zoomLevel": "1"
+                }
+            }
+        }
+    },
+    "map-page": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "map Config",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/page",
+            "sling:resourceType": "softwareag/components/structure/page",
+            "parsys": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/parsys",
+                "map": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/map",
+                    "americaOffice": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "item0": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "latitude": "43.6514973",
+                            "longitude": "-79.3806597",
+                            "text": "Office text",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "href": "north_america.html#canada_test",
+                                "text": "4 Offices in Canada"
+                            }
+                        },
+                        "item1": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "latitude": "38.9526285",
+                            "longitude": "-77.3521932",
+                            "text": "Office text",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "href": "north_america.html#usa",
+                                "text": "11 Offices in USA"
+                            }
+                        }
+                    },
+                    "europeOffice": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "item0": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "latitude": "37.9743773",
+                            "longitude": "23.7116498",
+                            "text": "Office text",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "href": "central_eastern_europe.html#greece",
+                                "text": "Greece"
+                            }
+                        }
+                    },
+                    "africaOffice": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "item0": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "latitude": "-26.0455758",
+                            "longitude": "28.0206311",
+                            "text": "Office text",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "href": "africa_middle_east.html#South_Africa",
+                                "text": "Office in South Africa"
+                            }
+                        }
+                    },
+                    "asiaOffice": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "item0": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "latitude": "32.0226525",
+                            "longitude": "34.8605845",
+                            "text": "Office text",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "href": "africa_middle_east.html#Israel",
+                                "text": "Office in Israel"
+                            }
+                        }
+                    },
+                    "australiaOffice": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "item0": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "latitude": "-33.8363471",
+                            "longitude": "151.2055923",
+                            "text": "Office text",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "href": "asia_pacific.html#australia",
+                                "text": "3 Offices in Australia"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

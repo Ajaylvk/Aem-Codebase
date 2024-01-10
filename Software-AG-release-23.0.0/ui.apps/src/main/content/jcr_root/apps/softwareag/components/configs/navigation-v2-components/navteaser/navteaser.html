@@ -1,0 +1,40 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+	data-sly-use.navItemModel="com.softwareag.core.models.navigation_v2.NavItem" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<div data-sly-test="${properties.compvariation == 'small'}" class="nav-teaser-wrapper ${properties.compvariation}">
+	<div class="nav-image">
+		<sly data-sly-test="${properties.type =='asset'}"
+			data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+		<sly data-sly-test="${properties.type =='svg'}">
+
+			<img src="${properties.image}" alt="${properties.altText2}">
+		</sly>
+	</div>
+	<div class="nav-teaser-content">
+		<div data-sly-test="${properties.title}" class="nav-headline">
+			<a href="${navItemModel.link}" target="${navItemModel.openIn}">${properties.title @ context='html'}</a>
+		</div>
+		<div data-sly-test="${properties.description}" class="nav-description">
+			${properties.description @ context = 'html'}
+		</div>
+	</div>
+</div>
+<div data-sly-test="${properties.compvariation == 'large'}" class="nav-teaser-wrapper ${properties.compvariation}">
+	<div class="nav-image">
+		<sly data-sly-test="${properties.type =='asset'}"
+			data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+		<sly data-sly-test="${properties.type =='svg'}">
+
+			<img src="${properties.image}" alt="${properties.altText2}">
+		</sly>
+	</div>
+	<div class="nav-teaser-content">
+		<div data-sly-test="${properties.title}" class="nav-headline">
+			<a href="${navItemModel.link}" target="${navItemModel.openIn}">${properties.title @ context='html'}</a>
+		</div>
+		<div data-sly-test="${properties.description}" class="nav-description">
+			${properties.description @ context = 'html'}
+		</div>
+	</div>
+</div>

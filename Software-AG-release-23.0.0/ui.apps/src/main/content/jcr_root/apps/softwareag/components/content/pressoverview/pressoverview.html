@@ -1,0 +1,55 @@
+<div class="eventoverview__wrapper">
+    <div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+         data-sly-use.pressOverview="com.softwareag.core.models.press.PressOverview"
+         data-sly-test.hasContent="${pressOverview.title}"
+         data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+         class="pressoverview__container content-width"
+         data-attrib-name="contentsection"
+         data-attrib-value="${pressOverview.dataAttribValue}">
+        <h2 class="pressoverview__title a-h2">${pressOverview.title}</h2>
+        <p class="pressoverview__description a-intro-small">${properties.copyText}</p>
+        <ul data-sly-list.pressItem="${pressOverview.searchResults}" class="pressoverview__list"
+            data-load-more-items="${pressOverview.amountOfMoreLoadedPressItems}">
+            <li class="pressoverview__list-item ${pressItemList.index >= pressOverview.amountOfListedPressItems ? 'pressoverview__list-item--hidden' : ''}"
+                data-sly-test="${!pressItem.hidePressInPressOverview}"
+                data-sly-use.pressReleaseDate="${'com.softwareag.core.models.DateTimeModel' @ input=pressItem.pressReleaseDate, format=pressOverview.getGeneralConfigDateFormat}">
+                <a href="${pressItem.link.href}"
+                   class="pressoverview__list-item__link"
+                   target="${pressItem.link.target}"
+                   title="${pressItem.pressTitle}"
+                   data-attrib-type="asset"
+                   data-attrib-name="${pressItem.pressTitle}">
+                    <span class="pressoverview__list-item__date a-copytext">
+                        ${pressReleaseDate.output}
+                    </span>
+                    <h4 class="a-h4 pressoverview__list-item__title">${pressItem.pressTitle @ context='html'}</h4>
+                    <p class="a-copytext pressoverview__list-item__description">${pressItem.pressSummary @ context='html'}</p>
+
+                    <div class="cta-container a-cta--default-link-color">
+                        <div class="a-cta a-cta--design-link">
+                        <span class="a-cta__button">
+                            <span class="a-cta__button-text">
+                                ${pressOverview.labelLearnMore}
+                            </span>
+                            <span class="a-cta__button-icon">
+                                <sly class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}" />
+                            </span>
+                        </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <button class="pressoverview__load-more a-cta a-cta--design-dark-button">
+            <span class="a-cta__button">
+                <span class="a-cta__button-text">
+                    ${pressOverview.labelLoadMore}
+                </span>
+            </span>
+        </button>
+        <label>
+            <input class="pressoverview__currently-shown-items" value="${pressOverview.amountOfListedPressItems}">
+        </label>
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

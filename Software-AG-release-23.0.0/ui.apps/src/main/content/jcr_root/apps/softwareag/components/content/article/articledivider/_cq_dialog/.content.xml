@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article Divider"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[showhidetab.clientlibs]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container"
+        margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        granite:class="cq-RichText-FixedColumn-column"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dividerStyle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Select the divider color"
+                                                fieldLabel="Divider Color"
+                                                name="./dividerStyle">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <select
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Divider Color"
+                                                        value=""/>
+                                                    <brightpulse600
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bright Pulse 600"
+                                                        value="brightpulse600"/>
+                                                    <coredark900
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Core Dark 900"
+                                                        value="coredark900"/>
+                                                    <corelight930
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Core Dark 120"
+                                                        value="coredark120"/>
+                                                </items>
+                                            </dividerStyle>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <!-- <dmSettings
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_dm_settings"/> -->
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,147 @@
+$button-height: 5rem;
+
+.textmediabanner__container {
+    @include clearfix();
+    @include component-bottom-spacing();
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq-except-phone {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .s7dm-dynamic-media {
+        line-height: 0;
+    }
+
+    .wrapper-container {
+        width: 100%;
+    }
+
+    .image-block {
+        position: relative;
+
+        @include mq-phone {
+            position: relative;
+            float: none;
+            margin: $spacing-mobile-s;
+            margin-bottom: 0;
+        }
+
+        @include mq-tablet-all {
+            @include columns(7);
+            margin-left: 0;
+            position: relative;
+            margin-right: -0.2rem;
+        }
+
+        @include mq-desktop {
+            @include columns(6);
+            @include grid-column();
+            margin-left: 0;
+            margin-right: -0.2rem;
+            float: left;
+            width: 50%;
+        }
+    }
+
+    .s7dm-dynamic-media img {
+        max-width: 100%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .inner-cta-block {
+        @include mq-phone {
+            display: none;
+        }
+
+        @include mq-desktop {
+            height: $button-height;
+        }
+
+        .a-cta {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include mq-except-phone {
+                text-align: right;
+            }
+            @include mq-tablet {
+                transform: translateX(100%);
+            }
+        }
+
+        .a-cta--design-link {
+            right: -1rem;
+            bottom: 1rem;
+            color: $color-core-black;
+
+            @include mq-from-tablet {
+                right: 2rem;
+            }
+        }
+
+        .a-cta--design-link:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .cta-block {
+        @include mq-phone {
+            float: right;
+            margin-right: $spacing-mobile-xl;
+
+            .a-cta--design-link {
+                margin-top: $spacing-mobile-s;
+                margin-bottom: $spacing-mobile-s;
+            }
+        }
+        @include mq-except-phone {
+            display: none;
+        }
+    }
+
+    .text-block__inner {
+        @include spacing(padding, m);
+        text-align: left;
+    }
+
+    .text-block {
+        @include base-font;
+
+        @include mq-phone {
+            @include font-size-with-rem-line-height(1.6rem, 3rem);
+            margin-right: $spacing-mobile-xl;
+            clear: both;
+            margin-left: 0;
+            width: auto;
+        }
+
+        @include mq-tablet-all {
+            float: right;
+            display: block;
+            margin-right: 0;
+            width: 70%;
+        }
+
+        @include mq-desktop {
+            @include columns(6);
+            @include grid-column();
+            margin-right: 0;
+            margin-left: -0.2rem;
+
+            position: relative;
+            margin-top: 8rem;
+            float: right;
+            width: 50%;
+        }
+
+        &__image {
+            @include spacing(margin-bottom, s);
+            max-width: 75%;
+        }
+    }
+}
+

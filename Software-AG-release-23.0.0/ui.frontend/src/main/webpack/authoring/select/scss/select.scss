@@ -1,0 +1,19 @@
+/* stylelint-disable selector-class-pattern */
+
+/* fix for page properties */
+.cq-siteadmin-admin-properties,
+.cq-siteadmin-admin-properties
+.cq-dialog-content-page {
+    height: 100%;
+}
+
+/* fix for full screen component dialogs */
+.coral3-Dialog--fullscreen .cq-dialog {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.coral3-Dialog--fullscreen .cq-dialog .coral3-Dialog-content,
+.coral3-Dialog--fullscreen .cq-dialog .cq-dialog-content {
+    height: 100%;
+}

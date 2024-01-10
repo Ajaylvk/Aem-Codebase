@@ -1,0 +1,24 @@
+## Put entries of items you do or don't want to cache in apaches doc root
+## the globbing pattern to be compared against the url
+## example: *             -> everything
+##        : /foo/bar.*    -> only the /foo/bar documents
+##        : /foo/bar/*    -> all pages below /foo/bar
+##        : /foo/bar[./]* -> all pages below and /foo/bar itself
+##        : *.html        -> all .html files
+## Default allow all items to cache
+##
+## Don't cache events overview page because it requires quite often invalidating the cache
+/0002 {
+	/glob "/content/softwareag/*/*/company/events.html"
+	/type "deny"
+}
+## Don't cache events overview page because it requires quite often invalidating the cache
+/0003 {
+	/glob "/content/investorrelation/*/*/company/events.html"
+	/type "deny"
+}
+## Don't cache /bin folder and its contents because it will break the reference servlet operation as all the requests will not serve any new results whenever someone publish new pages (valid for assets and partner overview)
+/0004 {
+	/glob "/bin[./]*"
+	/type "deny"
+}

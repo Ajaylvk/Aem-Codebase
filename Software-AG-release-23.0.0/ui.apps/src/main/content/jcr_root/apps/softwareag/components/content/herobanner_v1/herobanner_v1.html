@@ -1,0 +1,37 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<section class="hero-text ${properties.heroBannerVariation == 'herobannerb' ? 'hero_B--variation':''}">
+
+    <div
+        class="hero-text-container ${properties.fontColor} ${properties.heroBannerVariation == 'herobannerb' ? 'hero_B--partition':''}">
+
+        <div class="hero-title">
+
+            ${properties.title @ context='html'}
+
+        </div>
+
+        <div class="hero-description">
+
+            ${properties.description @ context='html'}
+
+        </div>
+        <div class="hero-button"
+            data-sly-resource="${ @ path='button-alignment1', resourceType='softwareag/components/content/button', decoration=true}">
+
+        </div>
+
+    </div>
+    <!-- Banner B image start-->
+    <div class="hero-B-banner-image" data-sly-test="${properties.enableForegroundImage}">
+
+        <sly data-sly-test="${properties.foregroundImage =='asset'}"
+            data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+        <img data-sly-test="${properties.foregroundImage == 'svg'}" src="${properties.svgImage}"
+            alt="${properties.altText}">
+
+    </div>
+    <!--Banner B image end -->
+
+</section>

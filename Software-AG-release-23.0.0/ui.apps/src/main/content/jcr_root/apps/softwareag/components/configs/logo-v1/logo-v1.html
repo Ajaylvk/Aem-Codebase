@@ -1,0 +1,25 @@
+<div data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.logoModel="com.softwareag.core.models.link.HeaderLogo"
+     data-sly-test.hasContent="${logoModel.image && logoModel.altText}">
+
+<div class="logo-v1">
+    <div class="logoImage ${logoModel.title ? 'margin-16' : ' ' }">
+        <a href="${logoModel.href}" title="${logoModel.altText}" target="_self" data-attrib-type="image"
+        data-attrib-name="${logoModel.altText}">
+            <img src="${logoModel.image}" alt="${logoModel.altText}" srcset="" class="headerv1__logo">
+        </a>
+    </div>
+    <div data-sly-test="${logoModel.title}" class="logo-separator">
+
+    </div>
+    <div data-sly-test="${logoModel.title}" class="logo-title">
+        <a href="${logoModel.hrefSite}" title="${logoModel.title}" target="_self"
+        data-attrib-name="${logoModel.title}">
+           <span>${logoModel.title}</span>
+        </a>
+    </div>
+</div>
+
+    
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

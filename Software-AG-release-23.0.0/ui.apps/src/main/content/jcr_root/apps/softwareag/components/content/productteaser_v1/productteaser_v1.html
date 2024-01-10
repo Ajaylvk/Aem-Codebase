@@ -1,0 +1,166 @@
+<sly data-sly-use.teaserObj="com.softwareag.core.models.ProductTeaser"
+    data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-test.hasContent="${!teaserObj.isEmpty}">
+    <div class="productteaser_v1__container">
+
+        <!-- Product teaser A Start-->
+        <sly data-sly-test="${teaserObj.productteaser == 'productteasera'}">
+            <article
+                class="${teaserObj.productteaser} ${teaserObj.featureTaga ? 'hasfeaturedtag' : ''} ${teaserObj.backgroundColora ? teaserObj.backgroundColora : 'input__colorselect-background-color7'}">
+                <div data-sly-test="${teaserObj.featureTaga}" class="featuredtag ${teaserObj.tagColora} ">
+                    ${teaserObj.tagCopya}
+
+                </div>
+                <div class="productTeaser_icon_container">
+                    <img src="${teaserObj.fileReferencea}" alt="${teaserObj.altTexta}"
+                        class="svgicon ${teaserObj.iconBackgroundColor}" />
+                </div>
+        </sly>
+        <!-- Product teaser A End-->
+        <!-- Product Teaser B Start-->
+        <sly data-sly-test="${teaserObj.productteaser == 'productteaserb'}">
+            <article
+                class="${teaserObj.productteaser} ${teaserObj.featureTagb ? 'hasfeaturedtag' : ''} ${teaserObj.backgroundColorb ? teaserObj.backgroundColorb : 'input__colorselect-background-color8'}">
+                <div data-sly-test="${teaserObj.featureTagb}" class="featuredtag  ${teaserObj.tagColorb}">
+                    ${teaserObj.tagCopyb}
+
+                </div>
+                <div class="prodBIconColumn" data-sly-test="${teaserObj.iconNameb}">
+
+                    <div class="productTeaser_icon_container">
+                        <img src="${teaserObj.fileReferenceb}" alt="${teaserObj.altTextb}"
+                            class="svgicon ${teaserObj.iconBackgroundColorb}" />
+                    </div>
+                </div>
+        </sly>
+        <!-- Product Teaser B image container End-->
+
+
+        <!-- Proudct Teaser C Start -->
+
+        <sly data-sly-test="${teaserObj.productteaser == 'productteaserc'}">
+            <article
+                class="${teaserObj.productteaser} ${teaserObj.backgroundColorc ? teaserObj.backgroundColorc : 'input__colorselect-background-color1'}">
+                <div class="productTeaserc_image_container">
+                    <img src="${teaserObj.fileReferencec}" alt="${teaserObj.altTextc}" height="48">
+                </div>
+        </sly>
+        <!-- Proudct Teaser C image container End -->
+
+        <!-- Product Teaser D start -->
+
+
+        <sly data-sly-test="${teaserObj.productteaser == 'productteaserd'}">
+            <article
+                class="${teaserObj.productteaser} ${teaserObj.featureTag ? 'hasfeaturedtag' : ''} ${teaserObj.backgroundColord ? teaserObj.backgroundColord : 'input__colorselect-background-color7'}">
+                <div data-sly-test="${teaserObj.featureTag}" class="featuredtag ${teaserObj.tagColord}">
+                    ${teaserObj.tagCopyd}
+                </div>
+                <!-- Product Teaser D image container and featured tag ends-->
+
+                <!-- Product Teaser D Asset types SVG, Non SVG and Video starts-->
+                <div class="productTeaserd_image_container">
+                    <sly data-sly-test="${properties.type =='asset'}"
+                        data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+                    </sly>
+                    <sly data-sly-test="${properties.type =='svg'}">
+                        <img src="${properties.image}" alt="${properties.altText2}" class="prod-d-svg-image">
+                    </sly>
+                    <sly data-sly-test="${properties.type =='embed'}">
+                     ${teaserObj.html @ context='unsafe'}
+
+                    </sly>
+                </div>
+        </sly>
+
+
+        <!-- Proudct Teaser D Asset types SVG, Non SVG and Video End -->
+
+        <!-- Product Teaser D ends-->
+
+        <!-- Product teaser E -->
+        <sly data-sly-test="${teaserObj.productteaser == 'productteasere'}">
+        <article
+                class="${teaserObj.productteaser} ${teaserObj.backgroundColore ? teaserObj.backgroundColore : 'input__colorselect-background-color7'}">
+
+                    <div class="productteaserecard-animated-text ${properties.lightcolor}">
+                        <div data-productteasere-figure="${teaserObj.productsCounte}"
+                          class="productteaserecard-gradient-txt"></div>
+                        <div class="productteasere-spchar">${teaserObj.symbole @ context='html'}</div>
+                    </div>
+                    
+
+        </sly>
+
+        <!-- Common Properties for all product teaser cards below-->
+        
+        <!-- Container exclusive to product teaser B for body column -->
+        <div class=" ${teaserObj.productteaser == 'productteaserb' ? 'prodBBodyColumn' : 'teasercontent'}">
+
+            <h6 class="a-overline" data-sly-test="${teaserObj.productteaser == 'productteasera'}">${teaserObj.captiona @
+                context="html"}</h6>
+            <h6 class="a-overline" data-sly-test="${teaserObj.productteaser == 'productteaserc'}">${teaserObj.captionc @
+                context="html"}</h6>
+            <h6 class="a-overline" data-sly-test="${teaserObj.productteaser == 'productteaserd'}">${teaserObj.captiond @
+                context="html"}</h6>
+
+
+            <!-- Heading -->
+            <h5 class="a-h5" data-sly-test="${teaserObj.title}">
+                <pre class="aem__textarea">${teaserObj.title}</pre>
+            </h5>
+            <!-- Prodyuctteaser Tile Description -->
+            <div class="a-bodycopy" data-sly-test="${teaserObj.description}">
+                ${teaserObj.description @ context="html"}
+            </div>
+            <!-- Link  -->
+            <sly data-sly-test="${teaserObj.productteaser == 'productteasera' && teaserObj.enableLink}">
+                <sly
+                    data-sly-call="${addLink @ link=teaserObj.linkaDestUrl, linktext=teaserObj.linkTexta , target=teaserObj.linkaTargetVal}" />
+            </sly>
+            <sly data-sly-test="${teaserObj.productteaser == 'productteaserb'}">
+                <sly
+                    data-sly-call="${addLink @ link=teaserObj.linkbDestUrl, linktext=teaserObj.linkTextb, target=teaserObj.linkbTargetVal}" />
+            </sly>
+            <sly data-sly-test="${teaserObj.productteaser == 'productteaserc'}">
+                <sly
+                    data-sly-call="${addLink @ link=teaserObj.linkcDestUrl, linktext=teaserObj.linkTextc, target=teaserObj.linkcTargetVal}" />
+            </sly>
+            <sly data-sly-test="${teaserObj.productteaser == 'productteaserd'}">
+                <sly
+                    data-sly-call="${addLink @ link=teaserObj.linkdDestUrl, linktext=teaserObj.linkTextd, target=teaserObj.linkdTargetVal}" />
+            </sly>
+            <sly data-sly-test="${teaserObj.productteaser == 'productteasere'}">
+                <sly
+                    data-sly-call="${addLink @ link=teaserObj.linkeDestUrl, linktext=teaserObj.linkTexte, target=teaserObj.linkeTargetVal}" />
+            </sly>
+
+        </div>
+        <!-- Product Teaser B body column End-->
+        <!-- Button only for product teaser A-->
+
+        <div class="button secondary-core-dark-large"
+            data-sly-test="${teaserObj.productteaser== 'productteasera' && teaserObj.enableButton}">
+
+            <a id="${teaserObj.button}" target="${teaserObj.buttonDestTagetVal}" class="cmp-button"
+                href="${teaserObj.buttonDestLink}" aria-label="${teaserObj.button}">
+                <span class="cmp-button__text">${teaserObj.buttonText}</span>
+            </a>
+        </div>
+        </article>
+    </div>
+</sly>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=hasContent}"></sly>
+<!--  add Link html template -->
+<sly data-sly-template.addLink="${@ link, linktext, target}">
+    <div class="prodcmp-link prodcmp-link--design-links" data-sly-test="${linktext}">
+        <a class="prodcmp-link__button" href="${link}" target="${target}">
+            <span class="prodcmp-link__button-text">${linktext}</span>
+            <span class="prodcmp-link__button-icon svg-baseline"> <svg class="a-icon a-icon--to-top">
+                    <use xlink:href="#to-top"></use>
+                </svg>
+            </span>
+        </a>
+    </div>
+</sly>

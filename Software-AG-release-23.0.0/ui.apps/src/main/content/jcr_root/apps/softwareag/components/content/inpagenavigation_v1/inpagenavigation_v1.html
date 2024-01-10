@@ -1,0 +1,37 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+
+
+<div data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+    data-sly-use.model="com.softwareag.core.models.inpagenavigation.InPageNavigationModel_V1"
+    class="inpagenavigation-v1__container ${model.backgroundColor}">
+    <!-- add class dark-background or white-background dynamically -->
+
+<div class="inpagenavigation-v1__wrapper ${model.alignment ? model.alignment : 'align-center'}">
+
+    <div class="label-wrapper">
+        <div class="hamburger-menu-inpage">
+            <svg class="menu-core-dark120" alt="menu-core-dark120" xmlns="http://www.w3.org/2000/svg" height="30"
+                viewBox="0 0 24 24" width="30" fill="#011f3d">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </div>
+        <span class="link_active">
+
+        </span>
+    </div>
+
+    <div class="dropdown-container">
+        <sly data-sly-repeat.navigationItem="${model.navItems}">
+            <div class="inpagenavigation-v1-item ${navigationItem.hideInNavigation == true ? 'hide': ' '}">
+                <a class="inpagenavigation-v1__link">
+                    ${navigationItem.title @ context = 'html'}
+                </a>
+            </div>
+
+        </sly>
+    </div>
+</div>
+</div>

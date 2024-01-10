@@ -1,0 +1,107 @@
+/*
+ * Colors according to https://frontify.namics.com/screens/94920
+ */
+.input__colorselect-background-color1 {
+  background-color: #fff;
+}
+
+.input__colorselect-background-color2 {
+  background-color: #8e3cf7;
+}
+
+.input__colorselect-background-color3 {
+  background-color: #3cc1b7;
+}
+
+.input__colorselect-background-color4 {
+  background-color: #d9ec27;
+}
+
+.input__colorselect-background-color5 {
+  background-color: #3b2c5e;
+}
+
+.input__colorselect-background-color6 {
+  background-color: #1c5569;
+}
+
+.input__colorselect-background-color7 {
+  background-color: #f2f2ea;
+}
+
+.input__colorselect-background-color8 {
+  background-color: #011f3d;
+}
+.input__colorselect-background-color9 {
+  background-color: #193857;
+}
+
+.input__colorselect-background-color10 {
+  background-color: #f0f2f4;
+}
+
+.input__colorselect-text-background-text-component-color1 {
+  background-color: #f2f2ea !important;
+}
+.input__colorselect-text-background-text-component-color2 {
+  background-color: #fff !important;
+}
+.input__colorselect-text-background-text-component-color3 {
+  background-color: #011f3d !important;
+}
+.input__colorselect-text-background-text-component-color4 {
+  background-color: #f0f2f4 !important;
+}
+
+.input__colorselect-icon-color1 {
+  background-color: #fff;
+}
+.input__colorselect-icon-color2 {
+  background-color: #8e3cf7;
+}
+.input__colorselect-icon-color3 {
+  background-color: #3cc1b7;
+}
+.input__colorselect-icon-color4 {
+  background-color: #d9ec27;
+}
+.input__colorselect-icon-color5 {
+  background-color: #3b2c5e;
+}
+.input__colorselect-icon-color6 {
+  background-color: #1c5569;
+}
+.input__colorselect-icon-color7 {
+  background-color: #f2f2ea;
+}
+.input__colorselect-icon-color8 {
+  background-color: #011f3d;
+}
+.input__colorselect-icon-color9 {
+  background-color: #193857;
+}
+.input__colorselect-icon-color10 {
+  background-color: #f0f2f4;
+}
+.input__colorselect-icon-color11 {
+  background-color: #058192;
+}
+
+/*Form fields*/
+/* stylelint-disable selector-class-pattern */
+/* fix for page properties */
+.cq-siteadmin-admin-properties,
+.cq-siteadmin-admin-properties .cq-dialog-content-page {
+  height: 100%;
+}
+
+/* fix for full screen component dialogs */
+.coral3-Dialog--fullscreen .cq-dialog {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.coral3-Dialog--fullscreen .cq-dialog .coral3-Dialog-content,
+.coral3-Dialog--fullscreen .cq-dialog .cq-dialog-content {
+  height: 100%;
+}

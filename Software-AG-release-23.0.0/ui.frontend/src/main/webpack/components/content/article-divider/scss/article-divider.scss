@@ -1,0 +1,29 @@
+.articledivider {
+  @include mq-desktop {
+    height: 6.4rem;
+    padding: 3.2rem 0;
+  }
+
+  @include mq-tablet {
+    height: 4.8rem;
+    padding: 2.4rem 0;
+  }
+
+  @include mq-phone {
+    height: 4rem;
+    padding: 2rem 0;
+  }
+}
+
+.component-separator.brightpulse600{
+  border-top: 2px solid $color-bright-pulse;
+  width: 28rem;
+}
+.component-separator.coredark120{
+  border-top: 2px solid $color-core-black;
+  width: 28rem;
+}
+.component-separator.coredark900{
+  border-top: 2px solid #E1E5EA;
+  width: 28rem;
+}

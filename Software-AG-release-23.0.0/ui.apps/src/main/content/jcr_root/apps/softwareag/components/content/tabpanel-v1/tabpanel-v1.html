@@ -1,0 +1,9 @@
+<sly data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+    data-sly-use.tabPanel="com.softwareag.core.models.tab.TabPanelV1" data-sly-attribute.id="${TabPanelV1.anchorName}">
+    <button class="tab__button" id="${TabPanel.anchorName}">
+        ${tabPanel.label}
+    </button>
+    <div class="tab__content" data-sly-resource="${'parsys' @ resourceType='softwareag/components/content/parsys'}"
+        id="${TabPanelV1.anchorName}">
+    </div>
+</sly>

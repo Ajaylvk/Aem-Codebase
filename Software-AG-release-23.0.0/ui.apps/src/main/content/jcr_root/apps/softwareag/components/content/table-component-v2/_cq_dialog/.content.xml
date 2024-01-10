@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Table Component V2"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <coloumspecifications
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Column Specifications"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <coloumn
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <noofcol
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./colspecifications">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <colspecs
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Select the column width"
+                                                    fieldLabel="Width"
+                                                    name="./colwidth">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <select
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Select Width"
+                                                            value="0%"/>
+                                                        <_x0031_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="10%"
+                                                            value="10%"/>
+                                                        <_x0032_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="20%"
+                                                            value="20%"/>
+                                                        <_x0032_5_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="25%"
+                                                            value="25%"/>
+                                                        <_x0033_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="30%"
+                                                            value="30%"/>
+                                                        <_x0033_3_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="33%"
+                                                            value="33%"/>
+                                                        <_x0034_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="40%"
+                                                            value="40%"/>
+                                                        <_x0035_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="50%"
+                                                            value="50%"/>
+                                                        <_x0036_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="60%"
+                                                            value="60%"/>
+                                                        <_x0037_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="70%"
+                                                            value="70%"/>
+                                                        <_x0038_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="80%"
+                                                            value="80%"/>
+                                                        <_x0039_0_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="90%"
+                                                            value="90%"/>
+                                                        <_x0031_00_x0025_
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="100%"
+                                                            value="100%"/>
+                                                    </items>
+                                                </colspecs>
+                                                <coloumbgcolor
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Select the Background color"
+                                                    fieldLabel="Column Background color"
+                                                    name="./colbgcolor">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <select
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Select Background Color"
+                                                            value="nocolor"/>
+                                                        <corelight930
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Light 930"
+                                                            value="#f2f2ea"/>
+                                                        <coredark120
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 120"
+                                                            value="#011f3d"/>
+                                                        <coredark220
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 220"
+                                                            value="#193857"/>
+                                                        <coredark350
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 350"
+                                                            value="#36597D"/>
+                                                        <coredark850
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 850"
+                                                            value="#D2D9E0"/>
+                                                        <coredark920
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 920"
+                                                            value="#E7EBEE"/>
+                                                        <coredark950
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 950"
+                                                            value="#F0F2F4"/>
+                                                        <brightpulse950
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Bright Pulse 950"
+                                                            value="#F1E7FE"/>
+                                                        <brightsense950
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Bright Sense 950"
+                                                            value="#EBF9F8"/>
+                                                        <white
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="White"
+                                                            value="#fff"/>
+                                                    </items>
+                                                </coloumbgcolor>
+                                            </items>
+                                        </field>
+                                    </noofcol>
+                                </items>
+                            </coloumn>
+                        </items>
+                    </coloumspecifications>
+                    <rowspecifications
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Row Specifications"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <coloumn
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <noofrows
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./rowspecifications">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <rowbgcolor
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Select the Row Background color"
+                                                    fieldLabel="Background color"
+                                                    name="./rowbgcolor">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <select
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Select Background Color"
+                                                            value="nocolor"/>
+                                                        <corelight930
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Light 930"
+                                                            value="#f2f2ea"/>
+                                                        <coredark120
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 120"
+                                                            value="#011f3d"/>
+                                                        <coredark220
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 220"
+                                                            value="#193857"/>
+                                                        <coredark350
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 350"
+                                                            value="#36597D"/>
+                                                        <coredark850
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 850"
+                                                            value="#D2D9E0"/>
+                                                        <coredark920
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 920"
+                                                            value="#E7EBEE"/>
+                                                        <coredark950
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Core Dark 950"
+                                                            value="#F0F2F4"/>
+                                                        <brightpulse950
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Bright Pulse 950"
+                                                            value="#F1E7FE"/>
+                                                        <brightsense950
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Bright Sense 950"
+                                                            value="#EBF9F8"/>
+                                                        <white
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="White"
+                                                            value="#fff"/>
+                                                    </items>
+                                                </rowbgcolor>
+                                            </items>
+                                        </field>
+                                    </noofrows>
+                                </items>
+                            </coloumn>
+                        </items>
+                    </rowspecifications>
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Layout Specifications"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <backgroundcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="The Background color of the Table."
+                                        fieldLabel="Background Color"
+                                        name="./tableBackGroundColor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <select
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select Background Color"
+                                                value=""/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="input__colorselect-background-color1"/>
+                                            <corelight930
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Light 930"
+                                                value="input__colorselect-background-color7"/>
+                                            <coredark120
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 120"
+                                                value="input__colorselect-background-color8"/>
+                                            <coredark220
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 220"
+                                                value="input__colorselect-background-color9"/>
+                                            <coredark950
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 950"
+                                                value="input__colorselect-background-color10"/>
+                                        </items>
+                                    </backgroundcolor>
+                                    <tabletalignment
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Alignment in Tablet mode"
+                                        fieldLabel="Tablet Alignment"
+                                        name="./tabletAlignment">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <stacked
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Stacked"
+                                                value="stacked"/>
+                                            <sidebyside
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Side By Side"
+                                                value="side-by-side"/>
+                                        </items>
+                                    </tabletalignment>
+                                </items>
+                            </column>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

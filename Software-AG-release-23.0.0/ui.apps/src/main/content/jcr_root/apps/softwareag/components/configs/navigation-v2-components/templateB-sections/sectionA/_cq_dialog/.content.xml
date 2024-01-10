@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Section A"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <colcount
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Please select the number of Columns required in the container."
+                        fieldLabel="Number of Columns"
+                        name="./nooflinks">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Number of Columns"
+                                value="0"/>
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="1"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="2"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="3"/>
+                        </items>
+                    </colcount>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

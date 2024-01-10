@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Resource Library "
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <resourceconfig
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Resource Library configurations"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <caption
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Caption"
+                            name="./caption"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="caption">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="caption"/>
+                        </caption>
+                        <title
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldLabel="Title"
+                            name="./title"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="title">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="title"/>
+                        </title>
+                        <description
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                            fieldLabel="Description"
+                            maxlength="{Long}300"
+                            name="./description"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="description">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="description"/>
+                        </description>
+                        <hideinRL
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            checked="{Boolean}false"
+                            name="./hideInRL"
+                            renderReadOnly="{Boolean}true"
+                            text="Hide in Resource Library"
+                            unchecked="{Boolean}false"
+                            value="true">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="hideInRL"/>
+                        </hideinRL>
+                        <contenttypetags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Content Type Tags"
+                            multiple="{Boolean}true"
+                            name="./contenttypetags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/content-type">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="contenttypetags"/>
+                        </contenttypetags>
+                        <topictags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Topic Tags"
+                            multiple="{Boolean}true"
+                            name="./topictags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/topic">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="topictags"/>
+                        </topictags>
+                        <industrytags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Industry Tags"
+                            multiple="{Boolean}true"
+                            name="./industrytags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/industry_v1">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="industrytags"/>
+                        </industrytags>
+                        <searchkeywordtags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Search Keyword Tags"
+                            multiple="{Boolean}true"
+                            name="./searchtags"
+                            rootPath="/content/cq:tags/softwareag/search-keywords">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="searchtags"/>
+                        </searchkeywordtags>
+                        <promoted
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            name="./promotedTag"
+                            renderReadOnly="{Boolean}true"
+                            text="Select Check box to show in Promoted Article List"
+                            value="softwareag:promoted">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="promotedTag"/>
+                        </promoted>
+                        <popular
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            name="./popularTag"
+                            renderReadOnly="{Boolean}true"
+                            text="Select Check box to show in Popular Article List"
+                            value="softwareag:popular">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="popularTag"/>
+                        </popular>
+                        <thumbnail
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/common/wcm/pagethumbnail"
+                            page="${empty param.item ? requestPathInfo.suffix : param.item}"
+                            quiet="{Boolean}true"
+                            rootPath="/content/dam/softwareag">
+                            <assetpicker
+                                granite:class="js-browse-activator"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/button"
+                                rootPath="/content/dam/softwareag"
+                                text="Select Image">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    cq-msm-lockable="./image"/>
+                            </assetpicker>
+                            <preview
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/siteadmin/admin/pagepreview"/>
+                        </thumbnail>
+                        <alttext
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldLabel="Alternative Text"
+                            name="./alttext"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="alttext">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="alttext"/>
+                        </alttext>
+						<ctalabel
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldDescription="CTA Label"
+                            fieldLabel="CTA Label"
+                            name="./ctaLabel"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="title">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="ctalinkdestination"/>
+                        </ctalabel>
+                        <ctalinkdestination
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="CTA Link Destination"
+                            fieldLabel="CTA Link Destination"
+                            name="./ctalinkdestination"
+                            required="{Boolean}false"
+                            rootPath="/content/softwareag"
+                            validation="ctalinkdestination">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="ctalinkdestination"/>
+                        </ctalinkdestination>
+                    </items>
+                </resourceconfig>
+            </items>
+        </column>
+    </items>
+</jcr:root>

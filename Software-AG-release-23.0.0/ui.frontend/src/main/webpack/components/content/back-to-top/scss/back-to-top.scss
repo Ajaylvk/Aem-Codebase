@@ -1,0 +1,16 @@
+.back-to-top {
+    position: fixed;
+    z-index: 10;
+    bottom: 10rem;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    background-color: $color-bright-sense;
+}
+
+.back-to-top__icon {
+    height: 4rem;
+    width: 3rem;
+    margin: 0 auto;
+}

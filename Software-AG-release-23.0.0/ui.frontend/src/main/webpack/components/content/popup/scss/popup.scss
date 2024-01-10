@@ -1,0 +1,87 @@
+.sag-popup {
+    background: rgba($color-core-black, 0.8);
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+
+    &__grey-area {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+    &__helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    &__container {
+        @include base-font;
+        @include font-size-with-rem-line-height(1.6rem, 3rem);
+        background-color: $color-core-light;
+        box-shadow: 10px 10px 60px $color-core-black-75;
+        display: inline-block;
+        height: auto;
+        width: 90%;
+        padding: 48px 16px 32px;
+        min-height: 100px;
+        vertical-align: middle;
+        position: relative;
+        font-size: 16px;
+
+        @include mq-from-tablet { 
+            width: 60%;
+            padding: 32px;
+        }
+    }
+
+    &__content-area {
+        margin-bottom: 32px;
+
+        @include mq-from-tablet {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__cross-btn {
+        @include base-font;
+        cursor: pointer;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        font-size: 33px;
+        line-height: 26px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+
+        :hover {
+            background-color: $color-core-black-55;
+        }
+
+        @include mq-from-tablet { 
+            top: 15px;
+            right: 20px;
+        }
+    }
+
+    &--no-scroll {
+        overflow: hidden;
+    }
+
+    a,
+    button {
+        cursor: pointer;
+    } 
+}

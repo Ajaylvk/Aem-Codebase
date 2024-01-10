@@ -1,0 +1,52 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+	data-sly-use.navItemModel="com.softwareag.core.models.navigation_v2.NavItem" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<a href="${navItemModel.link}" target="${navItemModel.openIn}">
+	<div data-sly-test="${properties.compvariation == 'variationa'}" class="nav-item-A-wrapper">
+
+		<div data-sly-test="${properties.fileReferencea}" class="navItem_col-A">
+			<img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+				class="svgicon ${properties.iconBackgroundColora}" />
+		</div>
+		<div class="navItem_col-B">
+			<div data-sly-test="${properties.title}"
+				class="navItem-A_headline ${properties.title ? 'title-space' : ''}">
+				${properties.title @ context='html'}
+			</div>
+			<div data-sly-test="${properties.description}" class="navItem-A_description">
+				${properties.description @ context='html'}
+			</div>
+		</div>
+	</div>
+</a>
+<a href="${navItemModel.link}" target="${navItemModel.openIn}">
+	<div data-sly-test="${properties.compvariation == 'variationb'}" class="nav-item-B-wrapper">
+		<div data-sly-test="${properties.fileReferenceb}" class="navItem_col-A">
+			<img src="${properties.fileReferenceb}" alt="${properties.altTextb}"
+				class="svgicon ${properties.iconBackgroundColorb}" />
+		</div>
+		<div class="navItem_col-B">
+			<div data-sly-test="${properties.title}"
+				class="navItem-B_headline ${properties.title ? 'title-space' : ''}">
+				${properties.title @ context='html'}
+			</div>
+			<div data-sly-test="${properties.description}" class="navItem-B_description">
+				${properties.description @ context='html'}
+			</div>
+		</div>
+	</div>
+</a>
+<a href="${navItemModel.link}" target="${navItemModel.openIn}">
+	<div data-sly-test="${properties.compvariation == 'variationc'}" class="nav-item-C-wrapper">
+		<div class="navItemC-inner-div">
+			<div data-sly-test="${properties.title}"
+				class="navItem-C_headline ${properties.title ? 'navItem-title-space' : ''}">
+				${properties.title @ context='html'}
+			</div>
+			<div data-sly-test="${properties.description}" class="navItem-C_description">
+				${properties.description @ context='html'}
+			</div>
+		</div>
+	</div>
+</a>

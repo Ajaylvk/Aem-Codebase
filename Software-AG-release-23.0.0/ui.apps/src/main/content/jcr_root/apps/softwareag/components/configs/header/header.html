@@ -1,0 +1,77 @@
+<div data-sly-use.headerConfigModel="com.softwareag.core.models.header.HeaderConfigModel"
+     class="configuration__block">
+
+    <h2 class="a-h2">Header Configuration</h2>
+
+    <p data-sly-test="${headerConfigModel.notValid}"
+       class="message--error">
+        ${headerConfigModel.validationMessage}
+    </p>
+
+    <p data-sly-test="${!headerConfigModel.configured}"
+       class="message--error">
+        Header is not configured yet.
+    </p>
+
+    <div data-sly-test="${headerConfigModel.configured}">
+        <div class="property__block">
+            <h4 class="a-h4">Logo</h4>
+
+            <dl>
+                <dt>Logo:</dt>
+                <dd><img class="header__logo" src="${headerConfigModel.logo.image}" alt="${headerConfigModel.logo.altText}" /></dd>
+                <dt>Alternative Text:</dt>
+                <dd>${headerConfigModel.logo.altText}</dd>
+                <dt>Link Destination:</dt>
+                <dd>${headerConfigModel.logo.href}</dd>
+                <dt>Title:</dt>
+                <dd>${headerConfigModel.title}</dd>
+                <dt>Link Destination:</dt>
+                <dd>${headerConfigModel.link.href}</dd>
+            </dl>
+        </div>
+
+        <div class="property__block">
+            <h4 class="a-h4">Search Icon</h4>
+
+            <dl>
+                <dt>Open Search Icon Alternative Text:</dt>
+                <dd>${headerConfigModel.openSearchAltText}</dd>
+                <dt>Start Search Icon Alternative Text:</dt>
+                <dd>${headerConfigModel.startSearchAltText}</dd>
+                <dt>Close Search Icon Alternative Text:</dt>
+                <dd>${headerConfigModel.closeSearchAltText}</dd>
+            </dl>
+        </div>
+
+        <div class="property__block">
+            <h4 class="a-h4">First Icon</h4>
+
+            <dl>
+                <dt>Icon:</dt>
+                <dd><img class="header__icons-first" src="${headerConfigModel.firstIcon.image}" alt="${headerConfigModel.firstIcon.altText}" /></dd>
+                <dt>Title:</dt>
+                <dd>${headerConfigModel.firstIcon.link.text}</dd>
+                <dt>Alternative Text:</dt>
+                <dd>${headerConfigModel.firstIcon.altText}</dd>
+                <dt>Link Destination:</dt>
+                <dd>${headerConfigModel.firstIcon.link.href}</dd>
+            </dl>
+        </div>
+
+        <div class="property__block">
+            <h4 class="a-h4">Second Icon</h4>
+
+            <dl>
+                <dt>Icon:</dt>
+                <dd><img class="header__icons-second" src="${headerConfigModel.secondIcon.image}" alt="${headerConfigModel.secondIcon.altText}" /></dd>
+                <dt>Alternative Text:</dt>
+                <dd>${headerConfigModel.secondIconAltText}</dd>
+                <dt>Title:</dt>
+                <dd>${headerConfigModel.secondIconLink.text}</dd>
+                <dt>Link Destination:</dt>
+                <dd>${headerConfigModel.secondIconLink.href}</dd>
+            </dl>
+        </div>
+    </div>
+</div>

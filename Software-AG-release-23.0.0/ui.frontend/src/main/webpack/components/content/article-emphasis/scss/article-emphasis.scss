@@ -1,0 +1,200 @@
+.article-emphasis-link.core-dark-220,
+.article-emphasis-image.core-dark-220,
+.article-emphasis-text.core-dark-220 {
+  background-color: #193857;
+  color: white;
+  .arrow-right {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+  .article-emp-text:hover {
+    border-bottom: 1px solid white;
+  }
+}
+.article-emphasis-link.core-light-950,
+.article-emphasis-image.core-light-950,
+.article-emphasis-text.core-light-950 {
+  background-color: #f0f2f4;
+}
+.article-emphasis-link.corelight,
+.article-emphasis-image.corelight,
+.article-emphasis-text.corelight {
+  background-color: #f2f2ea;
+}
+.article-emphasis-text {
+  padding: 0 2.4rem;
+  @include mq-phone {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  @include mq-tablet {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+  @include mq-desktop {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+  h5 {
+    // color: #8e3cf7;
+    // @include base-font-bold;
+    // @include font-size-with-rem-line-height(2rem, 2.6rem);
+    // font-style: normal;
+    padding-bottom: 1.6rem;
+  }
+
+  color: #011f3d;
+  @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  @include base-font;
+
+  // p {
+  //   color: #011f3d;
+  //   @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  //   @include base-font;
+  // }
+  p:not(:last-child) {
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.6rem;
+    // @include mq-phone {
+    //     margin-bottom: 2rem;
+    // }
+    // @include mq-tablet {
+    //    margin-bottom: 2.4rem;
+    // }
+    // @include mq-desktop {
+    //     margin-bottom: 3.2rem;
+    // }
+    li:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 1.6rem;
+    // @include mq-phone {
+    //     margin-bottom: 2rem;
+    // }
+    // @include mq-tablet {
+    //    margin-bottom: 2.4rem;
+    // }
+    // @include mq-desktop {
+    //     margin-bottom: 3.2rem;
+    // }
+  }
+  li:not(:last-child) {
+    padding-bottom: 1rem;
+  }
+}
+.articleemphasis {
+  position: relative;
+  //background-color: #f0f2f4;
+  @include mq-phone {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @include mq-tablet {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  @include mq-desktop {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .article-emphasis-image {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    // background-color: #f0f2f4;
+    .article-emphasis-svg {
+      width: 100%;
+    }
+  }
+}
+//class to apply when no summary
+.article-image-padding {
+  @include mq-phone {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  @include mq-tablet {
+    padding-top: 2.4rem !important;
+    padding-bottom: 2.4rem !important;
+  }
+  @include mq-desktop {
+    padding-top: 3.2rem !important;
+    padding-bottom: 3.2rem !important;
+  }
+}
+//class to apply when there is summary
+.article-image-padding-summary {
+  @include mq-phone {
+    padding-bottom: 2rem !important;
+  }
+  @include mq-tablet {
+    padding-bottom: 2.4rem !important;
+  }
+  @include mq-desktop {
+    padding-bottom: 3.2rem !important;
+  }
+}
+.article-emphasis-link {
+  padding: 0 2.4rem;
+  @include mq-desktop {
+    padding-bottom: 3.2rem;
+  }
+  @include mq-tablet {
+    padding-bottom: 2.4rem;
+  }
+  @include mq-phone {
+    padding-bottom: 2rem;
+  }
+  .article-emp-text {
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    @include base-font-bold;
+    margin-right: 0.5rem;
+    &:hover {
+      border-bottom: 1px solid #011f3d;
+    }
+    &:active {
+      color: #058192;
+      border-bottom: 1px solid #058192;
+    }
+  }
+  .article-emp-text:active ~ .arrow-right {
+    border-color: #058192 !important;
+  }
+  .arrow-right {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    position: relative;
+    top: -1px;
+    left: 3px;
+  }
+}
+.article_content-link {
+  @include mq-phone {
+    padding-bottom: 2.4rem !important;
+  }
+  @include mq-tablet {
+    padding-bottom: 2.4rem !important;
+  }
+  @include mq-desktop {
+    padding-bottom: 2.4rem !important;
+  }
+}

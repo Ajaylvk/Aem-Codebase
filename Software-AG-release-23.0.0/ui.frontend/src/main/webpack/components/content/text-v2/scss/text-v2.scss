@@ -1,0 +1,67 @@
+.text_v2__container {
+  margin-bottom: 0rem;
+}
+.text-title-alignment {
+  text-align: center;
+}
+.white-font-color {
+  color: $color-white;
+}
+.coreDark-font-color {
+  color: $color-core-black;
+}
+
+// media queries for text content and text header
+.text_v2__container .textV2-a-h2 {
+  @include base-font-light;
+  @media all and (max-width: 414px) {
+    @include font-size-with-rem-line-height(2.8rem, 3.4rem);
+    margin-bottom: 2.4rem;
+  }
+  @media all and (min-width: 414px) {
+    @include font-size-with-rem-line-height(2.8rem, 3.4rem);
+    margin-bottom: 2.4rem;
+  }
+  @media all and (min-width: 414px) and (max-width: 768px) {
+    @include font-size-with-rem-line-height(3.4rem, 4.2rem);
+    margin-bottom: 2.4rem;
+  }
+  @media all and (min-width: 769px) {
+    @include font-size-with-rem-line-height(4.2rem, 5rem);
+    margin-bottom: 2.4rem;
+  }
+}
+.no-description {
+  margin-bottom: 0 !important;
+}
+.text_v2__container .textV2-text {
+  @include base-font;
+  @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  text-align: center;
+
+  > p {
+    margin-bottom: 3.2rem;
+  }
+  > p:last-child {
+    margin-bottom: 0rem;
+  }
+}
+.text_v2_standalone {
+  max-width: $mq-max-allowed-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6.4rem 0;
+  max-width: 72rem;
+  @include mq-tablet {
+    padding: 4.8rem 2.4rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
+  @include mq-phone {
+    padding: 4rem 1.6rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
+}

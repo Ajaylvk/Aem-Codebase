@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <linkLabel
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldLabel="Link Label"
+            fieldDescription="Please add link label here."
+            name="./text"
+            required="{Boolean}true" />
+        <linkDestination
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+            fieldLabel="Link Destination"
+            fieldDescription="Please add link destination here."
+            rootPath="/content"
+            required="{Boolean}true"
+            name="./href" />
+    </items>
+</jcr:root>
+

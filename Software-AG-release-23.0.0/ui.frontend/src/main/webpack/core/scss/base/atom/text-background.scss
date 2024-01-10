@@ -1,0 +1,46 @@
+@import "../../../../core/scss/helper/_colors";
+
+.input__colorselect-background {
+  &-color1 {
+    background-color: $color-white;
+  }
+
+  &-color2 {
+    background-color: $color-bright-pulse;
+  }
+
+  &-color3 {
+    background-color: $color-bright-sense;
+  }
+
+  &-color4 {
+    background-color: $color-bright-life;
+  }
+
+  &-color5 {
+    background-color: $color-deep-pulse;
+  }
+
+  &-color6 {
+    background-color: $color-deep-sense;
+  }
+
+  &-color7 {
+    background-color: $color-core-light;
+  }
+
+  &-color8 {
+    background-color: $color-core-black;
+  }
+
+  &-color9 {
+    background-color: $color-core-dark-220;
+  }
+  &-color10 {
+    background-color: $color-core-dark-950;
+  }
+
+  &-color11 {
+    background-color: $color-bright-sense-300;
+  }
+}

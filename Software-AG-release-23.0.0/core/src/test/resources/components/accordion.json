@@ -1,0 +1,65 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Accordion component",
+        "jcr:description": "General Test page for Accordion Component",
+        "cq:conf": "/conf/softwareag-test",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "accordioncontainer": {
+                "jcr:primaryType": "nt:unstructured",
+                "design": "accordion__container--dark",
+                "sling:resourceType": "softwareag/components/content/accordioncontainer",
+                "targetThisComponent": "false",
+                "title": "Accordion container",
+                "anchorName": "container",
+                "panels": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "subtitle": "Panel subtitle 1",
+                        "titlePanel": "Panel title 1",
+                        "sling:resourceType": "softwareag/components/content/accordionpanel",
+                        "parsys": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/parsys",
+                            "accordionitem": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "softwareag/components/content/accordionitem",
+                                "text": "<b><i>This accordion item text. When expanded it is visible, otherwise unvisible.</i></b>",
+                                "anchorName": "anchorName",
+                                "textIsRich": "true",
+                                "design": "dark-button",
+                                "link": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "target": "_blank",
+                                    "href": "/content/softwareag/sag-test/sag-test/hero-page",
+                                    "text": "Button"
+                                }
+                            }
+                        }
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "subtitle": "Panel subtitle 2",
+                        "titlePanel": "Panel title 2",
+                        "sling:resourceType": "softwareag/components/content/accordionpanel",
+                        "parsys": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/parsys",
+                            "accordionitem": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "softwareag/components/content/accordionitem",
+                                "text": "<b>This accordion item text. When expanded it is visible, otherwise unvisible.</b>",
+                                "textIsRich": "true"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

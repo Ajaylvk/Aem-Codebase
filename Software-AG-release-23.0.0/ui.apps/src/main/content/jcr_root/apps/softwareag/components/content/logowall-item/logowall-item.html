@@ -1,0 +1,14 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+   data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.logowallitem="com.softwareag.core.models.logo.LogoWallItem"></sly>
+<div class="${properties.fileReference ? 'logo-width': ''}" data-sly-test="${properties.type =='asset'}">
+   <a href="${logowallitem.linkdestination}" target="${logowallitem.openIn}">
+      <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+   </a>
+</div>
+
+<div class="${properties.image ? 'logo-width': ''}" data-sly-test="${properties.type =='svg'}">
+   <a href="${logowallitem.linkdestination}" target="${logowallitem.openIn}"><img src="${properties.image}"
+         alt="${properties.altTextSVG}"></a>
+</div>

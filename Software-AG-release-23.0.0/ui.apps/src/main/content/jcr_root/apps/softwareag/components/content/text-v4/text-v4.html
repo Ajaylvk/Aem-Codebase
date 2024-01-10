@@ -1,0 +1,45 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<div class="text_V4-wrapper ${properties.backgroundStyle}">
+   <div
+      class="text_V4-container ${properties.backgroundStyle} ${properties.position == 'center'? 'centered-text' : ''} ${properties.position == 'right'? 'right-aligned' : ''}"
+      data-wcmmode="${wcmmode.edit ? 'edit' : 'non-edit'}">
+      <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to"></p>
+      <div data-sly-test="${properties.enableDivider}"
+         class="text_V4-divider ${properties.position == 'center'? 'centered-text' : ''} ${properties.position == 'right'? 'right-aligned' : ''}">
+      </div>
+      <div data-sly-test="${properties.enableIcon}" class="text_V4-icon">
+         <img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+            class="svgicon ${properties.iconBackgroundColor} ${properties.enableDivider ? 'icon-top-padding' : ''}" />
+      </div>
+      <div data-sly-test="${properties.caption}" class="text_V4-overline-text">
+         ${properties.caption @ context='html'}
+      </div>
+      <div data-sly-test="${properties.header}"
+         class="text_V4-headline ${properties.position == 'center'? 'centered-text' : ''} ${properties.position == 'right'? 'right-aligned' : ''}">
+         ${properties.header @ context='html'}
+      </div>
+      <div data-sly-test="${properties.summary}"
+         class="text_V4-description ${properties.position == 'center'? 'centered-text' : ''} ${properties.position == 'right'? 'right-aligned' : ''}">
+         ${properties.summary @ context='html'}
+      </div>
+      <div
+         class="text_V4-link ${properties.position == 'center'? 'centered-text' : ''} ${properties.position == 'right'? 'right-aligned' : ''}">
+         <sly
+            data-sly-resource="${ 'section-links001'@ resourceType='softwareag/components/content/links', decoration=true}">
+         </sly>
+         <sly
+            data-sly-resource="${ 'section-links002'@ resourceType='softwareag/components/content/links', decoration=true}">
+         </sly>
+         <sly
+            data-sly-resource="${ 'section-links003'@ resourceType='softwareag/components/content/links', decoration=true}">
+         </sly>
+         <sly
+            data-sly-resource="${ 'section-links004'@ resourceType='softwareag/components/content/links', decoration=true}">
+         </sly>
+         <sly
+            data-sly-resource="${ 'section-links005'@ resourceType='softwareag/components/content/links', decoration=true}">
+         </sly>
+      </div>
+   </div>
+</div>

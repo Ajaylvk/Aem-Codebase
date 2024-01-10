@@ -1,0 +1,49 @@
+.title__wrapper {
+    @include spacing(padding-left, s);
+    @include spacing(padding-right, s);
+    @include spacing(padding-top, xxl);
+    @include spacing(padding-bottom, xl);
+    position: relative;
+
+    @include mq-from-desktop {
+        padding-left: $spacing-desktop-xxl;
+        padding-right: $spacing-desktop-xxl;
+    }
+
+    &[data-position=left] {
+        text-align: left;
+    }
+
+    &[data-position=middle] {
+        text-align: center;
+    }
+
+    &[data-position=right] {
+        text-align: right;
+    }
+}
+
+.title__container {
+    @include spacing(padding-left, xxl);
+    @include spacing(padding-right, xxl);
+
+    @include mq-phone {
+        .col:last-child {
+            margin-bottom: 0;
+        }
+        padding: 0;
+    }
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+    .cmp-title__text {
+        @include a-h1;
+        @include spacing(padding-bottom, l);
+    }
+
+    .a-copytext.title__text {
+        margin-top: 0;
+    }
+}

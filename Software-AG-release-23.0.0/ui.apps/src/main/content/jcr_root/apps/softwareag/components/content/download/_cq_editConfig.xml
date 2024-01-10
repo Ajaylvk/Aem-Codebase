@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:dialogMode="floating"
+          jcr:primaryType="cq:EditConfig"
+          cq:actions="[EDITANNOTATE,COPYMOVE,INSERT,DELETE]"
+          cq:layout="editbar"
+          cq:disableTargeting ="true">
+    <cq:dropTargets jcr:primaryType="nt:unstructured">
+        <file
+            jcr:primaryType="cq:DropTargetConfig"
+            accept="[.*]"
+            groups="[media]"
+            propertyName="./fileReference"/>
+    </cq:dropTargets>
+</jcr:root>

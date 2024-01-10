@@ -1,0 +1,41 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "IT Portfolio Management & Planning | Alfabet | Software AG",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "gridcontainer_copy_196222524": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/gridcontainer",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_self"
+                },
+                "container": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "productteaser": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/productteaser",
+                        "layout": "large"
+                    },
+                    "productteaser_copy": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/productteaser",
+                        "layout": "small"
+                    }
+                }
+            },
+            "gridcontainer_empty": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/gridcontainer",
+                "container": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys"
+                }
+            }
+        }
+    }
+}

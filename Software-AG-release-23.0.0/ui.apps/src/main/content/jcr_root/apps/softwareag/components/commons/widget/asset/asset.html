@@ -1,0 +1,99 @@
+<sly data-sly-use.dmInfo="dynamicmedia_sly.js"
+     data-sly-use.mediaConfig="com.softwareag.core.models.media.MediaConfigModel"
+     data-sly-use.linkItemModel="com.softwareag.core.models.link.LinkItemModel"
+     data-sly-use.linkModel="com.softwareag.core.models.link.LinkModel"
+     data-sly-use.cta="com.softwareag.core.models.cta.CtaModel"
+     data-sly-use.mediaComponent="softwareag/components/content/media/media.html"
+     data-sly-test="${dmInfo.isDMEnabled || dmInfo.isS7Enabled || dmInfo.isWCMDisabled}">
+
+    <sly data-sly-use.icons="softwareag/components/commons/svg/icons.html" />
+
+    <!--/* Viewer container when there is an asset */-->
+    <div data-sly-test="${dmInfo.asset.path}" data-sly-unwrap>
+        
+        <!-- Start -- Media Video component only for "Software_AG_Video_PopUp" preset -->
+        <sly data-sly-test.videoPopup="${'Software_AG_Video_PopUp' in dmInfo.asset.config}">
+            <div class="s7dm__placeholder hide"></div>
+            <div class="s7dm__component">
+                <div class="s7dm__black-area"></div>
+                <div class="s7dm__container">
+                    <div class="s7dm__head-area">
+                        <div class="s7dm__title hide a-h4">${properties.title}</div>
+                        <button class="s7dm__close-popup hide" data-sly-test="${ dmInfo.asset.viewerType == 'VideoViewer'}">
+                            Close
+                            <span class="region__options-close a-icon--close" data-sly-call="${icons.getIcon @ name='close'}"></span>
+                        </button>
+                    </div>
+
+                    <div id="${dmInfo.componentId}"
+                            data-current-page="${currentPage.path}"
+                            data-page-locale="${dmInfo.pageLocale}"
+                            data-asset-path="${dmInfo.asset.path}"
+                            data-asset-name="${dmInfo.asset.name}"
+                            data-asset-type="${dmInfo.asset.s7damType}"
+                            data-viewer-type="${dmInfo.asset.viewerType}"
+                            data-viewer-path="${dmInfo.asset.viewerPath}"
+                            data-imageserver="${dmInfo.asset.imageserver}"
+                            data-videoserver="${dmInfo.asset.videoserver}"
+                            data-contenturl="${dmInfo.asset.contenturl}"
+                            data-config="${dmInfo.asset.config}"
+                            data-imagepreset="${dmInfo.asset.imagePreset}"
+                            data-wcmdisabled="${dmInfo.isWCMDisabled}"
+                            data-dms7="${dmInfo.isS7Enabled}"
+                            data-stagesize="${dmInfo.asset.stageSize}"
+                            data-mode="${dmInfo.asset.mode}"
+                            data-breakpoints="${dmInfo.asset.viewerType ||  dmInfo.asset.mode || mediaConfig.disableBreakpoints  ? '' : mediaConfig.breakpoints}"
+                            data-urlmodifiers="${dmInfo.asset.urlModifiers}"
+                            data-viewermodifiers="${dmInfo.asset.viewerModifiers}"
+                            data-linkurl="${!properties.assetIsBackground && (cta.href || linkItemModel.link.href)}"
+                            data-linktarget="${linkItemModel.link.target || linkModel.target}"
+                            data-title="${dmInfo.asset.alt || properties.altText}"
+                            data-alt="${dmInfo.asset.alt || properties.altText}"
+                            data-attrib-type="${dmInfo.asset.s7damType == 'image' ? '' : 'asset'}"
+                            data-attrib-name="${dmInfo.asset.name}"
+                            class="s7dm-dynamic-media">
+                    </div>
+                </div>
+            </div>
+        </sly>
+        <!-- End -- Media Video component only for "Software_AG_Video_PopUp" preset -->
+        
+        <!-- Start -- Media component other than the "Software_AG_Video_PopUp" preset -->
+        <sly data-sly-test=${!videoPopup}>
+            <!-- <head>
+                <link rel="preload" as="image" href="${dmInfo.asset.path}" />
+            </head> -->
+            <div id="${dmInfo.componentId}"
+                data-current-page="${currentPage.path}"
+                data-page-locale="${dmInfo.pageLocale}"
+                data-asset-path="${dmInfo.asset.path}"
+                data-asset-name="${dmInfo.asset.name}"
+                data-asset-type="${dmInfo.asset.s7damType}"
+                data-viewer-type="${dmInfo.asset.viewerType}"
+                data-viewer-path="${dmInfo.asset.viewerPath}"
+                data-imageserver="${dmInfo.asset.imageserver}"
+                data-videoserver="${dmInfo.asset.videoserver}"
+                data-contenturl="${dmInfo.asset.contenturl}"
+                data-config="${dmInfo.asset.config}"
+                data-imagepreset="${dmInfo.asset.imagePreset}"
+                data-wcmdisabled="${dmInfo.isWCMDisabled}"
+                data-dms7="${dmInfo.isS7Enabled}"
+                data-stagesize="${dmInfo.asset.stageSize}"
+                data-mode="${dmInfo.asset.mode}"
+                data-breakpoints="${dmInfo.asset.viewerType ||  dmInfo.asset.mode || mediaConfig.disableBreakpoints  ? '' : mediaConfig.breakpoints}"
+                data-urlmodifiers="${dmInfo.asset.urlModifiers}"
+                data-viewermodifiers="${dmInfo.asset.viewerModifiers}"
+                data-linkurl="${!properties.assetIsBackground && (cta.href || linkItemModel.link.href)}"
+                data-linktarget="${linkItemModel.link.target || linkModel.target}"
+                data-title="${dmInfo.asset.alt || properties.altText}"
+                data-alt="${dmInfo.asset.alt || properties.altText}"
+                data-attrib-type="${dmInfo.asset.s7damType == 'image' ? '' : 'asset'}"
+                data-attrib-name="${dmInfo.asset.name}"
+                class="s7dm-dynamic-media">
+            </div>
+         
+        </sly>
+        <!-- End -- Media component other than "Software_AG_Video_PopUp" preset -->
+
+    </div>
+</sly>

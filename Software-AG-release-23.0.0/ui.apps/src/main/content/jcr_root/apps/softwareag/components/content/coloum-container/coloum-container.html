@@ -1,0 +1,25 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+   data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+   data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+   data-sly-use.number="com.softwareag.core.models.links.LinksModel"
+   data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html">
+   <div id="columncontainer" data-hPadding="${properties.hPadding}" data-tbPadding="${properties.enabletbpadding}"
+      class="column-layout__wrapper ${properties.backgroundColor}">
+      <sly
+         data-sly-resource="${ @ path='columncontainer-spacer', resourceType='softwareag/components/content/spacer', decoration=true}">
+      </sly>
+      <sly
+         data-sly-resource="${ @ path='textcomponent', resourceType='softwareag/components/content/text-v3', decoration=true}">
+      </sly>
+      <div class="column-layout__inner-wrapper" data-column-count="${properties.nooflinks}"
+         data-hPadding="${properties.hPadding}" data-column-partition="${properties.columnLayout}"
+         data-column-padding="${properties.centerPadding}">
+         <sly data-sly-list="${number.nooflinks}">
+            <sly data-sly-test.newPath="${'parsys{0}' @ format = itemList.index}">
+               <sly data-sly-resource="${ newPath @ resourceType='wcm/foundation/components/parsys', decoration=true}">
+               </sly>
+      </div>
+   </div>
+
+   <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = !properties.text}"></sly>

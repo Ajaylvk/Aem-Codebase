@@ -1,0 +1,35 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+           data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.icons="softwareag/components/commons/svg/icons.html" />
+<sly data-sly-use.resourceBanner = "com.softwareag.core.models.ResourceBanner" />
+<div class="resourcebanner-inner-container">
+<div class="resource-library-heading ${resourceBanner.copyText ? 'resource-banner-bottom-padding' : 'resource-banner-description-bottom-padding'}">
+${resourceBanner.title @ context='html'}
+</div>
+<div class="resource-library-description resource-banner-description-bottom-padding ">
+${resourceBanner.copyText @ context='html'}
+</div>
+<div class="resource-library-banner-content">
+<div class="resource-library-column-1">
+<sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly></div>
+<div class="resource-library-column-2">
+  <div class="resource-library-divider">
+  <div class="resource-library-sub-caption-1">
+  ${resourceBanner.captionText @ context='html'}
+  </div>
+  <div class="resource-library-sub-caption-2">
+    ${resourceBanner.captionTitle @ context='html'}
+  </div>
+  <div class="resource-library-sub-caption-3">
+    ${resourceBanner.description @ context='html'}
+  </div>
+  <div class="resource-library-link">
+    <a href="${resourceBanner.linkDestination}" target="${resourceBanner.openIn}">
+       <span class="linkLabel">${resourceBanner.linkLabel} </span>
+       <span data-sly-test="${resourceBanner.linkLabel}"><i class="arrow-right"></i></span></a>
+  </div>
+  </div>
+</div>
+</div>
+</div>

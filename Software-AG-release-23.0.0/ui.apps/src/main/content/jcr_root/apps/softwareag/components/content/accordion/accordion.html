@@ -1,0 +1,48 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <div data-emptytext="${component.title}" class="cq-placeholder"></div>
+</sly>
+<sly data-sly-use.accordion="${'com.softwareag.core.models.accordion.Accordion'}"></sly>
+<div class="accordion-v2-container ${accordion.backgroundColor}">
+    <div class="accordion-width ${accordion.textAlignment}">
+        <div class="accordion-wrapper ${accordion.textAlignment}">
+            <div data-sly-test="${accordion.accordionTitle}" class="acc-title">
+                ${accordion.accordionTitle}
+            </div>
+            <div class="acc-items">
+                <ul data-sly-list.item="${accordion.accordionList}">
+                    <li>
+                        <div class="accordion">
+                            <div class="contentBx">
+                                <div class="accordion-label">
+                                    <span class="desc"> ${item.itemTitle @ context='html'}</span>
+    
+                                    <span class="accordion-top accordion-arrow">
+    
+                                        <svg class="a-icon a-icon--to-top">
+                                            <use xlink:href="#to-top"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="accordion-content">
+                                    ${item.description @ context='html'}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<script type="application/ld+json" data-sly-test="${accordion.enableFaqSchema}">
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": ${accordion.faqArray @context="unsafe"}
+}
+
+</script>

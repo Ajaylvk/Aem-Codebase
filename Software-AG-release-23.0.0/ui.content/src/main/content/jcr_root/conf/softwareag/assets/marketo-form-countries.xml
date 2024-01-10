@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<countries>
+    <country>
+        <name>default</name>
+        <value>
+            *I consent that SAG Deutschland GmbH (Uhlandstraße 12, Darmstadt, 64297, Germany) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that SAG Deutschland GmbH processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how SAG Deutschland GmbH uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Argentina Mexico-->
+        <name>Anguilla</name>
+        <name>Argentina</name>
+        <name>Barbados</name>
+        <name>Bermuda</name>
+        <name>Chile</name>
+        <name>Paraguay</name>
+        <name>Uruguay</name>
+        <name>Falkland Islands</name>
+        <name>Brazil</name>
+        <name>Antigua and Barbuda</name>
+        <name>Bahamas</name>
+        <name>Belize</name>
+        <name>Bolivia</name>
+        <name>Cayman Islands</name>
+        <name>Colombia</name>
+        <name>Costa Rica</name>
+        <name>Cuba</name>
+        <name>Dominica</name>
+        <name>Dominican Republic</name>
+        <name>Ecuador</name>
+        <name>El Salvador</name>
+        <name>Grenada</name>
+        <name>Guatemala</name>
+        <name>Guyana</name>
+        <name>Haiti</name>
+        <name>Honduras</name>
+        <name>Jamaica</name>
+        <name>Mexico</name>
+        <name>Nicaragua</name>
+        <name>Panama</name>
+        <name>Peru</name>
+        <name>Puerto Rico</name>
+        <name>Saint Barthelemy</name>
+        <name>Trinidad and Tobago</name>
+        <name>Venezuela</name>
+        <name>Grenada</name>
+        <name>Montserrat</name>
+        <name>Saint Kitts</name>
+        <name>Saint Lucia</name>
+        <name>Saint Vincent and the Grenadines</name>
+        <name>Suriname</name>
+        <value>
+            *I consent that Software AG Brasil Ltda (Av. das Naзхes Unidas 12.901, 33° andar, Torre Norte, Sгo Paulo/SP, CEP 04578-000,
+            Brazil) contacts me via email and phone with information about the products, services and events offered by Software AG. I
+            consent that Software AG Brasil Ltda processes my personal data (email address and phone number) for these purposes. I can
+            withdraw this consent at any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG Brasil Ltda uses personal
+            data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Asia & China-->
+        <name>Bangladesh</name>
+        <name>Bhutan</name>
+        <name>Brunei Darussalam</name>
+        <name>Cambodia</name>
+        <name>China</name>
+        <name>China (Hong Kong)</name>
+        <name>Guam</name>
+        <name>Hong Kong</name>
+        <name>India</name>
+        <name>Indonesia</name>
+        <name>Macao</name>
+        <name>Macao S.A.R.</name>
+        <name>Malaysia</name>
+        <name>Maldives</name>
+        <name>Myanmar</name>
+        <name>Nepal</name>
+        <name>North Korea</name>
+        <name>Pakistan</name>
+        <name>Philippines</name>
+        <name>Singapore</name>
+        <name>South Korea</name>
+        <name>Sri Lanka</name>
+        <name>Taiwan</name>
+        <name>Thailand</name>
+        <name>Timor-Leste</name>
+        <name>Vietnam</name>
+        <name>Brunei</name>
+        <name>Laos</name>
+        <name>Northern Mariana Islands</name>
+        <name>Palau</name>
+        <name>Japan</name>
+        <value>
+            *I consent that Software AG (Singapore) Pte LTD (12 Marina Boulevard #17-04, Marina Bay Financial Centre Tower 3, Singapore,
+            018982, Singapore) contacts me via email and phone with information about the products, services and events offered by Software
+            AG. I consent that Software AG (Singapore) Pte LTD processes my personal data (email address and phone number) for these
+            purposes. I can withdraw this consent at any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG (Singapore) Pte LTD uses
+            personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Australia-->
+        <name>Australia</name>
+        <name>New Zealand</name>
+        <name>Christmas Island</name>
+        <name>Cocos (Keeling) Islands</name>
+        <name>Cook Islands</name>
+        <name>Fiji Islands</name>
+        <name>Heard Island and McDonald Islands</name>
+        <name>Kiribati</name>
+        <name>Marshall Islands</name>
+        <name>Micronesia</name>
+        <name>Nauru</name>
+        <name>Niue</name>
+        <name>Norfolk Island</name>
+        <name>Papua New Guinea</name>
+        <name>Pitcairn</name>
+        <name>Samoa</name>
+        <name>Solomon Islands</name>
+        <name>Tokelau</name>
+        <name>Tonga</name>
+        <name>Turks and Caicos Islands</name>
+        <name>Tuvalu</name>
+        <name>Vanuatu</name>
+        <value>
+            *I consent that Software AG Australia Pty Ltd. (Level 16, 201 Miller Street, North Sydney NSW 2060, Australia) contacts me via
+            email and phone with information about the products, services and events offered by Software AG. I consent that Software AG
+            Australia Pty Ltd. processes my personal data (email address and phone number) for these purposes. I can withdraw this consent
+            at any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG Australia Pty Ltd. uses
+            personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Austria-->
+        <name>Austria</name>
+        <value>
+            *I consent that Software GmbH Österreich (Tech Gate Vienna | Donau-City-Straße 1, 1220 Wien, Österreich) contacts me via email
+            and phone with information about the products, services and events offered by Software AG. I consent that Software GmbH
+            Österreich processes my personal data (email address and phone number) for these purposes. I can withdraw this consent at any
+            time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software GmbH Österreich uses personal
+            data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Switzerland-->
+        <name>Switzerland</name>
+        <value>
+            *I consent that SAG Software Systems AG (Thurgauerstrasse 40, 8050 Zürich, Schweiz) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that SAG Software Systems AG processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how SAG Software Systems AG uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Germany-->
+        <name>Germany</name>
+        <name>Liechtenstein</name>
+        <value>
+            *Ich willige ein, dass die Software AG (Uhlandstraße 12, 64297 Darmstadt) mich per E-Mail und Telefon mit Informationen über die
+            Produkte, Dienste und Veranstaltungen der Software AG kontaktieren darf. Ich willige in die Verarbeitung meiner
+            personenbezogenen Daten (E-Mail-Adresse und Telefonnummer) für diese Zwecke ein. Ich kann diese Einwilligung jederzeit kostenlos
+            &lt;a href=&quot;https://www.softwareag.com/de/company/resources/subscription/default.html&quot; target=&quot;_blank&quot;&gt;hier&lt;/a&gt;
+            widerrufen. Weitere Informationen über die Nutzung personenbezogener Daten durch die Software AG sind in der &lt;a href=&quot;https://www.softwareag.com/de/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Datenschutzerklärung&lt;/a&gt; zu finden.
+        </value>
+    </country>
+    <country>
+        <!--BeLux-->
+        <name>Belgium</name>
+        <name>Luxembourg</name>
+        <value>
+            *I consent that Software AG Nederland BV (Loire 162, Den Haag, 2491 IL, Netherlands) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that Software AG Nederland BV processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG Nederland BV uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Canada and USA-->
+        <name>Canada</name>
+        <name>USA</name>
+        <name>American Samoa</name>
+        <name>United States of America</name>
+        <name>USA</name>
+        <name>Virgin Islands (U.S.)</name>
+        <name>U.S. Virgin Islands</name>
+        <name>United States Minor Outlying Islands</name>
+        <value>
+            *I consent that Software AG USA, Inc.(11700 Plaza America Drive, Suite 700, Reston, VA 20190, United States) contacts me via
+            email and phone with information about the products, services and events offered by Software AG. I consent that Software AG USA,
+            Inc. processes my personal data (email address and phone number) for these purposes. I can withdraw this consent at any time –
+            this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG USA, Inc. uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--France-->
+        <name>Algeria</name>
+        <name>Cameroon</name>
+        <name>Cote d'Ivoire</name>
+        <name>Cфte d'Ivoire</name>
+        <name>France</name>
+        <name>French Guiana</name>
+        <name>French Southern Territories</name>
+        <name>Ivory Coast</name>
+        <name>Morocco</name>
+        <name>New Caledonia</name>
+        <name>Saint Pierre and Miquelon</name>
+        <name>Senegal</name>
+        <name>Tunisia</name>
+        <name>French Polynesia</name>
+        <name>Guadeloupe</name>
+        <name>Martinique</name>
+        <name>Mayotte</name>
+        <name>Monaco</name>
+        <name>Reunion</name>
+        <name>Wallis and Futuna</name>
+        <name>Western Sahara</name>
+        <value>
+            *I consent that Software AG France SAS (20, Avenue André Prothin, Tour Europlaza La Défense 4, Paris La Défense Cedex, 92927,
+            France) contacts me via email and phone with information about the products, services and events offered by Software AG. I
+            consent that Software AG France SAS processes my personal data (email address and phone number) for these purposes. I can
+            withdraw this consent at any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG France SAS uses personal
+            data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Iberia-->
+        <name>Andorra</name>
+        <name>Angola</name>
+        <name>Cape Verde</name>
+        <name>Espaсa</name>
+        <name>Mozambique</name>
+        <name>Portugal</name>
+        <name>Sao Tome and Principe</name>
+        <name>Spain</name>
+        <name>Madagascar</name>
+        <value>
+            *I consent that Software AG Espana SA (Ronda de la Luna, 22, Tres Cantos, Madrid, E-28760, Spain) contacts me via email and
+            phone with information about the products, services and events offered by Software AG. I consent that Software AG Espana SA
+            processes my personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this
+            can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG Espana SA uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Israel-->
+        <name>Israel</name>
+        <name>Palestinian Territory</name>
+        <value>
+            *I consent that S.P.L. Software Ltd. (3B Yoni Netanyahu Street, OR-Yehuda, 6037602, Israel) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that S.P.L. Software Ltd. processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how S.P.L. Software Ltd. uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Italy-->
+        <name>Genoa</name>
+        <name>Italy</name>
+        <name>Malta</name>
+        <name>Milano</name>
+        <name>San Marino</name>
+        <name>Vatican City</name>
+        <name>Vatican</name>
+        <value>
+            *I consent that Software AG Italia SpA (Via Battistotti Sassi 11, Milan, 20133, Italy) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that Software AG Italia SpA processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG Italia SpA uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Middle East-->
+        <name>Afghanistan</name>
+        <name>Bahrain</name>
+        <name>Benin</name>
+        <name>Burkina Faso</name>
+        <name>Chad</name>
+        <name>Dubai</name>
+        <name>Egypt</name>
+        <name>Egypt outside Cairo</name>
+        <name>Ethiopia</name>
+        <name>Gambia</name>
+        <name>Ghana</name>
+        <name>Guinea-Bissau</name>
+        <name>Iran</name>
+        <name>Iraq</name>
+        <name>Jordan</name>
+        <name>Kuwait</name>
+        <name>Lebanon</name>
+        <name>Liberia</name>
+        <name>Libya</name>
+        <name>Oman</name>
+        <name>Qatar</name>
+        <name>Saudi Arabia</name>
+        <name>Sudan</name>
+        <name>Syria</name>
+        <name>United Arab Em.</name>
+        <name>United Arab Emirates</name>
+        <name>Somalia</name>
+        <name>Yemen</name>
+        <value>
+            *I consent that Software AG Bilgi Sis. AS (Degirmen Yolu Sok. No: 4, Sasmaz Plaza Kat: 9, Istanbul, TR-34742, Turkey) contacts
+            me via email and phone with information about the products, services and events offered by Software AG. I consent that Software
+            AG Bilgi Sis. AS processes my personal data (email address and phone number) for these purposes. I can withdraw this consent at
+            any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG Bilgi Sis. AS uses personal
+            data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Netherlands-->
+        <name>Aruba</name>
+        <name>Iceland</name>
+        <name>Netherlands</name>
+        <name>Netherlands Antilles</name>
+        <name>Netherlands, the</name>
+        <name>Netherlands</name>
+        <name>Netherlands</name>
+        <value>
+            *I consent that Software AG Nederland BV (Loire 162, Den Haag, 2491 IL, Netherlands) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that Software AG Nederland BV processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG Nederland BV uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Nordics-->
+        <name>Aland Islands</name>
+        <name>Denmark</name>
+        <name>Finland</name>
+        <name>Greenland</name>
+        <name>Ireland</name>
+        <name>Norway</name>
+        <name>Sweden</name>
+        <name>Bouvet Island</name>
+        <name>Faroe Islands</name>
+        <name>Svalbard and Jan Mayen</name>
+        <value>
+            *I consent that Software AG Sweden AB (Kista Science Tower, Kista, 16451, Sweden) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that Software AG Sweden AB processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG Sweden AB uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Poland-->
+        <name>Albania</name>
+        <name>Bosnia and Herzegovina</name>
+        <name>Bulgaria</name>
+        <name>Croatia</name>
+        <name>Cyprus</name>
+        <name>Czech Republic</name>
+        <name>Estonia</name>
+        <name>Greece</name>
+        <name>Hungary</name>
+        <name>Latvia</name>
+        <name>Lithuania</name>
+        <name>Macedonia</name>
+        <name>Montenegro</name>
+        <name>Poland</name>
+        <name>Polska</name>
+        <name>Romania</name>
+        <name>Serbia</name>
+        <name>Slovakia</name>
+        <name>Slovenia</name>
+        <value>
+            *I consent that Software AG Polska Sp zoo (ul. Piкkna 18, Warszawa, 00-549, Poland) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that Software AG Polska Sp zoo processes
+            my personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done
+            by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG Polska Sp zoo uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+    <country>
+        <!--Russia-->
+        <name>Armenia</name>
+        <name>Azerbaidjan</name>
+        <name>Azerbaijan</name>
+        <name>Belarus</name>
+        <name>Georgia</name>
+        <name>Kasachstan</name>
+        <name>Kazakhstan</name>
+        <name>Kyrgyzstan</name>
+        <name>Moldova</name>
+        <name>Mongolia</name>
+        <name>Russian Federation</name>
+        <name>Tajikistan</name>
+        <name>Turkmenistan</name>
+        <name>Ukraine</name>
+        <name>Uzbekistan</name>
+        <name>Russia</name>
+        <value>
+            *I consent that Software AG Russia (Kosmodamianskaya Naberezhnaya, 52, building 4, 3rd floor, Moscow, 115054, Russia) contacts
+            me via email and phone with information about the products, services and events offered by Software AG. I consent that Software
+            AG Russia processes my personal data (email address and phone number) for these purposes. I can withdraw this consent at any
+            time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG Russia uses personal data
+            can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--South Africa-->
+        <name>Botswana</name>
+        <name>Congo</name>
+        <name>Congo, Democratic Republic of</name>
+        <name>Congo, The Democratic Republic of the</name>
+        <name>Gabon</name>
+        <name>Kenya</name>
+        <name>Lesotho</name>
+        <name>Malawi</name>
+        <name>Mauritius</name>
+        <name>Namibia</name>
+        <name>Nigeria</name>
+        <name>South Africa</name>
+        <name>Tanzania</name>
+        <name>Togo</name>
+        <name>Uganda</name>
+        <name>Zambia</name>
+        <name>Zimbabwe</name>
+        <name>Burundi</name>
+        <name>Central African Republic</name>
+        <name>Comoros</name>
+        <name>Democratic Republic of the Congo</name>
+        <name>Djibouti</name>
+        <name>Equatorial Guinea</name>
+        <name>Eritrea</name>
+        <name>Guinea</name>
+        <name>Mali</name>
+        <name>Mauritania</name>
+        <name>Niger</name>
+        <name>Rwanda</name>
+        <name>Seychelles</name>
+        <name>Sierra Leone</name>
+        <name>Swaziland</name>
+        <value>
+            *I consent that Software AG South Africa (Culross on Main Office Park, 34 Culross Road, Building 3, Bryanston, 2021, South
+            Africa) contacts me via email and phone with information about the products, services and events offered by Software AG. I
+            consent that Software AG South Africa processes my personal data (email address and phone number) for these purposes. I can
+            withdraw this consent at any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG South Africa uses personal
+            data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--Turkey-->
+        <name>Turkey</name>
+        <value>
+            *I consent that Software AG Bilgi Sis. AS (Degirmen Yolu Sok. No: 4, Sasmaz Plaza Kat: 9, Istanbul, TR-34742, Turkey) contacts
+            me via email and phone with information about the products, services and events offered by Software AG. I consent that Software
+            AG Bilgi Sis. AS processes my personal data (email address and phone number) for these purposes. I can withdraw this consent at
+            any time – this can be done by &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot;
+            target=&quot;_blank&quot;&gt;unsubscribing here&lt;/a&gt;. Further information about how Software AG Bilgi Sis. AS uses personal
+            data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot; target=&quot;_blank&quot;&gt;Privacy
+            Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the check-box to maintain your subscription
+            status.
+        </value>
+    </country>
+    <country>
+        <!--United Kingdom-->
+        <name>British Indian Ocean Territory</name>
+        <name>Gibraltar</name>
+        <name>Guernsey</name>
+        <name>Isle of Man</name>
+        <name>United Kingdom</name>
+        <name>British Virgin Islands</name>
+        <name>Saint Helena</name>
+        <value>
+            *I consent that Software AG UK Ltd (Locomotive Way, Derby, GB - DE24 8PU, United Kingdom) contacts me via email and phone with
+            information about the products, services and events offered by Software AG. I consent that Software AG UK Ltd processes my
+            personal data (email address and phone number) for these purposes. I can withdraw this consent at any time – this can be done by
+            &lt;a href=&quot;https://www.softwareag.com/corporate/company/resources/subscription/default&quot; target=&quot;_blank&quot;&gt;unsubscribing
+            here&lt;/a&gt;. Further information about how Software AG UK Ltd uses personal data can be found in the &lt;a href=&quot;https://www.softwareag.com/corporate/privacy.html&quot;
+            target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;. If you are currently subscribed, you do not need to check the
+            check-box to maintain your subscription status.
+        </value>
+    </country>
+</countries>
+
+

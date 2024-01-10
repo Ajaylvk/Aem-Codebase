@@ -1,0 +1,374 @@
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cmp-link {
+  display: inline-block;
+  position: relative;
+  padding: 3.2rem 0;
+  font-weight: 700;
+  font-size: 16px;
+  @include mq-tablet {
+    padding: 2.4rem 0;
+  }
+
+  @include mq-phone {
+    padding: 2rem 0;
+  }
+}
+
+.cmp-link__button-icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.cmp-link__button-icon svg {
+  height: 1.6rem;
+  width: 1.8rem;
+  margin-left: 6px;
+  font-size: 3.2rem;
+  transform: rotate(90deg);
+}
+
+.cmp-link__button-icon.svg-baseline {
+  top: 0.2rem;
+  position: relative;
+}
+
+.cmp-link__button {
+  text-decoration: none;
+}
+
+.cmp-link__button-text {
+  @include base-font-bold();
+}
+
+.links.standalone-primary-core-dark .cmp-link--design-links .cmp-link__button {
+  color: #011f3d;
+}
+
+.links.standalone-primary-core-dark
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-icon
+  svg {
+  fill: #011f3d;
+}
+
+.links.standalone-primary-core-dark
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  border-bottom: 1px solid #011f3d;
+}
+.links.standalone-primary-core-dark
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  border-bottom: 1px solid #011f3d;
+}
+
+.links.standalone-primary-core-dark
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #058192;
+  border-bottom: 1px solid #058192;
+}
+
+.links.standalone-primary-core-dark
+  .cmp-link--design-links
+  .cmp-link__button:active
+  svg {
+  fill: #058192;
+}
+
+.links.standalone-primary-white .cmp-link--design-links .cmp-link__button {
+  color: #ffffff;
+}
+
+.links.standalone-primary-white
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-icon
+  svg {
+  fill: #ffffff;
+}
+
+.links.standalone-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  border-bottom: 1px solid #ffffff;
+}
+.links.standalone-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  border-bottom: 1px solid #ffffff;
+}
+
+.links.standalone-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #3cc1b7;
+  border-bottom: 1px solid #3cc1b7;
+}
+
+.links.standalone-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:active
+  svg {
+  fill: #3cc1b7;
+}
+
+.links.standalone-secondary-bright-sense-300
+  .cmp-link--design-links
+  .cmp-link__button {
+  color: #058192;
+}
+
+.links.standalone-secondary-bright-sense-300
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-icon
+  svg {
+  fill: #058192;
+}
+
+.links.standalone-secondary-bright-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  border-bottom: 1px solid #058192;
+}
+
+.links.standalone-secondary-bright-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  border-bottom: 1px solid #058192;
+}
+
+.links.standalone-secondary-bright-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #1c5569;
+  border-bottom: 1px solid #1c5569;
+}
+
+.links.standalone-secondary-bright-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:active
+  svg {
+  fill: #1c5569;
+}
+
+.links.standalone-secondary-bright-pulse-600
+  .cmp-link--design-links
+  .cmp-link__button {
+  color: #8e3cf7;
+}
+
+.links.standalone-secondary-bright-pulse-600
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-icon
+  svg {
+  fill: #8e3cf7;
+}
+
+.links.standalone-secondary-bright-pulse-600
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  border-bottom: 1px solid #8e3cf7;
+}
+.links.standalone-secondary-bright-pulse-600
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  border-bottom: 1px solid #8e3cf7;
+}
+
+.links.standalone-secondary-bright-pulse-600
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #3b2c5e;
+  border-bottom: 1px solid #3b2c5e;
+}
+
+.links.standalone-secondary-bright-pulse-600
+  .cmp-link--design-links
+  .cmp-link__button:active
+  svg {
+  fill: #3b2c5e;
+}
+.links.inline-bright-secondary-sense-300
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-text {
+  color: #058192;
+  border-bottom: 1px solid #058192;
+  font-weight: 400;
+}
+.links.inline-bright-secondary-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  color: #058192;
+  border-bottom: 1px solid #058192;
+}
+.links.inline-bright-secondary-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  color: #058192;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #058192;
+}
+.links.inline-bright-secondary-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #1c5569;
+  border-bottom: 1px solid #1c5569;
+}
+.links.inline-bright-secondary-sense-300
+  .cmp-link--design-links
+  .cmp-link__button:visited
+  .cmp-link__button-text {
+  color: #5b25a7;
+  border-bottom: 1px solid #5b25a7;
+}
+.links.inline-primary-core-dark-120
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-text {
+  color: #011f3d;
+  font-weight: 400;
+  border-bottom: 1px solid #011f3d;
+}
+
+.links.inline-primary-core-dark-120
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  color: #058192;
+  border-bottom: 1px solid #058192;
+}
+
+.links.inline-primary-core-dark-120
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  color: #058192;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #058192;
+}
+
+.links.inline-primary-core-dark-120
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #1c5569;
+  border-bottom: 1px solid #1c5569;
+}
+.links.inline-primary-core-dark-120
+  .cmp-link--design-links
+  .cmp-link__button:visited
+  .cmp-link__button-text {
+  color: #5b25a7;
+  border-bottom: 1px solid #5b25a7;
+}
+.links.inline-secondary-bright-sense-500
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-text {
+  color: #3cc1b7;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #3cc1b7;
+}
+.links.inline-secondary-bright-sense-500
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  color: #3cc1b7;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #3cc1b7;
+}
+.links.inline-secondary-bright-sense-500
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  color: #3cc1b7;
+  border-bottom: 1px solid #3cc1b7;
+}
+
+.links.inline-secondary-bright-sense-500
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #8adbd5;
+  border-bottom: 1px solid #8adbd5;
+}
+.links.inline-secondary-bright-sense-500
+  .cmp-link--design-links
+  .cmp-link__button:visited
+  .cmp-link__button-text {
+  color: #dabffc;
+  border-bottom: 1px solid #dabffc;
+}
+
+.links.inline-primary-white
+  .cmp-link--design-links
+  .cmp-link__button
+  .cmp-link__button-text {
+  color: #ffffff;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #ffffff;
+}
+
+.links.inline-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:hover
+  .cmp-link__button-text {
+  color: #3cc1b7;
+  border-bottom: 1px solid #3cc1b7;
+}
+
+.links.inline-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:focus
+  .cmp-link__button-text {
+  color: #3cc1b7;
+  border-bottom: 1px solid #3cc1b7;
+}
+
+.links.inline-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:active
+  .cmp-link__button-text {
+  color: #8adbd5;
+  border-bottom: 1px solid #8adbd5;
+}
+
+.links.inline-primary-white
+  .cmp-link--design-links
+  .cmp-link__button:visited
+  .cmp-link__button-text {
+  color: #dabffc;
+  border-bottom: 1px solid #dabffc;
+}
+
+.cmp-link__button.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+  xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+  jcr:primaryType="nt:unstructured"
+  jcr:title="Software AG responsivegrid Policy"
+  jcr:description="Responsive Grid Wrapper"
+  sling:resourceType="wcm/core/components/policy/policy"
+  policyResourceType="softwareag/components/content/image"
+  allowedRenditionWidths="[128,256,512,1024,1280,1440,1920,2048]">
+  <plugins jcr:primaryType="nt:unstructured">
+    <crop
+      jcr:primaryType="nt:unstructured"
+      features="*">
+      <aspectRatios jcr:primaryType="nt:unstructured">
+        <item0
+          jcr:primaryType="nt:unstructured"
+          name="Wide Landscape"
+          ratio="0.6180"/>
+        <item1
+          jcr:primaryType="nt:unstructured"
+          name="Landscape"
+          ratio="0.8284"/>
+        <item2
+          jcr:primaryType="nt:unstructured"
+          name="Square"
+          ratio="1"/>
+        <item3
+          jcr:primaryType="nt:unstructured"
+          name="Portrait"
+          ratio="1.6180"/>
+      </aspectRatios>
+    </crop>
+    <rotate
+      jcr:primaryType="nt:unstructured"
+      features="right"/>
+    <flip
+      jcr:primaryType="nt:unstructured"
+      features="-"/>
+  </plugins>
+</jcr:root>

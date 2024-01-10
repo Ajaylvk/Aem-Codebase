@@ -1,0 +1,38 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Config",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+        "cq:redirectTarget": "/content/softwareag",
+        "sling:redirect": true,
+        "sling:redirectStatus": 302,
+        "sling:resourceType": "softwareag/components/structure/configurationpage",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "label": {
+                "jcr:primaryType": "nt:unstructured",
+                "labelDays": "Days-configured",
+                "labelHours": "Hours-configured",
+                "labelMinutes": "Minutes-configured",
+                "labelSeconds": "Seconds-configured",
+                "labelGoToOverview": "Go to overview-configured",
+                "labelLoadMore": "Load more-configured",
+                "labelLearnMore": "Learn more-configured",
+                "labelBack": "Back-configured",
+                "labelEventFilterOptionOne": "Filter1-configured",
+                "labelEventFilterOptionTwo": "Filter2-configured",
+                "labelCountries": "Countries-configured",
+                "labelPartnerType": "Partner Type-configured",
+                "labelProductCategory": "Product Category-configured",
+                "labelIndustries": "Industries-configured",
+                "sling:resourceType": "softwareag/components/configs/label"
+            },
+            "label_empty": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/configs/label"
+            }
+        }
+    }
+}

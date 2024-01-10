@@ -1,0 +1,52 @@
+<div data-sly-use.model="com.softwareag.core.models.generictestcomponent.GenericModel" style="color: #000">
+	<p>Properties:</p>
+    <ul>
+	<li>model.obj.subtitle: ${model.obj.subtitle || '-'}</li>
+	<li>model['obj/subtitle']: ${model['obj/subtitle'] || '-'}</li>
+	<li>model['obj/level2/title']: ${model['obj/level2/title'] || '-'}</li>
+	<li>properties['obj/subtitle']: ${properties['obj/subtitle'] || '-'}</li>
+	<li>properties['obj/level2/title']: ${properties['obj/level2/title'] || '-'}</li>
+    </ul>
+	------------------------------------------------------------
+	<p>Array Example1</p>
+
+	<ul data-sly-repeat.child="${model['obj/images'].children}">
+		<li>child['fileReference']: ${child['fileReference'] || '-'}; child['altText']: ${child['altText'] || '-'}; Test: ${child['test']}; Name: ${child.name}</li>
+		<ul data-sly-repeat.imageChild="${child['test'].children}">
+			<li>Name: ${imageChild.name}; imageChild['foo']: ${imageChild['foo']}</li>
+		</ul>
+	</ul>
+	------------------------------------------------------------
+	<p>Array Example2</p>
+	<div>
+		<ul data-sly-repeat.child="${model['obj/images/img1/test'].children}">
+        	<li>child.foo: ${child.foo}</li>
+        </ul>
+    </div>
+    ------------------------------------------------------------
+    <p>Array Example3</p>
+	<div>
+		<ul data-sly-repeat.child="${model.obj.images.img1.test.children}">
+        	<li>child.foo: ${child.foo}</li>
+        </ul>
+    </div>
+    ------------------------------------------------------------
+	<p>Array in Array Example1</p>
+	<div data-sly-repeat.child1="${model.children}">
+		child1.name: ${child1.name}
+		<div data-sly-test="${child1.name == 'obj'}">
+			<ul data-sly-repeat.child2="${child1.children}">
+				<li>child2.name: ${child2.name}</li>
+			</ul>
+		</div>
+	</div>
+	------------------------------------------------------------
+    <p>Array in Array Example2</p>
+    <div>
+		<div data-sly-repeat.child="${model['obj/images'].children}">
+        	<ul data-sly-repeat.child1="${child['test'].children}">
+        		<li>child1.foo: ${child1.foo} child1['foo']: ${child1['foo']}</li>
+        	</ul>
+        </div>
+    </div>
+</div>

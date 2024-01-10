@@ -1,0 +1,95 @@
+<VirtualHost *:80>
+	ServerName	publish-tc
+	## Put names of which domains are used for your published site/content here
+	ServerAlias	tc-dev.softwareag.com
+	ServerAlias tc-stg.softwareag.com
+    ServerAlias techcommunity.softwareag.com
+
+	## Use a doc root that matches what's in the /etc/httpd/conf/publish-farm.any
+	DocumentRoot	${PUBLISH_DOCROOT}
+
+    ## for MVP error pages for all errors
+    ## these must always be in the cache - see /etc/httpd/bin/error_page_cacher.sh
+	ErrorDocument 404 /en_en/errors/404.html
+    ErrorDocument 500 /en_en/errors/500.html
+
+    IncludeOptional /etc/httpd/conf.d/available_vhosts/errordocuments/*.locmatch
+
+	<Location />
+       SetEnvIf X-Forwarded-For ^108\.218\.231\.86 env_allow_1
+       Deny from all
+       AuthUserFile /etc/httpd/conf.d/.htpasswd
+       AuthName "Restricted Access"
+       AuthType Basic
+       Allow from env=env_allow_1
+       Satisfy Any
+       require valid-user
+    </Location>
+
+	## Add header breadcrumbs for help in troubleshooting
+	<IfModule mod_headers.c>
+		Header add X-Dispatcher ${DISP_ID}
+		Header add X-Vhost "publish"
+		## Versioned clientlibs
+        SetEnvIf Request_URI "(\.min)?\.(ACSHASH)?[a-f0-9]+\.js" long_expires=true
+        SetEnvIf Request_URI "(\.min)?\.(ACSHASH)?[a-f0-9]+\.css" long_expires=true
+        Header set Cache-Control max-age=2592000 env=long_expires
+	</IfModule>
+
+	 ## Security Headers
+     Header always set X-Frame-Options "SAMEORIGIN"
+     Header unset X-Content-Type-Options
+     Header always set X-Content-Type-Options "nosniff"
+     Header always set X-Xss-Protection "1; mode=block"
+     Header always set Strict-Transport-Security "max-age=31536000; includeSubdomains"
+     Header always set Content-Security-Policy "frame-ancestors 'self'; worker-src 'self' blob:; upgrade-insecure-requests; script-src *.driftt.com *.6sc.co *.d41.co *.licdn.com *.softwareag.com *.marketo.net *.marketo.com siteimproveanalytics.com *.adobe.com *.rlcdn.com *.doubleclick.net *.googleadservices.com *.google-analytics.com  *.googletagmanager.com *.ytimg.com *.youtube.com *.adobedtm.com *.scene7.com *.trustarc.com *.ads-twitter.com *.bizible.com *.facebook.net *.omtrdc.net *.2o7.net *.demdex.net *.everesttech.net  'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+     Header always set Referrer-Policy 'origin-when-cross-origin'
+	<Directory />
+		## Update /etc/httpd/conf.d/variables/ams_default.vars with setting the PUBLISH_WHITELIST_ENABLED from 0 or 1 to enable or disable ip restriction rules
+		<If "${PUBLISH_WHITELIST_ENABLED} == 1">
+			Include /etc/httpd/conf.d/whitelists/*_whitelist.rules
+		</If>
+		<IfModule disp_apache2.c>
+			## Some items cache with the wrong mime type
+			## Use this option to use the name to auto-detect mime types when cached improperly
+			ModMimeUsePathInfo On
+			## Use this option to avoid cache poisioning
+			## Sling will return /content/image.jpg as well as /content/image.jpg/ but apache can't search /content/image.jpg/ as a file
+			## Apache will treat that like a directory.  This assures the last slash is never stored in cache
+			DirectorySlash Off
+			## Enable the dispatcher file handler for apache to fetch files from AEM
+			SetHandler dispatcher-handler
+		</IfModule>
+		Options FollowSymLinks
+		AllowOverride None
+		#### Insert filter
+		SetOutputFilter DEFLATE
+		#### Don't compress images
+		SetEnvIfNoCase Request_URI \
+		\.(?:gif|jpe?g|png)$ no-gzip dont-vary
+		#### Make sure proxies don't deliver the wrong content
+		Header append Vary User-Agent env=!dont-vary
+	</Directory>
+	<Directory "${PUBLISH_DOCROOT}">
+		AllowOverride None
+		Require all granted
+	</Directory>
+	<IfModule disp_apache2.c>
+		## Enabled to allow rewrites to take affect and not be ignored by the dispatcher module
+		DispatcherUseProcessedURL	1
+		## Default setting to allow all errors to come from the aem instance
+		DispatcherPassError		1
+	</IfModule>
+	<IfModule mod_rewrite.c>
+		ReWriteEngine	on
+		LogLevel warn rewrite:info
+		##Global rewrite include
+		Include /etc/httpd/conf.d/rewrites/base_rewrite.rules
+		##Global rewrite include
+        Include /etc/httpd/conf.d/rewrites/techcommunity_rewrite.rules
+		## Update /etc/httpd/conf.d/variables/ams_default.vars with setting the PUBLISH_FORCE_SSL from 0 or 1 to enable or disable enforcing SSL
+		<If "${PUBLISH_FORCE_SSL} == 1">
+			Include /etc/httpd/conf.d/rewrites/xforwarded_forcessl_rewrite.rules
+		</If>
+	</IfModule>
+</VirtualHost>

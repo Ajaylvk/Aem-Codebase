@@ -1,0 +1,234 @@
+{
+    "jcr:primaryType": "sling:OrderedFolder",
+    "experience-fragments": {
+        "jcr:primaryType": "sling:Folder",
+        "softwareag": {
+            "jcr:primaryType": "sling:OrderedFolder",
+            "jcr:title": "softwareag",
+            "en_us": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:title": "en_us",
+                "content": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:title": "content",
+                    "experience-content-fragment": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:title": "Experience Content Fragment",
+                            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                            "sling:resourceType": "cq/experience-fragments/components/experiencefragment"
+                        },
+                        "master": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:title": "Master variation",
+                                "cq:template": "/conf/softwareag/settings/wcm/templates/experience-fragment-content-template",
+                                "cq:xfMasterVariation": true,
+                                "cq:xfVariantType": "content",
+                                "cq:tags": [
+                                    "softwareag:asset-type/image",
+                                    "softwareag:industry/banking"
+                                ],
+                                "sling:resourceType": "softwareag/components/structure/xfpage",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                                    "filtercontainer": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "filterOptionThree": "softwareag:languages",
+                                        "filterOptionOne": "softwareag:asset-type",
+                                        "filterOptionTwo": "softwareag:industry",
+                                        "title": "Filter Container Title",
+                                        "amountOfListedContentItems": "2",
+                                        "amountOfMoreLoadedContentItems": "2",
+                                        "sling:resourceType": "softwareag/components/content/filtercontainer",
+                                        "textIsRich": "true",
+                                        "targetThisComponent": "false",
+                                        "container": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sling:resourceType": "softwareag/components/content/parsys",
+                                            "contentitem_1": {
+                                                "jcr:primaryType": "nt:unstructured",
+                                                "breakpoints": "",
+                                                "videoserverurl": "undefined",
+                                                "fileReference": "",
+                                                "s7ImagePreset": "",
+                                                "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                                                "jcr:lastModifiedBy": "admin",
+                                                "inline": "false",
+                                                "layout": "small",
+                                                "s7ViewerPreset": "||",
+                                                "target": "_self",
+                                                "assetID": "",
+                                                "copyText": "<p>Software AG : Asset Type / Image<br>\r\n</p>\r\n<p>Software AG : Languages / German</p>\r\n<p>&nbsp;</p>\r\n",
+                                                "urlModifiers": "",
+                                                "tags": [
+                                                    "softwareag:asset-type/image",
+                                                    "softwareag:languages/german"
+                                                ],
+                                                "s7PresetType": "viewer",
+                                                "disableBreakpoints": "false",
+                                                "sling:resourceType": "softwareag/components/content/contentitem",
+                                                "assetType": "",
+                                                "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                                                "textIsRich": "true",
+                                                "s7ViewerPresetPath": "||",
+                                                "link": {
+                                                    "jcr:primaryType": "nt:unstructured"
+                                                }
+                                            },
+                                            "contentitem_2": {
+                                                "jcr:primaryType": "nt:unstructured",
+                                                "breakpoints": "",
+                                                "videoserverurl": "undefined",
+                                                "fileReference": "",
+                                                "s7ImagePreset": "",
+                                                "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                                                "inline": "false",
+                                                "layout": "small",
+                                                "s7ViewerPreset": "||",
+                                                "target": "_self",
+                                                "assetID": "",
+                                                "copyText": "<p>Software AG : Asset Type / Image<br>\r\n</p>\r\n<p>Software AG : Languages / German</p>\r\n<p>&nbsp;</p>\r\n",
+                                                "urlModifiers": "",
+                                                "tags": [
+                                                    "softwareag:industry/xxx"
+                                                ],
+                                                "s7PresetType": "viewer",
+                                                "disableBreakpoints": "false",
+                                                "sling:resourceType": "softwareag/components/content/contentitem",
+                                                "assetType": "",
+                                                "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                                                "textIsRich": "true",
+                                                "s7ViewerPresetPath": "||",
+                                                "link": {
+                                                    "jcr:primaryType": "nt:unstructured"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "cq:metadata": {
+                                    "jcr:primaryType": "nt:unstructured"
+                                }
+                            }
+                        },
+                        "second": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:title": "Second var",
+                                "cq:template": "/conf/softwareag/settings/wcm/templates/experience-fragment-content-template",
+                                "cq:xfVariantType": "content",
+                                "cq:tags": [
+                                    "softwareag:asset-type/analyst-reports",
+                                    "softwareag:asset-type/brochure"
+                                ],
+                                "sling:resourceType": "softwareag/components/structure/xfpage",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                                    "filtercontainer": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "filterOptionOne": "softwareag:asset-type",
+                                        "amountOfListedContentItems": "9",
+                                        "amountOfMoreLoadedContentItems": "9",
+                                        "sling:resourceType": "softwareag/components/content/filtercontainer",
+                                        "textIsRich": "true",
+                                        "targetThisComponent": "false",
+                                        "container": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sling:resourceType": "softwareag/components/content/parsys"
+                                        }
+                                    }
+                                },
+                                "cq:metadata": {
+                                    "jcr:primaryType": "nt:unstructured"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "softwareag": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:title": "softwareag",
+        "test": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Reference Test Page",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+                "sling:resourceType": "softwareag/components/structure/basic-page",
+                "parsys": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "reference_1": {
+                        "jcr:primaryType":"nt:unstructured",
+                        "jcr:createdBy":"admin",
+                        "anchorName":"Anchor",
+                        "jcr:lastModifiedBy":"admin",
+                        "jcr:created":"Mon Apr 12 2021 10:54:10 GMT+0530",
+                        "path":"/content/experience-fragments/softwareag/language_master/en/content/closing-teaser-banner/master",
+                        "jcr:lastModified":"Mon Apr 12 2021 11:52:55 GMT+0530",
+                        "sling:resourceType":"softwareag/components/content/reference",
+                        "tags": [
+                            "softwareag:industry"
+                        ]
+                    },
+                    "reference_2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "anchorName": "2fc",
+                        "fragmentVariationPath": "/content/experience-fragments/softwareag/en_us/content/experience-content-fragment/second",
+                        "sling:resourceType": "softwareag/components/content/reference"
+                    }
+                }
+            },
+            "alfabet": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "IT Portfolio Management & Planning | Alfabet | Software AG",
+                    "parsys": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/parsys",
+                        "gridcontainer_copy_196222524": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/gridcontainer",
+                            "link": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "target": "_self"
+                            },
+                            "container": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "softwareag/components/content/parsys",
+                                "productteaser": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "softwareag/components/content/productteaser",
+                                    "layout": "large"
+                                },
+                                "productteaser_copy": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "softwareag/components/content/productteaser",
+                                    "layout": "small"
+                                }
+                            }
+                        },
+                        "gridcontainer_empty": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "softwareag/components/content/gridcontainer",
+                            "container": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "softwareag/components/content/parsys"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

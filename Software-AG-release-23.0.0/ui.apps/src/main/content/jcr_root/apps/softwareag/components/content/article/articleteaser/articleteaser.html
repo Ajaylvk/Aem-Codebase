@@ -1,0 +1,204 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+
+<sly
+    data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @ categories='articleteaser'}">
+    ${clientlibs.jsAndCssIncludes @ context="unsafe"}
+</sly>
+
+<sly data-sly-use.articleTeaserObj="com.softwareag.core.models.article.ArticleTeaserModel">
+
+
+    <div class="articleteaser__container">
+        <!-- Article teaser A Start-->
+        <sly data-sly-test="${articleTeaserObj.articleteaser == 'articleteasera'}">
+            <article
+                class="${articleTeaserObj.articleteaser} ${articleTeaserObj.featureTaga ? 'hasfeaturedtag' : ''} ${articleTeaserObj.backgroundColora}">
+                <!-- background color has to be updated -->
+                <div data-sly-test="${articleteaserObj.featureTaga}" class="featuredtag ${articleTeaserObj.tagColora}">
+                    ${articleTeaserObj.tagCopya}
+                </div>
+                <div class="articleTeaser_icon_container">
+                    <img src="${articleTeaserObj.fileReferencea}" alt="${articleTeaserObj.altTexta}"
+                        class="svgicon ${articleTeaserObj.iconBackgroundColor}" />
+                </div>
+        </sly>
+        <!-- Article teaser A End-->
+        <!-- Article Teaser C Start -->
+
+        <sly data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserc'}">
+            <article
+                class="${articleTeaserObj.articleteaser} ${articleTeaserObj.backgroundColorc ? articleTeaserObj.backgroundColorc : 'input__colorselect-background-color1'}">
+                <div class="articleTeaserc_image_container">
+                    <img src="${articleTeaserObj.fileReferencec}" alt="${articleTeaserObj.altTextc}" height="48">
+                </div>
+        </sly>
+        <!-- Article Teaser C image container End -->
+        <!-- Article Teaser B Start-->
+
+        <sly data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserb'}">
+            <article
+                class="${articleTeaserObj.articleteaser} ${articleTeaserObj.backgroundColorb} ${articleTeaserObj.featureTagb ? 'hasfeaturedtag' : ''}">
+                <!-- background color has to be updated -->
+                <div data-sly-test="${articleteaserObj.featureTagb}" class="featuredtag ${articleTeaserObj.tagColorb}">
+                    ${articleTeaserObj.tagCopyb}
+                </div>
+                <div class="articleBIconColumn">
+
+                    <div class="articleTeaser_icon_container">
+                        <img src="${articleTeaserObj.fileReferenceb}" alt="${articleTeaserObj.altTextb}"
+                            class="svgicon ${articleTeaserObj.iconBackgroundColorb}" />
+                    </div>
+                </div>
+        </sly>
+        <!-- article Teaser B image container End-->
+
+        <!-- Article teaser D -->
+
+        <sly data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserd'}">
+            <!-- add background colors dynamically with 3 variations -->
+
+            <article
+                class="${articleTeaserObj.articleteaser} ${articleteaserObj.featureTag ? 'hasfeaturedtag' : ''} ${articleTeaserObj.backgroundColord}">
+
+        </sly>
+
+
+
+        <!-- Common Properties for all article teaser cards below-->
+        <!-- Container exclusive to article teaser B for body column -->
+        <div
+            class="${articleTeaserObj.articleteaser == 'articleteaserb' ? 'articleBBodyColumn' : 'article-teasercontent' }">
+
+            <sly data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserd'}">
+                <!-- Featured tag for article teaser D -->
+                <div data-sly-test="${articleteaserObj.featureTag}" class="featuredtag ${articleteaserObj.tagColord}">
+                    ${articleteaserObj.tagCopyd}
+
+                </div>
+            </sly>
+
+
+            <div data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserd'}"
+                class="articleteaserD_image_container">
+                <sly data-sly-test="${properties.type =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+                </sly>
+                <sly data-sly-test="${properties.type =='svg'}">
+                    <img src="${properties.image}" alt="${properties.altText2}" class="article-d-svg-image">
+                </sly>
+            </div>
+            <!-- Caption details start -->
+            <div class="article-contentwrapper">
+                <h6 class="a-overline" data-sly-test="${articleTeaserObj.articleteaser == 'articleteasera'}">
+                    ${articleTeaserObj.captiona
+                    @context="html"}
+                </h6>
+                <!-- Article teaser C caption added -->
+
+                <h6 class="a-overline" data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserc'}">
+                    ${articleTeaserObj.captionc @
+                    context="html"}
+                </h6>
+
+                <h6 class="a-overline" data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserd'}">
+                    ${articleTeaserObj.caption
+                    @context="html"}
+                </h6>
+                <!-- Caption details end -->
+                <!-- Heading -->
+                <h5 class="a-h5" data-sly-test="${articleTeaserObj.title}">
+                    <pre class="aem__textarea">${articleTeaserObj.title}</pre>
+                </h5>
+                <!-- Articleteaser Tile Description -->
+                <div class="a-bodycopy" data-sly-test="${articleTeaserObj.description}">
+                    ${articleTeaserObj.description @ context="html"}
+                </div>
+
+                <!-- <sly data-sly-test="${articleTeaserObj.articleteaser == 'articleteaserd'}"> -->
+                <!-- Link -->
+                <div class="prodcmp-link prodcmp-link--design-links"
+                    data-sly-test="${articleTeaserObj.articleteaser== 'articleteasera' && articleteaserObj.enableLink}">
+                    <a class="prodcmp-link__button" href="${articleTeaserObj.ctaDestinationLink}"
+                        target="${articleTeaserObj.linkOpenIn}">
+                        <span class="prodcmp-link__button-text">${articleTeaserObj.ctaLinkLabel}</span><span
+                            data-sly-test="${articleTeaserObj.ctaLinkLabel}"
+                            class="prodcmp-link__button-icon svg-baseline">
+                            <svg class="a-icon a-icon--to-top">
+                                <use xlink:href="#to-top"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="prodcmp-link prodcmp-link--design-links"
+                    data-sly-test="${articleTeaserObj.articleteaser== 'articleteaserb'}">
+                    <a class="prodcmp-link__button" href="${articleTeaserObj.ctaDestinationLinkb}"
+                        target="${articleTeaserObj.linkTargetVal_b}">
+                        <span class="prodcmp-link__button-text">${articleTeaserObj.ctaLabelb}</span><span
+                            data-sly-test="${articleTeaserObj.ctaLabelb}"
+                            class="prodcmp-link__button-icon svg-baseline">
+                            <svg class="a-icon a-icon--to-top">
+                                <use xlink:href="#to-top"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <!-- Link added for article teaser C -->
+                <div class="prodcmp-link prodcmp-link--design-links"
+                    data-sly-test="${articleTeaserObj.articleteaser== 'articleteaserc'}">
+                    <a class="prodcmp-link__button" href="${articleTeaserObj.ctaDestinationLinkc}"
+                        target="${articleTeaserObj.linkTargetVal_c}">
+                        <span class="prodcmp-link__button-text">${articleTeaserObj.ctaLabelc}</span><span
+                            data-sly-test="${articleTeaserObj.ctaLabelc}"
+                            class="prodcmp-link__button-icon svg-baseline">
+                            <svg class="a-icon a-icon--to-top">
+                                <use xlink:href="#to-top"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="prodcmp-link prodcmp-link--design-links"
+                    data-sly-test="${articleTeaserObj.articleteaser== 'articleteaserd'}">
+                    <a class="prodcmp-link__button" href="${articleTeaserObj.ctaDestinationLinkd}"
+                        target="${articleTeaserObj.linkTargetVal_d}">
+                        <span class="prodcmp-link__button-text">${articleTeaserObj.ctaLabeld}</span><span
+                            data-sly-test="${articleTeaserObj.ctaLabeld}"
+                            class="prodcmp-link__button-icon svg-baseline">
+                            <svg class="a-icon a-icon--to-top">
+                                <use xlink:href="#to-top"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Button required for article teaser A -->
+                <div data-sly-test="${articleTeaserObj.articleteaser== 'articleteasera' && articleteaserObj.enableButton}"
+                    class="button secondary-core-dark-large">
+
+                    <a id="${articleteaserObj.ctaButtonLabel}" target="${articleteaserObj.buttonLinkTargetVal_a}"
+                        class="cmp-button" href="${articleteaserObj.ctaDestButtonLink}"
+                        aria-label="${articleteaserObj.ctaButtonLabel}">
+                        <span class="cmp-button__text">${articleteaserObj.ctaButtonLabel}</span>
+                    </a>
+                </div>
+
+
+            </div>
+            <!-- </sly> -->
+
+
+
+
+        </div>
+
+
+        </article>
+    </div>
+
+
+
+
+
+
+</sly>

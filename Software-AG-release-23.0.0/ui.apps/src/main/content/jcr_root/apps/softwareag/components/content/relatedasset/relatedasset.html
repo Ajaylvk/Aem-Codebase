@@ -1,0 +1,77 @@
+<sly data-sly-use.model="com.softwareag.core.models.asset.RelatedAsset"
+     data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"></sly>
+
+<div class="filtercontainer__wrapper">
+    <div class="filtercontainer__container content-width">
+        <h2 class="filtercontainer__title a-h2">${model.title}</h2>
+
+        <div class="reference">
+            <div class="reference__container asset asset--related">
+                <div class="reference__wrapper">
+
+                    <sly data-sly-list.asset="${model.assets}" data-sly-test="${model.hasAssets}">
+                       <!--/* <a class="tilestemplate"
+                           data-attrib-asset-link="${asset.ctaURL}"
+                           data-attrib-asset-type="${asset.assetType}"
+                           data-attrib-name="${asset.title}"
+                           data-attrib-type="${asset.assetTypeDisplay}"
+                           href="${asset.ctaURL}"
+                           target="_blank"
+                           title="${asset.title}">  
+
+                           */-->
+                           <div class="tilestemplate" data-attrib-asset-link="${asset.ctaURL}"
+                           data-attrib-asset-type="${asset.assetType}"
+                           data-attrib-name="${asset.title}"
+                           data-attrib-type="${asset.assetTypeDisplay}"
+                           title="${asset.title}">
+                            <div class="tilestemplate__img-area">
+                                <sly data-sly-test="${asset.fileReference}">
+                          <a href="${asset.ctaURL}" target="_blank"> 
+                          <img alt="${asset.title}" class="tilestemplate__img" src="${asset.fileReference}" title="${asset.title}">
+                          </a>
+                                </sly>
+                            </div>
+                            <a href="${asset.ctaURL}" target="_blank"> 
+                            <div class="tilestemplate__txt-area">
+
+                                <div class="tilestemplate__preheader">${asset.assetTypeDisplay}</div>
+                                <h1 class="tilestemplate__title">${asset.title @ context="html"}</h1>
+                                <div class="tilestemplate__description">${asset.copyText @ context="html"}</div>
+
+                                <div class="tilestemplate__btn-area a-cta--default-link-color">
+
+                                    <div class="a-cta a-cta--design-link">
+                                            <span class="a-cta__button">
+
+                                                <span class="a-cta__button-text">
+                                                    ${asset.ctaLabel}
+                                                </span>
+                                                <span class="a-cta__button-icon">
+                                                    <svg class="a-icon a-icon--arrow-up-right">
+                                                        <use xlink:href="#arrow-up-right"></use>
+                                                    </svg>
+                                                </span>
+
+
+                                            </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            </a>
+                            </div>
+                       <!--/* </a> */-->
+                    </sly>
+                    <div class="reference__err-msg" data-sly-test="${!model.hasAssets}">No related assets found</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+
+

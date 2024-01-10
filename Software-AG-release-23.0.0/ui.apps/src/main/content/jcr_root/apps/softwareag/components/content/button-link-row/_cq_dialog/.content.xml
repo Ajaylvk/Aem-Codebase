@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Button Link Row Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[showhidetab.clientlibs]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <ctatypes
+                                        granite:class="cq-dialog-dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        cq-dialog-dropdown-showhide-target=".links-showhide-target"
+                                        fieldDescription="Select the desired structure of widget"
+                                        fieldLabel="CTA Types"
+                                        name="./ctatypes">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <select
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Select the CTA type you want"
+                                                value=""/>
+                                            <button
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Only Button"
+                                                value="button"/>
+                                            <links
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Only Links"
+                                                value="links"/>
+                                            <buttonandlinks
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Both Button and Links"
+                                                value="linksbutton"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-dropdown-showhide-target=".links-showhide-target"/>
+                                    </ctatypes>
+                                    <widgetalignment
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Defines the alignment of Widget"
+                                        fieldLabel="Widget Alignment"
+                                        name="./position">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Left"
+                                                value="left-align"/>
+                                            <center
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center"
+                                                value="center-align"/>
+                                        </items>
+                                    </widgetalignment>
+                                    <backgroundcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="The Background color of the component."
+                                        fieldLabel="Background Color"
+                                        name="./backgroundColor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <select
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Select Widget Background Color"
+                                                value=""/>
+                                            <corelight
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Light"
+                                                value="input__colorselect-background-color7"/>
+											<coredark150
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 120"
+                                                value="input__colorselect-background-color8"/>
+                                            <coredark950
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 950"
+                                                value="input__colorselect-background-color10"/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="input__colorselect-background-color1"/>
+                                        </items>
+                                    </backgroundcolor>
+                                    <onlylinkcontainer
+                                        granite:class="links-showhide-target"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <nooflinks
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Defines the number of links "
+                                                fieldLabel="No of Links"
+                                                name="./nooflinks">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <one
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="One"
+                                                        value="1"/>
+                                                    <two
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Two"
+                                                        value="2"/>
+                                                    <three
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Three"
+                                                        value="3"/>
+                                                    <four
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Four"
+                                                        value="4"/>
+                                                    <five
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Five"
+                                                        value="5"/>
+                                                </items>
+                                            </nooflinks>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="links"/>
+                                    </onlylinkcontainer>
+                                    <buttonlinkcontainer
+                                        granite:class="links-showhide-target"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <buttonlinks
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Select the desired Variation"
+                                                fieldLabel="Button Link Variation"
+                                                name="./buttonlinks">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <one
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="Button and 1 Link"
+                                                        value="1"/>
+                                                    <two
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Button and 2 Links"
+                                                        value="2"/>
+                                                    <three
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text=" Button and 3 Links"
+                                                        value="3"/>
+                                                </items>
+                                            </buttonlinks>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="linksbutton"/>
+                                    </buttonlinkcontainer>
+                                </items>
+                            </column>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

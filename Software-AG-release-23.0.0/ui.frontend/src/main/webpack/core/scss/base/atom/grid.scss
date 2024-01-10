@@ -1,0 +1,53 @@
+
+@for $i from 1 to $grid-column-count + 1 {
+    .span#{$i} {
+        @include columns($i);
+    }
+}
+
+.content-width {
+    padding-left: $grid-margin + px;
+    padding-right: $grid-margin + px;
+    width: 95%;
+    max-width: $grid-max-width + px;
+    margin: 0 auto;
+    
+    .content-width {
+        width: 100%;
+    }
+
+    @include mq-except-desktop {
+        width: 100%;
+    }
+    @include mq-phone {
+        padding-left: $grid-phone-horizontal-margin;
+        padding-right: $grid-phone-horizontal-margin;
+    }
+    @include mq-tablet {
+        padding-left: $grid-tablet-horizontal-margin;
+        padding-right: $grid-tablet-horizontal-margin;
+    }
+
+    @include mq-desktop {
+        @include spacing('margin-bottom', m);
+    }
+}
+
+.row {
+    @include clearfix();
+}
+
+.col {
+    @include grid-column();
+}
+
+// Columns are collapsed below desktop, no need to float there.
+@include mq-desktop {
+    .col + .col:last-child {
+        float: right;
+    }
+
+    .col + .col.end {
+        float: left;
+    }
+}

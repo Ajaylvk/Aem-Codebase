@@ -1,0 +1,124 @@
+$icon-width-max: 30rem;
+$color-box-width-max: 75rem;
+
+.teaserbanner__wrapper {
+    position: relative;
+    width: 100%;
+
+    .teaserbanner__background-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        min-width: 100%;
+        min-height: 100%;
+        height: 100%;
+
+        .s7dm-dynamic-media {
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .content-width {
+        @include spacing(padding, l);
+        margin-bottom: 0;
+    }
+}
+
+.teaserbanner__container {
+    @include spacing(padding, l);
+    position: relative;
+    margin: auto;
+
+    // selector is applied if any color class is present
+    &[class*=' input__colorselect-background-color'] {
+        @include spacing(padding, m);
+        max-width: $color-box-width-max;
+    }
+
+    @include mq-phone {
+        padding: 0;
+    }
+
+    .a-h2,
+    .teaserbanner__icon,
+    .teaserbanner__text {
+        position: relative;
+    }
+
+    .teaserbanner__icon {
+        max-width: 100%;
+
+        @include mq-except-phone {
+            max-width: $icon-width-max;
+        }
+    }
+
+    &[data-position=left] {
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto;
+
+        .s7dm-dynamic-media,
+        .a-h2 {
+            text-align: left;
+        }
+
+        @include mq-until-tablet {
+            margin: 0 auto;
+        }
+    }
+
+    &[data-position=middle] {
+        text-align: center;
+        margin: 0 auto;
+
+        .s7dm-dynamic-media,
+        .a-h2 {
+            text-align: center;
+        }
+    }
+
+    &[data-position=right] {
+        text-align: right;
+        margin-right: 0;
+        margin-left: auto;
+
+        .s7dm-dynamic-media,
+        .a-h2 {
+            text-align: right;
+        }
+
+        @include mq-until-tablet {
+            margin: 0 auto;
+        }
+    }
+
+    .a-h2,
+    .teaserbanner__icon {
+        @include spacing(margin-bottom, m);
+    }
+
+    .teaserbanner__text {
+        @include spacing(margin-bottom, xl);
+    }
+
+    .s7dm-dynamic-media {
+        height: 100%;
+    }
+}
+
+.swiper-slide .teaserbanner__container {
+    @include spacing(padding, l);
+    width: auto;
+}

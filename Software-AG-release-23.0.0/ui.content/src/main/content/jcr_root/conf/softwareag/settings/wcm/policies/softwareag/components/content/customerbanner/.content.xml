@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:rep="internal"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Software AG Customerbanner Component Policy"
+    policyResourceType="softwareag/components/content/customerbanner"
+    sling:resourceType="wcm/core/components/policy/policy">
+    <styleGroups_disabled jcr:primaryType="nt:unstructured">
+        <item0
+            cq:styleGroupLabel="Background Color"
+            jcr:primaryType="nt:unstructured">
+            <cq:styles jcr:primaryType="nt:unstructured">
+                <item0
+                    cq:styleClasses="input__colorselect-background-color1"
+                    cq:styleId="input__colorselect-background-color1"
+                    cq:styleLabel="White"
+                    jcr:primaryType="nt:unstructured"/>
+                <item1
+                    cq:styleClasses="input__colorselect-background-color2"
+                    cq:styleId="input__colorselect-background-color2"
+                    cq:styleLabel="Bright Pulse"
+                    jcr:primaryType="nt:unstructured"/>
+                <item2
+                    cq:styleClasses="input__colorselect-background-color3"
+                    cq:styleId="input__colorselect-background-color3"
+                    cq:styleLabel="Bright Sense"
+                    jcr:primaryType="nt:unstructured"/>
+                <item3
+                    cq:styleClasses="input__colorselect-background-color4"
+                    cq:styleId="input__colorselect-background-color4"
+                    cq:styleLabel="Bright Life"
+                    jcr:primaryType="nt:unstructured"/>
+                <item4
+                    cq:styleClasses="input__colorselect-background-color5"
+                    cq:styleId="input__colorselect-background-color5"
+                    cq:styleLabel="Deep Pulse"
+                    jcr:primaryType="nt:unstructured"/>
+                <item5
+                    cq:styleClasses="input__colorselect-background-color6"
+                    cq:styleId="input__colorselect-background-color6"
+                    cq:styleLabel="Deep Sense"
+                    jcr:primaryType="nt:unstructured"/>
+                <item6
+                    cq:styleClasses="input__colorselect-background-color7"
+                    cq:styleId="input__colorselect-background-color7"
+                    cq:styleLabel="Core Light"
+                    jcr:primaryType="nt:unstructured"/>
+                <item7
+                    cq:styleClasses="input__colorselect-background-color8"
+                    cq:styleId="input__colorselect-background-color8"
+                    cq:styleLabel="Core Black"
+                    jcr:primaryType="nt:unstructured"/>
+            </cq:styles>
+        </item0>
+    </styleGroups_disabled>
+</jcr:root>

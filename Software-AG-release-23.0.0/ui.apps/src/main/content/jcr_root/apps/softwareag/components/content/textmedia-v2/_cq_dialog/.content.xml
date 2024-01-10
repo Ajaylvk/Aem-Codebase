@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Text/Media Component v2"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[showhidetab.clientlibs]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Text"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/select"
+                                        class="cq-dialog-tab-showhide"
+                                        cq-dialog-tab-showhide-target=".image-video-tab-showhide-target"
+                                        fieldLabel="Asset Type"
+                                        name="./type">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <selectdropdown
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select Asset Type"
+                                                value="select"/>
+                                            <svg
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SVG"
+                                                value="svg"/>
+                                            <asset
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Non-SVG/Video"
+                                                value="asset"/>
+											<embed
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Embed"
+                                                value="embed"/>
+                                        </items>
+                                    </type>
+                                    <textalignment
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Defines the alignment of the text"
+                                        fieldLabel="Text Alignment"
+                                        name="./position">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Left"
+                                                value="left"/>
+                                            <right
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Right"
+                                                value="right"/>
+                                        </items>
+                                    </textalignment>
+                                    <columndivision
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Defines the division of the columns"
+                                        fieldLabel="Column Division"
+                                        name="./columnDivision">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <select
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Select the column division"
+                                                value=""/>
+                                            <_x0036_0-40
+                                                jcr:primaryType="nt:unstructured"
+                                                text="60%-40%"
+                                                value="60%-40%"/>
+                                            <_x0035_0-50
+                                                jcr:primaryType="nt:unstructured"
+                                                text="50%-50%"
+                                                value="50%-50%"/>
+                                        </items>
+                                    </columndivision>
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author this field only when Text Media v2 component is used. No need to author when Tab Text variation is used."
+                                        fieldLabel="Title"
+                                        name="./title"/>
+                                    <text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Richtext editor for adding Text"
+                                        fieldLabel="copyText"
+                                        name="./copyText"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline
+                                                    jcr:primaryType="nt:unstructured"
+                                                    toolbar="[format#bold,format#italic,format#underline,subsuperscript#superscript,subsuperscript#subscript,#justify,#lists,edit#paste-plaintext,#styles]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                            ref="justify"/>
+                                                        <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                            ref="lists"/>
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="paraformat:getFormats:paraformat-pulldown"
+                                                            ref="paraformat"/>
+                                                        <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="styles:getStyles:styles-pulldown"
+                                                            ref="styles"/>
+                                                    </popovers>
+                                                </inline>
+                                                <dialogFullScreen
+                                                    jcr:primaryType="nt:unstructured"
+                                                    toolbar="[format#bold,format#italic,format#underline,subsuperscript#superscript,subsuperscript#subscript,#justify,lists#unordered,lists#ordered,links#modifylink,links#unlink,#paraformat,table#createoredit,misctools#sourceedit,edit#paste-plaintext,#styles,image#imageProps]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                            ref="justify"/>
+                                                        <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                            ref="lists"/>
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="paraformat:getFormats:paraformat-pulldown"
+                                                            ref="paraformat"/>
+                                                        <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="styles:getStyles:styles-pulldown"
+                                                            ref="styles"/>
+                                                    </popovers>
+                                                </dialogFullScreen>
+                                                <tableEditOptions
+                                                    jcr:primaryType="nt:unstructured"
+                                                    toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                            </cui>
+                                        </uiSettings>
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format
+                                                jcr:primaryType="nt:unstructured"
+                                                features="bold,italic,underline"/>
+                                            <justify
+                                                jcr:primaryType="nt:unstructured"
+                                                features="justifyleft,justifycenter,justifyright"/>
+                                            <links
+                                                jcr:primaryType="nt:unstructured"
+                                                features="modifylink,unlink,anchor"/>
+                                            <lists
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*"/>
+                                            <paraformat
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*">
+                                                <formats jcr:primaryType="nt:unstructured">
+                                                    <p
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Paragraph"
+                                                        tag="p"/>
+                                                    <h1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="H1"
+                                                        tag="h1"/>
+                                                    <h2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="H2"
+                                                        tag="h2"/>
+                                                    <h3
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="H3"
+                                                        tag="h3"/>
+                                                    <h4
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="H4"
+                                                        tag="h4"/>
+                                                    <h5
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="H5"
+                                                        tag="h5"/>
+                                                </formats>
+                                            </paraformat>
+                                            <styles
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*">
+                                                <styles jcr:primaryType="cq:WidgetCollection">
+                                                    <h4L
+                                                        jcr:primaryType="nt:unstructured"
+                                                        cssName="a-h4l"
+                                                        text="H4L Heading"/>
+                                                    <display
+                                                        jcr:primaryType="nt:unstructured"
+                                                        cssName="a-display"
+                                                        text="Display"/>
+                                                </styles>
+                                            </styles>
+                                            <table
+                                                jcr:primaryType="nt:unstructured"
+                                                features="table,removetable,insertrow,removerow,insertcolumn,removecolumn,cellprops,mergecells,splitcell,selectrow,selectcolumns">
+                                                <hiddenHeaderConfig
+                                                    jcr:primaryType="nt:unstructured"
+                                                    hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                    hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                            <subsuperscript
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*"/>
+                                            <edit
+                                                jcr:primaryType="nt:unstructured"
+                                                defaultPasteMode="plaintext"
+                                                features="cut,copy,paste-plaintext"/>
+                                            <findreplace
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Find and Replace"
+                                                features="find replace"/>
+                                            <misctools
+                                                jcr:primaryType="nt:unstructured"
+                                                features="sourceedit"/>
+                                        </rtePlugins>
+                                    </text>
+                                </items>
+                            </column>
+                        </items>
+                    </text>
+					<embedproperties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Embed"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <propertiesEmbed
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Embed Properties"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <html
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        emptyText="Paste embed code"
+                                                        fieldDescription="The code of the content to embed. The embed code is filtered to remove unsafe tags, such as the script tag."
+                                                        fieldLabel="HTML"
+                                                        name="./html"
+                                                        />
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </columns>
+                                </items>
+                            </propertiesEmbed>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target embed"/>
+                    </embedproperties>
+                    <asset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Non-SVG/Video"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:hideChildren="[title,height,width]">
+                                    <file
+                                        granite:id="dmFileReference"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fieldDescription="Please add asset here."
+                                        fieldLabel="Add asset here"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./fileReference"
+                                        mimeTypes="[image/.*,video/*,Multipart/Related;type=application/x-SpinSet,Multipart/Related;type=application/x-ImageSet,Multipart/Related;type=application/x-MixedMediaSet]"
+                                        multiple="{Boolean}false"
+                                        name="./file"
+                                        title="Asset"
+                                        useHTML5="{Boolean}true"/>
+                                    <alt
+                                        granite:id="dmAltText"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        fieldLabel="Alternative Text"
+                                        name="./altText"
+                                        validation="imageAlternativeText"/>
+                                </items>
+                            </column>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target asset"/>
+                    </asset>
+                    <svg
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SVG"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <file
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fieldDescription="Please add image here."
+                                        fieldLabel="SVG Image Field"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./image"
+                                        mimeTypes="[image/svg+xml]"
+                                        multiple="{Boolean}false"
+                                        name="./filesvg"
+                                        title="SVG Image Field"
+                                        useHTML5="{Boolean}true"/>
+                                    <alt
+                                        granite:id="dmAltText"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        fieldLabel="Alternative Text"
+                                        name="./altText2"
+                                        validation="imageAlternativeText"/>
+                                </items>
+                            </column>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target svg"/>
+                    </svg>
+                    <dmSettings
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_dm_settings"/>
+                    <analyticsTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_analytics"/>
+                    <targetTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_target"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

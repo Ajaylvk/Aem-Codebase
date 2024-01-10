@@ -1,0 +1,7 @@
+<sly data-sly-use.meta="com.softwareag.core.models.page.PageMetaModel">
+    <sly data-sly-list.item="${meta.websiteMetadataProvider.currentPageLanguageVersions}">
+        <link rel="alternate" hreflang="${item.localeString}" href="${item.languageHref}" />
+        <link data-sly-test="${item.isXDefault == true}" rel="alternate" hreflang="x-default" href="${item.languageHref}" />
+    </sly>
+    <link rel="canonical" href="${meta.websiteMetadataProvider.uRL}" />
+</sly>

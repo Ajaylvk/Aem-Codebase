@@ -1,0 +1,36 @@
+.nav-arrowlink-wrapper:hover {
+  color: #8e3cf7;
+  text-decoration: underline;
+  .cmp-link__button-icon {
+    svg {
+      fill: #8e3cf7 !important;
+    }
+  }
+}
+.nav-arrowlink-wrapper {
+  a {
+    div {
+      display: inline;
+    }
+  }
+  .cmp-link__button-icon {
+    display: inline-flex;
+    align-self: center;
+  }
+  .cmp-link__button-icon svg {
+    height: 1.6rem;
+    width: 1.8rem;
+    margin-left: 6px;
+    font-size: 3.2rem;
+    transform: rotate(90deg) !important;
+  }
+  .cmp-link__button-icon.svg-baseline {
+    top: 0.4rem;
+    position: relative;
+    width: 20px;
+    margin-left: -6px;
+  }
+}
+.navarrowlink-leftpadding {
+  padding-left: 4.8rem;
+}

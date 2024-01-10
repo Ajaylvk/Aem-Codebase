@@ -1,0 +1,15 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-test.hasContent="${properties.fileReference}"
+     class="media__container">
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationModel=integrationModel}"></sly>

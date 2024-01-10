@@ -1,0 +1,19 @@
+<div class="socialmediabar">
+    <ul class="m-horizontal-list" data-sly-use.templates="softwareag/components/commons/templates.html"
+        data-sly-use.socialMediaIconsModel="com.softwareag.core.models.socialmediabar.SocialMediaBarModel"
+        data-sly-test.hasContent="${socialMediaIconsModel.socialMediaItems}"
+        data-sly-list.socialItem="${socialMediaIconsModel.socialMediaItems}">
+
+        <li class="m-horizontal-list__item">
+            <a href="${socialItem.href}"
+               target="${socialItem.target}"
+               title="${socialItem.altText}"
+               class="socialmediabar__link a-anchor-image-footer"
+               data-attrib-type="image"
+               data-attrib-name="${socialItem.altText}">
+                <img src="${socialItem.image}" alt="${socialItem.altText}" title="${socialItem.altText}" class="socialmediabar__icon" />
+            </a>
+        </li>
+    </ul>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

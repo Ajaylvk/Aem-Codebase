@@ -1,0 +1,21 @@
+<div
+    data-sly-use.marketoModel="com.softwareag.core.models.marketoform.MarketoFormModel"
+    class="configuration__block">
+
+    <h2 class="a-h2" id="tabledesc">Marketo Configuration</h2>
+
+    <p data-sly-test="${!marketoModel.marketoEndpoint || !marketoModel.marketoEndpoint}"
+         class="message-error">
+
+        Marketo Endpoint or Munchkin Account Id Not Configured Yet
+    </p>
+
+    <div class="property__block">
+        <dl>
+            <dt data-sly-test="${marketoModel.marketoEndpoint}">Configured Marketo Server:</dt>
+            <dd data-sly-test="${marketoModel.marketoEndpoint}">${marketoModel.marketoEndpoint}</dd>
+            <dt data-sly-test="${marketoModel.marketoMunchkinAccountId}">Configured Marketo Munchkin Account ID:</dt>
+            <dd data-sly-test="${marketoModel.marketoMunchkinAccountId}">${marketoModel.marketoMunchkinAccountId}</dd>
+        </dl>
+    </div>
+</div>

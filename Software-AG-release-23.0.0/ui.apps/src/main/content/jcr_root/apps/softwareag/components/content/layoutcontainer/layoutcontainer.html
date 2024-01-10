@@ -1,0 +1,32 @@
+<sly data-sly-use.layout="com.softwareag.core.models.LayoutContainer"
+	data-sly-use.template="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!layout.columnCount}" />
+<div class="layoutcontainer-wrapper ${layout.backgroundColor}">
+	<div class="layoutcontainer_spacing">
+		<div class="column-layout__container ${layout.animation} ${layout.noMarginLeft ? 'no-marginleft' : ''}">
+			<h2 class="a-h2-new ${layout.description ? ' ': 'no-layout-description'}" data-sly-test="${layout.title}">
+				<pre class="aem__textarea">
+                ${layout.title @ context = 'html'}
+            </pre>
+			</h2>
+			<div class="a-bodycopy layoutcontainer__text" data-sly-test="${layout.description}">${layout.description @
+				context='html'}</div>
+
+
+			<section class="a-container">
+				<div class="container">
+					<div class="row a-container__layout-section tile-layout-${layout.columnCount}">
+						<sly data-sly-resource="${'container' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+					</div>
+				</div>
+			</section>
+
+			<sly
+				data-sly-resource="${ @ path='layout-button', resourceType='softwareag/components/content/button', decoration=true}">
+			</sly>
+
+		</div>
+	</div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!layout.columnCount}"></sly>

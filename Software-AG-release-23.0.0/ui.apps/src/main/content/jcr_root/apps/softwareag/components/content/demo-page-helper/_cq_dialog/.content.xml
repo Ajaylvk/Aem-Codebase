@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+  jcr:primaryType="nt:unstructured"
+  jcr:title="Demo Helper Component"
+  sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <headline
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/foundation/form/textfield"
+                      fieldLabel="Label"
+                      name="./label"
+                    />
+
+                    <listFrom
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/foundation/form/select"
+                      class="cq-dialog-dropdown-showhide field-is-listFrom"
+                      cq-dialog-dropdown-showhide-target=" .list-select-hide-show"
+                      fieldLabel="Device"
+                      name="./viewportDimensions">
+                        <items jcr:primaryType="nt:unstructured">
+                            <iphonex
+                              jcr:primaryType="nt:unstructured"
+                              selected="{Boolean}true"
+                              text="iPhone X"
+                              value="iframe-iphone-x"/>
+                            <iphonexland
+                              jcr:primaryType="nt:unstructured"
+                              selected="{Boolean}true"
+                              text="iPhone X (Landscape)"
+                              value="iframe-iphone-x-landscape"/>
+                            <ipad
+                              jcr:primaryType="nt:unstructured"
+                              text="iPad"
+                              value="iframe-ipad"/>
+                            <ipadland
+                              jcr:primaryType="nt:unstructured"
+                              text="iPad (Landscape)"
+                              value="iframe-ipad-landscape"/>
+                            <ipadpro
+                              jcr:primaryType="nt:unstructured"
+                              text="iPad Pro"
+                              value="iframe-ipad-pro"/>
+                            <ipadproland
+                              jcr:primaryType="nt:unstructured"
+                              text="iPad Pro (Landscape)"
+                              value="iframe-ipad-pro-landscape"/>
+                            <desktop
+                              jcr:primaryType="nt:unstructured"
+                              text="Desktop"
+                              value="iframe-desktop"/>
+
+                        </items>
+                    </listFrom>
+                    <width
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/foundation/form/textfield"
+                      fieldLabel="Width"
+                      name="./width"
+                    />
+                    <height
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/foundation/form/textfield"
+                      fieldLabel="Height"
+                      name="./height"
+                    />
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

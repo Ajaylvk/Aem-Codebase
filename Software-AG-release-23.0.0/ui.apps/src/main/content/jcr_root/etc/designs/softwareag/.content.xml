@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="cq:Page">
+    <jcr:content jcr:primaryType="nt:unstructured" jcr:title="spkv Site Design"
+                 sling:resourceType="wcm/core/components/designer">
+        <demo-component-page jcr:primaryType="nt:unstructured">
+            <par-stage jcr:primaryType="nt:unstructured"
+                       components="dwp/components/content/stage-start/stage-element"/>
+            <topics jcr:primaryType="nt:unstructured">
+                <par-teaser-topic_1 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_2 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_3 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_4 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_5 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_6 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_7 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_8 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_9 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+            </topics>
+            <par-main jcr:primaryType="nt:unstructured"
+                      sling:resourceType="wcm/foundation/components/parsys"
+                      components="[dwp/components/content/linklist,dwp/components/content/contactbox,dwp/components/content/download,dwp/components/content/reference,dwp/components/content/text-image,dwp/components/content/tab,spkv/components/content/anchorcontainer,dwp/components/structure/accordion,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,dwp/components/content/teaser-icon-container,dwp/components/content/separator,spkv/components/content/seitenabbinder,spkv/components/content/shop-now,dwp/components/content/trackingoptout,spkv/components/content/application-tiles]">
+                <anchorcontainer jcr:primaryType="nt:unstructured">
+                    <par-anchor jcr:primaryType="nt:unstructured"
+                                components="[dwp/components/content/teaser-icon-container,dwp/components/content/linklist,dwp/components/content/image,dwp/components/content/text-image,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/reference,dwp/components/structure/image,spkv/components/content/video,dwp/components/content/slideshow,dwp/components/structure/accordion,dwp/components/content/tab,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"
+                                            components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <teaser-text-image jcr:primaryType="nt:unstructured">
+                            <par-teaser-textimage jcr:primaryType="nt:unstructured"
+                                                  components="dwp/components/content/teaser-text-image/teaser-textimage-item"/>
+                        </teaser-text-image>
+                        <teaser-icon-container jcr:primaryType="nt:unstructured">
+                            <par-teaser-icon jcr:primaryType="nt:unstructured"
+                                             components="dwp/components/content/teaser-icon-container/teaser-icon"/>
+                        </teaser-icon-container>
+                    </par-anchor>
+                </anchorcontainer>
+                <linklist jcr:primaryType="nt:unstructured">
+                    <par-linklist jcr:primaryType="nt:unstructured"
+                                  components="dwp/components/content/linklist/linklist-item"/>
+                </linklist>
+                <contactbox jcr:primaryType="nt:unstructured">
+                    <par-contactbox jcr:primaryType="nt:unstructured"
+                                    components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                </contactbox>
+                <download jcr:primaryType="nt:unstructured">
+                    <par-download jcr:primaryType="nt:unstructured"
+                                  components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                        <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                components="dwp/components/content/download/download-element"/>
+                    </par-download>
+                </download>
+                <tab jcr:primaryType="nt:unstructured">
+                    <par-tab-item jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="wcm/foundation/components/parsys"
+                                  components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item>
+                    <par-tab-item_1 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_1>
+                    <par-tab-item_2 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_2>
+                    <par-tab-item_3 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_3>
+                    <par-tab-item_4 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_4>
+                    <par-tab-item_5 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_5>
+                    <par-tab-item_6 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_6>
+                    <par-tab-item_7 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_7>
+                    <par-tab-item_8 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_8>
+                    <par-tab-item_9 jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_9>
+                    <par-tab-item_10 jcr:primaryType="nt:unstructured"
+                                     sling:resourceType="wcm/foundation/components/parsys"
+                                     components="[dwp/components/content/text-image,dwp/components/content/linklist,dwp/components/structure/accordion,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/image,spkv/components/content/video,dwp/components/content/slideshow,spkv/components/content/shop-now]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="wcm/foundation/components/parsys"
+                                           components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="wcm/foundation/components/parsys"
+                                                           components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                    </par-tab-item_10>
+
+                </tab>
+                <accordion jcr:primaryType="nt:unstructured">
+                    <par-accordion jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="wcm/foundation/components/parsys"
+                                   components="[dwp/components/structure/accordion/accordion-element]">
+                        <accordion-element jcr:primaryType="nt:unstructured">
+                            <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                   sling:resourceType="wcm/foundation/components/parsys"
+                                                   components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                        </accordion-element>
+                    </par-accordion>
+                </accordion>
+                <teaser-text-image jcr:primaryType="nt:unstructured">
+                    <par-teaser-textimage jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/teaser-text-image/teaser-textimage-item"/>
+                </teaser-text-image>
+                <teaser-icon-container jcr:primaryType="nt:unstructured"
+                                       icons="[/content/dam/spkv/icons/cart-circle.svg\\Business Shop\\,/content/dam/spkv/icons/basket-circle.svg\\Mitarbeiter Shop\\,/content/dam/spkv/icons/calendar-circle.svg\\Veranstaltungskalender\\]">
+                    <par-teaser-icon jcr:primaryType="nt:unstructured"
+                                     components="dwp/components/content/teaser-icon-container/teaser-icon"/>
+                </teaser-icon-container>
+            </par-main>
+            <!--<par-news jcr:primaryType="nt:unstructured"
+                      sling:resourceType="wcm/foundation/components/parsys"
+                      components="[softwareag/components/content/news]">
+                <news jcr:primaryType="nt:unstructured"
+                      sling:resourceType="softwareag/components/content/news"
+                      parsysLimit="1"
+                      parsysLimitErrorMessage="Es darf nur eine Aktuelles-Komponente eingefügt werden.">
+                </news>
+            </par-news>-->
+            <par-secondary jcr:primaryType="nt:unstructured"
+                           sling:resourceType="wcm/foundation/components/parsys"
+                           components="[dwp/components/content/teaser-icon-container,dwp/components/content/teaser-text-image,dwp/components/content/download,dwp/components/structure/accordion,dwp/components/content/contactbox,spkv/components/content/anchorcontainer,dwp/components/content/reference]">
+                <teaser-text-image jcr:primaryType="nt:unstructured">
+                    <par-teaser-textimage jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/teaser-text-image/teaser-textimage-item"/>
+                </teaser-text-image>
+                <teaser-icon-container jcr:primaryType="nt:unstructured"
+                                       icons="[/content/dam/spkv/icons/cart-circle.svg\\Business Shop\\,/content/dam/spkv/icons/basket-circle.svg\\Mitarbeiter Shop\\,/content/dam/spkv/icons/calendar-circle.svg\\Veranstaltungskalender\\]">
+                    <par-teaser-icon jcr:primaryType="nt:unstructured"
+                                     components="dwp/components/content/teaser-icon-container/teaser-icon"/>
+                </teaser-icon-container>
+                <download jcr:primaryType="nt:unstructured">
+                    <par-download jcr:primaryType="nt:unstructured"
+                                  components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                        <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                components="dwp/components/content/download/download-element"/>
+                    </par-download>
+                </download>
+                <accordion jcr:primaryType="nt:unstructured">
+                    <par-accordion jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="wcm/foundation/components/parsys"
+                                   components="[dwp/components/structure/accordion/accordion-element]">
+                        <accordion-element jcr:primaryType="nt:unstructured">
+                            <par-accordion-element jcr:primaryType="nt:unstructured"
+                                                   sling:resourceType="wcm/foundation/components/parsys"
+                                                   components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                        </accordion-element>
+                    </par-accordion>
+                </accordion>
+                <contactbox jcr:primaryType="nt:unstructured">
+                    <par-contactbox jcr:primaryType="nt:unstructured"
+                                    components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                </contactbox>
+                <anchorcontainer jcr:primaryType="nt:unstructured">
+                    <par-anchor jcr:primaryType="nt:unstructured"
+                                components="[dwp/components/content/teaser-icon-container,dwp/components/content/linklist,dwp/components/content/image,dwp/components/content/text-image,dwp/components/content/download,dwp/components/content/contactbox,dwp/components/content/reference,dwp/components/content/teaser-text-image,dwp/components/structure/image,spkv/components/content/video,dwp/components/content/slideshow,dwp/components/structure/accordion,dwp/components/content/tab]">
+                        <linklist jcr:primaryType="nt:unstructured">
+                            <par-linklist jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/linklist/linklist-item"/>
+                        </linklist>
+                        <download jcr:primaryType="nt:unstructured">
+                            <par-download jcr:primaryType="nt:unstructured"
+                                          components="[dwp/components/content/download/download-element,dwp/components/content/download/download-accordion]">
+                                <par-download-accordion jcr:primaryType="nt:unstructured"
+                                                        components="dwp/components/content/download/download-element"/>
+                            </par-download>
+                        </download>
+                        <accordion jcr:primaryType="nt:unstructured">
+                            <par-accordion
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"
+                                    components="[dwp/components/structure/accordion/accordion-element]">
+                                <accordion-element jcr:primaryType="nt:unstructured">
+                                    <par-accordion-element
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"
+                                            components="[dwp/components/content/text-image,spkv/components/content/video]"/>
+                                </accordion-element>
+                            </par-accordion>
+                        </accordion>
+                        <contactbox jcr:primaryType="nt:unstructured">
+                            <par-contactbox jcr:primaryType="nt:unstructured"
+                                            components="[dwp/components/content/contactbox/item,dwp/components/content/reference]"/>
+                        </contactbox>
+                        <teaser-text-image jcr:primaryType="nt:unstructured">
+                            <par-teaser-textimage jcr:primaryType="nt:unstructured"
+                                                  components="dwp/components/content/teaser-text-image/teaser-textimage-item"/>
+                        </teaser-text-image>
+                        <teaser-icon-container jcr:primaryType="nt:unstructured">
+                            <par-teaser-icon jcr:primaryType="nt:unstructured"
+                                             components="dwp/components/content/teaser-icon-container/teaser-icon"/>
+                        </teaser-icon-container>
+                    </par-anchor>
+                </anchorcontainer>
+            </par-secondary>
+            <par-sub jcr:primaryType="nt:unstructured"
+                     sling:resourceType="wcm/foundation/components/parsys"
+                     components="[dwp/components/content/teaser-marketing-container,dwp/components/content/teaser-text-container,dwp/components/content/teaser-icon-container,dwp/components/content/reference]">
+                <teaser-marketing-container
+                        jcr:primaryType="nt:unstructured">
+                    <par-teaser-marketing jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/teaser-marketing-container/teaser-marketing"/>
+                </teaser-marketing-container>
+                <teaser-text-container jcr:primaryType="nt:unstructured">
+                    <par-teaser-text jcr:primaryType="nt:unstructured"
+                                     components="dwp/components/content/teaser-text-container/teaser-text"/>
+                </teaser-text-container>
+                <teaser-icon-container jcr:primaryType="nt:unstructured">
+                    <par-teaser-icon jcr:primaryType="nt:unstructured"
+                                     components="dwp/components/content/teaser-icon-container/teaser-icon"/>
+                </teaser-icon-container>
+            </par-sub>
+        </demo-component-page>
+
+        <start-page jcr:primaryType="nt:unstructured">
+            <stage-start jcr:primaryType="nt:unstructured">
+                <par-stage jcr:primaryType="nt:unstructured"
+                           components="dwp/components/content/stage-start/stage-element"/>
+            </stage-start>
+            <teaser-icon-container jcr:primaryType="nt:unstructured"
+                                   icons="[/etc/designs/cloudservices\\Business Shop\\,\\Mitarbeiter Shop\\,\\Veranstaltungskalender\\]">
+                <par-teaser-icon jcr:primaryType="nt:unstructured"
+                                 components="dwp/components/content/teaser-icon-container/teaser-icon"/>
+            </teaser-icon-container>
+            <topics jcr:primaryType="nt:unstructured">
+                <par-teaser-topic_1 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_2 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_3 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_4 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_5 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_6 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_7 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_8 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+                <par-teaser-topic_9 jcr:primaryType="nt:unstructured"
+                                    components="spkv/components/content/teaserThemeElement"/>
+            </topics>
+            <news jcr:primaryType="nt:unstructured">
+                <par-teaser-news jcr:primaryType="nt:unstructured"
+                                 components="spkv/components/content/teaser-news"/>
+            </news>
+            <par-main jcr:primaryType="nt:unstructured"
+                      sling:resourceType="wcm/foundation/components/parsys"
+                      components="[dwp/components/content/teaser-text-image,dwp/components/content/teaser-icon-container,spkv/components/content/application-tiles,dwp/components/content/image,dwp/components/content/reference,spkv/components/content/video,dwp/components/content/slideshow]">
+                <teaser-text-image jcr:primaryType="nt:unstructured">
+                    <par-teaser-textimage jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/teaser-text-image/teaser-textimage-item"/>
+                </teaser-text-image>
+            </par-main>
+            <par-ref-login jcr:primaryType="nt:unstructured"
+                           sling:resourceType="wcm/foundation/components/parsys"
+                           components="[dwp/components/content/reference]">
+            </par-ref-login>
+            <par-ref-login-gray jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys"
+                                components="[dwp/components/content/reference]">
+            </par-ref-login-gray>
+            <par-sub jcr:primaryType="nt:unstructured"
+                     sling:resourceType="wcm/foundation/components/parsys"
+                     components="[dwp/components/content/teaser-marketing-container,dwp/components/content/teaser-text-container]">
+                <teaser-marketing-container
+                        jcr:primaryType="nt:unstructured">
+                    <par-teaser-marketing jcr:primaryType="nt:unstructured"
+                                          components="dwp/components/content/teaser-marketing-container/teaser-marketing"/>
+                </teaser-marketing-container>
+                <teaser-text-container jcr:primaryType="nt:unstructured">
+                    <par-teaser-text jcr:primaryType="nt:unstructured"
+                                     components="dwp/components/content/teaser-text-container/teaser-text"/>
+                </teaser-text-container>
+            </par-sub>
+            <footer jcr:primaryType="nt:unstructured">
+                <par-footer jcr:primaryType="nt:unstructured"
+                            components="dwp/components/content/footer/linklist-footer"/>
+            </footer>
+        </start-page>
+    </jcr:content>
+</jcr:root>

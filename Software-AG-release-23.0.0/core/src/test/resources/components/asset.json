@@ -1,0 +1,83 @@
+{
+    "jcr:primaryType": "dam:Asset",
+    "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "rocks-downhill.jpg",
+        "jcr:lastModified": "Mon Sep 12 2016 17:16:46 GMT+0530",
+        "cq:parentPath": "/content/dam/we-retail/en/activities/biking",
+        "dam:relativePath": "we-retail/en/activities/biking/rocks-downhill.jpg",
+        "renditions": {
+            "jcr:primaryType": "nt:folder",
+            "cq5dam.thumbnail.48.48.png": {
+                "jcr:primaryType": "nt:file",
+                "jcr:content": {
+                    "jcr:primaryType": "nt:resource",
+                    "jcr:mimeType": "image/png",
+                    ":jcr:data": 4456
+                }
+            },
+            "cq5dam.thumbnail.140.100.png": {
+                "jcr:primaryType": "nt:file",
+                "jcr:content": {
+                    "jcr:primaryType": "nt:resource",
+                    "jcr:mimeType": "image/png",
+                    ":jcr:data": 30525
+                }
+            }
+        },
+        "related": {
+            "jcr:primaryType": "nt:unstructured"
+        },
+        "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:mixinTypes": [
+                "cq:Taggable"
+            ],
+            "exif:ExifOffset": 236,
+            "jcr:title": "Rocks Downhill",
+            "dam:Physicalheightininches": "3.5999999046325684",
+            "dam:Physicalwidthininches": "5.400000095367432",
+            "dam:Fileformat": "JPEG",
+            "dam:Progressive": "no",
+            "tiff:ImageLength": 1080,
+            "tiff:YResolution": "300/1",
+            "exif:ColorSpace": 65535,
+            "jcr:lastModifiedBy": "admin",
+            "xmp:CreatorTool": "Adobe Photoshop CC 2015",
+            "dam:extracted": "Mon Sep 12 2016 17:16:45 GMT+0530",
+            "dc:format": "image/jpeg",
+            "dc:description": "Rider in action at Freestyle Mountain Bike Session",
+            "dam:Bitsperpixel": 24,
+            "exif:ExifVersion": "0221",
+            "xmpMM:DocumentID": "adobe:docid:photoshop:74dba6be-260e-1179-a410-b2db021fd2b8",
+            "dam:MIMEtype": "image/jpeg",
+            "tiff:Orientation": 1,
+            "dam:Physicalwidthindpi": 300,
+            "dam:Physicalheightindpi": 300,
+            "tiff:ResolutionUnit": 2,
+            "xmpMM:OriginalDocumentID": "CF46A374E0DA48867093327C56F04AB8",
+            "dc:modified": "Sat Mar 12 2016 12:15:22 GMT+0100",
+            "photoshop:ColorMode": 3,
+            "dam:Numberofimages": 1,
+            "tiff:XResolution": "300/1",
+            "exif:PixelYDimension": 1920,
+            "xmp:MetadataDate": "Tue Mar 08 2016 23:49:35 GMT+0100",
+            "exif:PixelXDimension": 2880,
+            "jcr:lastModified": "Mon Sep 12 2016 17:16:31 GMT+0530",
+            "dam:Numberoftextualcomments": 0,
+            "tiff:BitsPerSample_xmpArrayType": "rdf:Seq",
+            "xmpMM:InstanceID": "xmp.iid:91c02c8a-dada-4527-a853-b7e7bc2bb680",
+            "xmp:ModifyDate": "Tue Mar 08 2016 23:49:35 GMT+0100",
+            "tiff:BitsPerSample": [
+                "8",
+                "8",
+                "8"
+            ],
+            "xmp:CreateDate": "Thu Mar 03 2016 09:57:15 GMT+0100",
+            "tiff:ImageWidth": 1620,
+            "dam:sha1": "3ea16e35ceeb4e6aed5bad0cb7639d043683e787",
+            "dam:size": 333302,
+            "dc:title": "Rocks Downhill"
+        }
+    }
+}

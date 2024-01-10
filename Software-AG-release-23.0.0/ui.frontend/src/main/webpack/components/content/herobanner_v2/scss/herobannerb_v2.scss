@@ -1,0 +1,532 @@
+/* //herobanner C styles
+
+//******Note********* -
+
+In case we are adding new gradients, follow the naming conventions used below, color should start with gradient.
+In case, we are adding new gradient preset, start it with gradient.
+This will ensure, new colors work well with all three options - gradient,preset,transparency combined
+In the case, where no transparency is selected from Dropdown - tranparency-100 is default
+In case ,there is no gradient selected, False is default.
+
+//***********Combination possible*************/
+
+/* 1.Solid color with no transparency or gradient preset
+
+2.Solid color with transparency only
+
+3. Solid color with gradient preset only
+
+4.Solid color with both transparency and gradient preset
+
+5.Gradient color with no transparency or gradient preset
+
+6.Gradient color with transparency only
+
+7.Gradient color with gradient preset only
+
+8.Gradient color with both transparency and gradient preset
+
+We can form around 200 combinations of backgrounds with this setup.
+
+(20 for each color)  */
+
+:root {
+  div[data-gradient-color="multicolor-gradient"] {
+    --color-1: #8e3cf7;
+    --color-2: #3cc1b7;
+    //rgb values of the dominant color
+    --gradient-color-red-2: 60;
+    --gradient-color-green-2: 193;
+    --gradient-color-blue-2: 183;
+  }
+  div[data-gradient-color="brightPulse-gradient"] {
+    --color-1: #3b2c5e;
+    --color-2: #8f3df8;
+    --gradient-color-red-2: 143;
+    --gradient-color-green-2: 61;
+    --gradient-color-blue-2: 248;
+  }
+  div[data-gradient-color="brightSense-gradient"] {
+    --color-1: #1c5569;
+    --color-2: #3cc1b6;
+    --gradient-color-red-2: 60;
+    --gradient-color-green-2: 193;
+    --gradient-color-blue-2: 182;
+  }
+  div[data-gradient-color="coreDark-gradient"] {
+    --color-1: #011f3d;
+    --color-2: #537393;
+    --gradient-color-red-2: 83;
+    --gradient-color-green-2: 115;
+    --gradient-color-blue-2: 147;
+  }
+  div[data-gradient-color="white"] {
+    --color-1: #fff;
+    --color-2: #fff;
+    --gradient-color-red-2: 255;
+    --gradient-color-green-2: 255;
+    --gradient-color-blue-2: 255;
+  }
+  div[data-gradient-color="corelight"] {
+    --color-1: #f2f2ea;
+    --color-2: #f2f2ea;
+    --gradient-color-red-2: 242;
+    --gradient-color-green-2: 242;
+    --gradient-color-blue-2: 234;
+  }
+  div[data-gradient-color="coredark-950"] {
+    --color-1: #f0f2f4;
+    --color-2: #f0f2f4;
+    --gradient-color-red-2: 240;
+    --gradient-color-green-2: 242;
+    --gradient-color-blue-2: 244;
+  }
+
+  //new colors sprint 17
+
+  div[data-gradient-color="coreDark-120"] {
+    --color-1: #011f3d;
+    --color-2: #011f3d;
+    --gradient-color-red-2: 1;
+    --gradient-color-green-2: 31;
+    --gradient-color-blue-2: 61;
+  }
+
+  div[data-gradient-color="deepPulse-270"] {
+    --color-1: #3b2c5e;
+    --color-2: #3b2c5e;
+    --gradient-color-red-2: 59;
+    --gradient-color-green-2: 44;
+    --gradient-color-blue-2: 94;
+  }
+
+  div[data-gradient-color="deepSense-200"] {
+    --color-1: #1c5569;
+    --color-2: #1c5569;
+    --gradient-color-red-2: 28;
+    --gradient-color-green-2: 85;
+    --gradient-color-blue-2: 105;
+  }
+}
+.herobannerc-container {
+  position: relative;
+}
+.herobannerc-container.herobanner-small #herobannerc-content,
+.herobannerc-container.herobanner-small,
+.herobannerc-container.herobanner-small .heroc-gradient-container {
+  width: 100%;
+  height: 360px;
+  @include mq-phone {
+    width: 100%;
+    height: 600px;
+  }
+}
+.herobannerc-container.herobanner-medium #herobannerc-content,
+.herobannerc-container.herobanner-medium .heroc-gradient-container,
+.herobannerc-container.herobanner-medium {
+  height: 600px;
+  width: 100%;
+}
+.herobannerc-container .bannerc-background-image {
+  position: relative;
+  height: 100%;
+  @include mq-desktop {
+    width: 100%;
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    @include mq-desktop {
+      width: 100%;
+    }
+  }
+  #heroc-desktop {
+    height: 100%;
+    @include mq-desktop {
+      width: 100%;
+    }
+  }
+  #heroc-tablet {
+    height: 100%;
+  }
+  #heroc-phone {
+    height: 100%;
+  }
+  .s7dm-dynamic-media {
+    height: 100%;
+    .s7responsiveContainer {
+      height: 100%;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .s7videoplayer {
+    height: 100%;
+    video {
+      height: 100%;
+    }
+  }
+}
+.heroc-gradient-container {
+  position: absolute;
+  z-index: 1;
+}
+.heroc-gradient-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.herobannerc-container.herobanner-small .herobannerc-content-padding {
+  @include mq-desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  @include mq-tablet {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  @include mq-phone {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.herobannerc-container.herobanner-medium .herobannerc-content-padding {
+  @include mq-desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include mq-tablet {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  @include mq-phone {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.herobannerc-content {
+  position: absolute;
+  z-index: 1;
+  max-width: 132rem;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  @include mq-phone {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .caption {
+    @include base-font-bold();
+    @include font-size-with-rem-line-height(1.4rem, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  .caption:not(:last-child) {
+    padding-bottom: 1.6rem;
+  }
+  .title {
+    @include base-font;
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    letter-spacing: 0em;
+
+    h1:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+  }
+  .title:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  .description {
+    @include a-bodycopy;
+
+    p:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+
+    .a-h4l-new:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+
+    h4:not(:last-child) {
+      padding-bottom: 2.4rem;
+    }
+  }
+  .no-title-padding {
+    padding-bottom: 0 !important;
+  }
+}
+.herobannerc-text-container {
+  width: 40.41%;
+  height: max-content !important;
+  @include mq-tablet {
+    width: 60.56%;
+  }
+  @include mq-phone {
+    width: 57%;
+  }
+}
+@media (min-width: 2560px) {
+  .herobannerc-text-container {
+    width: 50%;
+  }
+}
+.herobannerc-text-container.font-color-white {
+  color: #ffffff;
+}
+.herobannerc-text-container.font-core-dark {
+  color: #011f3d;
+}
+.herobannerc-text-container.middle {
+  @include mq-desktop {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  @include mq-tablet {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  @include mq-phone {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+//Effect constructors when gradient presets are selected
+
+//Case 3. Solid color with gradient preset only - Verified
+//Cae 7:  Gradient color with gradient preset only - Verified
+
+div[data-gradient-preset="gradient-preset-1"] {
+  background: linear-gradient(
+    90deg,
+    var(--color-1) 0%,
+    var(--color-2) 39.52%,
+    rgba(255, 255, 255, 0) 69.91%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+div[data-gradient-preset="gradient-preset-2"] {
+  background: linear-gradient(
+    90deg,
+    var(--color-1) 0%,
+    var(--color-2) 39.52%,
+    rgba(
+        var(--gradient-color-red-2),
+        var(--gradient-color-green-2),
+        var(--gradient-color-blue-2),
+        0.4
+      )
+      69.91%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+div[data-gradient-preset="gradient-preset-3"] {
+  background: linear-gradient(
+    90deg,
+    var(--color-1) 0%,
+    var(--color-2) 29.83%,
+    rgba(
+        var(--gradient-color-red-2),
+        var(--gradient-color-green-2),
+        var(--gradient-color-blue-2),
+        0.5
+      )
+      100%
+  );
+}
+
+div[data-gradient-preset="gradient-preset-4"] {
+  background: linear-gradient(
+    99.14deg,
+    var(--color-1) 6.93%,
+    var(--color-2) 93.07%
+  );
+}
+
+//Case 2.Solid color with transparency only - Verified
+
+div[data-gradient-color]:not([data-gradient-color$="gradient"])[data-gradient-preset="false"][data-overlay-preset="transparency-40"] {
+  background: rgba(
+    var(--gradient-color-red-2),
+    var(--gradient-color-green-2),
+    var(--gradient-color-blue-2),
+    0.4
+  );
+}
+
+div[data-gradient-color]:not([data-gradient-color$="gradient"])[data-gradient-preset="false"][data-overlay-preset="transparency-50"] {
+  background: rgba(
+    var(--gradient-color-red-2),
+    var(--gradient-color-green-2),
+    var(--gradient-color-blue-2),
+    0.5
+  );
+}
+
+div[data-gradient-color]:not([data-gradient-color$="gradient"])[data-gradient-preset="false"][data-overlay-preset="transparency-60"] {
+  background: rgba(
+    var(--gradient-color-red-2),
+    var(--gradient-color-green-2),
+    var(--gradient-color-blue-2),
+    0.6
+  );
+}
+
+div[data-gradient-color]:not([data-gradient-color$="gradient"])[data-gradient-preset="false"][data-overlay-preset="transparency-70"] {
+  background: rgba(
+    var(--gradient-color-red-2),
+    var(--gradient-color-green-2),
+    var(--gradient-color-blue-2),
+    0.7
+  );
+}
+//*****************//
+
+//Case 1.Solid color with no transparency or gradient preset - Verified
+//default to opacity:1 when no transparency or gradient is selected for solid colors
+div[data-gradient-preset="false"][data-overlay-preset="transparency-100"] {
+  background: rgba(
+    var(--gradient-color-red-2),
+    var(--gradient-color-green-2),
+    var(--gradient-color-blue-2),
+    1
+  );
+  opacity: 1;
+}
+
+//***************************
+
+/*Case  5. Gradient color with no transparency(transparency-100) or gradient preset - Verified
+ Case 6.Gradient color with transparency only - Verified default to gradient preset 1,
+and opacity 1 when no transparency or gradient is selected for gradient colors */
+
+div[data-gradient-color$="gradient"][data-gradient-preset="false"] {
+  background: linear-gradient(
+    90deg,
+    var(--color-1) 0%,
+    var(--color-2) 39.52%,
+    rgba(255, 255, 255, 0) 69.91%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  &[data-overlay-preset="transparency-100"] {
+    opacity: 1; //no transparency
+  }
+  &[data-overlay-preset="transparency-70"] {
+    opacity: 0.7;
+  }
+  &[data-overlay-preset="transparency-60"] {
+    opacity: 0.6;
+  }
+  &[data-overlay-preset="transparency-50"] {
+    opacity: 0.5;
+  }
+  &[data-overlay-preset="transparency-40"] {
+    opacity: 0.4;
+  }
+}
+
+//*************************
+
+//Case 4 : Solid color with both transparency and gradient preset - Verified
+//Case 8 : Gradient color with both transparency and gradient preset - Verified
+
+div[data-gradient-preset^="gradient"][data-overlay-preset="transparency-40"] {
+  opacity: 0.4;
+}
+
+div[data-gradient-preset^="gradient"][data-overlay-preset="transparency-50"] {
+  opacity: 0.5;
+}
+
+div[data-gradient-preset^="gradient"][data-overlay-preset="transparency-60"] {
+  opacity: 0.6;
+}
+
+div[data-gradient-preset^="gradient"][data-overlay-preset="transparency-70"] {
+  opacity: 0.7;
+}
+
+/*******************************/
+.herobanner-icon {
+  padding-bottom: 2.4rem;
+}
+.desktop-herocardccontainer.herobanner_card-container {
+  z-index: 1;
+}
+.herobannera-link,
+.herobannerb-link,
+.herobannerc-link,
+.herobannerd-link {
+  .banner-cta .bannercta__wrapper .bannercta__grid > div {
+    padding-top: 32px;
+  }
+}
+.herobanner-small .herobannerb-image {
+  #herob-desktop {
+    overflow-y: clip;
+  }
+}
+.herobanner-large .herobannerb-image,
+.herobanner-medium .herobannerb-image {
+  #herob-desktop {
+    @include mq-tablet {
+      overflow-y: clip;
+    }
+    @include mq-phone {
+      overflow-y: clip;
+    }
+  }
+}
+
+//overlay for video
+.herobannerc-container
+  div[data-overlay-preset="transparency-40"]
+  ~ .bannerc-background-image {
+  video {
+    opacity: 0.4;
+  }
+}
+.herobannerc-container
+  div[data-overlay-preset="transparency-50"]
+  ~ .bannerc-background-image {
+  video {
+    opacity: 0.5;
+  }
+}
+.herobannerc-container
+  div[data-overlay-preset="transparency-60"]
+  ~ .bannerc-background-image {
+  video {
+    opacity: 0.6;
+  }
+}
+.herobannerc-container
+  div[data-overlay-preset="transparency-70"]
+  ~ .bannerc-background-image {
+  video {
+    opacity: 0.7;
+  }
+}
+.herobannerc-container
+  div[data-overlay-preset="transparency-100"]
+  ~ .bannerc-background-image {
+  video {
+    opacity: 1;
+  }
+}

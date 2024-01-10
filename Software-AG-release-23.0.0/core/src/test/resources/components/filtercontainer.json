@@ -1,0 +1,97 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Filter Container Test",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/content",
+        "sling:resourceType": "softwareag/components/structure/basic-page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "filtercontainer": {
+                "jcr:primaryType": "nt:unstructured",
+                "copyText": "Filter Container Copy Text ",
+                "filterOptionOne": "softwareag:industry",
+                "filterOptionTwo": "softwareag:countries",
+                "filterOptionThree": "softwareag:asset-type",
+                "title": "Filter Container Title",
+                "amountOfListedContentItems": "9",
+                "amountOfMoreLoadedContentItems": "9",
+                "sling:resourceType": "softwareag/components/content/filtercontainer",
+                "textIsRich": "true",
+                "targetThisComponent": "false",
+                "container": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/parsys",
+                    "contentitem": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "breakpoints": "",
+                        "videoserverurl": "https://softwareag.scene7.com/is/content/",
+                        "fileReference": "/content/dam/softwareag/videos/test.mp4",
+                        "s7ImagePreset": "",
+                        "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                        "inline": "false",
+                        "layout": "small",
+                        "s7ViewerPreset": "",
+                        "altText": "Alternative Image Text",
+                        "target": "_self",
+                        "assetID": "softwareaglocaldevelop1/test-AVS",
+                        "copyText": "copy text",
+                        "urlModifiers": "",
+                        "viewerPresetPath": "",
+                        "tags": [
+                            "softwareag:industry/banking",
+                            "softwareag:countries/england",
+                            "softwareag:asset-type/image",
+                            "softwareag:industry/capital-markets"
+                        ],
+                        "title": "First Content item",
+                        "s7PresetType": "viewer",
+                        "disableBreakpoints": "false",
+                        "sling:resourceType": "softwareag/components/content/contentitem",
+                        "assetType": "VideoAVS",
+                        "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                        "textIsRich": "true",
+                        "s7ViewerPresetPath": "",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/softwareag/vp-test/vp-test-page/jump-mark-implementation",
+                            "text": "Link"
+                        }
+                    },
+                    "contentitem_1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "breakpoints": "",
+                        "videoserverurl": "https://softwareag.scene7.com/is/content/",
+                        "fileReference": "/content/dam/softwareag/videos/test.mp4",
+                        "s7ImagePreset": "",
+                        "viewerPath": "https://softwareag.scene7.com/s7viewers/",
+                        "inline": "false",
+                        "layout": "small",
+                        "s7ViewerPreset": "",
+                        "altText": "asdfsd",
+                        "target": "_self",
+                        "assetID": "softwareaglocaldevelop1/test-AVS",
+                        "copyText": "No copy text",
+                        "urlModifiers": "",
+                        "viewerPresetPath": "",
+                        "tags": [],
+                        "title": "Second Content Item",
+                        "s7PresetType": "image",
+                        "disableBreakpoints": "false",
+                        "sling:resourceType": "softwareag/components/content/contentitem",
+                        "assetType": "VideoAVS",
+                        "imageserverurl": "https://softwareag.scene7.com/is/image/",
+                        "textIsRich": "true",
+                        "s7ViewerPresetPath": "",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/softwareag/vp-test/vp-test-page/jump-mark-implementation",
+                            "text": "Link"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

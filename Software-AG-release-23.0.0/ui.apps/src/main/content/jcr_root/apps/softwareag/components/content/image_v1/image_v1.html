@@ -1,0 +1,10 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div class="${properties.addShadow == 'true' ? 'addDropshadow' : ''}">
+   <sly data-sly-test="${properties.type =='asset'}"
+   data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+<sly data-sly-test="${properties.type =='svg'}">
+   <img src="${properties.image}" alt="${properties.altTextSVG}" width="100%">
+</sly>
+</div>

@@ -1,0 +1,114 @@
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Customer Banner"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="A title to display as the headline for the Customer Banner."
+                                                fieldLabel="Title"
+                                                name="./title"/>
+                                            <fontStyle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                path="/apps/softwareag/components/commons/dialog/color/font"/>
+                                            <backgroundStyle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Background Color"
+                                                granite:class="cq-dialog-background-color-select"
+                                                fieldDescription="The background color of the Customer Banner."
+                                                name="./backgroundStyle">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="softwareag/datasources/backgroundcolors"
+                                                    name="datasource"/>
+                                            </backgroundStyle>
+                                            <anchorName
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="A internal name to be used for anchor jump functionality e.g. container1"
+                                                fieldLabel="Anchor Name"
+                                                name="./anchorName" />
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <logos
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Items"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <customerImage
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                jcr:primaryType="nt:unstructured"
+                                                composite="{Boolean}true">
+                                                <field sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./items">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <imageLink
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                            path="/apps/softwareag/components/commons/dialog/imagelink/optional"/>
+                                                    </items>
+                                                </field>
+                                            </customerImage>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </logos>
+                    <ctaTab jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/cta/tab_layout"/>
+                    <targetTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_target" />
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

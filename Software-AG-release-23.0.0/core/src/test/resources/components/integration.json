@@ -1,0 +1,62 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test Page Title",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "noexisting-id": {
+                "jcr:primaryType": "nt:unstructured",
+                "mbox": "test/tag",
+                "targetThisComponent": true,
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "emptyexisting-id": {
+                "jcr:primaryType": "nt:unstructured",
+                "mbox": "test/tag",
+                "id": "",
+                "targetThisComponent": true,
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "noexisting-id-disabled": {
+                "jcr:primaryType": "nt:unstructured",
+                "mbox": "test/tag",
+                "targetThisComponent": false,
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "noexisting-id-enabled-no-mbox": {
+                "jcr:primaryType": "nt:unstructured",
+                "targetThisComponent": true,
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "existingid": {
+                "jcr:primaryType": "nt:unstructured",
+                "id": "some-saved-id",
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "unconfigured": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/title"
+            }
+        },
+        "parsys2": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "noexisting-id": {
+                "jcr:primaryType": "nt:unstructured",
+                "mbox": "test/tag",
+                "targetThisComponent": true,
+                "sling:resourceType": "softwareag/components/content/title"
+            },
+            "noexisting-id2": {
+                "jcr:primaryType": "nt:unstructured",
+                "mbox": "test/tag",
+                "targetThisComponent": true,
+                "sling:resourceType": "softwareag/components/content/title"
+            }
+        }
+    }
+}

@@ -1,0 +1,327 @@
+$largebtnHeight: 48px;
+$largebtnPadding: 12px 24px;
+$smallbtnHeight: 40px;
+$smallbtnPadding: 9px 16px;
+
+// colors
+
+$btn-bright-sense: #058192;
+$btn-white: #ffffff;
+$btn-core-dark: #011f3d;
+$btn-bright-pulse: #8e3cf7;
+$btn-transparent: transparent;
+$btn-gradientBright: #1c5569;
+$btn-coredark950: #f0f2f4;
+$btn-coredarkgradient350: #36597d;
+$btn-bright-pulse270: #3b2c5e;
+$btn-bright-sense850: #c5edea;
+$core-dark-gradient850: #d2d9e0;
+$bright-pulse-gradient950: #f1e7fe;
+
+//border variations
+
+$btnborder-bright-sense: 2px solid #058192;
+$btnborder-white: 2px solid #fff;
+$btnborder-core-dark: 2px solid #011f3d;
+$btnborder-bright-pulse: 2px solid#8E3CF7;
+$btnborder-none: 2px solid transparent;
+
+@mixin buttontype(
+  $name,
+  $backgroundcolor,
+  $border,
+  $color,
+  $height,
+  $padding,
+  $hoverbackground,
+  $hoverborder,
+  $activebackground,
+  $activeborder,
+  $hovertextcolor,
+  $activetextcolor
+) {
+  .button.#{$name} {
+    .cmp-button {
+      background-color: $backgroundcolor;
+      border: $border;
+      color: $color;
+      height: $height;
+      padding: $padding;
+      &:hover {
+        background-color: $hoverbackground;
+        border: $hoverborder;
+        color: $hovertextcolor;
+      }
+      &:focus {
+        background-color: $hoverbackground;
+        border: $hoverborder;
+        color: $hovertextcolor;
+      }
+      &:active {
+        background-color: $activebackground;
+        border: $activeborder;
+        color: $activetextcolor;
+      }
+    }
+  }
+}
+
+@include buttontype(
+  "primary-bright-sense-large",
+  $btn-bright-sense,
+  $btnborder-none,
+  $btn-white,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-transparent,
+  $btnborder-bright-sense,
+  $btn-gradientBright,
+  $btnborder-none,
+  $btn-bright-sense,
+  $btn-white
+);
+@include buttontype(
+  "primary-white-large",
+  $btn-white,
+  $btnborder-none,
+  $btn-core-dark,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-transparent,
+  $btnborder-white,
+  $btn-coredark950,
+  $btnborder-none,
+  $btn-white,
+  $btn-core-dark
+);
+
+@include buttontype(
+  "primary-core-dark-large",
+  $btn-core-dark,
+  $btnborder-none,
+  $btn-white,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-transparent,
+  $btnborder-core-dark,
+  $btn-coredarkgradient350,
+  $btnborder-none,
+  $btn-core-dark,
+  $btn-white
+);
+
+@include buttontype(
+  "primary-bright-pulse-large",
+  $btn-bright-pulse,
+  $btnborder-none,
+  $btn-white,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-transparent,
+  $btnborder-bright-pulse,
+  $btn-bright-pulse270,
+  $btnborder-none,
+  $btn-bright-pulse,
+  $btn-white
+);
+
+@include buttontype(
+  "primary-bright-sense-small",
+  $btn-bright-sense,
+  $btnborder-none,
+  $btn-white,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-transparent,
+  $btnborder-bright-sense,
+  $btn-gradientBright,
+  $btnborder-none,
+  $btn-bright-sense,
+  $btn-white
+);
+
+@include buttontype(
+  "primary-white-small",
+  $btn-white,
+  $btnborder-none,
+  $btn-core-dark,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-transparent,
+  $btnborder-white,
+  $btn-coredark950,
+  $btnborder-none,
+  $btn-white,
+  $btn-core-dark
+);
+
+@include buttontype(
+  "primary-core-dark-small",
+  $btn-core-dark,
+  $btnborder-none,
+  $btn-white,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-transparent,
+  $btnborder-core-dark,
+  $btn-coredarkgradient350,
+  $btnborder-none,
+  $btn-core-dark,
+  $btn-white
+);
+
+@include buttontype(
+  "primary-bright-pulse-small",
+  $btn-bright-pulse,
+  $btnborder-none,
+  $btn-white,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-transparent,
+  $btnborder-bright-pulse,
+  $btn-bright-pulse270,
+  $btnborder-none,
+  $btn-bright-pulse,
+  $btn-white
+);
+
+@include buttontype(
+  "secondary-bright-sense-large",
+  $btn-transparent,
+  $btnborder-bright-sense,
+  $btn-bright-sense,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-bright-sense,
+  $btnborder-none,
+  $btn-bright-sense850,
+  $btnborder-bright-sense,
+  $btn-white,
+  $btn-bright-sense
+);
+@include buttontype(
+  "secondary-white-large",
+  $btn-transparent,
+  $btnborder-white,
+  $btn-white,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-white,
+  $btnborder-none,
+  $btn-transparent,
+  $btnborder-white,
+  $btn-core-dark,
+  $btn-white
+);
+@include buttontype(
+  "secondary-core-dark-large",
+  $btn-transparent,
+  $btnborder-core-dark,
+  $btn-core-dark,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-core-dark,
+  $btnborder-none,
+  $core-dark-gradient850,
+  $btnborder-core-dark,
+  $btn-white,
+  $btn-core-dark
+);
+@include buttontype(
+  "secondary-bright-pulse-large",
+  $btn-transparent,
+  $btnborder-bright-pulse,
+  $btn-bright-pulse,
+  $largebtnHeight,
+  $largebtnPadding,
+  $btn-bright-pulse,
+  $btnborder-none,
+  $bright-pulse-gradient950,
+  $btnborder-bright-pulse,
+  $btn-white,
+  $btn-bright-pulse
+);
+
+@include buttontype(
+  "secondary-bright-sense-small",
+  $btn-transparent,
+  $btnborder-bright-sense,
+  $btn-bright-sense,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-bright-sense,
+  $btnborder-none,
+  $btn-bright-sense850,
+  $btnborder-bright-sense,
+  $btn-white,
+  $btn-bright-sense
+);
+@include buttontype(
+  "secondary-white-small",
+  $btn-transparent,
+  $btnborder-white,
+  $btn-white,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-white,
+  $btnborder-none,
+  $btn-transparent,
+  $btnborder-white,
+  $btn-core-dark,
+  $btn-white
+);
+@include buttontype(
+  "secondary-core-dark-small",
+  $btn-transparent,
+  $btnborder-core-dark,
+  $btn-core-dark,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-core-dark,
+  $btnborder-none,
+  $core-dark-gradient850,
+  $btnborder-core-dark,
+  $btn-white,
+  $btn-core-dark
+);
+@include buttontype(
+  "secondary-bright-pulse-small",
+  $btn-transparent,
+  $btnborder-bright-pulse,
+  $btn-bright-pulse,
+  $smallbtnHeight,
+  $smallbtnPadding,
+  $btn-bright-pulse,
+  $btnborder-none,
+  $bright-pulse-gradient950,
+  $btnborder-bright-pulse,
+  $btn-white,
+  $btn-bright-pulse
+);
+
+.cmp-button {
+  @include base-font-bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3.2rem 0;
+  font-size: 16px;
+  cursor: pointer;
+  // text-transform: capitalize;
+  font-weight: 700;
+  align-items: center;
+  display: inline-flex;
+
+  @include mq-tablet {
+    margin: 2.4rem 0;
+  }
+
+  @include mq-phone {
+    margin: 2rem 0;
+  }
+}
+
+.cmp-button.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

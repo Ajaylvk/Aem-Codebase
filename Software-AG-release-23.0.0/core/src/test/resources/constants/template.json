@@ -1,0 +1,9 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test Homepage",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/homepage",
+        "sling:resourceType": "softwareag/components/structure/homepage"
+    }
+}

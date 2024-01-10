@@ -1,0 +1,207 @@
+.reference {
+    width: 100%;
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+
+        @media screen and (min-width: 810px) {
+            .filtercontainer__list & {
+                max-width: 70%;
+            }
+
+            .filtercontainer__list &.asset {
+                max-width: 87%;
+            }
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+    &__err-msg {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    &__load-more {
+        @include keyboard-outline();
+        display: block;
+        margin: 0 auto 2rem;
+        cursor: pointer;
+    }
+}
+
+
+.tilestemplate {
+    @include spacing(margin-bottom, s);
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 31%;
+    background-color: $color-white;
+    margin-bottom: 30px;
+
+
+    .asset:not(.asset--related) & {
+        background: $color-white;
+
+        @media (min-width: 1200px) {
+            &:nth-child(10n+1),
+            &:nth-child(10n+7) {
+                width: calc(61% + 30px);
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    @media (min-width: 640px) and (max-width: 1199px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+    }
+
+    hr {
+        color: #000;
+        width: 100%;
+        opacity: 0.4;
+    }
+
+    &__img-area {
+        @include spacing(padding, xs);
+        height: 150px;
+        text-align: center;
+        display: flex;
+        max-width: 100%;
+
+        .asset & {
+            height: 174px;
+            padding: 0;
+        }
+    }
+
+    &__txt-area {
+        @include spacing(padding-right, xs);
+        @include spacing(padding-left, xs);
+        @include spacing(padding-bottom, xs);
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .asset & {
+            @include spacing(padding-top, xs);
+            text-align: left;
+            height: 260px;
+        }
+    }
+
+    &__img {
+        width: 92%;
+        margin: auto;
+        max-height: 130px;
+        object-fit: cover;
+
+        .asset & {
+            width: 100%;
+            height: 100%;
+            max-height: none;
+        }
+    }
+
+    &__preheader {
+        font-size: 14px;
+        line-height: 22px;
+        color: $color-core-black-55;
+        text-transform: uppercase;
+    }
+
+    &__hr-line {
+        background: #000;
+        width: 100%;
+        opacity: 0.1;
+        margin: 0;
+        height: 1px;
+    }
+
+    &__title {
+        @include spacing(padding-top, s);
+        @include spacing(padding-bottom, s);
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
+
+        .asset & {
+            @include spacing(padding-top, xxs);
+        }
+    }
+
+    &__industry {
+        text-align: center;
+        text-transform: capitalize;
+        overflow: auto;
+        overflow-wrap: normal;
+    }
+
+    &__imp {
+        width: 100%;
+        color: $color-bright-pulse;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: auto;
+        padding-top: 20px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 24px;
+        color: #011c38;
+        max-height: 86px;
+        overflow: hidden;
+        position: relative;
+        flex: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__line-height {
+        line-height: 26px;
+    }
+
+    .a-cta--default-link-color {
+        margin-top: auto;
+    }
+
+    &:hover {
+        box-shadow: 1rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+        .a-cta {
+            text-decoration: underline;
+        }
+    }
+}
+
+.space {
+    @include spacing(padding-top, s);
+}

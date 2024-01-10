@@ -1,0 +1,528 @@
+:root {
+  div[data-transparency="0"] {
+    --transparency: 0;
+  }
+  div[data-transparency="1"] {
+    --transparency: 1;
+  }
+  --gradient-width-start: 30%;
+  --gradient-width-end: 70%;
+  @include mq-phone {
+    --gradient-width-start: 30%;
+    --gradient-width-end: 100%;
+  }
+  // div[data-gradient-width="0-60"] {
+  //   --gradient-width-start: 0%;
+  //   --gradient-width-end: 60%;
+  // }
+  // div[data-gradient-width="15-65"] {
+  //   --gradient-width-start: 15%;
+  //   --gradient-width-end: 65%;
+  // }
+  // div[data-gradient-width="30-70"] {
+  //   --gradient-width-start: 30%;
+  //   --gradient-width-end: 70%;
+  // }
+  // div[data-gradient-width="25-70"] {
+  //   --gradient-width-start: 25%;
+  //   --gradient-width-end: 70%;
+  // }
+  // div[data-transparency="0.2"] {
+  //   --transparency: 0.2;
+  // }
+  // div[data-transparency="0"] {
+  //   --transparency: 0;
+  // }
+  // div[data-transparency="1"] {
+  //   --transparency: 1;
+  // }
+
+  div[data-gradient-color="#011F3D"] {
+    --gradient-color-red: 1;
+    --gradient-color-green: 31;
+    --gradient-color-blue: 61;
+  }
+  div[data-gradient-color="#F0F2F4"] {
+    --gradient-color-red: 240;
+    --gradient-color-green: 242;
+    --gradient-color-blue: 244;
+  }
+  div[data-gradient-color="#F2F2EA"] {
+    --gradient-color-red: 242;
+    --gradient-color-green: 242;
+    --gradient-color-blue: 234;
+  }
+  div[data-gradient-color="#FFFFFF"] {
+    --gradient-color-red: 255;
+    --gradient-color-green: 255;
+    --gradient-color-blue: 255;
+  }
+}
+// herobannergradient change
+.herobanner-img-gradient {
+  position: relative;
+  width: 100%;
+}
+.herobanner-img-gradient > div:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.herobanner-img-gradient > div:after {
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(
+  //       var(--gradient-color-red),
+  //       var(--gradient-color-green),
+  //       var(--gradient-color-blue),
+  //       var(--transparency)
+  //     )
+  //     0%,
+  //   rgba(
+  //       var(--gradient-color-red),
+  //       var(--gradient-color-green),
+  //       var(--gradient-color-blue),
+  //       0.278419
+  //     )
+  //     30.97%,
+  //   rgba(
+  //       var(--gradient-color-red),
+  //       var(--gradient-color-green),
+  //       var(--gradient-color-blue),
+  //       0
+  //     )
+  //     42.92%
+  // );
+  background: linear-gradient(
+    90deg,
+    rgb(
+        var(--gradient-color-red),
+        var(--gradient-color-green),
+        var(--gradient-color-blue)
+      )
+      var(--gradient-width-start),
+    rgba(
+        var(--gradient-color-red),
+        var(--gradient-color-green),
+        var(--gradient-color-blue),
+        var(--transparency)
+      )
+      var(--gradient-width-end)
+  );
+}
+.herobanner-img-gradient.herobannerb {
+  @include mq-desktop {
+    height: 65rem;
+  }
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+}
+
+.herobanner-img-gradient.herobannera {
+  height: 65rem;
+}
+.herobanner-img-gradient.herobannerb > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.herobanner-img-gradient.herobannera > div {
+  display: block;
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+  @include mq-desktop {
+    height: 65rem;
+  }
+}
+.herobanner-img-gradient > div .s7responsiveContainer img {
+  width: 100%;
+}
+.herobanner-img-gradient.herobannera > div img,
+.herobanner-img-gradient.herobannera > div .s7responsiveContainer img {
+  height: 65rem;
+  vertical-align: middle;
+  object-fit: cover;
+}
+.herobanner-img-gradient.herobannerb > div img,
+.herobanner-img-gradient.herobannerb > div .s7responsiveContainer img {
+  height: 65rem;
+  @include mq-tablet {
+    height: 100%;
+  }
+  @include mq-phone {
+    height: 100%;
+  }
+  vertical-align: middle;
+  object-fit: cover;
+}
+.herobannerb .hero-text {
+  height: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  @include mq-tablet {
+    flex-direction: column;
+    // padding-bottom: 4.8rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  @include mq-phone {
+    flex-direction: column;
+    // padding-bottom: 4rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  top: 0;
+}
+.herobannera .hero-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include mq-desktop {
+    top: 10.5rem;
+  }
+  @include mq-tablet-landscape {
+    top: 6.4rem;
+  }
+  @include mq-tablet {
+    top: 6.4rem;
+  }
+  @include mq-phone {
+    top: 6.4rem;
+  }
+}
+.hero-text {
+  padding: 0 2.4rem;
+  max-width: 132rem;
+  margin: auto;
+  @include mq-tablet {
+    padding: 0 2.4rem;
+  }
+  @include mq-phone {
+    padding: 0 1.6rem;
+  }
+  .hero-title {
+    @include mq-desktop {
+      @include base-font-bold;
+      @include font-size-with-rem-line-height(6rem, 6.8rem);
+    }
+    @include mq-tablet {
+      @include base-font-bold;
+      @include font-size-with-rem-line-height(5.2rem, 6rem);
+    }
+    @include mq-phone {
+      @include base-font-bold;
+      @include font-size-with-rem-line-height(4.2rem, 5rem);
+    }
+    text-align: left;
+    // @include mq-desktop {
+    //   width: 58rem;
+    // }
+    // @include mq-tablet {
+    //   width: 35.3rem;
+    // }
+    // @include mq-phone {
+    //   width: 30rem;
+    // }
+    padding-bottom: 2.4rem;
+  }
+  .hero-description {
+    @include base-font;
+    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  }
+  .hero-button {
+    .cmp-button {
+      margin: 0;
+      margin-top: 4rem;
+      .cmp-button__text {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+//will be added to hero-text class if hero b is selected
+// .hero_B--variation {
+//   display: flex;
+//   flex-direction: row;
+//   @include mq-tablet {
+//     flex-direction: column;
+//     padding-bottom:4.8rem;
+//   }
+//   @include mq-phone {
+//     flex-direction: column;
+//     padding-bottom:4rem;
+//   }
+//   top: 0;
+// }
+
+//will be added to hero-text-container if hero b is selected
+// .hero_B--partition {
+//   @include mq-desktop {
+//     padding-top: 15.2rem;
+//     padding-right: 5.6rem;
+//     width: 50%;
+//   }
+//   @include mq-tablet {
+//     padding-top: 4.8rem;
+//   }
+//   @include mq-phone {
+//     padding-top: 6.4rem;
+//   }
+// }
+.hero-B-banner-image {
+  height: 100%;
+  @include mq-tablet {
+    padding-top: 4.8rem;
+  }
+  @include mq-phone {
+    padding-top: 4rem;
+  }
+  @include mq-desktop {
+    // padding-top: 7.5rem;
+    // padding-bottom: 7.5rem;
+    width: 50%;
+    padding-left: 1.6rem;
+  }
+
+  img {
+    vertical-align: bottom;
+    height: 100% !important;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.herobanner-img-gradient > div .s7dm-dynamic-media,
+.herobanner-img-gradient > div .s7responsiveContainer,
+.herobanner-img-gradient > div .s7responsiveContainer img,
+.hero-B-banner-image .s7dm-dynamic-media,
+.hero-B-banner-image .s7responsiveContainer,
+.hero-B-banner-image .s7responsiveContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.herobanner-img-gradient.core-light-930 {
+  background-color: $color-core-light;
+}
+.herobanner-img-gradient.core-light-950 {
+  background-color: $color-core-dark-950;
+}
+.herobanner-img-gradient.white {
+  background-color: $color-white;
+}
+.herobanner-img-gradient.core-dark-120 {
+  background-color: $color-core-black;
+}
+
+.herobannera .hero-text {
+  .hero-text-container {
+    @include mq-desktop {
+      width: 42%;
+    }
+    // @include mq-tablet {
+    //   width: 50%;
+    // }
+    // @include mq-phone {
+    //   width: 75%;
+    // }
+  }
+}
+.herobannerb .hero-text {
+  .hero-text-container {
+    @include mq-desktop {
+      padding-top: 7.5rem;
+      padding-right: 5.6rem;
+      width: 41%;
+    }
+    @include mq-tablet-landscape {
+      padding-top: 6rem;
+      width: 50%;
+    }
+    @include mq-tablet {
+      padding-top: 4.8rem;
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+    @include mq-phone {
+      padding-top: 6.4rem;
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
+  }
+}
+.hero-B-banner-image {
+  @include mq-desktop {
+    display: none;
+    width: 50% !important;
+    top: 0px !important;
+    left: 50% !important;
+    position: absolute;
+  }
+}
+.hero-text-container.core-dark-120 {
+  color: #011f3d;
+}
+.hero-text-container.white {
+  color: $color-white;
+}
+.herobannerb .herobanner_card-container {
+  @include mq-tablet {
+    bottom: -20rem;
+  }
+}
+.herobanner_card-container {
+  width: 100%;
+  position: absolute;
+  bottom: -18.8rem;
+  @include mq-tablet {
+    bottom: -19.5rem;
+  }
+  @include mq-phone {
+    position: relative;
+    bottom: 0;
+    margin-top: -7.2rem;
+  }
+  max-width: 132rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  @include mq-phone {
+    flex-direction: column;
+    padding: 0 1.6rem;
+  }
+  @include mq-tablet {
+    padding: 0 2.4rem;
+  }
+  padding: 0 1.2rem;
+  @include mq-tablet-landscape {
+    padding: 0 2.4rem;
+    bottom: -21rem;
+  }
+}
+.herocard-layout-2 > div {
+  @include mq-phone {
+    width: 100%;
+    margin: 0;
+  }
+  @include mq-tablet {
+    margin: 1.2rem 0.8rem;
+  }
+  width: calc((100% / 2));
+  min-height: 204px;
+  @include mq-phone {
+    min-height: 0;
+  }
+  margin: 1.2rem;
+  text-align: left;
+}
+.herocard-layout-2 > div:first-child {
+  @include mq-tablet {
+    margin-left: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-left: 0rem;
+  }
+}
+.herocard-layout-2 > div:last-child {
+  @include mq-tablet {
+    margin-right: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-right: 0rem;
+  }
+}
+.herocard-layout-3 > div {
+  @include mq-phone {
+    width: 100%;
+    margin: 0;
+  }
+  width: calc((100% / 3));
+  margin: 1.2rem;
+  @include mq-tablet {
+    margin: 1.2rem 0.4rem;
+  }
+  min-height: 204px;
+  @include mq-phone {
+    min-height: 0;
+  }
+  text-align: left;
+}
+.herocard-layout-3 > div:first-child {
+  @include mq-tablet {
+    margin-left: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-left: 0rem;
+  }
+}
+.herocard-layout-3 > div:last-child {
+  @include mq-tablet {
+    margin-right: 0rem;
+  }
+  @include mq-tablet-landscape {
+    margin-right: 0rem;
+  }
+}
+.herobannercontainer.herocardpresent {
+  @include mq-desktop {
+    margin-bottom: 18rem;
+  }
+  @include mq-tablet-landscape {
+    margin-bottom: 20rem;
+  }
+  @include mq-tablet {
+    margin-bottom: 21rem;
+  }
+  min-height: 204px;
+}
+.herobannercontainer {
+  min-height: 204px;
+}
+.herobanner-img-gradient.herocard-2 .hero-B-banner-image,
+.herobanner-img-gradient.herocard-3 .hero-B-banner-image {
+  @include mq-desktop {
+    // padding-bottom: 16rem !important;
+  }
+}
+.herobannera .hero-text {
+  @include mq-tablet {
+    .hero-title {
+      width: 60% !important;
+    }
+    .hero-description {
+      width: 43% !important;
+    }
+  }
+  @include mq-phone {
+    .hero-title {
+      width: 60% !important;
+    }
+    .hero-description {
+      width: 60% !important;
+    }
+  }
+}
+.herobannera-display {
+  display: none;
+}

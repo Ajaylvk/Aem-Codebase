@@ -1,0 +1,69 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.eventItem="com.softwareag.core.models.event.EventItemModel"
+     data-sly-use.campaignModel="${'com.softwareag.core.models.CampaignModel' @ titlePropName='eventTitle'}"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-test.hasContent="${eventItem.hasContent}"
+     data-sly-use.startDateTime="${'com.softwareag.core.models.DateTimeModel' @ input=eventItem.eventStartDate, format=eventItem.getGeneralConfigDateFormat, timeZone=eventItem.eventTimeZone}"
+     data-sly-use.endDateTime="${'com.softwareag.core.models.DateTimeModel' @ input=eventItem.eventEndDate, format=eventItem.getGeneralConfigDateFormat, timeZone=eventItem.eventTimeZone}"
+     data-sly-use.startDate="${'com.softwareag.core.models.DateTimeModel' @ input=eventItem.eventStartDate, format='YYYY-MM-dd', timeZone=eventItem.eventTimeZone}"
+     data-sly-use.startTime="${'com.softwareag.core.models.DateTimeModel' @ input=eventItem.eventStartDate, format='HH:mm', timeZone=eventItem.eventTimeZone}">
+
+    <div class="eventitem__container"
+         data-attrib-name="contentsection"
+         data-attrib-value="${campaignModel.title}"
+         data-attrib-campaign="${campaignModel.campaign}">
+        <a href="${eventItem.overviewPath @ context='uri', extension='html'}" title="${eventItem.labelGoToOverview}" class="eventitem__back a-distinction">
+            <div class="eventitem__back-icon a-icon" data-sly-call="${icons.getIcon @ name='arrow-left', width=30, height=30}"></div>
+            <span class="eventitem__back-label">${eventItem.labelGoToOverview}</span>
+        </a>
+
+        <div class="eventitem__counter" data-sly-test.enableCounter="${eventItem.enableCounter}"
+             data-counter-enabled="${enableCounter}"
+             data-date="${startDate.output}"
+             data-time="${startTime.output}"
+             data-timezone="${eventItem.eventTimeZone}">
+            <div class="eventitem__counter-stats">
+                <div class="eventitem__counter-stats-column a-distinction">
+                    <div class="eventitem__counter-stats-days a-h3"></div>
+                    ${eventItem.labelDays}
+                </div>
+                <div class="eventitem__counter-stats-column a-distinction">
+                    <div class="eventitem__counter-stats-hours a-h3"></div>
+                    ${eventItem.labelHours}
+                </div>
+                <div class="eventitem__counter-stats-column a-distinction">
+                    <div class="eventitem__counter-stats-minutes a-h3"></div>
+                    ${eventItem.labelMinutes}
+                </div>
+                <div class="eventitem__counter-stats-column a-distinction">
+                    <div class="eventitem__counter-stats-seconds a-h3"></div>
+                    ${eventItem.labelSeconds}
+                </div>
+            </div>
+        </div>
+
+        <div class="eventitem__country a-distinction">
+            ${eventItem.eventType} :: ${eventItem.eventCountry}
+        </div>
+
+        <div class="eventitem__date a-distinction">
+            ${startDateTime.output}
+            <sly data-sly-test="${endDateTime.output}">- ${endDateTime.output}</sly>
+        </div>
+
+        <h2 class="a-h1 eventitem__title">
+            <pre class="aem__textarea">
+                ${eventItem.eventTitle @ context='html'}
+            </pre>
+        </h2>
+
+        <div class="a-copytext eventitem__text">
+            ${eventItem.eventDescription @ context='html'}
+            <sly data-sly-test="${wcmmode.edit && eventItem.externalEventLink}">
+                <!-- /* never publicly visible.  Authoring assistance only */ -->
+                <h3>Redirected to: ${eventItem.externalEventLink}</h3>
+            </sly>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

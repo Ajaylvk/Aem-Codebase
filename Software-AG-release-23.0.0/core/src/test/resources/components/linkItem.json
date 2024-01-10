@@ -1,0 +1,29 @@
+{
+    "item": {
+        "jcr:primaryType": "nt:unstructured",
+        "link": {
+            "jcr:primaryType": "nt:unstructured",
+            "href": "/content/softwareag",
+            "text": "Title",
+            "target": "_blank"
+        }
+    },
+    "empty-item": {
+        "jcr:primaryType": "nt:unstructured"
+    },
+    "invalid-node-name": {
+        "jcr:primaryType": "nt:unstructured",
+        "link_abc": {
+            "jcr:primaryType": "nt:unstructured",
+            "href": "/content/softwareag",
+            "text": "Title",
+            "target": "_blank"
+        }
+    },
+    "empty-link": {
+        "jcr:primaryType": "nt:unstructured",
+        "link": {
+            "jcr:primaryType": "nt:unstructured"
+        }
+    }
+}

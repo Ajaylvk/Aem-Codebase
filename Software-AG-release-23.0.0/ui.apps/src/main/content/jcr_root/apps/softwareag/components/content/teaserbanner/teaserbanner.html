@@ -1,0 +1,47 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div class="teaserbanner__wrapper ${!properties.fileReference ? properties.backgroundStyle : ''} ${properties.fontStyle}"
+     data-attrib-name="contentsection"
+     data-attrib-value="${campaignModel.title}"
+     data-attrib-campaign="${campaignModel.campaign}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <div class="teaserbanner__background-image"
+         data-sly-test="${properties.fileReference}"
+         data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+    </div>
+
+    <div class="content-width"
+         data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+         data-sly-test.hasContent="${properties.icon || properties.title || properties.text || properties.fileReference}">
+
+        <div data-position="${properties.position}"
+             class="teaserbanner__container  ${properties.enableBoxColor ? properties.boxColor : ''}">
+
+            <img class="teaserbanner__icon"
+                 data-sly-test="${properties.icon}"
+                 src="${properties.icon}"
+                 alt="${properties.iconAltText}"
+                 title="${properties.iconAltText}" />
+
+            <h2 class="a-h2" data-sly-test="${properties.title}">
+                <pre class="aem__textarea">
+                    ${properties.title @ context='html'}
+                </pre>
+            </h2>
+
+            <div class="teaserbanner__text" data-sly-test="${properties.text}">${properties.text @ context='html'}</div>
+            <div class="${!properties.fileReference && properties.backgroundStyle == 'input__colorselect-background-color1' && properties.design == 'link' ? 'a-cta--default-link-color' : ''}"
+                 data-sly-resource="${ @ resourceType='softwareag/components/content/cta'}"></div>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplateFoot="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplateFoot.targetscript @ integrationModel=integrationModel}"></sly>

@@ -1,0 +1,178 @@
+.productteaser,
+.productteaser__fullheight {
+    height: 100%;
+}
+
+a > .productteaser__container {
+    &:hover {
+        box-shadow: 1rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+}
+
+.productteaser__container {
+    @include link-hover();
+    @include spacing(padding, m);
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    .s7dm-dynamic-media {
+        @include clearfix;
+        @include spacing(margin-bottom, m);
+
+        a {
+            display: block;
+        }
+    }
+
+    .a-distinction {
+        color: $color-core-black-55;
+    }
+
+    .a-h4,
+    .a-copytext,
+    .a-distinction {
+        @include clearfix;
+        @include spacing(margin-bottom, s);
+    }
+
+    .a-copytext {
+        overflow: hidden;
+        flex-grow: 1;
+        @include mq-phone {
+            margin-bottom: $spacing-mobile-m;
+        }
+
+        p:last-child,
+        ul:last-child,
+        ol:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    &[data-fullsize=true] .s7dm-dynamic-media {
+        @include mq-phone {
+            margin-left: -$spacing-mobile-m;
+            margin-right: -$spacing-mobile-m;
+            margin-top: -$spacing-mobile-m;
+        }
+        @include mq-tablet {
+            margin-left: -$spacing-tablet-m;
+            margin-right: -$spacing-tablet-m;
+            margin-top: -$spacing-tablet-m;
+        }
+        @include mq-desktop {
+            margin-left: -$spacing-desktop-m;
+            margin-right: -$spacing-desktop-m;
+            margin-top: -$spacing-desktop-m;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &[data-alignment=left] {
+        .s7dm-dynamic-media,
+        .a-h4,
+        .a-copytext,
+        .a-distinction,
+        .productteaser__morelink,
+        .cta-container {
+            text-align: left;
+        }
+    }
+
+    &[data-alignment=right] {
+        .s7dm-dynamic-media,
+        .a-h4,
+        .a-copytext,
+        .a-distinction,
+        .productteaser__morelink,
+        .cta-container {
+            text-align: right;
+        }
+    }
+}
+
+// CTA Link Design hover colors according to specs:
+// https://xd.adobe.com/view/4dd4dd03-3d90-4f23-4a56-e7509b54d0c3-3be5/
+.productteaser:hover {
+    .a-cta--design-light-button {
+        color: $color-white;
+        background-color: $color-core-black;
+    }
+
+    .a-cta--design-dark-button {
+        color: $color-white;
+        background-color: $color-deep-sense;
+    }
+}
+
+.productteaser .input__colorselect-font-color0 {
+    .a-cta--design-link {
+        color: $color-core-black;
+    }
+
+    &:hover .a-cta--design-link {
+        text-decoration: underline;
+    }
+}
+
+.productteaser .input__colorselect-font-color1 {
+    .a-cta--design-link {
+        color: $color-white;
+    }
+
+    &:hover .a-cta--design-link {
+        text-decoration: underline;
+    }
+}
+
+.productteaser .input__colorselect-background-color1.input__colorselect-font-color0,
+.productteaser .input__colorselect-background-color7.input__colorselect-font-color0 {
+    .a-cta--design-link {
+        color: $color-core-black;
+    }
+
+    &:hover .a-cta--design-link {
+        text-decoration: underline;
+    }
+}
+
+.productteaser .input__colorselect-background-color2.input__colorselect-font-color1,
+.productteaser .input__colorselect-background-color3.input__colorselect-font-color1,
+.productteaser .input__colorselect-background-color7.input__colorselect-font-color1 {
+    &:hover .a-cta--design-link {
+        text-decoration: underline;
+    }
+}
+
+.productteaser .input__colorselect-background-color2.input__colorselect-font-color0,
+.productteaser .input__colorselect-background-color3.input__colorselect-font-color0 {
+    &:hover .a-cta--design-link {
+        text-decoration: underline;
+    }
+}
+
+/* make sure list items in productteaser with black font have black list-symbols
+ even if the surrounding gridcontainer sets a white font-color */
+
+/* stylelint-disable-next-line */
+.productteaser .input__colorselect-font-color0 ul > li {
+    background-image: $arrow-dark;
+}
+
+// Productteaser layout attribute
+.gridcontainer .parsys {
+    [data-layout] {
+        @include mq-from-tablet {
+            padding: $spacing-tablet-s;
+        }
+    }
+}

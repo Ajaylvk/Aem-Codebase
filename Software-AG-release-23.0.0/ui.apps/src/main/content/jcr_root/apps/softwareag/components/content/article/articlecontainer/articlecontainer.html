@@ -1,0 +1,31 @@
+<sly data-sly-use.layout="com.softwareag.core.models.LayoutContainer"
+    data-sly-use.template="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-test="${properties.enablearticleHero}">
+
+    <div class="articleherobanner ${properties.backgroundStyle}"
+        data-articleherobanner="${properties.enablearticleHero}" data-size="${properties.bannerSize}">
+        <sly data-sly-test="${properties.type =='asset'}"
+            data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+        </sly>
+        <sly data-sly-test="${properties.type =='svg'}">
+            <img src="${properties.image}" alt="${properties.altText2}" class="articleherobanner-svg-image">
+        </sly>
+    </div>
+</sly>
+
+<div class="container">
+
+    <div class="articleNavBlock" data-sly-test="${properties.enableNavigation}"
+        data-articleherobanner="${properties.enablearticleHero}">
+        <sly data-sly-resource="${'article-nav-container' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+    </div>
+
+    <div class="article-content" data-articleherobanner="${properties.enablearticleHero}"
+        data-size="${properties.bannerSize}">
+        <sly data-sly-resource="${'article-container' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+    </div>
+
+</div>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!layout.columnCount}"></sly>

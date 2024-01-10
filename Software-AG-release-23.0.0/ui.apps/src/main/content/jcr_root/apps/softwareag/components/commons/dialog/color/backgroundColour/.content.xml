@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <backgroundStyle
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+            fieldDescription="The font color of the component."
+            fieldLabel="Background Color"
+            name="./backgroundStyle">
+            <items jcr:primaryType="nt:unstructured">
+                <white
+                    jcr:primaryType="nt:unstructured"
+                    text="White"
+                    value="input__colorselect-text-background-text-component-color2"/>
+                <coreLight
+                    jcr:primaryType="nt:unstructured"
+                    text="Core Light"
+                    value="input__colorselect-text-background-text-component-color1"/>
+                <coreDark
+                    jcr:primaryType="nt:unstructured"
+                    text="Core Dark"
+                    value="input__colorselect-text-background-text-component-color3"/>
+                <coreDark950
+                    jcr:primaryType="nt:unstructured"
+                    selected="{Boolean}true"
+                    text="Core Dark 950"
+                    value="input__colorselect-text-background-text-component-color4"/>
+            </items>
+        </backgroundStyle>
+    </items>
+</jcr:root>

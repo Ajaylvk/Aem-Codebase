@@ -1,0 +1,70 @@
+## deny everything and allow specific entries
+## Start with everything blocked as a safeguard and open things customers need and what's safe OOTB
+/0001 { /type "deny"  /url "*" }
+
+## Open consoles if this isn't a production environment by uncommenting the next few lines
+## allow content repository
+#/002 { /type "allow" /url "/crx/*" }
+## allow OSGi console
+#/003 { /type "allow" /url "/system/*" }
+
+## allow non-public content directories if this isn't a production environment by uncommenting the next few lines
+## allow apps access
+#/004 { /type "allow" /url "/apps/*" }
+## allow bin path access
+#/005 { /type "allow" /url "/bin/*" }
+
+## This rule allows content to be accessed, and enforces no suffixes or selectors.
+## JSON and XML should never be included in the file types here
+/0010 { /type "allow" /method '(GET|HEAD|OPTIONS)' /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html|ics|xls|xlsx)' /path '\/content\/(dam|cq:tags|experience-fragments)?\/?(softwareag|newscenter)?\/.+' /suffix '' /selectors '' }
+
+## Enable specific mime types clientlibs directories
+/0012 { /type "allow" /method "GET" /url '/etc\.clientlibs/[^\.]+(\.min)?\.ACSHASH[a-f0-9]+\.(js|css)' }
+
+## Enable basic features
+## AEM provides a framework aimed at preventing Cross-Site Request Forgery attacks
+/0013 { /type "allow" /method "GET" /url '/libs/granite/csrf/token.json' /extension 'json' }
+
+## enable personalization
+/0014 { /type "allow" /method "GET" /path "/libs/cq/personalization" }
+
+## allow sitemaps for standard countries
+/0021 { /type "allow" /method "GET" /url '/content/newscenter/[a-z]{2}/[a-z]{2}(_[a-z]{2})?\.sitemap\.xml' /extension "xml" }
+
+## allow download servlet e.g. /content/dam/...png.sagdownload.inline.png
+/0022 { /type "allow" /method "GET" /path "/content/dam/newscenter/*" /selectors "sagdownload" }
+/0023 { /type "allow" /method "GET" /path "/content/dam/softwareag/*" /selectors "sagdownload" }
+
+## allow reference servlet
+/0024 { /type "allow" /method "GET" /path "/bin/reference*" /extension "json" }
+
+## enable dynamic media
+/0029 { /type "allow" /method "GET" /path "/libs/dam/components/scene7/*" /extension '(js|css)' }
+/0030 { /type "allow" /method "GET" /path "/is/image/*" }
+/0031 { /type "allow" /method "GET" /path "/is/content/*" }
+
+## enabled i18N in js
+/0040 { /type "allow" /method "GET" /url '/libs/cq/i18n/dict\..+\.json' /extension 'json' }
+
+## enable forms country list XML
+/0051 { /type "allow" /method '(GET|HEAD|OPTIONS)' /url "/conf/softwareag/assets/marketo-form-countries.xml" /extension "xml" /suffix '' /selectors '' }
+
+## enable asset files
+/0052 { /type "allow" /method '(GET|HEAD|OPTIONS)' /path "/conf/softwareag/assets/*" /extension '(png|gif|ico|jpeg|jpg|svg)' /suffix '' /selectors '' }
+
+# System-wide Adobe denies to mitigate known exploits
+
+## Deny authoring query params
+/0096 { /type "deny" /method "GET" /query "debug=*" }
+/0097 { /type "deny" /method "GET" /query "wcmmode=*" }
+
+#### Deny front door entry
+/0098 { /type "deny" /path "/content/ams/healthcheck/*"}
+/0099 { /type "deny" /url "/content/regent.html"}
+
+## Deny content grabbing for greedy queries and prevent un-intended self DOS attacks.  Should not be necessary, but is a known fix.
+/0100 { /type "deny" /selectors '(feed|rss|pages|languages|blueprint|infinity|tidy|sysview|docview|query|[0-9-]+|jcr:content)' /extension '(json|xml|html|feed)' }
+
+## fix bug https://jira.corp.adobe.com/browse/PSIRT-14494. This should be able to be removed when this bug is fixed
+## this ensures that no URLs with .. are allowed
+/0101 { /type "deny" /suffix '.*\\/*\\.\\.\\..*' }

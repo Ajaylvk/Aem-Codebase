@@ -1,0 +1,56 @@
+.socialmediabar {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq-from-tablet {
+        justify-items: flex-end;
+        justify-self: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .m-horizontal-list {
+        @include mq-except-desktop {
+            justify-content: flex-start;
+        }
+    }
+
+    .m-horizontal-list__item {
+        margin-right: 2.4rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        cursor: pointer;
+    }
+
+    &__link:hover {
+        .socialmediabar__icon {
+            transform: translateY(1rem);
+        }
+    }
+
+    &__icon {
+        display: block;
+        height: 100%;
+        transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        @include mq-phone {
+            height: 3rem;
+        }
+        @include mq-tablet {
+            height: 4rem;
+        }
+        @include mq-desktop {
+            height: 4rem;
+        }
+    }
+}

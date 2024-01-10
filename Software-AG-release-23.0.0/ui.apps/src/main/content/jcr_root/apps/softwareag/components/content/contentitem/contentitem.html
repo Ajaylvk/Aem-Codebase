@@ -1,0 +1,70 @@
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.model="com.softwareag.core.models.contentitem.ContentItemModel"
+     data-sly-test.ctaModel="${model.ctaModel}"
+     data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+     data-sly-test.hasContent="${properties.title || properties.copyText || properties['link/text']}"
+     class="contentitem__container"
+     data-filter1="${model.filter1}"
+     data-filter2="${model.filter2}"
+     data-filter3="${model.filter3}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <!--/* Content without Link */-->
+    <sly data-sly-test=${!ctaModel.href} data-sly-call="${innerContent @ properties = properties, model = model, ctaModel=ctaModel, icons = icons}"></sly>
+
+    <!--/* Content with Link */-->
+    <a data-sly-test=${ctaModel.href}
+       class="contentitem__link"
+       href="${ctaModel.href}"
+       target="${ctaModel.link.target}"
+       title="${properties.title}"
+       data-attrib-type="asset"
+       data-attrib-name="${properties.title}"
+       data-attrib-campaign="${campaignModel.campaign}"
+       data-attrib-asset-type="${ctaModel.link.assetType}"
+       data-attrib-asset-link="${ctaModel.href}">
+        <sly data-sly-call="${innerContent @ properties = properties, model = model, ctaModel=ctaModel, icons = icons}"></sly>
+    </a>
+
+</div>
+
+<sly data-sly-template.innerContent="${@ properties, model, ctaModel, icons}">
+    <div class="contentitem__content">
+        <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+        <div class="contentitem__content-wrapper">
+            <h4 class="a-h4" data-sly-test="${properties.title}">
+                <pre class="aem__textarea">
+                    ${properties.title}
+                </pre>
+            </h4>
+
+            <div class="a-copytext contentitem__text">
+                ${properties.copyText @ context = 'html'}
+            </div>
+
+            <div class="cta-container a-cta--default-link-color"
+                 data-sly-test="${ctaModel.href && ctaModel.link.text}">
+
+                <div class="a-cta a-cta--design-${!properties.design ? 'link' : properties.design}">
+                    <span class="a-cta__button" title="${ctaModel.link.text}">
+                        <span class="a-cta__button-text">
+                            ${ctaModel.link.text}
+                        </span>
+                        <span class="a-cta__button-icon" data-sly-test="${!properties.design || properties.design == 'link'}">
+                            <sly data-sly-test="${!ctaModel.inline && ctaModel.assetModel}"
+                                 class="a-icon"
+                                 data-sly-call="${icons.getIcon @ name='arrow-down', width=30, height=30}" />
+                            <sly data-sly-test="${ctaModel.inline || !ctaModel.assetModel}"
+                                 class="a-icon"
+                                 data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}" />
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

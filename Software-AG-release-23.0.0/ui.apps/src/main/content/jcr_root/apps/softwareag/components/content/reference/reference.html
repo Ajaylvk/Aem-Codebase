@@ -1,0 +1,101 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.model="com.softwareag.core.models.reference.ReferenceModel">
+
+    <div data-sly-test="${model.pathType != null && model.pathType == 'experienceFragment'}">
+        <div class="jump_to" data-sly-resource="${@path=model.path, selectors='content', wcmmode='disabled'}" data-sly-attribute.id="${model.anchorName}">
+        </div>
+    </div>
+
+    <sly data-sly-test="${model.pathType != null && model.pathType != 'experienceFragment'}">
+        <div class="reference__container referenceComponent jump_to ${model.pathType}"
+             data-sly-attribute.id="${model.anchorName}">
+            <div class="reference__wrapper" data-page-type="${model.pathType}" data-current-path="${currentPage.getPath}" data-template-id="filter-result-template">
+                <!-- below template will be added here based on "page-type" attribute -->
+            </div>
+        </div>
+
+        <button class="reference__load-more a-cta a-cta--design-dark-button hide">
+            <span class="a-cta__button">
+                <span class="a-cta__button-text">
+                    Load more
+                </span>
+            </span>
+        </button>
+
+        <sly data-sly-test="${model.pathType != null && model.pathType == 'partner'}">
+            <script id="filter-result-template" type="text/x-handlebars-template">
+                {{#each result}}
+                <a id="tile_{{@index}}"
+                   class="tilestemplate"
+                   href="{{partnerPageURL}}"
+                   title="{{title}}"
+                   data-attrib-type="Partner"
+                   data-attrib-name="{{title}}"
+                   data-attrib-asset-type="internal"
+                   data-attrib-asset-link="{{partnerPageURL}}">
+                    <div class="tilestemplate__img-area">
+                        <img src="{{fileReference}}" alt="{{altText}}" title="{{title}}" class="tilestemplate__img">
+                    </div>
+                    <div class="tilestemplate__txt-area">
+                        <div class="tilestemplate__hr-line"></div>
+                        <h1 class="tilestemplate__title">{{title}}</h1>
+                        <h2 class="tilestemplate__industry tilestemplate__line-height">{{industryTags}}</h2>
+                        <ul class="tilestemplate__imp tilestemplate__line-height">
+                            {{#ifCond
+                        globalPartner
+                        '==='
+                        true}}
+                            <li>Global Alliance</li>
+                            {{/ifCond}}
+                            <li>{{partnerLevelTagName}}</li>
+                        </ul>
+                    </div>
+                </a>
+                {{else}}
+                <div class="reference__err-msg">No record found</div>
+                {{/each}}
+            </script>
+        </sly>
+
+        <sly data-sly-test="${model.pathType != null && model.pathType == 'asset'}">
+            <script id="filter-result-template" type="text/x-handlebars-template">
+                {{#each result}}
+                <a id="tile_{{@index}}"
+                   class="tilestemplate"
+                   href="{{ctaURL}}"
+                   title="{{title}}"
+                   data-attrib-type="{{assetTypeDisplay}}"
+                   data-attrib-name="{{title}}"
+                   data-attrib-asset-type="{{assetType}}"
+                   data-attrib-asset-link="{{ctaURL}}">
+                    <div class="tilestemplate__img-area">
+                        <img src="{{fileReference}}" alt="{{title}}" title="{{title}}" class="tilestemplate__img">
+                    </div>
+                    <div class="tilestemplate__txt-area">
+                        <div class="tilestemplate__preheader">{{assetTypeDisplay}}</div>
+                        <h1 class="tilestemplate__title">{{title}}</h1>
+                        <div class="tilestemplate__description">{{{copyText}}}</div>
+                        <div class="tilestemplate__btn-area a-cta--default-link-color">
+                            <div class="a-cta a-cta--design-link">
+                                <span class="a-cta__button">
+                                    <span class="a-cta__button-text">
+                                        {{ctaLabel}}
+                                    </span>
+                                    <span class="a-cta__button-icon">
+                                        <svg class="a-icon a-icon--arrow-up-right">
+                                            <use xlink:href="#arrow-up-right"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{else}}
+                <div class="reference__err-msg">No record found</div>
+                {{/each}}
+            </script>
+        </sly>
+    </sly>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

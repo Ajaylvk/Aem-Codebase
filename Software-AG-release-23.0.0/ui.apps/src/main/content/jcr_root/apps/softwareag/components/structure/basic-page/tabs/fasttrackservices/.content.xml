@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Fast Track Services"
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <fasttractservicesconfig
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Fast Track Services Configuration"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <caption
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Caption"
+                            name="./fasttrackcaption"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="caption">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttrackcaption"/>
+                        </caption>
+                        <title
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldLabel="Title"
+                            name="./fasttracktitle"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="title">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttracktitle"/>
+                        </title>
+                        <description
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                            fieldLabel="Description"
+                            maxlength="{Long}300"
+                            name="./fasttrackdescription"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="description">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttrackdescription"/>
+                        </description>
+                        <hideinRL
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            checked="{Boolean}false"
+                            name="./hideInfastrackservices"
+                            renderReadOnly="{Boolean}true"
+                            text="Hide in Fast Track Services"
+                            unchecked="{Boolean}false"
+                            value="true">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="hideInfastrackservices"/>
+                        </hideinRL>
+                        <servicetypetags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Service Type Tags"
+                            multiple="{Boolean}true"
+                            name="./servicetypetags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/service-type">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="servicetypetags"/>
+                        </servicetypetags>
+                        <producttags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Topic Tags"
+                            multiple="{Boolean}true"
+                            name="./producttags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/topic">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="producttags"/>
+                        </producttags>
+                        <searchkeywordtags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Search Keyword Tags"
+                            multiple="{Boolean}true"
+                            name="./ftsearchtags"
+                            rootPath="/content/cq:tags/softwareag/search-keywords">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="ftsearchtags"/>
+                        </searchkeywordtags>
+                        <icon
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="Select the Tile Icon"
+                            fieldLabel="Tile Icon"
+                            name="./fasttracktileicon"
+                            required="{Boolean}false"
+                            rootPath="/content/dam/softwareag/global/image/icon-library"
+                            validation="fasttracktileicon">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttracktileicon"/>
+                        </icon>
+                        <fsiconcolor
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Icon Backgroundcolor"
+                            name="./fsiconcolor"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="fsiconcolor">
+                            <items jcr:primaryType="nt:unstructured">
+                                <select
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="Select the Icon Backgroundcolor"
+                                    value=""/>
+                                <coredark120
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Core dark 120"
+                                    value="input__colorselect-icon-color8"/>
+                                <brightpulse600
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bright Pulse 600"
+                                    value="input__colorselect-icon-color2"/>
+                                <brightsense300
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bright Sense 300"
+                                    value="input__colorselect-icon-color11"/>
+                                <brightsense500
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bright Sense 500 "
+                                    value="input__colorselect-icon-color3"/>
+                                <white
+                                    jcr:primaryType="nt:unstructured"
+                                    text="White"
+                                    value="input__colorselect-icon-color1"/>
+                            </items>
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="fsiconcolor"/>
+                        </fsiconcolor>
+                        <alttext
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldLabel="Alternative Text"
+                            name="./fasttrackalttext"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="alttext">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttrackalttext"/>
+                        </alttext>
+                        <ctalabel
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldDescription="CTA Label"
+                            fieldLabel="CTA Label"
+                            name="./fasttrackctaLabel"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="title">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttrackctaLabel"/>
+                        </ctalabel>
+                        <ctalinkdestination
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="CTA Link Destination"
+                            fieldLabel="CTA Link Destination"
+                            name="./fasttrackctalinkdestination"
+                            required="{Boolean}false"
+                            rootPath="/content/softwareag"
+                            validation="ctalinkdestination">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="fasttrackctalinkdestination"/>
+                        </ctalinkdestination>
+                    </items>
+                </fasttractservicesconfig>
+            </items>
+        </column>
+    </items>
+</jcr:root>

@@ -1,0 +1,72 @@
+.download {
+    &__container {
+        @include spacing(padding-top, xxs);
+        @include spacing(padding-bottom, xxs);
+        @include spacing(padding-left, m);
+        @include spacing(padding-right, m);
+        @include spacing(margin-bottom, xxs);
+        @include clearfix();
+
+        .s7dm-dynamic-media {
+            height: 100%;
+        }
+
+        .a-cta__button-icon {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            margin-left: 0;
+            transform-origin: center;
+        }
+
+        .a-icon--arrow-down {
+            position: absolute;
+            transform-origin: center;
+        }
+
+        .a-cta {
+            @include spacing(margin-left, m);
+        }
+    }
+
+    &__header {
+        @include base-font-bold;
+        @include font-size-with-rem-line-height(1.6rem, 3rem);
+        @include spacing(padding-left, m);
+        color: $color-core-black;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    &__text {
+        @include spacing(margin-left, m);
+    }
+
+    &__props {
+        display: inline-block;
+        width: 100%;
+        @include spacing(margin-left, m);
+
+        .download__filename,
+        .download__size,
+        .download__format {
+            display: inline-block;
+            @include spacing(margin-right, m);
+            color: $color-core-black-35;
+        }
+    }
+
+    .asset__download,
+    .asset__inline {
+        &:hover { 
+            @include link-hover(); 
+            text-decoration: underline;
+        }
+    }
+}
+
+.rtewrapper {
+    .download__container .download__text {
+        margin-bottom: 0;
+    }
+}

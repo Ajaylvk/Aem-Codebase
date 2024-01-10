@@ -1,0 +1,140 @@
+//start region spacings
+@use 'sass:map';
+
+$spacing-desktop-xxs: 1rem;
+$spacing-desktop-xs: 1.5rem;
+$spacing-desktop-s: 2rem;
+$spacing-desktop-m: 3rem;
+$spacing-desktop-l: 4rem;
+$spacing-desktop-xl: 5rem;
+$spacing-desktop-xxl: 8rem;
+// New spacing
+$spacing-desktop-new-xxs: 0.4rem;
+$spacing-desktop-new-xs: 0.8rem;
+$spacing-desktop-new-s: 1.6rem;
+$spacing-desktop-new-m: 2.4rem;
+$spacing-desktop-new-heading: 2.4rem;
+$spacing-desktop-new-l: 3.2rem;
+$spacing-desktop-new-xl: 4rem;
+$spacing-desktop-footerhr: 4rem;
+$spacing-desktop-new-xl: 4.8rem;
+$spacing-desktop-new-xxl: 6.4rem;
+$spacing-desktop-new-xxxl: 8rem;
+$spacing-desktop-new-96l: 96rem;
+$spacing-desktop-new-128l: 128rem;
+
+$desktop: (
+  "xxs": $spacing-desktop-xxs,
+  "xs": $spacing-desktop-xs,
+  "s": $spacing-desktop-s,
+  "m": $spacing-desktop-m,
+  "l": $spacing-desktop-l,
+  "xl": $spacing-desktop-xl,
+  "xxl": $spacing-desktop-xxl,
+  // New spacing
+    "newxxs": $spacing-desktop-new-xxs,
+  "newxs": $spacing-desktop-new-xs,
+  "news": $spacing-desktop-new-s,
+  "newm": $spacing-desktop-new-m,
+  "newheading": $spacing-desktop-new-heading,
+  "footerhr": $spacing-desktop-footerhr,
+  "newl": $spacing-desktop-new-l,
+  "newxl": $spacing-desktop-new-xl,
+  "newxxl": $spacing-desktop-new-xxl,
+  "newxxxl": $spacing-desktop-new-xxxl,
+  "new96l": $spacing-desktop-new-96l,
+  "new128l": $spacing-desktop-new-128l,
+);
+
+$spacing-tablet-xxs: 0.5rem;
+$spacing-tablet-xs: 1rem;
+$spacing-tablet-s: 1.5rem;
+$spacing-tablet-m: 2rem;
+$spacing-tablet-new-heading: 3.2rem;
+$spacing-tablet-footerhr: 3.2rem;
+$spacing-tablet-l: 4rem;
+$spacing-tablet-xl: 5rem;
+$spacing-tablet-xxl: 6rem;
+$spacing-tablet-new-s: 0.8rem;
+$spacing-tablet-new-m: 2.4rem;
+$spacing-tablet-new-l: 2.4rem;
+$spacing-tablet-new-xl: 4rem;
+$spacing-tablet-new-xxl: 4.8rem;
+
+$tablet: (
+  "xxs": $spacing-tablet-xs,
+  "xs": $spacing-tablet-xxs,
+  "s": $spacing-tablet-s,
+  "m": $spacing-tablet-m,
+  "l": $spacing-tablet-l,
+  "xl": $spacing-tablet-xl,
+  "xxl": $spacing-tablet-xxl,
+  "news": $spacing-tablet-new-s,
+  "newm": $spacing-tablet-new-m,
+  "newheading": $spacing-tablet-new-heading,
+  "footerhr": $spacing-tablet-footerhr,
+  "newl": $spacing-tablet-new-l,
+  "newxl": $spacing-tablet-new-xl,
+  "newxxl": $spacing-tablet-new-xxl,
+);
+
+$spacing-mobile-xxs: 1rem;
+$spacing-mobile-xs: 1rem;
+$spacing-mobile-s: 1.5rem;
+$spacing-mobile-m: 2rem;
+$spacing-mobile-l: 4rem;
+$spacing-mobile-xl: 5rem;
+$spacing-mobile-xxl: 6rem;
+$spacing-mobile-new-s: 0.8rem;
+$spacing-mobile-new-m: 1.6rem;
+$spacing-mobile-new-heading: 3.2rem;
+$spacing-mobile-footerhr: 3.2rem;
+$spacing-mobile-new-l: 1.6rem;
+$spacing-mobile-new-xl: 3.2rem;
+$spacing-mobile-new-xxl: 4rem;
+
+$phone: (
+  "xxs": $spacing-mobile-xxs,
+  "xs": $spacing-mobile-xs,
+  "s": $spacing-mobile-s,
+  "m": $spacing-mobile-m,
+  "l": $spacing-mobile-l,
+  "xl": $spacing-mobile-xl,
+  "xxl": $spacing-mobile-xxl,
+  "news": $spacing-mobile-new-s,
+  "newm": $spacing-mobile-new-m,
+  "newheading": $spacing-mobile-new-heading,
+  "footerhr": $spacing-mobile-footerhr,
+  "newl": $spacing-mobile-new-l,
+  "newxl": $spacing-mobile-new-xl,
+  "newxxl": $spacing-mobile-new-xxl,
+);
+
+@function get-viewport-rem-by-size($device, $size) {
+  @if ($device == "phone") {
+    @return #{map-get($phone, $size)};
+  }
+  @if ($device == "tablet") {
+    @return #{map-get($tablet, $size)};
+  }
+  @if ($device == "desktop") {
+    @return #{map-get($desktop, $size)};
+  }
+}
+
+@mixin spacing($property, $size: "xs") {
+  @include mq-phone {
+    #{$property}: get-viewport-rem-by-size(phone, $size);
+  }
+
+  @include mq-tablet {
+    #{$property}: get-viewport-rem-by-size(tablet, $size);
+  }
+  @include mq-desktop {
+    #{$property}: get-viewport-rem-by-size(desktop, $size);
+  }
+}
+
+@mixin component-bottom-spacing($property: margin-bottom) {
+  @include spacing($property, m);
+}

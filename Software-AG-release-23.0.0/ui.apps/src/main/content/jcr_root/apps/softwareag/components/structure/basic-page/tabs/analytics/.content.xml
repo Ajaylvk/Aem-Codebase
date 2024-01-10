@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="nt:unstructured" jcr:title="Analytics"
+	cq:showOnCreate="{Boolean}false"
+	sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+	<items jcr:primaryType="nt:unstructured">
+		<column jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/coral/foundation/container">
+			<items jcr:primaryType="nt:unstructured">
+				<analytics cq:showOnCreate="{Boolean}false"
+					jcr:primaryType="nt:unstructured" jcr:title="Analytics"
+					sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+					<items jcr:primaryType="nt:unstructured">
+                        <productCategoryTag jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            rootPath="/content/cq:tags/softwareag"
+                            fieldDescription="Here a tag can be added or removed from the page, specific to the respective product category."
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}false"
+                            fieldLabel="Tag for product category"
+                            multiple="{Boolean}false"
+                            required="{Boolean}false"
+                            name="./productCategoryTag">
+                            <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="productCategoryTag" />
+                        </productCategoryTag>
+                        <productNameTag jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            rootPath="/content/cq:tags/softwareag"
+                            fieldDescription="Here a tag can be added or removed from the page, specific to the respective product name."
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}false"
+                            fieldLabel="Tag for product name"
+                            multiple="{Boolean}false"
+                            required="{Boolean}false"
+                            name="./productNameTag">
+                            <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="productNameTag" />
+                        </productNameTag>
+                        <productCapabilityTags jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            rootPath="/content/cq:tags/softwareag"
+                            fieldDescription="Here a tag can be added or removed from the page, specific to the respective product capability."
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}false"
+                            fieldLabel="Tags for product capabilities"
+                            multiple="{Boolean}true"
+                            required="{Boolean}false"
+                            name="./productCapabilityTags">
+                            <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="productCapabilityTags" />
+                        </productCapabilityTags>
+                        <productUsageLevelTag jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            rootPath="/content/cq:tags/softwareag"
+                            fieldDescription="Here a tag can be added or removed from the page, specific to the respective product usage level."
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}false"
+                            fieldLabel="Tag for product usage level"
+                            multiple="{Boolean}false"
+                            required="{Boolean}false"
+                            name="./productUsageLevelTag">
+                            <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="productUsageLevelTag" />
+                        </productUsageLevelTag>
+                        <campaignLandingPage
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            text="Campaign landing page"
+                            fieldDescription="A checkbox indicates whether the page is a campaign landing page or not."
+                            name="./campaignLandingPage"
+                            value="{Boolean}true"
+                            uncheckedValue="{Boolean}false"
+                            checked="{Boolean}false">
+                            <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="campaignLandingPage" />
+                        </campaignLandingPage>
+					</items>
+				</analytics>
+			</items>
+		</column>
+	</items>
+</jcr:root>

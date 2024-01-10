@@ -1,0 +1,63 @@
+.carousel-logos {
+  .slick-image {
+    margin: 0 auto;
+    max-height: 4.2rem;
+    object-fit: contain;
+    max-width: 100%;
+
+    @include mq-phone {
+      margin: 0 1rem;
+      width: 100%;
+      max-height: 2.4rem;
+    }
+  }
+
+  .slick-image:hover {
+    opacity: 1 !important;
+  }
+}
+
+.slick-customarrowleft {
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 21%;
+  left: 2.4rem;
+  @include mq-phone {
+    left: -0.5rem;
+    top: 15%;
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.slick-customarrowright {
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 21%;
+  right: 2.4rem;
+  @include mq-phone {
+    top: 15%;
+    right: 0;
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.slick-dots li button:before {
+  font-size: 1rem !important;
+}
+.carousel-a-v1__container[data-wcmmode="edit"] {
+  .slider-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .carousel-logos {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Language Changer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <General
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="The title of the component visible in the Footer."
+                                        fieldLabel="Title"
+                                        required="{Boolean}true"
+                                        name="./general/title" />
+                                    <introductoryText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldDescription="An introductory text, i.e. Selecting a language changes the languages and/or content of this page."
+                                        fieldLabel="Introductory Text"
+                                        rows="3"
+                                        required="{Boolean}true"
+                                        value="Please select a language."
+                                        name="./general/introductoryText" />
+                                </items>
+                            </column>
+                        </items>
+                    </General>
+                    <Language
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Language"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <linkItems
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                fieldDescription="A multi-field to add several link items with headline and link."
+                                                fieldLabel="Link Items"
+                                                jcr:primaryType="nt:unstructured"
+                                                composite="{Boolean}true">
+                                                <field
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./language">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <linkLabel
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Link Label"
+                                                            fieldDescription="Please add link label here."
+                                                            name="./text"
+                                                            required="{Boolean}true" />
+                                                        <linkDestination
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                            fieldLabel="Link Destination"
+                                                            fieldDescription="Please add link destination here."
+                                                            rootPath="/content"
+                                                            required="{Boolean}true"
+                                                            name="./href" />
+                                                    </items>
+                                                </field>
+                                            </linkItems>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </Language>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
+

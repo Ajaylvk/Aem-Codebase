@@ -1,0 +1,39 @@
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+
+RewriteCond "%{HTTP_HOST}" "!^www\.softwareag\.com" [NC]
+RewriteCond "%{HTTP_HOST}" "!^www-test\.softwareag\.com" [NC]
+#RewriteCond "%{HTTP_HOST}" "!\.adobecqms\.net$" [NC]
+RewriteRule "^/?(.*)" https://www.softwareag.com/$1 [R=301,NC,L]
+
+RewriteRule ^/$ /en_corporate.html [R=301,L,NC]
+RewriteRule ^/content/softwareag/[a-z]+/(.*)(\.html)?$ /$1 [NE,L,R=301]
+
+#Handle extensionless URLs + URLs without trailing slash
+RewriteCond %{REQUEST_URI} !^/content/dam/.*
+RewriteCond %{REQUEST_URI} !.*\..*$
+RewriteCond %{REQUEST_URI} !.*/$
+RewriteRule (.*)$ $1.html [R,QSA]
+
+#Resolve URLs ending with trailing slash
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^/([a-z]{2}_)([a-z]+)(/.*)?/$ /content/softwareag/$2/$1$2$3.html [PT,L,QSA]
+
+#Append .html for URL resolution on Publish
+#RewriteCond %{REQUEST_URI} !^/en_corporate/company/news/(.*) [NC]
+RewriteRule ^/([a-z]{2}_)([a-z]+)(/.*)?\.(html|jpe?g|JPE?G|png|PNG|gif|GIF)$ /content/softwareag/$2/$1$2$3.$4 [PT,L,QSA]
+
+#Sitemap resolution
+RewriteRule ^/([a-z]{2}_)([a-z]+)\.sitemap\.xml$ /content/softwareag/$2/$1$2.sitemap.xml [PT,L]
+
+#RewriteCond %{REQUEST_URI} ^/en_corporate/company/news/(.*) [NC]
+#RedirectMatch ^/en_corporate/company/news(/.*)?\.html$ https://newscenter.softwareag.com/en/press-releases$1.htm
+
+#RewriteCond %{REQUEST_URI} ^/de_de/company/news/(.*) [NC]
+#RedirectMatch ^/de_de/company/news(/.*)?\.html$ https://newscenter.softwareag.com/de/press-releases$1.html

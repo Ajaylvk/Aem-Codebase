@@ -1,0 +1,10 @@
+.cq-Overlay--placeholder {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cq-Overlay--placeholder.is-active,
+.cq-Overlay--placeholder:focus,
+.cq-Overlay--placeholder.is-hover,
+.cq-Overlay--placeholder.is-selected {
+  background-color: rgba(255, 255, 255, 0.1);
+}

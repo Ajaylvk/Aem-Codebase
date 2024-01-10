@@ -1,0 +1,17 @@
+@import '../../../../core/scss/helper/_colors';
+
+.input__colorselect-text-background {
+    &-text-component-color1 {
+        background-color: $color-core-light !important;
+    }
+
+    &-text-component-color2 {
+        background-color: $color-white !important;
+    }
+    &-text-component-color3 {
+        background-color:$color-core-black !important;
+    }
+    &-text-component-color4 {
+        background-color: $color-core-dark-950 !important;
+    }
+}

@@ -1,0 +1,26 @@
+<div class="a-cta a-cta--design-${!cta.design ? 'link' : cta.design}"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.cta="com.softwareag.core.models.cta.CtaModel"
+     data-sly-test="${cta.valid}">
+
+    <a class="a-cta__button"
+       href="${cta.href}"
+       title="${cta.link.text}"
+       target="${cta.link.target}"
+       data-attrib-type="asset"
+       data-attrib-name="${cta.link.text}"
+       data-attrib-asset-type="${cta.link.assetType}"
+       data-attrib-asset-link="${cta.href}">
+        <span class="a-cta__button-text">
+            ${cta.link.text}
+        </span>
+        <span class="a-cta__button-icon" data-sly-test="${!cta.design || cta.design == 'link'}">
+            <sly data-sly-test.downloadable="${!cta.inline && cta.assetModel}"
+                 class="a-icon"
+                 data-sly-call="${icons.getIcon @ name='arrow-down', width=30, height=30}" />
+            <sly data-sly-test="${!downloadable}"
+                 class="a-icon"
+                 data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}" />
+        </span>
+    </a>
+</div>

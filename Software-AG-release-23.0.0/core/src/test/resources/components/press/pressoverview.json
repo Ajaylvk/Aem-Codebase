@@ -1,0 +1,164 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Press Overview",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/pressoverview",
+        "sling:resourceType": "softwareag/components/structure/basic-page",
+        "pressoverview": {
+            "jcr:primaryType": "nt:unstructured",
+            "copyText": "Some text",
+            "title": "Send us a message",
+            "amountOfListedPressItems": "6",
+            "amountOfMoreLoadedPressItems": "20",
+            "sling:resourceType": "softwareag/components/content/pressoverview"
+        }
+    },
+    "press-folder-01": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Press Folder 01",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "Press Folder 01",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "press-page-01": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Press Page 01",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/press",
+                "sling:resourceType": "softwareag/components/structure/basic-page",
+                "pressitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pressReleaseDate": "2021-02-08",
+                    "hidePressInPressOverview": "false",
+                    "sling:resourceType": "softwareag/components/content/pressitem",
+                    "textIsRich": "true",
+                    "pressDescription": "Press Item 01",
+                    "pressTitle": "Press Item 01"
+                }
+            }
+        },
+        "press-folder-01-01": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Press Folder 01-01",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+                "cq:redirectTarget": "Press Folder 01-01",
+                "sling:resourceType": "softwareag/components/structure/folder"
+            },
+            "press-page-01-01": {
+                "jcr:primaryType": "cq:Page",
+                "jcr:content": {
+                    "jcr:primaryType": "cq:PageContent",
+                    "jcr:title": "Press Page 01-01",
+                    "cq:template": "/conf/softwareag/settings/wcm/templates/press",
+                    "sling:resourceType": "softwareag/components/structure/basic-page",
+                    "pressitem": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "pressReleaseDate": "2020-01-09",
+                        "hidePressInPressOverview": "false",
+                        "sling:resourceType": "softwareag/components/content/pressitem",
+                        "textIsRich": "true",
+                        "pressDescription": "Press Item 01-01",
+                        "pressTitle": "Press Item 01-01"
+                    }
+                }
+            }
+        }
+    },
+    "press-folder-02": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Press Folder 02",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/folder",
+            "cq:redirectTarget": "Press Folder 02",
+            "sling:resourceType": "softwareag/components/structure/folder"
+        },
+        "press-page-03": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Press Page 03",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/press",
+                "sling:resourceType": "softwareag/components/structure/basic-page",
+                "pressitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pressReleaseDate": "2020-01-10",
+                    "hidePressInPressOverview": "false",
+                    "sling:resourceType": "softwareag/components/content/pressitem",
+                    "textIsRich": "true",
+                    "pressDescription": "Press Item 03",
+                    "pressTitle": "Press Item 03"
+                },
+                "pressitem2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pressReleaseDate": "2020-01-11",
+                    "hidePressInPressOverview": "false",
+                    "sling:resourceType": "softwareag/components/content/pressitem",
+                    "textIsRich": "true",
+                    "pressDescription": "Press Item 03",
+                    "pressTitle": "Press Item 03"
+                },
+                "othercomponent": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pressReleaseDate": "2020-01-11",
+                    "hidePressInPressOverview": "false",
+                    "sling:resourceType": "softwareag/components/content/rte",
+                    "textIsRich": "true",
+                    "pressDescription": "Press Item 03",
+                    "pressTitle": "Press Item 03"
+                }
+            }
+        },
+        "press-page-04": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Press Page 04",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/press",
+                "sling:resourceType": "softwareag/components/structure/basic-page",
+                "pressitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pressReleaseDate": "2020-01-28",
+                    "hidePressInPressOverview": "true",
+                    "sling:resourceType": "softwareag/components/content/pressitem",
+                    "textIsRich": "true",
+                    "pressDescription": "Press Item 04",
+                    "pressTitle": "Press Item 04"
+                }
+            }
+        },
+        "press-page-corrupt-content1": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Press Page 04",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/press",
+                "sling:resourceType": "softwareag/components/structure/basic-page",
+                "pressitem": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pressReleaseDate": "2020-01-28",
+                    "hidePressInPressOverview": "false",
+                    "sling:resourceType": "softwareag/components/content/anothercomponent",
+                    "textIsRich": "true",
+                    "pressDescription": "Press Item 04",
+                    "pressTitle": "Press Item 04"
+                }
+            }
+        },
+        "press-page-corrupt-content2": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:title": "Press Page 04",
+                "cq:template": "/conf/softwareag/settings/wcm/templates/press",
+                "sling:resourceType": "softwareag/components/structure/basic-page"
+            }
+        }
+    }
+}

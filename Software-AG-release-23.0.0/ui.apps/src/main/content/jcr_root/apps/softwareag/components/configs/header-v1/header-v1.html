@@ -1,0 +1,48 @@
+<sly data-sly-use.icons="softwareag/components/commons/svg/icons.html" />
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+    data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+    data-sly-use.headerV1Model="com.softwareag.core.models.header.HeaderModel_V1"
+    data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+    data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}" />
+
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-attrib-campaign="${campaignModel.campaign}" id="header-v1-parent-Id"
+    class="header-v1-parent ${headerV1Model.backgroundColor}">
+    <!--/* Logo */-->
+    <div id="child-div-1-Id" class="child-div-1">
+        <div style="min-width:10rem;" data-sly-resource="${ 'logo' @ resourceType='softwareag/components/configs/logo-v1'}"></div>
+    </div>
+    <div id="child-div-2-Id" class="child-div-2">
+        <div class="navigation_menu-v1" data-sly-resource="${'sitenav' @ resourceType='softwareag/components/content/navigation_menu-v1'}"></div>
+        <div class="tablet-view-contact-button ${headerV1Model.type != 'devcenter' ? '' : 'dev-center-header-v1'}">
+
+      </div>
+  <div data-sly-test="${headerV1Model.type != 'devcenter'}" class="regionChanger-spacing_mobile-view">
+  <button  class="region-changer-text"><span class="region-changer-button">Region Changer</span></button>
+  </div>
+</div>
+    <div id="child-div-3-Id" class="child-div-3">
+        <div class="child-div-4">
+            <div class="searchIcon"
+                data-sly-resource="${ 'search' @ resourceType='softwareag/components/content/searchcomponent'}"></div>
+        </div>
+        <div data-sly-test="${headerV1Model.type != 'devcenter'}" class="regionChanger-spacing"
+            data-sly-resource="${ @path='regionchanger', resourceType='softwareag/components/content/regionchanger-v1'}">
+    </div>
+            <div id="primary-contact-button" class="primary-button">
+                <div data-sly-resource="${ 'button4' @ resourceType='softwareag/components/content/button'}"></div>
+            </div>
+          <div id="secondary-try-button" class="secondary-button ${headerV1Model.type != 'devcenter' ? '' : 'dev-center-desktop'}">
+            <div data-sly-resource="${ 'button5' @ resourceType='softwareag/components/content/button'}"></div>
+        </div>
+    <!--/* Burger Menu */-->
+    <button class="headerV1__icons-menu" role="navigation">
+        <div class="headerV1__icons-menu-open a-icon a-icon--hover hamburger-icon"
+            data-sly-call="${icons.getIcon @ name='menu-core-dark120', width=30, height=30}"></div>
+        <div class="headerV1__icons-menu-close a-icon a-icon--hover" style="display: none;"
+            data-sly-call="${icons.getIcon @ name='close', width=30, height=30}"></div>
+            <div class="headerV1__icons-menu-regionChanger a-icon a-icon--hover" style="display: none;"
+            data-sly-call="${icons.getIcon @ name='close', width=30, height=30}"></div>
+    </button>
+</div>
+</div>

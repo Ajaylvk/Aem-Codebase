@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:actions="[EDITANNOTATE,COPYMOVE,INSERT,DELETE]"
+    cq:dialogMode="floating"
+    cq:layout="editbar"
+    jcr:primaryType="cq:EditConfig">
+    <cq:editConfig
+        cq:actions="[EDITANNOTATE,DELETE,INSERT,COPYMOVE]"
+        cq:dialogMode="floating"
+        cq:disableTargeting="true"
+        cq:layout="editbar"
+        jcr:primaryType="cq:EditConfig">
+        <cq:dropTargets jcr:primaryType="nt:unstructured">
+            <image
+                jcr:primaryType="cq:DropTargetConfig"
+                accept="[image/.*]"
+                groups="[media,s7media]"
+                propertyName="./fileReference">
+                <parameters
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="softwareag/components/content/gridcontainer"/>
+            </image>
+        </cq:dropTargets>
+        <cq:listeners
+            jcr:primaryType="cq:EditListenersConfig"
+            afterdelete="REFRESH_PAGE"/>
+    </cq:editConfig>
+</jcr:root>

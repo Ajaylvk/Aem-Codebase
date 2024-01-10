@@ -1,0 +1,62 @@
+{
+    "internal-link": {
+        "text": "Text",
+        "href": "/content/softwareag",
+        "target": "_blank"
+    },
+    "external-link": {
+        "text": "Text",
+        "href": "https://www.softwareag.com",
+        "target": "_blank"
+    },
+    "dam-link": {
+        "text": "Text",
+        "href": "/content/dam/softwareag/test.png"
+    },
+    "empty" : {
+
+    },
+    "internal-rel-path-hash-link": {
+        "text": "Text",
+        "href": "/content/softwareag#anchor",
+        "target": "_blank"
+    },
+    "internal-hash-only-link": {
+        "text": "Text",
+        "href": "#anchor",
+        "target": "_blank"
+    },
+    "internal-utm-link": {
+        "text": "Text",
+        "href": "/content/softwareag",
+        "utmParameter":	"utm_source=facebook.com&utm_medium=social&utm_campaign=fs2017cat",
+        "target": "_blank"
+    },
+    "internal-hash-utm-link": {
+        "text": "Text",
+        "href": "/content/softwareag#anchor",
+        "utmParameter":	"utm_source=facebook.com&utm_medium=social&utm_campaign=fs2017cat",
+        "target": "_blank"
+    },
+    "without-text": {
+        "href": "/content",
+        "target": "_blank"
+    },
+    "without-href": {
+        "text": "Text",
+        "target": "_blank"
+    },
+    "internal-without-target": {
+        "text": "Text",
+        "href": "/content/softwareag"
+    },
+    "external-without-target": {
+        "text": "Text",
+        "href": "https://www.softwareag.com"
+    },
+    "incorrect-target": {
+        "text": "Text",
+        "href": "/content/softwareag",
+        "target": "abc"
+    }
+}

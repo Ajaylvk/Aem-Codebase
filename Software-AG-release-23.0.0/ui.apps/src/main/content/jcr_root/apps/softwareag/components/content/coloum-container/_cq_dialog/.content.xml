@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Coloum Container"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            jcr:title="container"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+            margin="{Boolean}true"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <colcount
+                        granite:class="cq-dialog-dropdown-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        cq-dialog-dropdown-showhide-target=".bgimage-showhide-target"
+                        fieldDescription="Please select the number of Columns required in the container."
+                        fieldLabel="Number of Columns"
+                        name="./nooflinks">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Number of Columns"
+                                value="0"/>
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="1 Column"
+                                value="1"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="2 Columns"
+                                value="2"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".bgimage-showhide-target"/>
+                    </colcount>
+                    <collayout
+                        granite:class="bgimage-showhide-target"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="2"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Please select column Layout"
+                                        fieldLabel="Column Layout"
+                                        name="./columnLayout">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <_x0035_0-50
+                                                jcr:primaryType="nt:unstructured"
+                                                text="50%-50%"
+                                                value="fifty"/>
+                                            <_x0036_6-33
+                                                jcr:primaryType="nt:unstructured"
+                                                text="66%-33%"
+                                                value="sixtysix"/>
+                                            <_x0033_3-66
+                                                jcr:primaryType="nt:unstructured"
+                                                text="33%-66%"
+                                                value="thirtythree"/>
+                                        </items>
+                                    </layout>
+                                </items>
+                            </column>
+                        </items>
+                    </collayout>
+                    <horizontalpadding
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Please select the padding for horizontal container(px)"
+                        fieldLabel="Horizontal Container Padding"
+                        name="./hPadding">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                text="No Padding"
+                                value="0px"/>
+                            <_x0032_4
+                                jcr:primaryType="nt:unstructured"
+                                text="84 Pixels"
+                                value="84px"/>
+                        </items>
+                    </horizontalpadding>
+                    <centerpadding
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Please select the padding between the coloums(px)"
+                        fieldLabel="Padding between columns"
+                        name="./centerPadding">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                text="No Padding"
+                                value="0px"/>
+                            <_x0032_4
+                                jcr:primaryType="nt:unstructured"
+                                text="24 Pixels"
+                                value="24px"/>
+                            <_x0034_0
+                                jcr:primaryType="nt:unstructured"
+                                text="40 Pixels"
+                                value="40px"/>
+                            <_x0036_4
+                                jcr:primaryType="nt:unstructured"
+                                text="64 Pixels"
+                                value="64px"/>
+                        </items>
+                    </centerpadding>
+                    <backgroundcolor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="The Background color of the component."
+                        fieldLabel="Background Color"
+                        name="./backgroundColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                selected="{Boolean}true"
+                                text="Select Teaser Background Color"
+                                value=""/>
+                            <corelight
+                                jcr:primaryType="nt:unstructured"
+                                text="Core Light"
+                                value="input__colorselect-background-color7"/>
+                            <coredark950
+                                jcr:primaryType="nt:unstructured"
+                                text="Core Dark 950"
+                                value="input__colorselect-background-color10"/>
+                            <coredark120
+                                jcr:primaryType="nt:unstructured"
+                                text="Core Dark 120"
+                                value="input__colorselect-background-color8"/>
+                                <coredark220
+                                jcr:primaryType="nt:unstructured"
+                                text="Core Dark 220"
+                                value="input__colorselect-background-color9"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="input__colorselect-background-color1"/>
+                        </items>
+                    </backgroundcolor>
+                    <checkbox
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        defaultChecked="{Boolean}true"
+                        name="./enabletbpadding"
+                        text="Top and Bottom padding"
+                        value="{Boolean}true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

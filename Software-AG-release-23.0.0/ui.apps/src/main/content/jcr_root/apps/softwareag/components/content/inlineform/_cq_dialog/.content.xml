@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="In-line Form"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <form
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form "
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <greyline
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Grey line will add top of the form"
+                                name="./greyLine"
+                                text="Show Grey Boder Line"
+                                uncheked="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <position
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Defines the position of the icon, title, text and CTA."
+                                fieldLabel="Position"
+                                name="./position">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <select
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="Select the dropdown for Alignment"
+                                        value=""/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="left"/>
+                                    <center
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Center"
+                                        value="center"/>
+                                </items>
+                            </position>
+                            <bgcolor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Please select Form background color"
+                                fieldLabel="Background Color"
+                                name="./backgroundColor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <select
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="Select Form Background Color"
+                                        value=""/>
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="input__colorselect-background-color1"/>
+                                    <coredark950
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Core Dark 950"
+                                        value="input__colorselect-background-color10"/>
+                                    <corelight930
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Core Light 930"
+                                        value="input__colorselect-background-color7"/>
+                                </items>
+                            </bgcolor>
+                        </items>
+                    </form>
+					<asset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Background Image"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:hideChildren="[title,height,width]">
+                                    <file
+                                        granite:id="dmFileReference"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fieldDescription="Please add Background image here."
+                                        fieldLabel="Background Image"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./fileReference"
+                                        mimeTypes="[image/.*]"
+                                        multiple="{Boolean}false"
+                                        name="./file"
+                                        title="Asset"
+                                        useHTML5="{Boolean}true"/>
+                                    <alt
+                                        granite:id="dmAltText"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        fieldLabel="Alternative Text"
+                                        name="./altTextc"
+                                        validation="imageAlternativeText"/>
+                                </items>
+                            </image>
+                        </items>
+                    </asset>
+                    <dmSettings
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_dm_settings"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

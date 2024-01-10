@@ -1,0 +1,48 @@
+<div data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.pressItem="com.softwareag.core.models.press.PressItem"
+     data-sly-test.hasContent="${pressItem.pressTitle && pressItem.pressReleaseDate}"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     data-sly-use.pressReleaseDate="${'com.softwareag.core.models.DateTimeModel' @ input=pressItem.pressReleaseDate, format=pressItem.getGeneralConfigDateFormat}"
+     class="pressitem__container"
+     data-attrib-name="contentsection"
+     data-attrib-value="${pressItem.dataAttribValue}">
+
+    <div class="pressitem__top">
+        <div class="cta-container a-cta--default-link-color">
+            <a class="a-cta a-cta--design-link" href="${pressItem.overviewPath @ context='uri', extension='html'}" title="${pressItem.labelGoToOverview}" data-attrib-type="asset" data-attrib-name="${pressItem.labelGoToOverview}">
+                <span class="a-cta__button">
+                    <span class="a-cta__button-text">
+                        ${pressItem.labelGoToOverview}
+                    </span>
+                    <span class="a-cta__button-icon">
+                        <sly class="a-icon" data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}" />
+                    </span>
+                </span>
+            </a>
+        </div>
+        <span class="pressitem__date a-copytext">
+            ${pressReleaseDate.output}
+        </span>
+    </div>
+
+    <h2 class="a-h1 pressitem__title">
+        <pre class="aem__textarea">
+            ${pressItem.pressTitle @ context='html'}
+        </pre>
+    </h2>
+
+    <div class="a-copytext pressitem__text" data-sly-test="${pressItem.pressHighlights}">
+        ${pressItem.pressHighlights @ context='html'}
+    </div>
+
+    <p data-sly-test="${pressItem.pressSummary}" class="a-copytext pressitem__summary">${pressItem.pressSummary @ context='html'}</p>
+
+    <div class="a-copytext pressitem__text">
+        ${pressItem.pressDescription @ context='html'}
+        <sly data-sly-test="${wcmmode.edit && pressItem.externalPressLink}">
+            <!-- /* never publicly visible.  Authoring assistance only */ -->
+            <h3>Redirected to: ${pressItem.externalPressLink}</h3>
+        </sly>
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

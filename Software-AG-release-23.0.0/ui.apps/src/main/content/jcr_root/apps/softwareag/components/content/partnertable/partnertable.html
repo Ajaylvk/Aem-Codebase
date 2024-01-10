@@ -1,0 +1,41 @@
+<div data-sly-use.templates="softwareag/components/commons/templates.html"
+	  data-sly-use.partnerTable="com.softwareag.core.models.partner.PartnerTableModel"
+    data-sly-test.hasContent="${partnerTable.hasContent}" class="partnertable__wrapper" >
+
+  <table class="partnertable__table" aria-label="partner table content">
+      <caption class="a-h2">${properties.title}</caption>
+      <thead>
+      <tr>
+          <th scope="col">${partnerTable.labelCountries}</th>
+          <th scope="col">${partnerTable.labelPartnerType}</th>
+          <th scope="col">${partnerTable.labelProductCategory}</th>
+          <th scope="col">${partnerTable.labelIndustries}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>
+              <ul data-sly-list.countries="${partnerTable.countryTags}">
+                  <li>${countries}</li>
+              </ul>
+          </td>
+          <td>
+              <ul data-sly-list.partnerTypes="${partnerTable.partnerTypeTags}">
+                  <li>${partnerTypes}</li>
+              </ul>
+      </td>
+      <td>
+        <ul data-sly-list.prdCategories="${partnerTable.productCategoryTags}">
+          <li>${prdCategories}</li>
+        </ul>
+      </td>
+      <td>
+        <ul data-sly-list.industries="${partnerTable.industryTags}">
+          <li>${industries}</li>
+        </ul>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>

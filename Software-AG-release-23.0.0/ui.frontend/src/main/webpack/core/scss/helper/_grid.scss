@@ -1,0 +1,117 @@
+//https://codepen.io/goschevski/pen/Awuyz
+@mixin row() {
+    font-size: 0;
+}
+
+// This is column mixins.
+@mixin col($col, $sum, $gap: 1em, $align: top, $first: false, $last: false) {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: if($first, 0, $gap);
+    padding-right: if($last, 0, $gap);
+
+    @media only screen and (min-width: 768px) {
+        width: percentage($col/$sum);
+        vertical-align: $align;
+    }
+
+    &.fluid {
+        width: percentage($col/$sum);
+    }
+}
+
+// http://jsfiddle.net/fMeBk/46/
+$grid-column-count: 12; // Total column count
+$grid-gutter-width: 36; // [in pixels]
+$grid-column-padding: 0; // [in pixels]
+$grid-max-width: $mq-desktop-width-value; // [in pixels]
+$grid-margin: 0; // [in pixels] Space outside the grid
+$grid-phone-horizontal-margin: 2rem;
+$grid-tablet-horizontal-margin: 4rem;
+$grid-desktop-horizontal-margin: 3rem;
+
+
+@function grid-column-width() {
+    @return $grid-max-width / $grid-column-count;
+}
+
+// Grid calculations
+@function grid-column-width-calc($colNumber) {
+    // Is correct
+    @if $grid-gutter-width == 0 {
+        @return percentage($colNumber / $grid-column-count);
+    }
+    // Is incorrect
+    @else {
+        @return percentage((($colNumber / $grid-column-count) - gutterCalc(false)));
+    }
+}
+
+@function gutter-calc($showUnit: true) {
+    @if $showUnit == true {
+        @return percentage($grid-gutter-width / $grid-max-width);
+    } @else {
+        @return $grid-gutter-width / ( $grid-max-width - ($grid-margin * 2) );
+    }
+}
+
+// Accepts a number of columns that a  block should span.
+// Returns a percentage width for that block.
+@mixin columns($columnSpan: 1) {
+    $number-of-blocks-in-container: $grid-column-count / $columnSpan;
+    $total-width-of-all-gutters: gutter-calc(false) * ($number-of-blocks-in-container - 1);
+    $total-width-of-all-blocks: 1 - $total-width-of-all-gutters;
+    $width-of-a-single-block: $total-width-of-all-blocks / $number-of-blocks-in-container;
+
+    width: percentage($width-of-a-single-block);
+}
+
+@mixin grid-column() {
+    @if $grid-gutter-width > 0 {
+        margin-left: gutter-calc() / 4;
+        margin-right: gutter-calc() / 4;
+    }
+    @if $grid-column-padding > 0 {
+        padding: $grid-column-padding + px;
+    }
+    float: none;
+    display: inline-block;
+    min-height: 30px;
+    position: relative;
+    clear: none;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    @include mq-until-tablet {
+        float: none;
+        clear: both;
+        margin-left: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include mq-phone {
+        @include spacing(margin-bottom, m);
+    }
+    @include mq-tablet {
+        @include spacing(margin-bottom, m);
+    }
+}
+
+@mixin clearfix {
+    *zoom: 1;
+
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Logo Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <file
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}false"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldDescription="Please add image here."
+                                fieldLabel="Logo"
+                                fileNameParameter="./fileName"
+                                fileReferenceParameter="./image"
+                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                multiple="{Boolean}false"
+                                name="./file"
+                                required="{Boolean}true"
+                                title="Logo"
+                                useHTML5="{Boolean}true"/>
+                            <altText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                fieldLabel="Alternative Text"
+                                name="./altText"
+                                required="{Boolean}true"/>
+                            <href
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldDescription="Please add a link destination here."
+                                fieldLabel="Link Destination"
+                                name="./link/href"
+                                required="{Boolean}true"
+                                rootPath="/content"/>
+                            <utmParameter
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please add the UTM Parameter in the following manner: utm_source=facebook.com&amp;utm_medium=social&amp;utm_campaign=fs2017cat."
+                                fieldLabel="UTM Parameter"
+                                name="./link/utmParameter"/>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Tenant name that is shown next to the logo."
+                                fieldLabel="Site Title"
+                                name="./title"/>
+                            <hrefSite
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldDescription="Please add a link destination here."
+                                fieldLabel="Link Destination"
+                                name="./hrefSite"
+                                rootPath="/content"/>
+                        </items>
+                    </column>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

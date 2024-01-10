@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        allowedPaths="[/content/softwareag/[^/]*(/.*),/content/investorrelation/[^/]*(/.*)]"
+        allowedParents="[/conf/softwareag/settings/wcm/templates/folder]"
+        cq:templateType="/conf/softwareag/settings/wcm/template-types/empty-template"
+        jcr:description="Software AG Event Page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Event Page"
+        status="enabled" />
+</jcr:root>

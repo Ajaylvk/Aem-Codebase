@@ -1,0 +1,4 @@
+#base=js
+showhidetab.js
+showhide.js
+gradientcheck.js

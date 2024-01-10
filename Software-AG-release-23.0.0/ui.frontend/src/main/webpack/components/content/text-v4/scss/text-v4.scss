@@ -1,0 +1,298 @@
+.text_V4-container {
+  .text_V4-headline:first-child {
+    padding-top: 0;
+  }
+  .text_V4-overline-text:first-child {
+    padding-top: 0;
+  }
+  .cmp-link__button-icon.svg-baseline {
+    top: unset;
+  }
+  width: 100%;
+  max-width: 132rem;
+  padding: 6.4rem 2.4rem 0;
+  margin: auto;
+  @include mq-tablet {
+    padding: 4.8rem 2.4rem 0;
+  }
+  @include mq-phone {
+    padding: 4rem 1.6rem 0;
+  }
+  .text_V4-divider {
+    border-top: 2px solid #8e3cf7;
+    width: 28rem;
+    // padding-top: 4rem;
+  }
+
+  .text_V4-divider.centered-text {
+    margin: auto;
+  }
+  .text_V4-divider.right-aligned {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .text_V4-overline-text {
+    text-transform: uppercase;
+    color: #193857;
+    @include base-font-bold;
+    @include font-size-with-rem-line-height(1.4rem, 2rem);
+    letter-spacing: 0.06em;
+    padding-top: 4rem;
+  }
+
+  .text_V4-headline {
+    @include font-size-with-rem-line-height(4.2rem, 5rem);
+    @include base-font-light;
+    padding-top: 2.4rem;
+    @include mq-desktop {
+      width: 95rem;
+    }
+  }
+
+  .text_V4-description {
+    padding-top: 3.2rem;
+    @include mq-desktop {
+      width: 95rem;
+    }
+  }
+
+  .text_V4-link {
+    .cmp-link__button {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+  .text_V4-link.text_V4-link.right-aligned > div {
+    .cmp-link {
+      .cmp-link__button {
+        margin-right: 0 !important;
+      }
+    }
+  }
+  .text_V4-link.text_V4-link.right-aligned > div:not(:first-child) {
+    .cmp-link {
+      .cmp-link__button {
+        margin-left: 3.2rem;
+      }
+    }
+  }
+  .text_V4-link.text_V4-link > div:not(:last-child) {
+    .cmp-link {
+      .cmp-link__button {
+        margin-right: 3.2rem;
+      }
+    }
+  }
+  .text_V4-link.text_V4-link.centered-text
+    > div:not(:first-child, :last-child) {
+    .cmp-link {
+      .cmp-link__button {
+        margin-right: 3.2rem;
+      }
+      @include mq-phone {
+        .cmp-link__button {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+  .text_V4-link {
+    @include mq-desktop {
+      width: 95rem;
+    }
+    padding-top: 3.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    .cmp-link {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+  }
+  .text_V4-link > div > div {
+    min-width: 6rem;
+  }
+}
+.text_V4-container.centered-text {
+  text-align: center;
+  .text_V4-link {
+    @include mq-desktop {
+      width: 72rem;
+    }
+  }
+}
+.text_V4-container.right-aligned {
+  text-align: right;
+}
+.text_V4-link.right-aligned {
+  justify-content: end;
+  margin-right: 0;
+  margin-left: auto;
+}
+.text_V4-link.centered-text {
+  justify-content: center;
+  @include mq-phone {
+    justify-content: space-around;
+  }
+  margin-right: auto;
+  margin-left: auto;
+}
+.text_V4-headline.centered-text {
+  margin: auto;
+  @include mq-desktop {
+    width: 72rem;
+  }
+}
+.text_V4-headline.right-aligned,
+.text_V4-description.right-aligned {
+  text-align: right;
+  margin-left: auto;
+  @include mq-desktop {
+    width: 95rem;
+  }
+}
+.text_V4-description.centered-text {
+  margin: auto;
+  @include mq-desktop {
+    width: 72rem;
+  }
+}
+.text_V4-link > div {
+  padding-bottom: 1rem;
+}
+.text_V4-description {
+  @include base-font;
+  @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+  letter-spacing: 0em;
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    @include mq-phone {
+      padding-left: 2.6rem;
+    }
+    @include mq-tablet {
+      padding-left: 4.6rem;
+    }
+    @include mq-desktop {
+      padding-left: 4.6rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    li:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+  ul {
+    @include mq-phone {
+      padding-left: 2.6rem;
+    }
+    @include mq-tablet {
+      padding-left: 4.6rem;
+    }
+    @include mq-desktop {
+      padding-left: 4.6rem;
+    }
+    list-style-type: disc;
+    list-style-position: outside;
+    li:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+  }
+  h2:not(:last-child) {
+    padding-bottom: 1.6rem;
+  }
+  h3 {
+    @include mq-desktop {
+      padding-bottom: 1.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 1.2rem;
+    }
+    @include mq-phone {
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  h4 {
+    padding-bottom: 0.8rem;
+  }
+  h5 {
+    padding-bottom: 0.4rem;
+  }
+  h6:not(:last-child) {
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  p:not(:last-child) {
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+}
+.text_V4-link {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+}
+.text_V4-wrapper.white {
+  background-color: $color-white;
+  color: $color-core-black;
+}
+.text_V4-wrapper.core-dark-950 {
+  background-color: $color-core-dark-950;
+  color: $color-core-black;
+}
+.text_V4-wrapper.core-light-930 {
+  background-color: $color-core-light;
+  color: $color-core-black;
+}
+.text_V4-wrapper.core-dark-120 {
+  background-color: $color-core-black;
+  color: $color-white;
+  .text_V4-overline-text {
+    color: $color-white;
+  }
+}
+.text_V4-wrapper.core-dark-220 {
+  background-color: $color-core-dark-220;
+  color: $color-white;
+  .text_V4-overline-text {
+    color: $color-white;
+  }
+}
+.icon-top-padding {
+  padding-top: 40px;
+}

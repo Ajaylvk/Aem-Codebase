@@ -1,0 +1,28 @@
+.blogfooter__container {
+    // @include mq-phone {
+    //     @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    // }
+    // @include mq-tablet {
+    //     @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    // }
+    // @include mq-desktop {
+    //     @include font-size-with-rem-line-height(2.4rem, 3.0rem);
+    // }
+    
+    a:hover & {
+        text-decoration: underline;
+        color: $color-white;
+    }
+
+    .a-h5-new {
+        color: $color-white;
+        margin-bottom: 2.8rem;
+    }
+
+    /*TODO SGEIER make atom */
+    .a-bodycopy {
+        margin-bottom: 2.4rem;
+        color:$color-core-dark-850;
+    }
+}
+

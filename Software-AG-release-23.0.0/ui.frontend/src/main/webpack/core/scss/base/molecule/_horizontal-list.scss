@@ -1,0 +1,16 @@
+.m-horizontal-list {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &--right {
+        justify-content: flex-end;
+    }
+
+    &__item {
+        display: inline-block;
+        flex: 0 1 auto; /* Default */
+        list-style-type: none;
+    }
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Press Item Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                granite:class="cq-RichText-FixedColumn-column">
+                <items jcr:primaryType="nt:unstructured">
+                    <hidepressinpressoverview
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        text="Hide press in Press Overview component"
+                        fieldDescription="A checkbox indicates whether the press is shown or hidden in the Press Overview component."
+                        name="./hidePressInPressOverview"
+                        value="{Boolean}true"
+                        uncheckedValue="{Boolean}false"/>
+                    <make-releasedate-string
+                        about="This causes pressReleaseDate to be saved as a String in JCR instead of Date"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/hidden"
+                        name="./pressReleaseDate@TypeHint"
+                        value="String"/>
+                    <pressreleasedate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                        fieldLabel="Press Release Date"
+                        fieldDescription="The date when the press was released."
+                        required="{Boolean}true"
+                        valueFormat="YYYY-MM-DD"
+                        type="date"
+                        name="./pressReleaseDate"/>
+                    <presstitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldDescription="A title to display as the headline for the Press Item."
+                        fieldLabel="Press Title"
+                        name="./pressTitle"
+                        required="{Boolean}true"
+                        removeSingleParagraphContainer="{Boolean}true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePluginsOnlySubsuperscript" />
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettingsOnlySubsuperscript" />
+                    </presstitle>
+                    <presshighlights
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        name="./pressHighlights"
+                        fieldLabel="Press Highlights"
+                        fieldDescription="The hightlights of the press."
+                        useFixedInlineToolbar="{Boolean}true"
+                        removeSingleParagraphContainer="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePlugins" />
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettings" />
+                    </presshighlights>
+                    <presssummary
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Press Summary"
+                        fieldDescription="A short summary of the Press Item."
+                        name="./pressSummary"/>
+                    <pressdescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        name="./pressDescription"
+                        fieldLabel="Press Description"
+                        fieldDescription="A text to display as the description for the Press Item."
+                        useFixedInlineToolbar="{Boolean}true"
+                        removeSingleParagraphContainer="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePlugins" />
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettings" />
+                    </pressdescription>
+                    <externalPresslink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="External Press Link"
+                        fieldDescription="The link destination of the page of the external configured press page."
+                        required="{Boolean}false"
+                        name="./externalPressLink" />
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

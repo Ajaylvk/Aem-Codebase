@@ -1,0 +1,62 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.marketoModel="com.softwareag.core.models.marketoform.MarketoFormModel">
+	<div class="content-width" data-sly-test="${wcmmode.edit}">
+		<div class="row">
+			<div class="col span8">
+				<div class="footer__logo">Marketo Form Component</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="content-width" data-sly-test="${!marketoModel.marketoFormId || !marketoModel.marketoEndpoint}">
+		<div class="row">
+			<div class="col span8">
+				<div class="footer__logo" data-sly-test="${marketoModel.marketoFormId}">Configured Marketo Form Id:
+					${marketoModel.marketoFormId}</div>
+				<div class="footer__logo" data-sly-test="${!marketoModel.marketoFormId}" class=".message-error"
+					style="color: red;">Marketo Form Id Not Configured Yet</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col span8">
+				<div class="footer__logo" data-sly-test="${marketoModel.marketoEndpoint}">Configured Marketo Server:
+					${marketoModel.marketoEndpoint}</div>
+				<div class="footer__logo" data-sly-test="${!marketoModel.marketoEndpoint}" class=".message-error"
+					style="color: red;">Marketo Endpoint Not Configured Yet</div>
+
+			</div>
+		</div>
+	</div>
+
+    <div class="marketoform" data-sly-test="${marketoModel.marketoFormId && marketoModel.marketoEndpoint && !wcmmode.edit}">
+        <link rel="stylesheet" href="https://info.softwareag.com/rs/858-DJP-749/images/mkto-form-May7.css">
+        <script src="${marketoModel.marketoJSUrl @ context='uri'}"></script>
+        <form id="mktoForm_${marketoModel.marketoFormId @ context='uri'}"></form>
+
+        <script data-sly-test="${!marketoModel.showInLightbox}">
+            MktoForms2.loadForm("${marketoModel.marketoEndpoint @context='uri'}", "${marketoModel.marketoMunchkinAccountId @context='uri'}", "${marketoModel.marketoFormId @context='uri'}");
+        </script>
+
+        <script data-sly-test="${marketoModel.showInLightbox}">
+            MktoForms2.loadForm("${marketoModel.marketoEndpoint @context='uri'}", "${marketoModel.marketoMunchkinAccountId @context='uri'}", "${marketoModel.marketoFormId @context='uri'}", function (form){MktoForms2.lightbox(form).show();});
+        </script>
+        <script src="https://info.softwareag.com/rs/858-DJP-749/images/mkto-form-May7.js"></script>
+    </div>
+
+</div>
+
+<!--/* For script testing. Show input, click it and it will load the XML
+    <input type="text" id="Address_Visit_Country__c" />
+*/-->
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='softwareag.marketo-form'}"/>
+
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationmodel=integrationmodel}"></sly>

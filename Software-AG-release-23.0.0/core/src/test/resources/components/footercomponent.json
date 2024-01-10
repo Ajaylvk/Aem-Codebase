@@ -1,0 +1,265 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Software AG",
+        "redirectTarget": "/content/softwareag/landing-page",
+        "sling:redirect": true,
+        "sling:redirectStatus": 302,
+        "cq:deviceGroups": ["mobile/groups/responsive"],
+        "sling:resourceType": "foundation/components/redirect",
+        "cq:allowedTemplates": ["/conf/softwareag/settings/wcm/templates/.*"]
+    },
+    "test": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Test Page",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+            "sling:resourceType": "softwareag/components/structure/page",
+            "parsys": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/parsys",
+                "footer": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/content/footer"
+                }
+            }
+        }
+    },
+    "config-page": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "Config Page",
+            "cq:template": "/conf/softwareag/settings/wcm/templates/config-page",
+            "sling:redirect": true,
+            "sling:redirectStatus": 302,
+            "sling:resourceType": "softwareag/components/structure/page",
+            "parsys": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "softwareag/components/content/parsys",
+                "footer": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "softwareag/components/configs/footer",
+                    "copyright": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "copyrightInformation": "Software AG All Rights Reserved.",
+                        "cookieConsentInformation": "Cookie Preferences",
+                        "sling:resourceType": "softwareag/components/content/copyright"
+                    },
+                    "logo": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Alternative Text",
+                        "logo": "/content/dam/softwareag/sag-logo.png",
+                        "sling:resourceType": "softwareag/components/configs/logo",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "#"
+                        }
+                    },
+                    "linklistsparsys": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "softwareag/components/content/parsys",
+                        "list": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Welcome",
+                            "sling:resourceType": "softwareag/components/content/list",
+                            "listFrom": "static",
+                            "listItems": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "item0": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/team_analyst_relations/default",
+                                        "text": "Analysts"
+                                    }
+                                },
+                                "item1": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://investors.softwareag.com/en",
+                                        "text": "Investors"
+                                    }
+                                },
+                                "item2": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "http://jobs.softwareag.com/",
+                                        "text": "Jobs"
+                                    }
+                                },
+                                "item3": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/partners/default",
+                                        "text": "Partners"
+                                    }
+                                },
+                                "item4": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/press/default",
+                                        "text": "Press"
+                                    }
+                                }
+                            }
+                        },
+                        "list_copy": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Welcome",
+                            "sling:resourceType": "softwareag/components/content/list",
+                            "listFrom": "static",
+                            "listItems": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "item0": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/team_analyst_relations/default",
+                                        "text": "Analysts"
+                                    }
+                                },
+                                "item1": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://investors.softwareag.com/en",
+                                        "text": "Investors"
+                                    }
+                                },
+                                "item2": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "http://jobs.softwareag.com/",
+                                        "text": "Jobs"
+                                    }
+                                },
+                                "item3": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/partners/default",
+                                        "text": "Partners"
+                                    }
+                                },
+                                "item4": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/press/default",
+                                        "text": "Press"
+                                    }
+                                }
+                            }
+                        },
+                        "list_copy_copy": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Welcome",
+                            "sling:resourceType": "softwareag/components/content/list",
+                            "listFrom": "static",
+                            "listItems": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "item0": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/team_analyst_relations/default",
+                                        "text": "Analysts"
+                                    }
+                                },
+                                "item1": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://investors.softwareag.com/en",
+                                        "text": "Investors"
+                                    }
+                                },
+                                "item2": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "http://jobs.softwareag.com/",
+                                        "text": "Jobs"
+                                    }
+                                },
+                                "item3": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/partners/default",
+                                        "text": "Partners"
+                                    }
+                                },
+                                "item4": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/press/default",
+                                        "text": "Press"
+                                    }
+                                }
+                            }
+                        },
+                        "list_copy_copy_1665644751": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Welcome",
+                            "sling:resourceType": "softwareag/components/content/list",
+                            "listFrom": "static",
+                            "listItems": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "item0": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/team_analyst_relations/default",
+                                        "text": "Analysts"
+                                    }
+                                },
+                                "item1": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://investors.softwareag.com/en",
+                                        "text": "Investors"
+                                    }
+                                },
+                                "item2": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "http://jobs.softwareag.com/",
+                                        "text": "Jobs"
+                                    }
+                                },
+                                "item3": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/partners/default",
+                                        "text": "Partners"
+                                    }
+                                },
+                                "item4": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "link": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "href": "https://www.softwareag.com/corporate/company/press/default",
+                                        "text": "Press"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

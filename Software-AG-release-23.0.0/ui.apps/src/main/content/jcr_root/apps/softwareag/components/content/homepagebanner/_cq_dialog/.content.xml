@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Homepage Banner"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <teaserBox
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Teaser Box"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="A title to display as the headline for the Homepage Banner."
+                                        fieldLabel="Title"
+                                        name="./teaserBox/title"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        required="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePluginsOnlySubsuperscript" />
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettingsOnlySubsuperscript" />
+                                    </title>
+                                    <ctaLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="CTA Link Label"
+                                        fieldDescription="Please add link label here."
+                                        required="{Boolean}true"
+                                        name="./teaserBox/cta/link/text" />
+                                    <ctaDestination
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Please add link destination here."
+                                        fieldLabel="CTA Link Destination"
+                                        rootPath="/content"
+                                        required="{Boolean}true"
+                                        name="./teaserBox/cta/link/href" />
+                                    <utmParameter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please add the UTM Parameter in the following manner: utm_source=facebook.com&amp;utm_medium=social&amp;utm_campaign=fs2017cat."
+                                        fieldLabel="UTM Parameter"
+                                        name="./teaserBox/cta/link/utmParameter" />
+                                    <campaign
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                        rootPath="/content/cq:tags/softwareag"
+                                        fieldDescription="The respective campaign of the Teaser Box."
+                                        allowBulkEdit="{Boolean}true"
+                                        autocreateTag="{Boolean}false"
+                                        fieldLabel="Campaign"
+                                        multiple="{Boolean}false"
+                                        name="./teaserBox/campaign">
+                                        <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="./teaserBox/campaign" />
+                                    </campaign>
+                                    <fontStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="The font color of the Teaser Box."
+                                        fieldLabel="Font Color"
+                                        name="./teaserBox/fontStyle">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dark
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Dark"
+                                                value="input__colorselect-font-color0" />
+                                            <light
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light"
+                                                value="input__colorselect-font-color1" />
+                                        </items>
+                                    </fontStyle>
+                                    <backgroundStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Background Color"
+                                        granite:class="cq-dialog-background-color-select"
+                                        fieldDescription="The background color of the Teaser Box."
+                                        name="./teaserBox/backgroundStyle">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="softwareag/datasources/backgroundcolors"
+                                            name="datasource" />
+                                    </backgroundStyle>
+                                </items>
+                            </column>
+                        </items>
+                    </teaserBox>
+                    <solutionBox1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Solution Box 1"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <upperTitle jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="A upper title to display as the upper headline for the first Solution Box."
+                                        fieldLabel="Upper Title"
+                                        name="./solutionBox1/upperTitle" />
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="A title to display as the headline."
+                                        fieldLabel="Title"
+                                        name="./solutionBox1/title"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        required="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePluginsOnlySubsuperscript" />
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettingsOnlySubsuperscript" />
+                                    </title>
+                                    <image
+                                        granite:id="dmFileReference"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fileNameParameter="./solutionBox1/image"
+                                        fileReferenceParameter="./solutionBox1/image"
+                                        mimeTypes="[image/.*]"
+                                        fieldDescription="An image for the first Solution Box."
+                                        fieldLabel="Image"
+                                        multiple="{Boolean}false"
+                                        name="./solutionBox1/file"
+                                        title="Image"
+                                        allowUpload="{Boolean}false"
+                                        useHTML5="{Boolean}true" />
+                                    <altText jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Alternative Text"
+                                        validation="imageAlternativeText"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        name="./solutionBox1/altText" />
+                                    <ctaLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="CTA Link Label"
+                                        fieldDescription="Please add link label here."
+                                        required="{Boolean}true"
+                                        name="./solutionBox1/cta/link/text" />
+                                    <ctaDestination
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Please add link destination here."
+                                        fieldLabel="CTA Link Destination"
+                                        rootPath="/content"
+                                        required="{Boolean}true"
+                                        name="./solutionBox1/cta/link/href" />
+                                    <utmParameter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please add the UTM Parameter in the following manner: utm_source=facebook.com&amp;utm_medium=social&amp;utm_campaign=fs2017cat."
+                                        fieldLabel="UTM Parameter"
+                                        name="./solutionBox1/cta/link/utmParameter" />
+                                    <campaign
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                        rootPath="/content/cq:tags/softwareag"
+                                        fieldDescription="The respective campaign of the Solution Box 1."
+                                        allowBulkEdit="{Boolean}true"
+                                        autocreateTag="{Boolean}false"
+                                        fieldLabel="Campaign"
+                                        multiple="{Boolean}false"
+                                        name="./solutionBox1/campaign">
+                                        <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="./solutionBox1/campaign" />
+                                    </campaign>
+                                    <fontStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="The font color of the first Solution Box."
+                                        fieldLabel="Font Color"
+                                        name="./solutionBox1/fontStyle">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dark
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Dark"
+                                                value="input__colorselect-font-color0" />
+                                            <light
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light"
+                                                value="input__colorselect-font-color1" />
+                                        </items>
+                                    </fontStyle>
+                                    <backgroundStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Background Color"
+                                        granite:class="cq-dialog-background-color-select"
+                                        fieldDescription="The background color of the first Solution Box."
+                                        name="./solutionBox1/backgroundStyle">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="softwareag/datasources/backgroundcolors"
+                                            name="datasource" />
+                                    </backgroundStyle>
+                                    <assetIsBackground
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                        value="{Boolean}true"
+                                        name="./assetIsBackground" />
+                                </items>
+                            </column>
+                        </items>
+                    </solutionBox1>
+                    <solutionBox2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Solution Box 2"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <upperTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="A upper title to display as the upper headline for the first Solution Box."
+                                        fieldLabel="Upper Title"
+                                        name="./solutionBox2/upperTitle" />
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="A title to display as the headline."
+                                        fieldLabel="Title"
+                                        name="./solutionBox2/title"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        required="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePluginsOnlySubsuperscript" />
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettingsOnlySubsuperscript" />
+                                    </title>
+                                    <image
+                                        granite:id="dmFileReference"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fileNameParameter="./solutionBox2/image"
+                                        fileReferenceParameter="./solutionBox2/image"
+                                        mimeTypes="[image/.*]"
+                                        fieldDescription="An image for the first Solution Box."
+                                        fieldLabel="Image"
+                                        multiple="{Boolean}false"
+                                        name="./solutionBox2/file"
+                                        title="Image"
+                                        allowUpload="{Boolean}false"
+                                        useHTML5="{Boolean}true" />
+                                    <altText jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Alternative Text"
+                                        fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                                        validation="imageAlternativeText"
+                                        name="./solutionBox2/altText" />
+                                    <ctaLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="CTA Link Label"
+                                        fieldDescription="Please add link label here."
+                                        required="{Boolean}true"
+                                        name="./solutionBox2/cta/link/text" />
+                                    <ctaDestination
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Please add link destination here."
+                                        fieldLabel="CTA Link Destination"
+                                        rootPath="/content"
+                                        required="{Boolean}true"
+                                        name="./solutionBox2/cta/link/href" />
+                                    <utmParameter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please add the UTM Parameter in the following manner: utm_source=facebook.com&amp;utm_medium=social&amp;utm_campaign=fs2017cat."
+                                        fieldLabel="UTM Parameter"
+                                        name="./solutionBox2/cta/link/utmParameter" />
+                                    <campaign
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                        rootPath="/content/cq:tags/softwareag"
+                                        fieldDescription="The respective campaign of the Solution Box 2."
+                                        allowBulkEdit="{Boolean}true"
+                                        autocreateTag="{Boolean}false"
+                                        fieldLabel="Campaign"
+                                        multiple="{Boolean}false"
+                                        name="./solutionBox2/campaign">
+                                        <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="./solutionBox2/campaign" />
+                                    </campaign>
+                                    <fontStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="The font color of the first Solution Box."
+                                        fieldLabel="Font Color"
+                                        name="./solutionBox2/fontStyle">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dark
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Dark"
+                                                value="input__colorselect-font-color0" />
+                                            <light
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light"
+                                                value="input__colorselect-font-color1" />
+                                        </items>
+                                    </fontStyle>
+                                    <backgroundStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Background Color"
+                                        granite:class="cq-dialog-background-color-select"
+                                        fieldDescription="The background color of the second Solution Box."
+                                        name="./solutionBox2/backgroundStyle">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="softwareag/datasources/backgroundcolors"
+                                            name="datasource" />
+                                    </backgroundStyle>
+                                </items>
+                            </column>
+                        </items>
+                    </solutionBox2>
+                    <asset jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_advanced/alttext" />
+                    <dmSettings jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_dm_settings" />
+                    <targetTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_target" />
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,4 @@
+.text__container {
+    @include spacing(padding, m);
+    @include component-bottom-spacing();
+}

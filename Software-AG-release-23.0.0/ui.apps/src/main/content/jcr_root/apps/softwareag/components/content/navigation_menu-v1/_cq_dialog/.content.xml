@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header Navigation Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[showhidetab.clientlibs,navigationmenuv1.hideshow]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                                        path="/apps/softwareag/components/commons/dialog/website/selectwebsite"/>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <additionallinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Additional Links"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Links">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./additionalLinks">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <linklabel
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Link Label"
+                                                            fieldLabel="Link Label"
+                                                            name="./linkLabel"/>
+                                                        <linkdestination
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                            fieldDescription="Link Destination"
+                                                            fieldLabel="Link Destination"
+                                                            name="./linkDestination"
+                                                            rootPath="/content"/>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                        </field>
+                                    </links>
+                                </items>
+                            </column>
+                        </items>
+                    </additionallinks>
+                    <corporate
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Corporate Site Navigation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target corporate"/>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <corporate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./corporate">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzeroTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level Zero Title"
+                                                    fieldLabel="Level Zero Title"
+                                                    name="./levelzerotitle"/>
+                                                <levelone
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Add Level one Navigation">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./levelone">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <levelonetitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldDescription=" Level 1 Title"
+                                                                        fieldLabel="Level 1 Title"
+                                                                        name="./levelonetitle"/>
+                                                                    <levelonedestination
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldDescription=" Level 1 Destination"
+                                                                        fieldLabel="Level 1 Destination"
+                                                                        name="./levelonedestination"
+                                                                        rootPath="/content"/>
+                                                                    <primarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Primary Promo "
+                                                                        name="./enableprimarypromo"
+                                                                        text="Add Primary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".primarypromodisplay"/>
+                                                                    </primarypromodisplay>
+                                                                    <primarypromosection
+                                                                        granite:class="primarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <primarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Heading"
+                                                                                fieldLabel="Primary Promo Heading"
+                                                                                name="./primarypromoheading"/>
+                                                                            <primarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Caption"
+                                                                                fieldLabel="Primary Promo Caption"
+                                                                                name="./primarypromocaption"/>
+                                                                            <primarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Description"
+                                                                                fieldLabel="Primary Promo Description"
+                                                                                name="./primarypromodescription"/>
+                                                                            <primarypromoimage
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fileNameParameter="./primaryPromoName"
+                                                                                fileReferenceParameter="./primaryPromoReference"
+                                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./primaryPromoImage"
+                                                                                title="Upload Image Asset"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttext
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextPrimary"/>
+                                                                            <primarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Link Label"
+                                                                                fieldLabel="Primary Promo Link Label"
+                                                                                name="./primarypromolinklabel"/>
+                                                                            <primarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Primary Logo Link Destination"
+                                                                                fieldLabel="Primary Logo Link Destination"
+                                                                                name="./primarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="primarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </primarypromosection>
+                                                                    <secondarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Secondary Promo "
+                                                                        name="./enablesecondarypromo"
+                                                                        text="Add Secondary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".secondarypromodisplay"/>
+                                                                    </secondarypromodisplay>
+                                                                    <secondarypromosection
+                                                                        granite:class="secondarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <secondarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Heading"
+                                                                                fieldLabel="Secondary Promo Heading"
+                                                                                name="./secondarypromoheading"/>
+                                                                            <secondarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Caption"
+                                                                                fieldLabel="Secondary Promo Caption"
+                                                                                name="./secondarypromocaption"/>
+                                                                            <secondarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Description"
+                                                                                fieldLabel="Secondary Promo Description"
+                                                                                name="./secondarypromodescription"/>
+                                                                            <secondarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Secondary Promo Level 1"
+                                                                                fieldLabel="Secondary Promo Image"
+                                                                                fileNameParameter="./secondaryPromoName"
+                                                                                fileReferenceParameter="./secondaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./secondaryPromoImage"
+                                                                                title="Secondary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttextsec
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextSecondary"/>
+                                                                            <secondarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Link Label"
+                                                                                fieldLabel="Secondary Promo Link Label"
+                                                                                name="./secondarypromolinklabel"/>
+                                                                            <secondarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Secondary Logo Link Destination"
+                                                                                fieldLabel="Secondary Logo Link Destination"
+                                                                                name="./secondarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="secondarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </secondarypromosection>
+                                                                    <leveltwo
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        fieldLabel="Level 2"
+                                                                        max-item="2">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./leveltwo">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <column
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <leveltwotitle
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                            fieldDescription=" Level 2 Title"
+                                                                                            fieldLabel="Level 2 Title"
+                                                                                            name="./leveltwotitle"/>
+                                                                                        <leveltwodestination
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldDescription=" Level 2 Destination"
+                                                                                            fieldLabel="Level 2 Destination"
+                                                                                            name="./leveltwodestination"
+                                                                                            rootPath="/content"/>
+                                                                                    </items>
+                                                                                </column>
+                                                                            </items>
+                                                                        </field>
+                                                                    </leveltwo>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </levelone>
+                                                <overviewlinklabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Overview Link Label"
+                                                    fieldLabel="Overview Link Label"
+                                                    name="./overviewlinklabel"/>
+                                                <overviewlinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Overview Link Destination"
+                                                    fieldLabel="Overview Link Destination"
+                                                    name="./overviewlinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </corporate>
+                        </items>
+                    </corporate>
+                    <investorrelation
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Investor Relations Site Navigation"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target investorrelations"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <investorrelations
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./investorrelations">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzerotitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level zero Title"
+                                                    fieldLabel="Level zero Title"
+                                                    name="./levelzerotitle"/>
+                                                <levelone
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Add Sub Navigation">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./levelone">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <levelonetitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldDescription=" Level 1 Title"
+                                                                        fieldLabel="Level 1 Title"
+                                                                        name="./levelonetitle"/>
+                                                                    <levelonedestination
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldDescription=" Level 1 Destination"
+                                                                        fieldLabel="Level 1 Destination"
+                                                                        name="./levelonedestination"
+                                                                        rootPath="/content"/>
+                                                                    <primarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Primary Promo "
+                                                                        name="./enableprimarypromo"
+                                                                        text="Add Primary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".primarypromodisplay"/>
+                                                                    </primarypromodisplay>
+                                                                    <secondarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Secondary Promo "
+                                                                        name="./enablesecondarypromo"
+                                                                        text="Add Secondary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".secondarypromodisplay"/>
+                                                                    </secondarypromodisplay>
+                                                                    <primarypromosection
+                                                                        granite:class="primarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <primarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Heading"
+                                                                                fieldLabel="Primary Promo Heading"
+                                                                                name="./primarypromoheading"/>
+                                                                            <primarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Caption"
+                                                                                fieldLabel="Primary Promo Caption"
+                                                                                name="./primarypromocaption"/>
+                                                                            <primarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Description"
+                                                                                fieldLabel="Primary Promo Description"
+                                                                                name="./primarypromodescription"/>
+                                                                            <primarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Primary Promo Level 1"
+                                                                                fieldLabel="Primary Promo Image"
+                                                                                fileNameParameter="./primaryPromoName"
+                                                                                fileReferenceParameter="./primaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./primaryPromoImage"
+                                                                                title="Primary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttext
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextPrimary"/>
+                                                                            <primarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Link Label"
+                                                                                fieldLabel="Primary Promo Link Label"
+                                                                                name="./primarypromolinklabel"/>
+                                                                            <primarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Primary Logo Link Destination"
+                                                                                fieldLabel="Primary Logo Link Destination"
+                                                                                name="./primarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="primarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </primarypromosection>
+                                                                    <secondarypromosection
+                                                                        granite:class="secondarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <secondarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Heading"
+                                                                                fieldLabel="Secondary Promo Heading"
+                                                                                name="./secondarypromoheading"/>
+                                                                            <secondarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Caption"
+                                                                                fieldLabel="Secondary Promo Caption"
+                                                                                name="./secondarypromocaption"/>
+                                                                            <secondarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Description"
+                                                                                fieldLabel="Secondary Promo Description"
+                                                                                name="./secondarypromodescription"/>
+                                                                            <secondarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Secondary Promo Level 1"
+                                                                                fieldLabel="Secondary Promo Image"
+                                                                                fileNameParameter="./secondaryPromoName"
+                                                                                fileReferenceParameter="./secondaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./secondaryPromoImage"
+                                                                                title="Secondary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttextsec
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextSecondary"/>
+                                                                            <secondarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Link Label"
+                                                                                fieldLabel="Secondary Promo Link Label"
+                                                                                name="./secondarypromolinklabel"/>
+                                                                            <secondarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Secondary Logo Link Destination"
+                                                                                fieldLabel="Secondary Logo Link Destination"
+                                                                                name="./secondarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="secondarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </secondarypromosection>
+                                                                    <leveltwo
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        fieldLabel="Level 2"
+                                                                        max-item="2">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./leveltwo">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <column
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <leveltwotitle
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                            fieldDescription=" Level 2 Title"
+                                                                                            fieldLabel="Level 2 Title"
+                                                                                            name="./leveltwotitle"/>
+                                                                                        <leveltwodestination
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldDescription=" Level 2 Destination"
+                                                                                            fieldLabel="Level 2 Destination"
+                                                                                            name="./leveltwodestination"
+                                                                                            rootPath="/content"/>
+                                                                                    </items>
+                                                                                </column>
+                                                                            </items>
+                                                                        </field>
+                                                                    </leveltwo>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </levelone>
+                                                <overviewlinklabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Overview Link Label"
+                                                    fieldLabel="Overview Link Label"
+                                                    name="./overviewlinklabel"/>
+                                                <overviewlinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Overview Link Destination"
+                                                    fieldLabel="Overview Link Destination"
+                                                    name="./overviewlinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </investorrelations>
+                        </items>
+                    </investorrelation>
+                    <techcommunity
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tech Community Site Navigation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target techcommunity"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <techcommunity
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./techcommunity">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzerotitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level Zero Title"
+                                                    fieldLabel="Level Zero Title"
+                                                    name="./levelzerotitle"/>
+                                                <levelone
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Add Sub Navigation">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./levelone">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <levelonetitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldDescription=" Level 1 Title"
+                                                                        fieldLabel="Level 1 Title"
+                                                                        name="./levelonetitle"/>
+                                                                    <levelonedestination
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldDescription=" Level 1 Destination"
+                                                                        fieldLabel="Level 1 Destination"
+                                                                        name="./levelonedestination"
+                                                                        rootPath="/content"/>
+                                                                    <primarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Primary Promo "
+                                                                        name="./enableprimarypromo"
+                                                                        text="Add Primary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".primarypromodisplay"/>
+                                                                    </primarypromodisplay>
+                                                                    <secondarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Secondary Promo "
+                                                                        name="./enablesecondarypromo"
+                                                                        text="Add Secondary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".secondarypromodisplay"/>
+                                                                    </secondarypromodisplay>
+                                                                    <primarypromosection
+                                                                        granite:class="primarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <primarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Heading"
+                                                                                fieldLabel="Primary Promo Heading"
+                                                                                name="./primarypromoheading"/>
+                                                                            <primarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Caption"
+                                                                                fieldLabel="Primary Promo Caption"
+                                                                                name="./primarypromocaption"/>
+                                                                            <primarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Description"
+                                                                                fieldLabel="Primary Promo Description"
+                                                                                name="./primarypromodescription"/>
+                                                                            <primarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Primary Promo Level 1"
+                                                                                fieldLabel="Primary Promo Image"
+                                                                                fileNameParameter="./primaryPromoName"
+                                                                                fileReferenceParameter="./primaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./primaryPromoImage"
+                                                                                title="Primary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttext
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextPrimary"/>
+                                                                            <primarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Link Label"
+                                                                                fieldLabel="Primary Promo Link Label"
+                                                                                name="./primarypromolinklabel"/>
+                                                                            <primarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Primary Logo Link Destination"
+                                                                                fieldLabel="Primary Logo Link Destination"
+                                                                                name="./primarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="primarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </primarypromosection>
+                                                                    <secondarypromosection
+                                                                        granite:class="secondarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <secondarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Heading"
+                                                                                fieldLabel="Secondary Promo Heading"
+                                                                                name="./secondarypromoheading"/>
+                                                                            <secondarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Caption"
+                                                                                fieldLabel="Secondary Promo Caption"
+                                                                                name="./secondarypromocaption"/>
+                                                                            <secondarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Description"
+                                                                                fieldLabel="Secondary Promo Description"
+                                                                                name="./secondarypromodescription"/>
+                                                                            <secondarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Secondary Promo Level 1"
+                                                                                fieldLabel="Secondary Promo Image"
+                                                                                fileNameParameter="./secondaryPromoName"
+                                                                                fileReferenceParameter="./secondaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./secondaryPromoImage"
+                                                                                title="Secondary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttextsec
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextSecondary"/>
+                                                                            <secondarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Link Label"
+                                                                                fieldLabel="Secondary Promo Link Label"
+                                                                                name="./secondarypromolinklabel"/>
+                                                                            <secondarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Secondary Logo Link Destination"
+                                                                                fieldLabel="Secondary Logo Link Destination"
+                                                                                name="./secondarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="secondarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </secondarypromosection>
+                                                                    <leveltwo
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        fieldLabel="Level 2">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./leveltwo">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <column
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <leveltwotitle
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                            fieldDescription=" Level 2 Title"
+                                                                                            fieldLabel="Level 2 Title"
+                                                                                            name="./leveltwotitle"/>
+                                                                                        <leveltwodestination
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldDescription=" Level 2 Destination"
+                                                                                            fieldLabel="Level 2 Destination"
+                                                                                            name="./leveltwodestination"
+                                                                                            rootPath="/content"/>
+                                                                                    </items>
+                                                                                </column>
+                                                                            </items>
+                                                                        </field>
+                                                                    </leveltwo>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </levelone>
+                                                <overviewlinklabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Overview Link Label"
+                                                    fieldLabel="Overview Link Label"
+                                                    name="./overviewlinklabel"/>
+                                                <overviewlinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Overview Link Destination"
+                                                    fieldLabel="Overview Link Destination"
+                                                    name="./overviewlinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </techcommunity>
+                        </items>
+                    </techcommunity>
+                    <newscenter
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="News Center Site Navigation"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target newscenter"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <newscenter
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./newscenter">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzerotitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level Zero Title"
+                                                    fieldLabel="Level Zero Title"
+                                                    name="./levelzerotitle"/>
+                                                <levelone
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Add Sub Navigation">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./levelone">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <levelonetitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldDescription=" Level 1 Title"
+                                                                        fieldLabel="Level 1 Title"
+                                                                        name="./levelonetitle"/>
+                                                                    <levelonedestination
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldDescription=" Level 1 Destination"
+                                                                        fieldLabel="Level 1 Destination"
+                                                                        name="./levelonedestination"
+                                                                        rootPath="/content"/>
+                                                                    <primarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Primary Promo "
+                                                                        name="./enableprimarypromo"
+                                                                        text="Add Primary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".primarypromodisplay"/>
+                                                                    </primarypromodisplay>
+                                                                    <secondarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Secondary Promo "
+                                                                        name="./enablesecondarypromo"
+                                                                        text="Add Secondary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".secondarypromodisplay"/>
+                                                                    </secondarypromodisplay>
+                                                                    <primarypromosection
+                                                                        granite:class="primarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <primarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Heading"
+                                                                                fieldLabel="Primary Promo Heading"
+                                                                                name="./primarypromoheading"/>
+                                                                            <primarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Caption"
+                                                                                fieldLabel="Primary Promo Caption"
+                                                                                name="./primarypromocaption"/>
+                                                                            <primarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Description"
+                                                                                fieldLabel="Primary Promo Description"
+                                                                                name="./primarypromodescription"/>
+                                                                            <primarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Primary Promo Level 1"
+                                                                                fieldLabel="Primary Promo Image"
+                                                                                fileNameParameter="./primaryPromoName"
+                                                                                fileReferenceParameter="./primaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./primaryPromoImage"
+                                                                                title="Primary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttext
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextPrimary"/>
+                                                                            <primarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Link Label"
+                                                                                fieldLabel="Primary Promo Link Label"
+                                                                                name="./primarypromolinklabel"/>
+                                                                            <primarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Primary Logo Link Destination"
+                                                                                fieldLabel="Primary Logo Link Destination"
+                                                                                name="./primarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="primarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </primarypromosection>
+                                                                    <secondarypromosection
+                                                                        granite:class="secondarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <secondarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Heading"
+                                                                                fieldLabel="Secondary Promo Heading"
+                                                                                name="./secondarypromoheading"/>
+                                                                            <secondarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Caption"
+                                                                                fieldLabel="Secondary Promo Caption"
+                                                                                name="./secondarypromocaption"/>
+                                                                            <secondarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Description"
+                                                                                fieldLabel="Secondary Promo Description"
+                                                                                name="./secondarypromodescription"/>
+                                                                            <secondarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Secondary Promo Level 1"
+                                                                                fieldLabel="Secondary Promo Image"
+                                                                                fileNameParameter="./secondaryPromoName"
+                                                                                fileReferenceParameter="./secondaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./secondaryPromoImage"
+                                                                                title="Secondary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttextsec
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextSecondary"/>
+                                                                            <secondarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Link Label"
+                                                                                fieldLabel="Secondary Promo Link Label"
+                                                                                name="./secondarypromolinklabel"/>
+                                                                            <secondarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Secondary Logo Link Destination"
+                                                                                fieldLabel="Secondary Logo Link Destination"
+                                                                                name="./secondarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="secondarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </secondarypromosection>
+                                                                    <leveltwo
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        fieldLabel="Level 2"
+                                                                        max-item="2">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./leveltwo">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <column
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <leveltwotitle
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                            fieldDescription=" Level 2 Title"
+                                                                                            fieldLabel="Level 2 Title"
+                                                                                            name="./leveltwotitle"/>
+                                                                                        <leveltwodestination
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldDescription=" Level 2 Destination"
+                                                                                            fieldLabel="Level 2 Destination"
+                                                                                            name="./leveltwodestination"
+                                                                                            rootPath="/content"/>
+                                                                                    </items>
+                                                                                </column>
+                                                                            </items>
+                                                                        </field>
+                                                                    </leveltwo>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </levelone>
+                                                <overviewlinklabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Overview Link Label"
+                                                    fieldLabel="Overview Link Label"
+                                                    name="./overviewlinklabel"/>
+                                                <overviewlinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Overview Link Destination"
+                                                    fieldLabel="Overview Link Destination"
+                                                    name="./overviewlinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </newscenter>
+                        </items>
+                    </newscenter>
+                    <devcenter
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Dev Center Site Navigation"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target devcenter"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <devcenter
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./devcenter">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzerotitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level Zero Title"
+                                                    fieldLabel="Level Zero Title"
+                                                    name="./levelzerotitle"/>
+                                                <levelzerolinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Level Zero Link Destination"
+                                                    fieldLabel="Level Zero Link Destination"
+                                                    name="./levelzerolinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </devcenter>
+                        </items>
+                    </devcenter>
+                    <brandcenter
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Brand Center Multi Level Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target brandcenter"/>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <brandcenter
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./brandcenter">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzeroTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level Zero Title"
+                                                    fieldLabel="Level Zero Title"
+                                                    name="./levelzerotitle"/>
+                                                <levelone
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Add Level one Navigation">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./levelone">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <levelonetitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldDescription=" Level 1 Title"
+                                                                        fieldLabel="Level 1 Title"
+                                                                        name="./levelonetitle"/>
+                                                                    <levelonedestination
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldDescription=" Level 1 Destination"
+                                                                        fieldLabel="Level 1 Destination"
+                                                                        name="./levelonedestination"
+                                                                        rootPath="/content"/>
+                                                                    <primarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Primary Promo "
+                                                                        name="./enableprimarypromo"
+                                                                        text="Add Primary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".primarypromodisplay"/>
+                                                                    </primarypromodisplay>
+                                                                    <primarypromosection
+                                                                        granite:class="primarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <primarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Heading"
+                                                                                fieldLabel="Primary Promo Heading"
+                                                                                name="./primarypromoheading"/>
+                                                                            <primarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Caption"
+                                                                                fieldLabel="Primary Promo Caption"
+                                                                                name="./primarypromocaption"/>
+                                                                            <primarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Description"
+                                                                                fieldLabel="Primary Promo Description"
+                                                                                name="./primarypromodescription"/>
+                                                                            <primarypromoimage
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fileNameParameter="./primaryPromoName"
+                                                                                fileReferenceParameter="./primaryPromoReference"
+                                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./primaryPromoImage"
+                                                                                title="Upload Image Asset"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttext
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextPrimary"/>
+                                                                            <primarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Primary Promo Link Label"
+                                                                                fieldLabel="Primary Promo Link Label"
+                                                                                name="./primarypromolinklabel"/>
+                                                                            <primarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Primary Logo Link Destination"
+                                                                                fieldLabel="Primary Logo Link Destination"
+                                                                                name="./primarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="primarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </primarypromosection>
+                                                                    <secondarypromodisplay
+                                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                        checked="{Boolean}false"
+                                                                        fieldDescription="Add Secondary Promo "
+                                                                        name="./enablesecondarypromo"
+                                                                        text="Add Secondary Promo "
+                                                                        uncheckedValue="{Boolean}false"
+                                                                        value="{Boolean}true">
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            cq-dialog-checkbox-showhide-target=".secondarypromodisplay"/>
+                                                                    </secondarypromodisplay>
+                                                                    <secondarypromosection
+                                                                        granite:class="secondarypromodisplay"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <secondarypromoheading
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Heading"
+                                                                                fieldLabel="Secondary Promo Heading"
+                                                                                name="./secondarypromoheading"/>
+                                                                            <secondarypromocaption
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Caption"
+                                                                                fieldLabel="Secondary Promo Caption"
+                                                                                name="./secondarypromocaption"/>
+                                                                            <secondarypromodescription
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Description"
+                                                                                fieldLabel="Secondary Promo Description"
+                                                                                name="./secondarypromodescription"/>
+                                                                            <secondarypromoimage
+                                                                                granite:id="dmFileReference"
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                allowUpload="{Boolean}false"
+                                                                                autoStart="{Boolean}false"
+                                                                                class="cq-droptarget"
+                                                                                fieldDescription="Secondary Promo Level 1"
+                                                                                fieldLabel="Secondary Promo Image"
+                                                                                fileNameParameter="./secondaryPromoName"
+                                                                                fileReferenceParameter="./secondaryPromoReference"
+                                                                                mimeTypes="[image/.*]"
+                                                                                multiple="{Boolean}false"
+                                                                                name="./secondaryPromoImage"
+                                                                                title="Secondary Promo Image"
+                                                                                useHTML5="{Boolean}true"/>
+                                                                            <alttextsec
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Please add Alternative text here"
+                                                                                fieldLabel="Alternative Text"
+                                                                                name="./altTextSecondary"/>
+                                                                            <secondarypromolinklabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Secondary Promo Link Label"
+                                                                                fieldLabel="Secondary Promo Link Label"
+                                                                                name="./secondarypromolinklabel"/>
+                                                                            <secondarypromolinkdestination
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                fieldDescription="Secondary Logo Link Destination"
+                                                                                fieldLabel="Secondary Logo Link Destination"
+                                                                                name="./secondarypromolinkdestination"
+                                                                                rootPath="/content"/>
+                                                                        </items>
+                                                                        <granite:data
+                                                                            granite:class="secondarypromodisplay"
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </secondarypromosection>
+                                                                    <leveltwo
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        fieldLabel="Level 2"
+                                                                        max-item="2">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./leveltwo">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <column
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <leveltwotitle
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                            fieldDescription=" Level 2 Title"
+                                                                                            fieldLabel="Level 2 Title"
+                                                                                            name="./leveltwotitle"/>
+                                                                                        <leveltwodestination
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldDescription=" Level 2 Destination"
+                                                                                            fieldLabel="Level 2 Destination"
+                                                                                            name="./leveltwodestination"
+                                                                                            rootPath="/content"/>
+                                                                                    </items>
+                                                                                </column>
+                                                                            </items>
+                                                                        </field>
+                                                                    </leveltwo>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </levelone>
+                                                <overviewlinklabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Overview Link Label"
+                                                    fieldLabel="Overview Link Label"
+                                                    name="./overviewlinklabel"/>
+                                                <overviewlinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Overview Link Destination"
+                                                    fieldLabel="Overview Link Destination"
+                                                    name="./overviewlinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </brandcenter>
+                        </items>
+                    </brandcenter>
+                    <brandcenterzerolevel
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Brand Center Zero Level Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            class="hide image-video-tab-showhide-target brandcenter"/>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <brandcenterzerolevel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Menu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./brandcenterzerolevel">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <levelzerotitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Level Zero Title"
+                                                    fieldLabel="Level Zero Title"
+                                                    name="./brandcenterlevelzerotitle"/>
+                                                <levelzerolinkdestination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Level Zero Link Destination"
+                                                    fieldLabel="Level Zero Link Destination"
+                                                    name="./brandcenterlevelzerolinkdestination"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </brandcenterzerolevel>
+                        </items>
+                    </brandcenterzerolevel>
+                </items>
+            </layout>
+        </items>
+    </content>
+</jcr:root>

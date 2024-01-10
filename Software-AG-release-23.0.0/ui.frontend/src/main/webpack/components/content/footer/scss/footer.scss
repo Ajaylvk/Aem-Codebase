@@ -1,0 +1,232 @@
+/* stylelint-disable selector-class-pattern */
+.aem-AuthorLayer-Preview {
+    .footer__list-container {
+        display: flex;
+        justify-items: flex-start;
+        flex-wrap: nowrap;
+
+        > .list {
+            margin-left: gutter-calc();
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+    }
+}
+
+.configurationpage .footer {
+    position: unset;
+}
+
+.footer {
+    background-color: $color-core-black;
+    width: 100%;
+    left: 0;
+    @include clearfix();
+
+    @include mq-phone {
+        @include spacing('padding', s);
+
+        .content-width {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @include mq-tablet {
+        @include spacing('padding', xxl);
+
+        .content-width {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @include mq-desktop {
+        padding: 4rem;
+    }
+
+    @include mq-until-tablet {
+        .flex-reverse-order {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    hr {
+        @include spacing('margin-bottom', m);
+        border: 0 none;
+        border-bottom: 1px solid $color-core-light;
+    }
+    
+    .pull-left {
+        min-width: 220px;
+    }
+
+    .text__container {
+        background: transparent;
+        padding: 0;
+        color: $color-core-black-35;
+
+        .text__text {
+            @include mq-phone {
+                @include font-size-with-rem-line-height(1.4rem, 2.4rem);
+            }
+            @include mq-tablet {
+                @include font-size-with-rem-line-height(1.8rem, 2.8rem);
+            }
+            @include mq-desktop {
+                @include font-size-with-rem-line-height(1.8rem, 2.8rem);
+            }
+        }
+    }
+}
+
+.footer__logo {
+    @include mq-phone {
+        width: 14rem;
+    }
+
+    @include mq-tablet {
+        width: 21.8rem;
+    }
+
+    @include mq-desktop {
+        width: 25rem;
+    }
+}
+
+.footer__region-selector--toggle {
+    color: $color-white;
+
+    .icon-global {
+        @include mq-phone {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        @include mq-except-desktop {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @include mq-desktop {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+
+.footer__list-container {
+    @include clearfix();
+
+    @include mq-phone {
+        @include font-size-with-rem-line-height(1.4rem, 2.4rem);
+    }
+    @include mq-tablet {
+        @include font-size-with-rem-line-height(1.8rem, 2.8rem);
+    }
+    @include mq-desktop {
+        @include font-size-with-rem-line-height(1.8rem, 2.8rem);
+    }
+}
+
+.footer__list-container > .list {
+    vertical-align: top;
+
+    @include mq-until-tablet {
+        float: none;
+        width: 100%;
+        margin: 0;
+        cursor: pointer;
+
+        border-bottom: 1px solid $color-core-light;
+
+        &:first-child {
+            border-top: 1px solid $color-core-light;
+        }
+    }
+
+    @include mq-desktop {
+        /* Automatic grid generation - 2 Link Lists */
+        &:nth-child(1):nth-last-child(2),
+        &:nth-child(2):nth-last-child(1) {
+            @include columns(6);
+            @include grid-column();
+        }
+        /* Automatic grid generation - 3 Link Lists */
+        &:nth-child(1):nth-last-child(3),
+        &:nth-child(2):nth-last-child(2),
+        &:nth-child(3):nth-last-child(1) {
+            @include columns(4);
+            @include grid-column();
+        }
+        /* Automatic grid generation - 4 Link Lists */
+        &:nth-child(1):nth-last-child(4),
+        &:nth-child(2):nth-last-child(3),
+        &:nth-child(3):nth-last-child(2),
+        &:nth-child(4):nth-last-child(1) {
+            @include columns(3);
+            @include grid-column();
+        }
+    }
+}
+
+.footer__list-container .list__head {
+    @include mq-from-tablet {
+        outline: none;
+    }
+}
+
+.footer__list-container .list__head-title {
+    @include clearfix();
+    @include font-size-with-rem-line-height(1.8rem, 2.8rem);
+    font-weight: bold;
+    color: $color-white;
+    display: block;
+
+    @include mq-until-tablet {
+        width: 100%;
+        vertical-align: middle;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    @include mq-tablet {
+        @include font-size-with-rem-line-height(2.8rem, 3.8rem);
+    }
+
+    @include mq-desktop {
+        @include font-size-with-rem-line-height(2.8rem, 3.8rem);
+        margin-bottom: 2rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.footer__list-container .list__head-icon {
+    color: $color-white;
+    display: none;
+
+    @include mq-from-tablet {
+        display: none;
+    }
+}
+
+.footer__list-container .list__linklist {
+    @include mq-from-tablet {
+        display: block;
+        height: auto !important; // override inline style
+    }
+}
+
+.footer__list-container .linklist__item {
+    margin-bottom: 0.6rem;
+    margin-top: 0.6rem;
+
+    &:last-child {
+        margin-bottom: 2rem;
+    }
+}
+
+.footer__list-container .linklist__link {
+    @include a-anchor-text-footer();
+}

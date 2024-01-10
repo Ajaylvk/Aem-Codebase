@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Free Trial"
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <freetrailconfig
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Free Trial Configuration"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <caption
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Caption"
+                            name="./freetrailcaption"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="caption">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailcaption"/>
+                        </caption>
+                        <description
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                            fieldLabel="Description"
+                            maxlength="{Long}300"
+                            name="./freetraildescription"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="description">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetraildescription"/>
+                        </description>
+                        <hideinRL
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            checked="{Boolean}false"
+                            name="./hideInfreetrail"
+                            renderReadOnly="{Boolean}true"
+                            text="Hide in Free Trial"
+                            unchecked="{Boolean}false"
+                            value="true">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="hideInfreetrail"/>
+                        </hideinRL>
+                        <topictypetags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Topic Tags"
+                            multiple="{Boolean}true"
+                            name="./freetrailtopictags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/topic">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="freetrailtopictags"/>
+                        </topictypetags>
+                        <deploymenttags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Deployment Tags"
+                            multiple="{Boolean}true"
+                            name="./freetraildeploymentttags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/deployment">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="freetraildeploymentttags"/>
+                        </deploymenttags>
+                        <producttags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Product Tags"
+                            multiple="{Boolean}true"
+                            name="./freetrailproducttags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/product-type">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="freetrailproducttags"/>
+                        </producttags>
+                        <categorytags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Category Tag"
+                            name="./freetrailcategorytags"
+                            required="{Boolean}false"
+                            rootPath="/content/cq:tags/softwareag/free-trail-categories">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="freetrailcategorytags"/>
+                        </categorytags>
+                        <searchkeywordtags
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            allowBulkEdit="{Boolean}true"
+                            autocreateTag="{Boolean}true"
+                            fieldLabel="Search Keyword Tags"
+                            multiple="{Boolean}true"
+                            name="./freetrailsearchtags"
+                            rootPath="/content/cq:tags/softwareag/search-keywords">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="freetrailsearchtags"/>
+                        </searchkeywordtags>
+                        <ftlogo
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="Select the Tile Logo"
+                            fieldLabel="Tile Logo"
+                            name="./freetraillogo"
+                            required="{Boolean}false"
+                            rootPath="/content/dam/softwareag/global/image/logos"
+                            validation="freetraillogo">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetraillogo"/>
+                        </ftlogo>
+                        <alttext
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldLabel="Alternative Text"
+                            name="./freetrailalttext"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="alttext">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailalttext"/>
+                        </alttext>
+                        <buttontext
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldLabel="Button Text"
+                            name="./freetrailbuttontext"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="alttext">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailbuttontext"/>
+                        </buttontext>
+                        <ftbuttonicon
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="Select the Button Icon"
+                            fieldLabel="Button Icon"
+                            name="./freetrailbuttonicon"
+                            required="{Boolean}false"
+                            rootPath="/content/dam/softwareag/global/image/icon-library"
+                            validation="freetrailbuttonicon">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailbuttonicon"/>
+                        </ftbuttonicon>
+                        <ftbtcolor
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Button Color"
+                            name="./freetrailbtcolor"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="fsiconcolor">
+                            <items jcr:primaryType="nt:unstructured">
+                                <select
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="Select the Button Color"
+                                    value=""/>
+                                <coredark120
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Core dark 120"
+                                    value="input__colorselect-icon-color8"/>
+                                <brightpulse600
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bright Pulse 600"
+                                    value="input__colorselect-icon-color2"/>
+                            </items>
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="freetrailbtcolor"/>
+                        </ftbtcolor>
+                        <buttonctalinkdestination
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="Button Link Destination"
+                            fieldLabel="Button Link Destination"
+                            name="./freetrailbuttonctalinkdestination"
+                            required="{Boolean}false"
+                            rootPath="/content/softwareag"
+                            validation="ctalinkdestination">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailbuttonctalinkdestination"/>
+                        </buttonctalinkdestination>
+                        <ctalabel
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            allowBulkEdit="{Boolean}true"
+                            fieldDescription="CTA Label"
+                            fieldLabel="CTA Label"
+                            name="./freetrailctaLabel"
+                            renderReadOnly="{Boolean}true"
+                            required="{Boolean}false"
+                            validation="title">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailctaLabel"/>
+                        </ctalabel>
+                        <ctalinkdestination
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                            fieldDescription="CTA Link Destination"
+                            fieldLabel="CTA Link Destination"
+                            name="./freetrailctalinkdestination"
+                            required="{Boolean}false"
+                            rootPath="/content/softwareag"
+                            validation="ctalinkdestination">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                allowBulkEdit="{Boolean}true"
+                                cq-msm-lockable="freetrailctalinkdestination"/>
+                        </ctalinkdestination>
+                    </items>
+                </freetrailconfig>
+            </items>
+        </column>
+    </items>
+</jcr:root>

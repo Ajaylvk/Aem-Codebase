@@ -1,0 +1,56 @@
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-use.model="com.softwareag.core.models.tableitem.TableItem"
+     data-sly-test.hasContent="${model.hasContent}"
+     data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+     class="tableitem__container">
+
+    <div class="tableitem__text" data-sly-test="${model.text}">
+        ${model.text @ context='html'}
+    </div>
+
+    <sly data-sly-repeat.ctaItem="${model.ctaItems}">
+        <a data-sly-test=${ctaItem.href}
+           class="tableitem__link"
+           href="${ctaItem.href}"
+           target="${ctaItem.link.target}"
+           title="${ctaItem.link.text}"
+           data-attrib-asset-type="${ctaItem.link.assetType}"
+           data-attrib-asset-link="${ctaItem.href}">
+           <sly data-sly-call="${ctaContent @ model=model, ctaModel=ctaItem, icons=icons}"></sly>
+        </a>
+    </sly>
+
+</div>
+
+<sly data-sly-template.ctaContent="${@ model, ctaModel, icons}">
+    <div class="tableitem__link_content ${ctaModel.assetModel.extension ? 'has-asset' : ''}">
+        <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+
+        <div data-sly-test="${ctaModel.href}"
+             class="cta-container a-cta--default-link-color">
+
+            <div class="a-cta a-cta--design-link">
+                <span class="a-cta__button" title="${ctaModel.link.text}">
+                    <!--/* Only show when no asset added */-->
+                    <span class="a-cta__button-text" data-sly-test="${!ctaModel.assetModel}">
+                        ${ctaModel.link.text}
+                    </span>
+
+                    <span class="a-cta__button-icon">
+                        <sly data-sly-test="${(ctaModel.inline || !ctaModel.inline) && ctaModel.assetModel}"
+                             title="${ctaModel.assetModel.extensionCta}"
+                             data-sly-test.svgName="${'{0}{1}' @ format=['file-', ctaModel.assetModel.extensionCta]}"
+                             class="a-icon a-icon--asset"
+                             data-sly-call="${icons.getIcon @ name=svgName, width=30, height=30}" />
+
+                        <sly data-sly-test="${(ctaModel.inline || !ctaModel.assetModel) && !ctaModel.assetModel}"
+                             class="a-icon"
+                             data-sly-call="${icons.getIcon @ name='arrow-up-right', width=30, height=30}" />
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

@@ -1,0 +1,61 @@
+.textmedia__container {
+  @include component-bottom-spacing();
+  @include spacing(padding, m);
+  width: 100%;
+
+  @include mq-phone {
+    .col:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .textmedia__textarea {
+    justify-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+    @include mq-desktop {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @include mq-tablet {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .row {
+    @include mq-except-phone {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .a-copytext {
+    @include spacing(margin-bottom, s);
+  }
+
+  // Overrides
+  .pull-right {
+    margin-right: 0;
+  }
+
+  .pull-left {
+    margin-left: 0;
+  }
+
+  .s7dm-dynamic-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img {
+      max-width: 100%;
+      min-height: auto;
+      min-width: auto;
+    }
+  }
+}

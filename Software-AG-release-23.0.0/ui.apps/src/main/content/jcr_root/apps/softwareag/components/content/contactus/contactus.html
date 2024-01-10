@@ -1,0 +1,86 @@
+<div data-sly-use.contactUs="com.softwareag.core.models.contactus.ContactUsModel">
+
+
+
+
+    <!-- change to dynamic media widget/asset -->
+    <div class="contactus-banner contactus__background-image">
+        <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+    </div>
+
+    <div class="contactus-container">
+        <div class="contactus-whitewrapper">
+            <div class="contactus-heading ${contactUs.layout=='1' ? 'heading-center' : 'heading-left' }">
+                <h2 class="a-h2-new">
+                    <pre class="aem__textarea">
+                        ${contactUs.title}
+                </pre>
+                </h2>
+                <div class="a-bodycopy">
+                    ${contactUs.description @ context="html"}
+                </div>
+            </div>
+            <!-- change to dynamic layout -->
+
+            <div class="form-wrapper column-layout-${contactUs.layout}">
+
+                <sly data-sly-resource="${'marketo-form' @ resourceType='softwareag/components/content/marketo-form_v1'}">
+                </sly>
+
+
+                <div class="contactus-tile-container">
+
+
+                    <!-- Parsys to be added here for form tile component -->
+
+                    <div class="form-tile-v1">
+
+                        <div class="form-tile-v1__container">
+
+
+
+                            <!-- Parsys for multiple tiles -->
+
+                            <sly data-sly-list.child="${contactUs.cards}">
+                                <article class="form-tile-item input__colorselect-background-color10">
+                                    <div class=" teasercontent">
+                                        <h5 class="a-h5">${child.cardTitle}</h5>
+                                        <p class="a-bodycopy">
+                                            ${child.cardDescription @ context='html'}
+                                        </p>
+
+                                        <div data-sly-test.chatbot="${child.enableLinka}" class="button secondary-core-dark-large ${child.enableLinka ? 'drift-open-chat' : ''}">
+                                            <a id="button-12515ea276" class="cmp-button">
+                                            	<span class="cmp-button__text">${child.ctaLabela}</span>
+                                            </a>
+                                        </div>
+
+                                         <div data-sly-test="${!chatbot && child.enableLinkb}" class="button secondary-core-dark-large">
+                                            <a id="button-12515ea276" class="cmp-button"
+                                                href="${child.linkDestinationUrl}" target="${child.linkOpenIn}">
+                                                <span class="cmp-button__text">${child.ctaLabelb}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+
+
+                            </sly>
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

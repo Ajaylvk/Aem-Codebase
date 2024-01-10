@@ -1,0 +1,18 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.sectiona="com.softwareag.core.models.navigation_v2.Section" />
+<!-- ********SECTION A********** -->
+<section id="sectiona" class="template-section">
+
+	<!-- section A Label dynamic for each section -->
+	<div data-sly-test="${sectiona.sectionTitle}" class="section-label a-overline">
+		${sectiona.sectionTitle}
+	</div>
+	<div class="linklist-wrapper">
+		<div class="linklistcol">
+			<sly data-sly-resource="${linklistcolitem @ resourceType='wcm/foundation/components/responsivegrid'}"
+				decoration=true />
+		</div>
+	</div>
+</section>

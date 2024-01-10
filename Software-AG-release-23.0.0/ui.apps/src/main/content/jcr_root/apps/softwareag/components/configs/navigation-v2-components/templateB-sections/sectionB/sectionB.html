@@ -1,0 +1,13 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.sectionc="com.softwareag.core.models.navigation_v2.Section" />
+<section id="sectionb" class="template-section ${properties.backgroundColor}">
+	<div class="section-label a-overline">
+		${sectionc.sectionTitle}
+	</div>
+	<div class="navteaser-wrapper">
+		<sly data-sly-resource="${navteaseritem @ resourceType='wcm/foundation/components/responsivegrid'}"
+			decoration=true />
+	</div>
+</section>

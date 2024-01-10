@@ -1,0 +1,221 @@
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Partner Banner"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <propertiesTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <position
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Position"
+                                                granite:class="cq-dialog-background-color-select"
+                                                fieldDescription="Defines the position of the icon, title, text and CTA."
+                                                name="./position">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <left
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Left"
+                                                        value="left" />
+                                                    <middle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="Middle"
+                                                        value="middle" />
+                                                    <right
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Right"
+                                                        value="right" />
+                                                </items>
+                                            </position>
+                                            <icon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                autoStart="{Boolean}false"
+                                                required="{Boolean}true"
+                                                class="cq-droptarget"
+                                                fileNameParameter="./fileName"
+                                                fileReferenceParameter="./icon"
+                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                fieldDescription="An image to display as the icon of the partner."
+                                                fieldLabel="Icon"
+                                                multiple="{Boolean}false"
+                                                name="./file"
+                                                title="Icon"
+                                                allowUpload="{Boolean}false"
+                                                useHTML5="{Boolean}true" />
+                                            <iconalttext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Textual alternative of the meaning or function of the icon, for visually impaired readers."
+                                                fieldLabel="Alternative Text"
+                                                required="{Boolean}true"
+                                                validation="imageAlternativeText"
+                                                name="./iconAltText" />
+                                            <partnername
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="The name of the partner that is relevant for the overview."
+                                                fieldLabel="Partner name"
+                                                required="{Boolean}true"
+                                                name="./partnerName" />
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                rows="3"
+                                                fieldDescription="A title to display as the headline for the Partner Banner"
+                                                fieldLabel="Title"
+                                                required="{Boolean}true"
+                                                name="./title" />
+                                            <text jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                name="./text"
+                                                fieldLabel="Text"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                removeSingleParagraphContainer="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/rtePlugins" />
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/softwareag/components/content/rte/customRtePlugins/uiSettings" />
+                                            </text>
+                                            <fontStyle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                path="/apps/softwareag/components/commons/dialog/color/font" />
+                                            <enableBoxColor
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="A color box between the background and text properties."
+                                                name="./enableBoxColor"
+                                                text="Enable Box Color"
+                                                value="{Boolean}true"
+                                                uncheckedValue="{Boolean}false"
+                                                checked="{Boolean}true" />
+                                            <boxColor
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Box Color"
+                                                granite:class="cq-dialog-background-color-select"
+                                                fieldDescription="The color of the box for the Partner Banner."
+                                                name="./boxColor"
+                                                disabled="{Boolean}false">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="softwareag/datasources/backgroundcolors"
+                                                    name="datasource" />
+                                            </boxColor>
+                                            <backgroundStyle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Background Color"
+                                                granite:class="cq-dialog-background-color-select"
+                                                fieldDescription="The background color of the Partner Banner if no asset is maintained."
+                                                name="./backgroundStyle">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="softwareag/datasources/backgroundcolors"
+                                                    name="datasource" />
+                                            </backgroundStyle>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </propertiesTab>
+
+                    <tagsTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tags"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <tag
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                fieldDescription="The tags to be filtered within the Filter Container."
+                                                allowBulkEdit="{Boolean}true"
+                                                autocreateTag="{Boolean}false"
+                                                fieldLabel="Partner Level Tag"
+                                                multiple="{Boolean}false"
+                                                required="{Boolean}true"
+                                                name="./partnerLevelTag">
+                                                <granite:data jcr:primaryType="nt:unstructured" cq-msm-lockable="cq:tags" />
+                                            </tag>
+                                            <globalPartner
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="To identify the partner as a global partner."
+                                                name="./globalPartner"
+                                                text="Global Alliance Tag"
+                                                value="{Boolean}true"
+                                                uncheckedValue="{Boolean}false"
+                                                checked="{Boolean}false" />
+                                            <displayTags
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="When checked, the tags are shown in the Partner Banner."
+                                                name="./displayTags"
+                                                text="Display Tags"
+                                                value="{Boolean}true"
+                                                uncheckedValue="{Boolean}false"
+                                                checked="{Boolean}false" />
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </tagsTab>
+                    <ctaTab jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/cta/tab_layout" />
+                    <assetTab jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_advanced/alttextonlyimages" />
+                    <damSettingsTab jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/asset/tab_dm_settings" />
+                    <targetTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/softwareag/components/commons/dialog/integration/tab_target" />
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

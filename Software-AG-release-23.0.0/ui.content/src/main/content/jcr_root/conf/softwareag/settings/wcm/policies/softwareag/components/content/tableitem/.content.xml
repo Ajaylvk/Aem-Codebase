@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Software AG Table Item Policy"
+          policyResourceType="softwareag/components/content/tableitem"
+          sling:resourceType="wcm/core/components/policy/policy">
+    <styleGroups_disabled jcr:primaryType="nt:unstructured">
+        <item0
+            cq:styleGroupLabel="Background Color"
+            jcr:primaryType="nt:unstructured">
+            <cq:styles jcr:primaryType="nt:unstructured">
+                <item0
+                    cq:styleClasses="input__colorselect-background-color1"
+                    cq:styleId="input__colorselect-background-color1"
+                    cq:styleLabel="White"
+                    jcr:primaryType="nt:unstructured"/>
+                <item1
+                    cq:styleClasses="input__colorselect-background-color7"
+                    cq:styleId="input__colorselect-background-color7"
+                    cq:styleLabel="Core Light"
+                    jcr:primaryType="nt:unstructured"/>
+            </cq:styles>
+        </item0>
+    </styleGroups_disabled>
+</jcr:root>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Spacer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <backgroundcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Choose the background color of the Spacer component"
+                                        fieldLabel="Background Color"
+                                        name="./backgroundColor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                          <select jcr:primaryType="nt:unstructured"
+                                          selected="{Boolean}true"
+                                                text="Select Spacer Color"
+                                                value=""/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="input__colorselect-background-color1"/>
+                                            <coredark120
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 120"
+                                                value="input__colorselect-background-color8"/>
+                                                <coredark220
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 220"
+                                                value="input__colorselect-background-color9"/>
+                                            <coredark950
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Dark 950"
+                                                value="input__colorselect-background-color10"/>
+                                            <corelight
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Core Light"
+                                                value="input__colorselect-background-color7"/>
+                                        </items>
+                                    </backgroundcolor>
+                                    <spaceroptions
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Choose the Spacing options from the dropdown"
+                                        fieldLabel="Spacing Options"
+                                        name="./spacing">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <select jcr:primaryType="nt:unstructured"
+                                            selected="{Boolean}true"
+                                                        text="Select Spacer Value"
+                                                        value=""/>
+                                            <extralarge
+                                                jcr:primaryType="nt:unstructured"
+                                                text="80px"
+                                                value="spacing-80"/>
+                                            <large
+                                                jcr:primaryType="nt:unstructured"
+                                                text="64px"
+                                                value="spacing-64"/>
+                                                <large-40
+                                                jcr:primaryType="nt:unstructured"
+                                                text="40px"
+                                                value="spacing-40"/>
+                                            <medium
+                                                jcr:primaryType="nt:unstructured"
+                                                text="32px"
+                                                value="spacing-32"/>
+                                                 <medium-24
+                                                jcr:primaryType="nt:unstructured"
+                                                text="24px"
+                                                value="spacing-24"/>
+                                            <small
+                                                jcr:primaryType="nt:unstructured"
+                                                text="16px"
+                                                value="spacing-16"/>
+                                        </items>
+                                    </spaceroptions>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

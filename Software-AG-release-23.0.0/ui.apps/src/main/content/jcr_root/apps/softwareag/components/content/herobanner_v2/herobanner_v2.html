@@ -1,0 +1,312 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.banner="com.softwareag.core.models.banner.BannerModel"></sly>
+
+<sly data-sly-test="${banner.bannerType == 'bannera'}">
+    <div id="herobannera-container" data-wcmmode="${wcmmode.edit ? 'edit' : 'non-edit'}"
+        class="herobannera-container ${banner.addKPISectionA && banner.kpiCards && banner.bannerASize == 'medium' ? 'kpicard-present': ''} herobanner-${banner.bannerASize}">
+        <div class="herobannera-background ${banner.backgroundColorA} ${banner.textImageRatio}"></div>
+        <section id="herobannera-content" class="herobannera-content herobannera-content-padding">
+            <div
+                class="herobannera-text-container ${banner.fontColorA} ${banner.bannerATextAlignment} ${banner.textImageRatio}">
+                <div data-sly-test="${properties.enableIcon}"
+                    class="${properties.enableIcon ? 'herobanner-icon' : '' }">
+                    <img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+                        class="svgicon ${properties.iconBackgroundColor}" />
+                </div>
+                <div data-sly-test="${banner.caption}" class="caption"> ${banner.caption @ context='html'}</div>
+                <div data-sly-test="${banner.title}" class="title ${!banner.description ? 'no-title-padding':''}">
+                    ${banner.title @ context='html'}
+                </div>
+                <div data-sly-test="${banner.description}" class="description">
+                    ${banner.description @ context='html'}
+                </div>
+                <div class="herobannera-link"
+                    data-sly-resource="${ @ path='bannera-cta', resourceType='softwareag/components/content/banner-cta', decoration=true}">
+                </div>
+            </div>
+        </section>
+        <div id="herobannera-image" class="herobannera-image ${banner.textImageRatio}">
+            <div id="heroa-desktop" class="herobannera-viewports">
+                <sly data-sly-test="${banner.backgroundImage =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+                <sly data-sly-test="${banner.backgroundImage =='svg'}">
+
+                    <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                </sly>
+            </div>
+            <div id="heroa-tablet" class="herobannera-viewports"><!-- Background Image start -->
+                <sly data-sly-test=${!banner.tabletImage}>
+                    <sly data-sly-test="${banner.backgroundImage =='asset'}"><img src="${properties.fileReference}"
+                            width="100%" alt="${properties.altText}"></sly>
+                    <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                        <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                    </sly>
+                </sly>
+                <img src="${banner.tabletImage}" width="100%"
+                    alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText}"
+                    data-sly-test="${banner.tabletImage}"><!-- image end -->
+            </div>
+            <div id="heroa-phone" class="herobannera-viewports"><!-- Background Image start -->
+                <sly data-sly-test=${!banner.mobileImage}>
+                    <sly data-sly-test="${banner.backgroundImage =='asset'}"><img src="${properties.fileReference}"
+                            width="100%" alt="${properties.altText}"></sly>
+                    <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                        <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                    </sly>
+                </sly>
+                <img src="${banner.mobileImage}" width="100%"
+                    alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText }"
+                    data-sly-test="${banner.mobileImage}"><!-- image end -->
+            </div>
+        </div>
+        <sly data-sly-test="${banner.addKPISectionA && banner.bannerASize == 'medium'}">
+            <section class="desktop-herocardacontainer herobanner_card-container herocard-layout-${banner.kpiCards}">
+                <sly data-sly-list.cardsList="${banner.cards}">
+                    <div class="kpi"
+                        data-sly-resource="${cardsList @ resourceType='/apps/softwareag/components/content/kpi'}">
+                    </div>
+                </sly>
+            </section>
+        </sly>
+    </div>
+
+</sly>
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<sly data-sly-test="${banner.bannerType == 'bannerb'}">
+    <div class="herobannerb-container ${banner.bannerBSize == 'large' ? banner.fgImageLarge : ''} ${banner.bannerBSize == 'medium' ? banner.fgImageMedium : ''} ${banner.addKPISectionB && banner.bannerBCards && banner.bannerBSize == 'medium' ? 'kpicard-present': ''}
+    ${banner.backgroundColorB} herobanner-${banner.bannerBSize}" data-wcmmode="${wcmmode.edit ? 'edit' : 'non-edit'}">
+        <div class="bannerb-background-image">
+            <div id="bannerb-desktop" class="herobannerb-viewports">
+                <sly data-sly-test="${banner.backgroundImage =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+                <sly data-sly-test="${banner.backgroundImage =='svg'}">
+
+                    <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                </sly>
+            </div>
+            <div id="herob-tablet" class="herobannerb-viewports"><!-- Background Image start -->
+                <sly data-sly-test=${!banner.tabletImage}>
+                    <sly data-sly-test="${banner.backgroundImage =='asset'}"><img src="${properties.fileReference}"
+                            width="100%" alt="${properties.altText}"></sly>
+                    <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                        <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                    </sly>
+                </sly>
+                <img src="${banner.tabletImage}" width="100%"
+                    alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText}"
+                    data-sly-test="${banner.tabletImage}"><!-- image end -->
+            </div>
+            <div id="herob-phone" class="herobannerb-viewports"><!-- Background Image start -->
+                <sly data-sly-test=${!banner.mobileImage}>
+                    <sly data-sly-test="${banner.backgroundImage =='asset'}"><img src="${properties.fileReference}"
+                            width="100%" alt="${properties.altText}"></sly>
+                    <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                        <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                    </sly>
+                </sly>
+                <img src="${banner.mobileImage}" width="100%"
+                    alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText }"
+                    data-sly-test="${banner.mobileImage}"><!-- image end -->
+            </div>
+        </div>
+        <section id="herobannerb-content" class="herobannerb-content herobannerb-content-padding">
+            <div class="herobannerb-text-container ${banner.fontColorB} ${banner.bannerBTextAlignment}">
+                <div data-sly-test="${properties.enableIcon}"
+                    class="${properties.enableIcon ? 'herobanner-icon' : '' }">
+                    <img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+                        class="svgicon ${properties.iconBackgroundColor}" />
+                </div>
+                <div data-sly-test="${banner.caption}" class="caption"> ${banner.caption @ context='html'}</div>
+                <div data-sly-test="${banner.title}" class="title ${!banner.description ? 'no-title-padding':''}">
+                    ${banner.title @ context='html'}
+                </div>
+                <div data-sly-test="${banner.description}" class="description">
+                    ${banner.description @ context='html'}
+                </div>
+                <div class="herobannerb-link">
+                    <sly
+                        data-sly-resource="${ @ path='bannerb-cta', resourceType='softwareag/components/content/banner-cta', decoration=true}">
+                    </sly>
+                </div>
+            </div>
+            <div data-sly-test="${banner.bannerType == 'bannerb'}" id="herobannerb-image" class="herobannerb-image">
+                <!-- <sly data-sly-test="${banner.backgroundImage =='asset'}"
+                    data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly> -->
+                <!-- <sly data-sly-test="${banner.backgroundImage =='svg'}"> -->
+                <div id="herob-desktop"
+                    data-sly-resource="${ @ path='foreground-img', resourceType='softwareag/components/content/image_v1'}">
+                </div>
+            </div>
+        </section>
+        <!-- <div id="herobannerb-image" class="herobannerb-image"> -->
+        <!-- <sly data-sly-test="${banner.backgroundImage =='asset'}"
+                data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly> -->
+        <!-- <sly data-sly-test="${banner.backgroundImage =='svg'}"> -->
+        <!-- <div id="herob-desktop"> -->
+        <!-- <sly
+                    data-sly-resource="${ @ path='foreground-img', resourceType='softwareag/components/content/image_v1'}">
+                </sly> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <sly data-sly-test="${banner.addKPISectionB && banner.bannerBSize == 'medium'}">
+            <section
+                class="desktop-herocardbcontainer herobanner_card-container herocard-layout-${banner.bannerBCards}">
+                <sly data-sly-list.cardsList="${banner.bCards}">
+                    <div class="kpi"
+                        data-sly-resource="${cardsList @ resourceType='/apps/softwareag/components/content/kpi'}">
+                    </div>
+                </sly>
+            </section>
+        </sly>
+    </div>
+</sly>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<sly data-sly-test="${banner.bannerType == 'bannerc'}">
+    <div
+        class="herobannerc-container ${banner.addKPISectionC && banner.bannerCCards && banner.bannerCSize == 'medium' ? 'kpicard-present': ''} herobanner-${banner.bannerCSize}">
+        <!-- Gradient preset section -->
+        <div class="heroc-gradient-container" data-gradient-color="${banner.backgroundColorC}"
+            data-gradient-preset="${banner.checkboxGradient ? banner.gradientPreset : 'false'}"
+            data-overlay-preset="${banner.checkboxTransperancy ? banner.transperancyLevel : 'transparency-100'}"></div>
+
+        <!-- ^^^checkbox button's value and only then populate the respective gradient or transparency. it should default to "select/false" if checkbox is false -->
+        <section id="herobannerc-content" class="herobannerc-content herobannerc-content-padding">
+            <div class="herobannerc-text-container ${banner.fontColorC} ${banner.bannerCTextAlignment}">
+                <div data-sly-test="${properties.enableIcon}"
+                    class="${properties.enableIcon ? 'herobanner-icon' : '' }">
+                    <img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+                        class="svgicon ${properties.iconBackgroundColor}" />
+                </div>
+                <div data-sly-test="${banner.caption}" class="caption"> ${banner.caption @ context='html'}</div>
+                <div data-sly-test="${banner.title}" class="title ${!banner.description ? 'no-title-padding':''}">
+                    ${banner.title @ context='html'}
+                </div>
+                <div data-sly-test="${banner.description}" class="description">
+                    ${banner.description @ context='html'}
+                </div>
+                <div class="herobannerc-link"
+                    data-sly-resource="${ @ path='bannerd-cta', resourceType='softwareag/components/content/banner-cta', decoration=true}">
+                </div>
+            </div>
+        </section>
+        <div class="bannerc-background-image">
+            <div id="heroc-desktop" class="herobannerc-viewports">
+                <sly data-sly-test="${banner.backgroundImage =='asset'}">
+                    <sly data-sly-test="${banner.isDesktopImage}"
+                        data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+                    <sly data-sly-test="${!banner.isDesktopImage}">
+                        <video playsinline="" autoplay="" muted="" loop=""
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="${banner.fileReference}">
+                        </video>
+                    </sly>
+                </sly>
+                <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                    <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                </sly>
+            </div>
+            <div id="heroc-tablet" class="herobannerc-viewports"><!-- Background Image start -->
+                <sly data-sly-test=${!banner.tabletImage}>
+                    <sly data-sly-test="${banner.backgroundImage =='asset'}">
+                        <sly data-sly-test="${banner.isTabletImage}"><img src="${properties.fileReference}" width="100%"
+                                alt="${properties.altText}"></sly>
+                        <sly data-sly-test="${!banner.isTabletImage}">
+                            <video playsinline="" autoplay="" muted="" loop=""
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                                <source src="${banner.fileReference}">
+                            </video>
+                        </sly>
+                    </sly>
+                    <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                        <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                    </sly>
+                </sly>
+                <sly data-sly-test="${banner.isTabletImage}"> <img src="${banner.tabletImage}" width="100%"
+                        alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText}"
+                        data-sly-test="${banner.tabletImage}"></sly>
+                <sly data-sly-test="${!banner.isTabletImage}">
+                    <video playsinline="" autoplay="" muted="" loop=""
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${banner.tabletImage}">
+                    </video>
+                </sly><!-- image end -->
+            </div>
+            <div id="heroc-phone" class="herobannerc-viewports"><!-- Background Image start -->
+                <sly data-sly-test=${!banner.mobileImage}>
+                    <sly data-sly-test="${banner.backgroundImage =='asset'}">
+                        <sly data-sly-test="${banner.isMobileImage}">
+                            <img src="${properties.fileReference}" width="100%" alt="${properties.altText}">
+                        </sly>
+                        <sly data-sly-test="${!banner.isMobileImage}">
+                            <video playsinline="" autoplay="" muted="" loop=""
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                                <source src="${banner.fileReference}">
+                            </video>
+                        </sly>
+                    </sly>
+                    <sly data-sly-test="${banner.backgroundImage =='svg'}">
+                        <img src="${banner.desktopSvgImage}" width="100%" alt="${banner.imgAltText}">
+                    </sly>
+                </sly>
+                <sly data-sly-test="${banner.isMobileImage}"> <img src="${banner.mobileImage}" width="100%"
+                        alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText}"
+                        data-sly-test="${banner.mobileImage}"></sly>
+                <sly data-sly-test="${!banner.isMobileImage}">
+                    <video playsinline="" autoplay="" muted="" loop=""
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${banner.mobileImage}">
+                    </video>
+                </sly>
+                <!-- <img src="${banner.mobileImage}" width="100%"
+                    alt="${banner.backgroundImage =='asset'? properties.altText : banner.imgAltText }"
+                    data-sly-test="${banner.mobileImage}"> -->
+                <!-- image end -->
+            </div>
+        </div>
+        <sly data-sly-test="${banner.addKPISectionC && banner.bannerCSize == 'medium'}">
+            <section
+                class="desktop-herocardccontainer herobanner_card-container herocard-layout-${banner.bannerCCards}">
+                <sly data-sly-list.cardsList="${banner.cCards}">
+                    <div class="kpi"
+                        data-sly-resource="${cardsList @ resourceType='/apps/softwareag/components/content/kpi'}">
+                    </div>
+                </sly>
+            </section>
+        </sly>
+    </div>
+</sly>
+
+<!-- /--------------------------------------------------------------------------------------------------------------- -->
+<sly data-sly-test="${banner.bannerType == 'bannerd'}">
+    <div id="herobannerd-container" class="herobannerd-container ${banner.backgroundColorD}"
+        data-wcmmode="${wcmmode.edit ? 'edit' : 'non-edit'}">
+        <div data-sly-test="${banner.addBannerBar}" class="herobannerd-gradient-bar ${banner.bannerDGradientColors}">
+
+        </div>
+        <section id="herobannerd-content" class="herobannerd-content herobannerd-content-padding">
+            <div data-sly-test="${banner.addDivider}" class="herobannerd-divider ${banner.bannerDTextAlignment}"></div>
+            <div data-sly-test="${properties.enableIcon}" class="${properties.enableIcon ? 'herobanner-icon' : '' }  ${banner.bannerDTextAlignment == 'center-align' ? 'add-center-style' : ''}">
+                <img src="${properties.fileReferencea}" alt="${properties.altTexta}"
+                    class="svgicon ${properties.iconBackgroundColor}" />
+            </div>
+            <div data-sly-test="${banner.caption}" class="caption ${banner.bannerDTextAlignment}"> ${banner.caption @
+                context='html'}</div>
+            <div data-sly-test="${banner.title}"
+                class="title_d ${!banner.description ? 'no-title-padding':''} ${banner.bannerDTextAlignment}">
+                ${banner.title @ context='html'}
+            </div>
+            <div data-sly-test="${banner.description}" class="description_d ${banner.bannerDTextAlignment}">
+                ${banner.description @ context='html'}
+            </div>
+            <div class="herobannerd-link"
+                data-sly-resource="${ @ path='bannerd-cta', resourceType='softwareag/components/content/banner-cta', decoration=true}">
+            </div>
+        </section>
+
+    </div>
+</sly>

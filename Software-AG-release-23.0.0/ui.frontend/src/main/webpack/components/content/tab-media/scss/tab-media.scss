@@ -1,0 +1,80 @@
+.tab-media {
+  .tab-media__wrapper {
+    position: relative;
+    padding: 6.4rem 0;
+
+    @include mq-tablet {
+      padding: 4.8rem 2.4rem;
+    }
+    @include mq-phone {
+      padding: 4rem 1.6rem;
+    }
+
+    //svg tab media
+    .dynamic-media__container,
+    .tab-media-image {
+      vertical-align: middle;
+      width: 100%;
+      object-fit: cover;
+      @include mq-desktop {
+        height: 46rem;
+      }
+      @include mq-tablet {
+        height: 30rem;
+      }
+      @include mq-phone {
+        height: 17.7rem;
+      }
+
+      img {
+        object-fit: cover;
+        @include mq-desktop {
+          height: 46rem;
+        }
+        @include mq-tablet {
+          height: 30rem;
+        }
+        @include mq-phone {
+          height: 17.7rem;
+        }
+      }
+    }
+
+    //tab media content
+    .tab-media-content {
+      padding: 2.4rem;
+      background-color: #f0f2f4;
+      @include mq-desktop {
+        position: absolute;
+        width: 50%;
+        bottom: 6.4rem;
+      }
+      @include mq-tablet {
+        width: 100%;
+      }
+      @include mq-phone {
+        width: 100%;
+      }
+
+      //tab media description
+      .tab-media-description {
+        .tab-heading {
+          @include base-font-bold;
+          @include font-size-with-rem-line-height(2rem, 2.6rem);
+        }
+
+        .tab-subheading {
+          padding: 1.6rem 0;
+          @include base-font;
+          @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+        }
+      }
+      .tab-media-link__container {
+        padding: 0;
+        .cmp-link {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

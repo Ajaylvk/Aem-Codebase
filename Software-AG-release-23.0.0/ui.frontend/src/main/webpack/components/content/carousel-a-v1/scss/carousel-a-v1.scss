@@ -1,0 +1,205 @@
+.carousel-a-v1 {
+  .carousel-a-v1-media-container {
+    .carousel-a-v1-media {
+      .carousel-a-v1-media__wrapper {
+        &.carousel-a-v1-media {
+          position: relative;
+          @include mq-desktop {
+            padding-top: 6.4rem;
+          }
+          @include mq-tablet {
+            padding-top: 4.8rem;
+          }
+          @include mq-phone {
+            padding-top: 4rem;
+          }
+          //carousel Image media
+          .dynamic-media__container {
+            // Non svg image
+            .s7responsiveContainer {
+              img {
+                vertical-align: middle;
+                width: 100%;
+                object-fit: cover;
+                @include mq-desktop {
+                  height: 460px;
+                }
+                @include mq-tablet {
+                  height: 301px;
+                }
+                @include mq-phone {
+                  height: 177px;
+                }
+              }
+            }
+
+            // svg image
+            .media-image {
+              vertical-align: middle;
+              width: 100%;
+              object-fit: cover;
+              @include mq-desktop {
+                height: 46rem;
+              }
+              @include mq-tablet {
+                height: 30rem;
+              }
+              @include mq-phone {
+                height: 17.7rem;
+              }
+            }
+          }
+
+          //svg carousel media
+          .carosuel-a-v1-content-wrapper {
+            @include mq-desktop {
+              position: relative;
+              max-width: 132rem;
+              margin: 0 auto;
+              padding: 0 2.4rem;
+            }
+            .carousel-a-v1-media-content {
+              &.bottom-left-corner {
+                left: 2.4rem;
+                @include mq-until-tablet {
+                  left: 0;
+                }
+              }
+
+              &.bottom-right-corner {
+                right: 2.4rem;
+                @include mq-until-tablet {
+                  right: 0;
+                }
+              }
+
+              @include mq-desktop {
+                position: absolute;
+                width: 50%;
+                bottom: 0rem;
+              }
+
+              @include mq-tablet {
+                width: 100%;
+              }
+              @include mq-phone {
+                width: 100%;
+              }
+
+              &.media-core-dark-950 {
+                background-color: $color-core-dark-950;
+              }
+              &.media-core-light-930 {
+                background-color: $color-core-light;
+              }
+              &.media-core-dark-120 {
+                background-color: $color-core-black;
+                .heading,
+                .subheading {
+                  color: #fff;
+                }
+              }
+              &.media-white {
+                background-color: $color-white;
+              }
+              //media textpanel
+              .carousel-a-v1-media__text {
+                //media textpanel description
+                .carousel-a-v1-media-description {
+                  padding: 2.4rem 2.4rem 1.6rem 2.4rem;
+                  @include mq-phone {
+                    padding: 1.6rem;
+                  }
+                  .heading {
+                    @include base-font-bold;
+                    @include font-size-with-rem-line-height(2rem, 2.6rem);
+                  }
+                  .subheading {
+                    padding-top: 1.6rem;
+                    @include base-font;
+                    @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+                  }
+                }
+
+                //Media textpanel Link Stylings
+                .carousel-a-v1-media-link__container {
+                  .cmp-link {
+                    text-align: left;
+                    padding-left: 2.4rem;
+                    padding-top: 0;
+                    padding-right: 3.2rem;
+                    padding-bottom: 2.4rem;
+                    @include mq-tablet {
+                      padding-left: 2.4rem;
+                      padding-right: 2.4rem;
+                    }
+                    @include mq-phone {
+                      padding-left: 1.6rem;
+                      padding-right: 1.6rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//left and centered carousel variation
+.carousel-left,
+.carousel-center {
+  .carousel-a-v1-media-container {
+    .carousel-a-v1-media {
+      .carousel-a-v1-media__wrapper {
+        &.carousel-a-v1-media {
+          .carosuel-a-v1-content-wrapper {
+            .carousel-a-v1-media-content {
+              &.bottom-left-corner {
+                left: 0rem;
+              }
+
+              &.bottom-right-corner {
+                right: 0rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel-left {
+  .carousel-a-v1-media-container {
+    width: 1066px;
+
+    @include mq-tablet {
+      width: 100%;
+    }
+    @include mq-phone {
+      width: 100%;
+    }
+  }
+}
+
+.carousel-center {
+  .carousel-a-v1-media-container {
+    width: 1066px;
+    margin: 0 auto;
+    @include mq-tablet {
+      width: 100%;
+    }
+    @include mq-phone {
+      width: 100%;
+    }
+  }
+}
+
+.carousel-a-v1__container[data-wcmmode="edit"] {
+  .cq-placeholder[data-emptytext="Carousel-A-v1"] {
+    margin: 5rem 0;
+  }
+}

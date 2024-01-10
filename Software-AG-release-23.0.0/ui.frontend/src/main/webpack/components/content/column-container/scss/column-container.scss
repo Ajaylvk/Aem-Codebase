@@ -1,0 +1,542 @@
+#columncontainer {
+  .articleemphasis,
+  .articlemedia {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .articlequote {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .accordion .accordion-wrapper{
+    max-width:100%;
+    width:100%;
+  }
+  
+  .pdfviewer.content-width {
+    max-width:100%;
+    width:100%;
+  }
+  .column-layout__inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    @include mq-phone {
+      flex-direction: column;
+    }
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    max-width: 132rem;
+    margin: auto;
+    .productteaser_v1 {
+      margin: 0;
+    }
+    .articleteaser {
+      margin-top: 0 !important;
+    }
+  }
+  .column-layout__inner-wrapper[data-hPadding="84px"] {
+    padding: 0 2.4rem;
+    @include mq-phone {
+      padding: 0 1.6rem;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="1"] > div {
+    width: 100%;
+    min-height: 50px;
+    .button-link-row .btnlink-row__wrapper .btnlink-row__layout {
+      padding-left: 0rem !important;
+      padding-right: 0rem !important;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="2"] > div {
+    width: calc((100% / 2) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+  }
+  .column-layout__inner-wrapper[data-column-count="2"] > div:first-child {
+    margin-right: 3.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="2"] > div:last-child {
+    margin-left: 3.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"]
+    > div:first-child {
+    width: calc((100% / 1.5) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 3.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"]
+    > div:last-child {
+    width: calc((100% / 3) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 3.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"]
+    > div:first-child {
+    width: calc((100% / 3) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 3.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"]
+    > div:last-child {
+    width: calc((100% / 1.5) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 3.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating width on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="64px"]
+    > div {
+    width: calc((100% / 2) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    // margin: 1.2rem;
+    // text-align: left;
+    // @include mq-tablet {
+    //   width: calc((100% / 2) - 1.6rem);
+    //   display: flex;
+    //   margin: 0.8rem;
+    //   text-align: left;
+    // }
+    // @include mq-phone {
+    //   width: 100%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   margin: 1.2rem 0;
+    //   text-align: left;
+    // }
+  }
+  // Calculating margin for first child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="64px"]
+    > div:first-child {
+    margin-right: 3.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin for last child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="64px"]
+    > div:last-child {
+    margin-left: 3.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating width on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="40px"]
+    > div {
+    width: calc((100% / 2) - 2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+  }
+  // Calculating margin for first child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="40px"]
+    > div:first-child {
+    margin-right: 2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin for last child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="40px"]
+    > div:last-child {
+    margin-left: 2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating width on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="24px"]
+    > div {
+    width: calc((100% / 2) - 1.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+  }
+  // Calculating margin for first child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="24px"]
+    > div:first-child {
+    margin-right: 1.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin for last child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="24px"]
+    > div:last-child {
+    margin-left: 1.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating width on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="16px"]
+    > div {
+    width: calc((100% / 2) - 0.8rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+  }
+  // Calculating margin for first child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="16px"]
+    > div:first-child {
+    margin-right: 0.8rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin for last child on Selecting Column - 2, Column partition - 50%-50% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"][data-column-padding="16px"]
+    > div:last-child {
+    margin-left: 0.8rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="64px"]
+    > div:first-child {
+    width: calc((100% / 1.5) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 3.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="64px"]
+    > div:last-child {
+    width: calc((100% / 3) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 3.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="40px"]
+    > div:first-child {
+    width: calc((100% / 1.5) - 2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="40px"]
+    > div:last-child {
+    width: calc((100% / 3) - 2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="24px"]
+    > div:first-child {
+    width: calc((100% / 1.5) - 1.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 1.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="24px"]
+    > div:last-child {
+    width: calc((100% / 3) - 1.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 1.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="16px"]
+    > div:first-child {
+    width: calc((100% / 1.5) - 0.8rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 0.8rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 66%-33% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"][data-column-padding="16px"]
+    > div:last-child {
+    width: calc((100% / 3) - 0.8rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 0.8rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="64px"]
+    > div:first-child {
+    width: calc((100% / 3) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 3.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 64px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="64px"]
+    > div:last-child {
+    width: calc((100% / 1.5) - 3.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 3.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="40px"]
+    > div:first-child {
+    width: calc((100% / 3) - 2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 40px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="40px"]
+    > div:last-child {
+    width: calc((100% / 1.5) - 2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="24px"]
+    > div:first-child {
+    width: calc((100% / 3) - 1.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 1.2rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 24px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="24px"]
+    > div:last-child {
+    width: calc((100% / 1.5) - 1.2rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 1.2rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+  // Calculating margin and width for first child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="16px"]
+    > div:first-child {
+    width: calc((100% / 3) - 0.8rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-right: 0.8rem;
+    @include mq-phone {
+      margin-right: 0;
+    }
+  }
+  // Calculating margin and width for last child on Selecting Column - 2, Column partition - 33%-66% , Padding between Columns - 16px
+  .column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"][data-column-padding="16px"]
+    > div:last-child {
+    width: calc((100% / 1.5) - 0.8rem);
+    @include mq-phone {
+      width: 100%;
+    }
+    min-height: 50px;
+    margin-left: 0.8rem;
+    @include mq-phone {
+      margin-left: 0;
+    }
+  }
+}
+#columncontainer {
+  .text_V3-container {
+    padding: 0;
+  }
+}
+#columncontainer.column-layout__wrapper[data-hPadding="84px"]
+  > .text_v3.rtewrapper
+  .text_V3-container {
+  padding-left: 2.4rem !important;
+  padding-right: 2.4rem !important;
+  @include mq-phone {
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+  }
+}
+.column-layout__inner-wrapper[data-column-count="2"] {
+  .text_V3-container .text_V3-link {
+    width: 100% !important;
+  }
+}
+.column-layout__inner-wrapper[data-column-count="2"] .text_V3-headline {
+  width: 100%;
+  max-width: 100%;
+}
+.column-layout__inner-wrapper[data-column-count="2"] .text_V3-description {
+  width: 100%;
+  max-width: 100%;
+}
+.column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"] {
+  @media (min-width: 415px) and (max-width: 640px) {
+    .articledivider {
+      .component-separator {
+        width: 70%;
+      }
+    }
+    .text_V3-divider {
+      width: 70% !important;
+    }
+  }
+}
+.column-layout__inner-wrapper[data-column-count="2"][data-column-partition="fifty"],
+.column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"],
+.column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"] {
+  .button-link-row .btnlink-row__wrapper .btnlink-row__layout {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+}
+.column-layout__inner-wrapper[data-column-count="2"][data-column-partition="thirtythree"]
+  > div:first-child,
+.column-layout__inner-wrapper[data-column-count="2"][data-column-partition="sixtysix"]
+  > div:last-child {
+  @media (min-width: 415px) and (max-width: 1200px) {
+    .articledivider {
+      .component-separator {
+        width: 70%;
+      }
+    }
+    .text_V3-divider {
+      width: 70% !important;
+    }
+  }
+}
+.column-layout__wrapper[data-tbPadding="true"] {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  @include mq-tablet {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+  @include mq-phone {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
+.column-layout__wrapper.input__colorselect-background-color9{
+  color: #fff;
+}
+
+//additional css for column container when it sits inside article template
+.article-content {
+  #columncontainer {
+    .text_V3-headline {
+      width: 100%;
+      max-width: 100%;
+    }
+    .text_V3-description {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+.aem-AuthorLayer-Edit {
+  #columncontainer {
+    padding-top: 3.2rem;
+  }
+}

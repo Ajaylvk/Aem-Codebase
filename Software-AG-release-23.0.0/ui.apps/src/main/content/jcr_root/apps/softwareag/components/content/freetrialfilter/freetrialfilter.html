@@ -1,0 +1,142 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.freetrailmodel="com.softwareag.core.models.freetrail.FreeTrailModel"></sly>
+
+
+<div class="resourcefilter-v1_wrapper">
+    <div class="filter-resources-container" data-assetpath="${freetrailmodel.sourcePath}">
+
+        <div class="filter-link">
+            <span class="filter-caption">${properties.filterlabel}</span>
+            <span class="filter-mobile-arrow">
+                <svg class="a-icon a-icon--to-top">
+                    <use xlink:href="#to-top"></use>
+                </svg>
+            </span>
+        </div>
+        <div class="filter-wrapper">
+            <form class="filter-form">
+                <div class="input-wrapper">
+                    <div class="filter-back-container" style="display:none;">
+                        <span class="filter-back">
+                            <svg class="a-icon a-icon--to-top">
+                                <use xlink:href="#to-top"></use>
+                            </svg><span class="filter-back-text">${properties.filterlabel}</span>
+                        </span>
+                    </div>
+                    <div class="firstdropdown-wrapper">
+                        <div id="menulist-1" class="menulist">
+                            <div class="menulist-placeholder"><span>${properties.filter1label}</span>
+                                <span class="list-to-top angle__down--rotate">
+                                    <svg class="a-icon a-icon--to-top">
+                                        <use xlink:href="#to-top"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="select" name="${freetrailmodel.filter1ID}" id="${freetrailmodel.filter1ID}">
+                            <sly data-sly-list.item="${freetrailmodel.filter1TagMap}">
+                                <li class="dropdownoption" data-name="${item}"
+                                    data-value="${freetrailmodel.filter1TagMap[item]}">
+                                    <label>
+                                        <span class="checkbox">
+                                        </span>
+                                        <span class="checkbox-text">${item}</span>
+                                    </label>
+                                </li>
+                            </sly>
+                        </ul>
+                    </div>
+                    <div class="seconddropdown-wrapper">
+                        <div id="menulist-2" class="menulist">
+                            <div class="menulist-placeholder"><span>${properties.filter2label}</span>
+                                <span class="list-to-top angle__down--rotate">
+                                    <svg class="a-icon a-icon--to-top">
+                                        <use xlink:href="#to-top"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="select" name="${freetrailmodel.filter2ID}" id="${freetrailmodel.filter2ID}">
+                            <sly data-sly-list.item="${freetrailmodel.filter2TagMap}">
+                                <li class="dropdownoption" data-name="${item}"
+                                    data-value="${freetrailmodel.filter2TagMap[item]}"> <label>
+                                        <span class="checkbox">
+                                        </span>
+                                        <span class="checkbox-text">${item}</span>
+                                    </label>
+                                </li>
+                            </sly>
+                        </ul>
+                    </div>
+                    <div class="thirddropdown-wrapper">
+                        <div id="menulist-3" class="menulist">
+                            <div class="menulist-placeholder"><span>${properties.filter3label}</span>
+                                <span class="list-to-top angle__down--rotate">
+                                    <svg class="a-icon a-icon--to-top">
+                                        <use xlink:href="#to-top"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="select" name="${freetrailmodel.filter3ID}" id="${freetrailmodel.filter3ID}">
+                            <sly data-sly-list.item="${freetrailmodel.filter3TagMap}">
+                                <li class="dropdownoption" data-name="${item}"
+                                    data-value="${freetrailmodel.filter3TagMap[item]}"> <label>
+                                        <span class="checkbox">
+                                        </span>
+                                        <span class="checkbox-text">${item}</span>
+                                    </label>
+                                </li>
+                            </sly>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <div class="searchlibrary-wrapper">
+                <div class="search-tooltip">${properties.searchtooltip}</div>
+                <div class="wrapicon">
+                    <button class="search-resources-btn" type="button">
+                        <svg class="search-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23"
+                            fill="#011f3d">
+                            <path d="M0 0h24v24H0V0z" fill="none"></path>
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+                    </button>
+                    <input name="searchtext" id="resource-searchbox" placeholder="${properties.searchplaceholder}"
+                        autocomplete="off" tabindex="0" />
+                    <span class="clear-search">
+                        <svg class="a-icon a-icon--close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="filter-bubbles-container hide">
+            <div class="clearall-bubble">
+                <span class="bubble-clear-text">${properties.clearfilter}</span>
+                <span class="bubble-filter-placeholder hide">${properties.clearfilter}</span>
+                <span class="bubble-search-placeholder hide">${properties.clearsearch}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="filter-results-population" data-errormessage="${properties.searcherror}">
+    <div id="error-message" style="display:none;height:62rem;"></div>
+    <div id="freetrial_integration" class="freetrial_integration" style="display:none;"></div>
+    <div id="first-items-set" class="first-items-set" style="display:none;">
+    </div>
+    <div id="freetrial_iot" class="freetrial_iot" style="display:none;"></div>
+    <div id="second-items-set" class="second-items-set" style="display:none;"></div>
+    <div id="freetrial_adabasnatural" class="freetrial_adabasnatural" style="display:none;"></div>
+    <div id="third-items-set" class="third-items-set" style="display:none;"></div>
+    <div id="freetrial_businessprocesstransformation" class="freetrial_businessprocesstransformation"
+        style="display:none;"></div>
+    <div id="fourth-items-set" class="fourth-items-set" style="display:none;"></div>
+    <div id="freetrial_ittransformation" class="freetrial_ittransformation" style="display:none;"></div>
+    <div id="fifth-items-set" class="fifth-items-set" style="display:none;"></div>
+</div>

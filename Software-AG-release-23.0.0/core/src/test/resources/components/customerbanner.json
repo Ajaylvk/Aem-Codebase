@@ -1,0 +1,114 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "pageTitle": "Test Page Title",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "customerbanner": {
+                "jcr:primaryType": "nt:unstructured",
+                "design": "darkbutton",
+                "title": "Software AG Customers",
+                "fontStyle": "input__colorselect-font-color0",
+                "backgroundStyle": "input__colorselect-background-color1",
+                "anchorName": "anchor",
+                "sling:resourceType": "softwareag/components/content/customerbanner",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "https://resources.softwareag.com/customers",
+                    "text": "Customer Information"
+                },
+                "items": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Telefonica",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/TEL-logo_color_pos_tcm389-160651.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/customers/2018-2-pv-dbp-telco-3-sp-telco-3-0-the-transformation-of-telefonica-spain-3"
+                        }
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Fujitsu",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/Fujitsu_95_45_tcm389-160562.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/customers/2017-1-cv-webmethods-integration-fujitsu-en-fujitsu-reveals-how-they-onboard-their-customers-30-faster-with-software-ag"
+                        }
+                    },
+                    "item2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "DB Netze",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/DB_Netze_186_45_tcm389-160549.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/customers/2016-2-rs-aris-wm-centrasite-en-get-processes-on-the-right-track-like-db-netz-customer-story"
+                        }
+                    },
+                    "item3": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Philips",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/philips_logo_tcm389-160540.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/customers/digital-transformation-at-philips"
+                        }
+                    },
+                    "item4": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Kiabi",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/Kiabi_184_45_tcm389-160633.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/customers/2017-4-rs-terracotta-aris-and-wm-en-kiabi-retail-digital-transformation-customer-story"
+                        }
+                    },
+                    "item5": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Logo Mapfre",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/Mapfre_96_45_tcm389-160551.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/customers/2015-11-rs-webmethods-integration-bpms-mapfre-en-swimming-in-paper-automate-customer-story"
+                        }
+                    },
+                    "item6": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Campari Group",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/Campari_Group_tcm389-160552.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/youtube-customer-showcase/2017-6-cv-aris-davide-campari-en-customer-testimonial-davide-campari"
+                        }
+                    },
+                    "item7": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "DHL",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/Logo_DHL_tcm389-160554.jpg",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://resources.softwareag.com/youtube-customer-showcase/2017-6-cv-aris-davide-campari-en-customer-testimonial-davide-campari"
+                        }
+                    },
+                    "item8": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "altText": "Nespresso",
+                        "image": "/content/dam/softwareag-test/images/customer-banner/201709_Nestle_nespresso_45_45_tcm389-160618.png",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "https://www.softwareag.com/corporate/services/training/default.html#customerstatements"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

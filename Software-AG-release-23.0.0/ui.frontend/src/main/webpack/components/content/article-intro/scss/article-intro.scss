@@ -1,0 +1,123 @@
+.article-intro-caption {
+  color: $color-core-dark-600;
+  @include font-size-with-rem-line-height(1.4rem, 2rem);
+  @include base-font-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  @include mq-desktop {
+    padding-bottom: 3.2rem;
+  }
+  @include mq-tablet {
+    padding-bottom: 2.4rem;
+  }
+
+  @include mq-phone {
+    padding-bottom: 2rem;
+  }
+}
+
+.article-intro-text {
+  @include a-bodycopy;
+  margin-bottom: 0 !important;
+  p {
+    margin-bottom: 0 !important;
+  }
+  p:not(:last-child):not(:has(*)) {
+    @include mq-desktop {
+      padding-bottom: 3.2rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  h1:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  h2:not(:last-child) {
+    padding-bottom: 2.4rem;
+  }
+  h3:not(:last-child) {
+    padding-bottom: 1.2rem;
+    @include mq-phone {
+      padding-bottom: 0.8rem;
+    }
+  }
+  h4:not(:last-child) {
+    padding-bottom: 0.8rem;
+  }
+  h5:not(:last-child) {
+    padding-bottom: 0.4rem;
+  }
+  p:not(:last-child) > span.a-display {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-bodycopy-small {
+    display: inline-block;
+    @include mq-desktop {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-tablet {
+      padding-bottom: 2.4rem;
+    }
+    @include mq-phone {
+      padding-bottom: 2rem;
+    }
+  }
+  p:not(:last-child) > span.a-h1l-new {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-h2l-new {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-h3l-new {
+    display: inline-block;
+    padding-bottom: 1.2rem;
+    @include mq-phone {
+      padding-bottom: 0.8rem;
+    }
+  }
+  p:not(:last-child) > span.a-h4l-new {
+    display: inline-block;
+    padding-bottom: 0.8rem;
+  }
+  p:not(:last-child) > span.a-h5l-new {
+    display: inline-block;
+    padding-bottom: 0.4rem;
+  }
+  p:not(:last-child) > span.a-subtitle-large {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-subtitle-small {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-overline {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+  p:not(:last-child) > span.a-caption {
+    display: inline-block;
+    padding-bottom: 2.4rem;
+  }
+
+  @include mq-desktop {
+    padding-bottom: 3.2rem;
+  }
+  @include mq-tablet {
+    padding-bottom: 2.4rem;
+  }
+
+  @include mq-phone {
+    padding-bottom: 2rem;
+  }
+}
+.article-intro-top-spacing{
+  padding-top: 4rem;
+}

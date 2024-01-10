@@ -1,0 +1,47 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.model="com.softwareag.core.models.gridcontainer.GridContainerModel"
+     class="gridcontainer__wrapper ${!model.fileReference ? model.backgroundStyle : ''} ${model.fontStyle}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <!--/* Grid Container Background Image */-->
+    <div class=" gridcontainer__background-image"
+         data-sly-test="${model.fileReference}"
+         data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+    </div>
+
+    <div data-sly-use.templates="softwareag/components/commons/templates.html"
+         class="gridcontainer__container"
+         data-attrib-name="contentsection"
+         data-attrib-value="${campaignModel.title}"
+         data-attrib-campaign="${campaignModel.campaign}">
+
+        <h2 class="a-h2" data-sly-test="${model.title}">
+            <pre class="aem__textarea">
+                ${model.title @ context = 'html'}
+            </pre>
+        </h2>
+
+        <div class="a-copytext gridcontainer__text" data-sly-test="${model.text}">${model.text @ context='html'}</div>
+
+        <!--/* Grid Container Parsys */-->
+        <div data-sly-resource="${'container' @ resourceType='softwareag/components/content/parsys'}"
+             data-sly-use.gridContainerParsysModel="${'com.softwareag.core.models.gridcontainer.GridContainerParsysModel' @ parsysResourcePath='container'}"
+             class="parsys${gridContainerParsysModel.additionalClasses}">
+        </div>
+
+        <!--/* Grid Container CTA */-->
+        <div class="cta-container ${!model.fileReference && model.backgroundStyle == 'input__colorselect-background-color1' && model.design == 'link' ? 'a-cta--default-link-color' : ''}"
+             data-sly-resource="${ @ resourceType='softwareag/components/content/cta'}"></div>
+    </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !model.hasContent}"></sly>
+
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationmodel=integrationmodel}"></sly>

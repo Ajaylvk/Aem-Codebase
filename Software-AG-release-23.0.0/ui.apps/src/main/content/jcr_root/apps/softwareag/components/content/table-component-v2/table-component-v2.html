@@ -1,0 +1,28 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.tabledetails="com.softwareag.core.models.table.TableV2"></sly>
+<!-- Table back ground color: ${tabledetails.tableBackGroundColor}
+Table's row count: ${tabledetails.rowCount} -->
+<div class="HTML_table-wrapper ${properties.tabletAlignment} ${tabledetails.tableBackGroundColor} ${properties.borderwidth1} ${properties.bordercolor1}"
+    data-columnwidth="${tabledetails.colWidths}" data-rowColors="${tabledetails.rowColours}"
+    data-tabletAlignment="${properties.tabletAlignment}" data-colColors="${tabledetails.colColours}"
+    data-noofcolumns="${tabledetails.colWidths.size}">
+    <div id="table-grid-cont" data-noOfRows="${tabledetails.intRowCount}" data-columnwidth="${tabledetails.colWidths}"
+        data-noofcolumns="${tabledetails.colWidths.size}"
+        class="table-wrapper hideTable  ${tabledetails.tableBackGroundColor}">
+        <!-- <div data-noOfRows="${tabledetails.intRowCount}" data-noOfColumns="${tabledetails.colWidths.size}" data-widths="${tabledetails.colWidths}"
+    class="table-container"> -->
+        <!-- overall container -->
+        <sly data-sly-list="${tabledetails.totalItems}">
+            <sly data-sly-test.newPath="${'table-item{0}' @ format = itemList.index}">
+
+                <sly
+                    data-sly-resource="${ newPath @ resourceType='softwareag/components/content/tableitem-v2', decoration=true}">
+                </sly>
+
+            </sly>
+            <!-- </div> -->
+    </div>
+    <div class="table-mobile-layout"></div>
+</div>

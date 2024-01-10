@@ -1,0 +1,10 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div class="article-text">
+	<h2 data-sly-test="${properties.header}" id="${currentNode.name}">${properties.header}</h2>
+<div  class="article-text-summary" >
+	${properties.summary @context="html"}
+</div>
+</div>
+  

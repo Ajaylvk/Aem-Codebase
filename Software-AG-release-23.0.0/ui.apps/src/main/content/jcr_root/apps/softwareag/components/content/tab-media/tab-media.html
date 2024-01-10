@@ -1,0 +1,23 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<div class="tab-media__wrapper bottom-left-corner">
+    <div class="dynamic-media__container">
+        <sly data-sly-test="${properties.type =='asset'}"
+            data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+        <sly data-sly-test="${properties.type =='svg'}">
+            <img src="${properties.image}" alt="${properties.altText2}" class="tab-media-image">
+        </sly>
+    </div>
+    <div class="tab-media-content">
+        <div id="tab-media__text" data-sly-test="${properties.heading || properties.subHeading}">
+            <div class="tab-media-description">
+                <div class="tab-heading">${properties.heading @ context='html'}</div>
+                <div class="tab-subheading">${properties.subHeading @ context='html'}</div>
+            </div>
+            <div class="tab-media-link__container"
+                data-sly-resource="${ @ path='tabmedia-links', resourceType='softwareag/components/content/links', decoration=true}">
+            </div>
+        </div>
+    </div>
+
+</div>

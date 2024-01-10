@@ -1,0 +1,34 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+
+<div class="carousel-a-v1-media-container">
+   <div class="carousel-a-v1-media">
+      <div class="carousel-a-v1-media__wrapper carousel-a-v1-media">
+         <div class="dynamic-media__container">
+            <sly data-sly-test="${properties.type =='asset'}"
+               data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}">
+            </sly>
+            <sly data-sly-test="${properties.type =='svg'}">
+               <img src="${properties.image}" alt="${properties.altText2}" class="media-image">
+            </sly>
+         </div>
+         <div class="carosuel-a-v1-content-wrapper">
+            <div class="carousel-a-v1-media-content ${properties.textAlignment} ${properties.backgroundStyle}">
+
+               <div class="carousel-a-v1-media__text" data-sly-test="${properties.heading || properties.subHeading}">
+                  <div class="carousel-a-v1-media-description">
+                     <div class="heading">${properties.heading @ context='html'}</div>
+                     <div class="subheading">${properties.description @ context='html'}
+                     </div>
+                  </div>
+                  <div class="carousel-a-v1-media-link__container"
+                     data-sly-resource="${ @ path='carousel-links', resourceType='softwareag/components/content/links', decoration=true}">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>

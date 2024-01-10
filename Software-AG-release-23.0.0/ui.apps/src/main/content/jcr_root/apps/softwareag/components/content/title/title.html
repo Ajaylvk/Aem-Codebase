@@ -1,0 +1,25 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div class="title__wrapper ${titleModel.backgroundStyle} ${titleModel.fontStyle}"
+     data-sly-use.titleModel="com.softwareag.core.models.title.TitleModel"
+     data-sly-use.template="softwareag/components/commons/templates.html"
+     data-sly-test.hasContent="${titleModel.hasContent}"
+     data-position="${titleModel.position}">
+    <div class="title__container">
+        <h1 class="cmp-title__text">
+            <pre class="aem__textarea">
+                ${titleModel.title  @ context = 'html'}
+            </pre>
+        </h1>
+        <div class="a-copytext title__text" data-sly-test="${titleModel.copyText}">
+            ${titleModel.copyText @ context = 'html'}
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-title'}"></sly>
+
+<sly data-sly-use.targetscriptTemplateFoot="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplateFoot.targetscript @ integrationModel=integrationModel}"></sly>

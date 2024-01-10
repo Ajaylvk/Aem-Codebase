@@ -1,0 +1,14 @@
+<div class="asset__container content-width ${properties.backgroundStyle} ${properties.fontStyle}"
+     data-sly-use.model="com.softwareag.core.models.asset.AssetComponentModel">
+    <div class="asset__content">
+        <h1>${model.title}</h1>
+
+        <div class="asset__viewer" data-sly-resource="${'mediaorpdfparsys' @ resourceType='softwareag/components/content/parsys'}">
+        </div>
+
+        <div class="asset__text" data-sly-test="${model.copyText}">
+            ${model.copyText @ context='html'}
+        </div>
+    </div> 
+</div>
+

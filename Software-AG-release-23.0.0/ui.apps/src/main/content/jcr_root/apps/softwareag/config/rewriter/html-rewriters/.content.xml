@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          contentTypes="[text/html]"
+          enabled="{Boolean}true"
+          generatorType="htmlparser"
+          order="1000"
+          resourceTypes="[/apps/softwareag/components/structure/page]"
+          paths="[/content]"
+          serializerType="htmlwriter"
+          transformerTypes="[versioned-clientlibs,resourceresolver-map,masterlinkrewriter]">
+    <generator-htmlparser
+            jcr:primaryType="nt:unstructured"
+            includeTags="[A,/A,IMG,/IMG,AREA,FORM,BASE,LINK,BODY,/BODY,IFRAME,/IFRAME,INPUT,/INPUT,SCRIPT,DIV,/DIV]"/>
+</jcr:root>

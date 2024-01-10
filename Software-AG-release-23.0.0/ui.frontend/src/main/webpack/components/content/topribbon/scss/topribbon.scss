@@ -1,0 +1,107 @@
+.topRibbon-wrapperclass {
+  display: flex;
+  @include mq-desktop {
+    align-items: center;
+    justify-content: center;
+  }
+  @include mq-tablet {
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  @include mq-phone {
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  padding: 8px 24px;
+  @include mq-phone {
+    padding: 8px 16px;
+  }
+  .topRibbon-text {
+    @include mq-tablet {
+      width: 100%;
+    }
+    @include mq-phone {
+      width: 100%;
+    }
+  }
+  //bodycopy typography
+  .topRibbon-text,
+  .topRibbon-text h5 {
+    @include base-font;
+    @include mq-phone {
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    }
+    @include mq-tablet {
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    }
+    @include mq-desktop {
+      @include font-size-with-rem-line-height(1.6rem, 2.4rem);
+    }
+  }
+  //Subtitle 1
+  .topRibbon-text h6 {
+    @include base-font-bold;
+    @include mq-desktop {
+      @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+    }
+    @include mq-tablet {
+      @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+    }
+    @include mq-phone {
+      @include font-size-with-rem-line-height(1.4rem, 2.2rem);
+    }
+  }
+  .ribbon-primary-link {
+    // padding-left: 24px;
+    // @include mq-tablet {
+    //   padding-left: 24px;
+    // }
+    // @include mq-phone {
+    //   width: 50%;
+    //   padding-left: 38px;
+    // }
+  }
+  .ribbon-primary-link {
+    @include mq-phone {
+      width: 100%;
+      text-align: left;
+      padding-top: 0.6rem;
+    }
+    @include mq-tablet {
+      padding-top: 0.6rem;
+    }
+    @media (min-width: 402px) and (max-width: 414px) {
+      text-align: left;
+    }
+    .cmp-link {
+      padding: 0;
+      padding-left: 24px;
+      @include mq-tablet {
+        padding: 0;
+      }
+      @include mq-phone {
+        padding: 0;
+      }
+    }
+  }
+}
+.ribbon_bright-life-540 {
+  background-color: #d9ec27;
+  color: #011f3d;
+}
+.ribbon_deep-pulse-270 {
+  background-color: #3b2c5e;
+  color: white;
+}
+.ribbon_core-dark-220 {
+  background-color: #193857;
+  color: white;
+}
+.aem-AuthorLayer-Edit {
+  .ribbon-primary-link {
+    min-width: 70px;
+    padding-left: 24px;
+  }
+}

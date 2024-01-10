@@ -1,0 +1,59 @@
+.articlenavigation {
+  .article-sidebar {
+    width: 100%;
+    padding-right: 12rem;
+    @include mq-until-tablet {
+      width: 100%;
+      margin-left: 0;
+      padding-right: 0;
+    }
+
+    @include mq-desktop {
+      padding: 0 4rem 0 0;
+    }
+  }
+
+  li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include mq-until-tablet {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    color: #537393;
+    font-weight: 400;
+  }
+
+  li:hover {
+    color: #8e3cf7;
+  }
+
+  .active {
+    color: #8e3cf7;
+    text-decoration: underline;
+  }
+
+  .active > .article-nav-link {
+    font-weight: bold;
+    color: #8e3cf7;
+  }
+}
+
+.aem-AuthorLayer-Edit {
+  .article-sidebar {
+    width: 100%;
+    top: 120px;
+    height: auto;
+    margin-left: 2rem;
+    padding-right: 12rem;
+    @include mq-until-tablet {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  }
+}

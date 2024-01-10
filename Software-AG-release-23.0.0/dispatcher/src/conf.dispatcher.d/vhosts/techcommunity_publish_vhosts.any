@@ -1,0 +1,4 @@
+## Put hostnames that would be honored for publish blob matching works.
+"tc-dev.softwareag.com"
+"tc-stg.softwareag.com"
+"techcommunity.softwareag.com"

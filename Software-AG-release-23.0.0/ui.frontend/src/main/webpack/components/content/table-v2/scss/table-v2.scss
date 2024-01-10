@@ -1,0 +1,468 @@
+.table-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(10, 0%);
+}
+.hideTable {
+  display: none;
+}
+/* background color of the entire table */
+.HTML_table-wrapper.white,
+.table-wrapper.white {
+  background-color: #fff;
+}
+.HTML_table-wrapper.core-dark-120,
+.table-wrapper.core-dark-120 {
+  background-color: #011f3d;
+  color: #fff;
+}
+.HTML_table-wrapper.core-dark-950 .table-wrapper.core-dark-950 {
+  background-color: #f0f2f4;
+  color: #fff;
+}
+.HTML_table-wrapper.core-light-930 .table-wrapper.core-light-930 {
+  background-color: #f2f2ea;
+}
+.HTML_table-wrapper.core-dark-220 .table-wrapper.core-dark-220 {
+  background-color: #193857;
+  color: #fff;
+}
+.HTML_table-wrapper div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom: 0.5px solid transparent;
+  border-right: 0.5px solid transparent;
+  border-color: #d2d9e0;
+  padding: 16px;
+}
+/* code for aligment of individual cell */
+div.tableitem-v2:has(.HTMLtable-item .leftAlign) {
+  justify-content: left;
+}
+div.tableitem-v2:has(.HTMLtable-item .rightAlign) {
+  justify-content: right;
+}
+div.tableitem-v2:has(.HTMLtable-item .centerAlign) {
+  justify-content: center;
+}
+.textAlignment {
+  text-align: center;
+}
+.HTMLtableitem-container {
+  overflow-wrap: anywhere;
+}
+// icon padding based on position
+.right-icon-padding {
+  padding-right: 3px;
+}
+.left-icon-padding {
+  padding-left: 3px;
+}
+.bottom-icon-padding {
+  padding-bottom: 3px;
+}
+/* Table Item background color */
+
+div.tableitem-v2:has(.HTMLtable-item.tableitem-corelight930) {
+  background-color: #f2f2ea !important;
+  color: #011f3d !important;
+}
+
+div.tableitem-v2:has(.HTMLtable-item.tableitem-brightpulse950) {
+  background-color: #f1e7fe !important;
+  color: #011f3d !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-brightsense950) {
+  background-color: #ebf9f8 !important;
+  color: #011f3d !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-corelight930) {
+  background-color: #f2f2ea !important;
+  color: #011f3d !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-white) {
+  background-color: #fff !important;
+  color: #011f3d !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark120) {
+  background-color: #011f3d !important;
+  color: #fff !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark220) {
+  background-color: #193857 !important;
+  color: #fff !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark350) {
+  background-color: #36597d !important;
+  color: #fff !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark850) {
+  background-color: #d2d9e0 !important;
+  color: #011f3d !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark920) {
+  background-color: #e7ebee !important;
+  color: #011f3d !important;
+}
+div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark950) {
+  background-color: #f0f2f4 !important;
+  color: #011f3d !important;
+}
+
+.HTML_table-wrapper.side-by-side {
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-corelight930) {
+    background-color: #f2f2ea !important;
+    color: #011f3d !important;
+  }
+
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-brightpulse950) {
+    background-color: #f1e7fe !important;
+    color: #011f3d !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-brightsense950) {
+    background-color: #ebf9f8 !important;
+    color: #011f3d !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-corelight930) {
+    background-color: #f2f2ea !important;
+    color: #011f3d !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-white) {
+    background-color: #fff !important;
+    color: #011f3d !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark120) {
+    background-color: #011f3d !important;
+    color: #fff !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark220) {
+    background-color: #193857 !important;
+    color: #fff !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark350) {
+    background-color: #36597d !important;
+    color: #fff !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark850) {
+    background-color: #d2d9e0 !important;
+    color: #011f3d !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark920) {
+    background-color: #e7ebee !important;
+    color: #011f3d !important;
+  }
+  div.tableitem-v2:has(.HTMLtable-item.tableitem-coredark950) {
+    background-color: #f0f2f4 !important;
+    color: #011f3d !important;
+  }
+}
+
+/* border thickness for each table */
+// div.responsivegrid:has(.HTMLtable-item.border-thickness-2) {
+//   border-bottom: 2px solid transparent;
+// }
+
+//*bottom border thickness
+div.tableitem-v2:has(.HTMLtable-item.borderbottom-thickness-3) {
+  border-bottom: 4px solid transparent !important;
+}
+.HTML_table-wrapper.borderbottom-thickness-3
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom: 4px solid transparent;
+}
+
+div.tableitem-v2:has(.HTMLtable-item.borderbottom-thickness-2) {
+  border-bottom: 2px solid transparent !important;
+}
+.HTML_table-wrapper.borderbottom-thickness-2
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom: 2px solid transparent;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottom-thickness-1) {
+  border-bottom: 0.5px solid transparent !important;
+}
+.HTML_table-wrapper.borderbottom-thickness-1
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom: 0.5px solid transparent;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottom-thickness-0) {
+  border-bottom: 0px solid transparent !important;
+}
+.HTML_table-wrapper.borderbottom-thickness-0
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom: 0px solid transparent;
+}
+
+//*right border thickness
+
+div.tableitem-v2:has(.HTMLtable-item.borderright-thickness-3) {
+  border-right: 4px solid transparent !important;
+}
+.HTML_table-wrapper.borderright-thickness-3
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right: 4px solid transparent;
+}
+
+div.tableitem-v2:has(.HTMLtable-item.borderright-thickness-2) {
+  border-right: 2px solid transparent !important;
+}
+.HTML_table-wrapper.borderright-thickness-2
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right: 2px solid transparent;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderright-thickness-1) {
+  border-right: 0.5px solid transparent !important;
+}
+.HTML_table-wrapper.borderright-thickness-1
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right: 0.5px solid transparent;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderright-thickness-0) {
+  border-right: 0px solid transparent !important;
+}
+.HTML_table-wrapper.borderright-thickness-0
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right: 0px solid transparent;
+}
+/* border right colors for each table item */
+.HTML_table-wrapper.borderrightcolor-coredark850
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right-color: #d2d9e0;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderrightcolor-coredark850) {
+  border-right-color: #d2d9e0 !important;
+}
+.HTML_table-wrapper.borderrightcolor-coredark450
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right-color: #537393;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderrightcolor-coredark450) {
+  border-right-color: #537393 !important;
+}
+.HTML_table-wrapper.borderrightcolor-coredark120
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right-color: #011f3d;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderrightcolor-coredark120) {
+  border-right-color: #011f3d !important;
+}
+.HTML_table-wrapper.borderrightcolor-white
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right-color: #fff;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderrightcolor-white) {
+  border-right-color: #fff !important;
+}
+
+//*new border right color
+.HTML_table-wrapper.borderrightcolor-coredark600
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-right-color: #7e96ae;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderrightcolor-coredark600) {
+  border-right-color: #7e96ae !important;
+}
+
+/* border bottom colors for each table item */
+.HTML_table-wrapper.borderbottomcolor-coredark850
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom-color: #d2d9e0;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottomcolor-coredark850) {
+  border-bottom-color: #d2d9e0 !important;
+}
+.HTML_table-wrapper.borderbottomcolor-coredark450
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom-color: #537393;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottomcolor-coredark450) {
+  border-bottom-color: #537393 !important;
+}
+.HTML_table-wrapper.borderbottomcolor-coredark120
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom-color: #011f3d;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottomcolor-coredark120) {
+  border-bottom-color: #011f3d !important;
+}
+.HTML_table-wrapper.borderbottomcolor-white
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom-color: #fff;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottomcolor-white) {
+  border-bottom-color: #fff !important;
+}
+
+//*new border color
+.HTML_table-wrapper.borderbottomcolor-coredark600
+  div.tableitem-v2:has(.HTMLtable-item) {
+  border-bottom-color: #7e96ae;
+}
+div.tableitem-v2:has(.HTMLtable-item.borderbottomcolor-coredark600) {
+  border-bottom-color: #7e96ae !important;
+}
+
+.HTMLtable_icon.icon-color-12 {
+  width: 12px;
+}
+.HTMLtable_icon.icon-color-22 {
+  width: 22px;
+}
+.HTMLtable_icon.icon-color-36 {
+  width: 36px;
+}
+
+.HTMLtable-item > .alignment-top {
+  text-align: center;
+}
+
+.table-mobile-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: max-content;
+}
+
+.table-thead {
+  width: 40%;
+  height: initial;
+}
+
+.table-tdata {
+  width: 60%;
+  height: initial;
+}
+.tableitem-v2[style="background-color: rgb(54, 89, 125);"],
+.tableitem-v2[style="background-color: rgb(1, 31, 61);"],
+.tableitem-v2[style="background-color: rgb(25, 56, 87);"] {
+  color: $color-white !important;
+}
+.tableitem-v2[style="background-color: rgb(255, 255, 255);"],
+.tableitem-v2[style="background-color: rgb(54, 89, 125);"],
+.tableitem-v2[style="background-color: rgb(210, 217, 224);"],
+.tableitem-v2[style="background-color: rgb(231, 235, 238);"],
+.tableitem-v2[style="background-color: rgb(240, 242, 244);"]
+  .tableitem-v2[style="background-color: rgb(235, 249, 248);"],
+.tableitem-v2[style="background-color: rgb(241, 231, 254);"],
+.tableitem-v2[style="background-color: rgb(1, 31, 61);"]
+  .tableitem-v2[style="background-color: rgb(242, 242, 234);"] {
+  color: $color-core-black !important;
+}
+
+.table-wrapper.input__colorselect-background-color9,
+.table-wrapper.input__colorselect-background-color8 {
+  color: $color-white;
+}
+@include mq-phone {
+  .tableitem-v2 {
+    height: 100%;
+  }
+}
+@include mq-tablet {
+  .tableitem-v2 {
+    height: 100%;
+  }
+}
+.HTMLtableitem-container {
+  display: flex;
+}
+// when author chooses stacked layout for table view
+.HTML_table-wrapper.stacked .HTMLtableitem-container {
+  flex-wrap: wrap;
+}
+// Table item icon placed towards the center  of the text
+.HTMLtableIcon-center {
+  flex-direction: column;
+  @include mq-phone {
+    flex-direction: row;
+  }
+  div:first-child {
+    text-align: center;
+    @include mq-phone {
+      text-align: left;
+      padding-bottom: 0px;
+      padding-right: 3px;
+    }
+  }
+}
+// Table item icon placed towards the left side of the text
+.HTMLtableIcon-leftside {
+  flex-direction: row;
+  align-items: center;
+}
+// Table item icon placed towards the right side of the text
+.HTMLtableIcon-rightside {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+// Table item icon positioned at top and center and text aligment is Left -aligning the entire container to left
+.HTMLtableitem-container.leftAlign.HTMLtableIcon-center {
+  align-items: start !important;
+}
+// Table item icon positioned at top and center and text aligment is right -aligning the entire container to right
+.HTMLtableitem-container.rightAlign.HTMLtableIcon-center {
+  align-items: end !important;
+}
+
+.tableitem-v2 {
+  display: flex;
+  align-items: flex-start;
+}
+// rte link hover
+.HTML_table-wrapper {
+  a {
+    color: #058192;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #058192;
+    text-decoration: underline;
+  }
+}
+.tableitem-v2[style="background-color: rgb(25, 56, 87);"]
+  .tableitem-v2[style="background-color: rgb(1, 31, 61);"],
+.HTMLtable-item.tableitem-coredark120,
+.HTMLtable-item.tableitem-coredark220,
+.input__colorselect-background-color8,
+.input__colorselect-background-color9 {
+  .HTMLtable_text {
+    a {
+      color: #3cc1b7 !important;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #3cc1b7 !important;
+      text-decoration: underline;
+    }
+  }
+}
+//font color of table item
+.HTMLtableitem-container.font-coredark120 {
+  color: #011f3d !important;
+}
+.HTMLtableitem-container.font-white {
+  color: #fff !important;
+}
+//*paragraph styling added
+.HTMLtable_text {
+  @include a-bodycopy-regular;
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    li {
+      text-align: left;
+      margin-left: 1.6rem;
+    }
+  }
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    li {
+      text-align: left;
+      margin-left: 1.6rem;
+    }
+  }
+}
+//*new color added
+.HTMLtableitem-container.font-coredark600 {
+  color: #7e96ae !important;
+}

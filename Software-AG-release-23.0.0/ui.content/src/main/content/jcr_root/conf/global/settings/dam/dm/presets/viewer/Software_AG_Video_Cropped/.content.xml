@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        dam:s7damType="ViewerPreset"
+        dam:scene7LastPublished="{Date}2021-06-04T15:36:38.083+03:00"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:uuid="68075285-3407-4011-9515-2dab67ed9538"
+        category="VIDEO"
+        isactive="{Boolean}true"
+        platform="HTML5">
+        <userdata
+            jcr:primaryType="nt:unstructured"
+            style="content/dam/_CSS/Software_AG_Video_Cropped/Software_AG_Video_Cropped.css"
+            VideoPlayer.autoplay="true"
+            VideoPlayer.iconeffect="true,-1,0.3,0"/>
+        <metadata
+            dam:scene7CloudConfigPath="/conf/global/settings/cloudconfigs/dmscene7"
+            dam:scene7File="softwareaglocaldevelop2/Software_AG_Video_Cropped"
+            dam:scene7ID="a|580296064"
+            dam:scene7RootID="softwareaglocaldevelop2"
+            jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>

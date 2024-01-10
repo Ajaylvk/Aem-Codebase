@@ -1,0 +1,11 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-test="${properties.type =='asset'}" data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+<sly data-sly-test="${properties.type =='svg'}">
+<img src="${properties.image}" alt="${properties.altText2}" class="article-media-img">
+</sly>
+<sly data-sly-test="${properties.type =='embed'}">
+    ${properties.html @ context='unsafe'}
+</sly>
+<h5 class="a-bodycopy article-media__text">${properties.caption @ context='html'}</h5>

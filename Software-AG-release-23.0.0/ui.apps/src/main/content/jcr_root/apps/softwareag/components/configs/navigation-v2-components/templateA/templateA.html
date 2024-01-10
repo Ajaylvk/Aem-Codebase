@@ -1,0 +1,26 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<!-- Template A -->
+<div class="template-leftcolumn">
+	<sly data-sly-test="${!properties.sectionaremover}">
+		<div data-sly-unwrap="${!wcmmode.edit}">
+			<sly data-sly-resource="${'sectiona' @ resourceType='softwareag/components/configs/navigation-v2-components/sectionA'}"
+				decoration=true />
+		</div>
+	</sly>
+	<sly data-sly-test="${!properties.sectionbremover}">
+		<div data-sly-unwrap="${!wcmmode.edit}">
+			<sly data-sly-resource="${'sectionb' @ resourceType='softwareag/components/configs/navigation-v2-components/sectionB'}"
+				decoration=true />
+		</div>
+	</sly>
+</div>
+<sly data-sly-test="${!properties.sectioncremover}">
+	<div class="template-rightcolumn">
+		<div data-sly-unwrap="${!wcmmode.edit}">
+			<sly data-sly-resource="${'sectionc' @ resourceType='softwareag/components/configs/navigation-v2-components/sectionC'}"
+				decoration=true />
+		</div>
+	</div>
+</sly>

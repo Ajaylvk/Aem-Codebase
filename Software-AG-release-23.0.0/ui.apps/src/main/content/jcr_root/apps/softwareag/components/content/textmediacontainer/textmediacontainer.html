@@ -1,0 +1,27 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html" />
+
+
+<div class="textmediacontainer-wrapper ${properties.backgroundColor}">
+	<div class="textmediacontainer_spacing">
+		<div class="column-layout__container">
+			<h2 class="a-h2-new ${properties.description ? ' ': 'no-text-description'} ${properties.backgroundColor=='input__colorselect-text-background-text-component-color3'? 'white-font-color':'coreDark-font-color'}"
+				data-sly-test="${properties.title}">
+				<pre class="aem__textarea">
+            ${properties.title @ context = 'html'}
+            </pre>
+			</h2>
+			<div class="a-bodycopy layoutcontainer__text ${properties.backgroundColor=='input__colorselect-text-background-text-component-color3'? 'white-font-color':'coreDark-font-color'}"
+				data-sly-test="${properties.description}">${properties.description @ context='html'}</div>
+			<section class="a-container">
+				<div class="container">
+					<div class="row a-container__layout-section">
+
+						<sly data-sly-resource="${'contentpar' @ resourceType='wcm/foundation/components/parsys'}">
+						</sly>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!true}"></sly>

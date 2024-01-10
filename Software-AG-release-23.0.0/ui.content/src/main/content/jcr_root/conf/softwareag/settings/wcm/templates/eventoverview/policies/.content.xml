@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastReplicated="{Date}2019-12-01T00:00:00.001Z"
+        cq:lastReplicationAction="Activate"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <topparsys
+            cq:policy="softwareag/components/content/parsys/eventoverview"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <softwareag jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <content jcr:primaryType="nt:unstructured">
+                        <gridcontainer
+                            cq:policy="softwareag/components/content/gridcontainer/container"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <productteaser
+                            cq:policy="softwareag/components/content/productteaser"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <text
+                            cq:policy="softwareag/components/content/text"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <textmedia
+                            cq:policy="softwareag/components/content/textmedia"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <textmediabanner
+                            cq:policy="softwareag/components/content/textmediabanner"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <customerbanner
+                            cq:policy="softwareag/components/content/customerbanner"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <teaserbanner
+                            cq:policy="softwareag/components/content/teaserbanner"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <carousel
+                            cq:policy="softwareag/components/content/carousel"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <accordioncontainer
+                            cq:policy="softwareag/components/content/accordioncontainer/container"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <filtercontainer
+                            cq:policy="softwareag/components/content/filtercontainer/container"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <reference
+                            cq:policy="softwareag/components/content/reference"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <tabcomponent
+                            cq:policy="softwareag/components/content/tabcomponent"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+						<productteaser_v1
+                            cq:policy="softwareag/components/content/productteaser_v1"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                    </content>
+                </components>
+            </softwareag>
+        </topparsys>
+        <bottomparsys
+            cq:policy="softwareag/components/content/parsys/eventoverview"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <softwareag jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <content jcr:primaryType="nt:unstructured">
+                        <gridcontainer
+                            cq:policy="softwareag/components/content/gridcontainer/container"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <productteaser
+                            cq:policy="softwareag/components/content/productteaser"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <text
+                            cq:policy="softwareag/components/content/text"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <textmedia
+                            cq:policy="softwareag/components/content/textmedia"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <textmediabanner
+                            cq:policy="softwareag/components/content/textmediabanner"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <customerbanner
+                            cq:policy="softwareag/components/content/customerbanner"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <teaserbanner
+                            cq:policy="softwareag/components/content/teaserbanner"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <carousel
+                            cq:policy="softwareag/components/content/carousel"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <accordioncontainer
+                            cq:policy="softwareag/components/content/accordioncontainer/container"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <filtercontainer
+                            cq:policy="softwareag/components/content/filtercontainer/container"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <reference
+                            cq:policy="softwareag/components/content/reference"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <tabcomponent
+                            cq:policy="softwareag/components/content/tabcomponent"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <table
+                            cq:policy="softwareag/components/content/table"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <tableitem
+                            cq:policy="softwareag/components/content/tableitem"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <table
+                            cq:policy="softwareag/components/content/table"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+                        <tableitem
+                            cq:policy="softwareag/components/content/tableitem"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping" />
+						<productteaser_v1
+                            cq:policy="softwareag/components/content/productteaser_v1"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                    </content>
+                </components>
+            </softwareag>
+        </bottomparsys>
+        <herobanner
+            cq:policy="softwareag/components/content/herobanner"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping" />
+    </jcr:content>
+</jcr:root>

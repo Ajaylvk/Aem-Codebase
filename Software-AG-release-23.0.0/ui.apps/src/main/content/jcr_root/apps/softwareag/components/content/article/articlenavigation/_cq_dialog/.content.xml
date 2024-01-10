@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article Navigation"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <navigationtab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Navigation Tab"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        granite:class="cq-RichText-FixedColumn-column"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                name="./enableNumberlist"
+                                                text="Enable Number List"
+                                                uncheked="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <faqschema
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}false"
+                                                fieldDescription="Select checkbox to generate Schema markup"
+                                                name="./enableFaqSchema"
+                                                text="Generate FAQ schema"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <navigation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="A multi-field to add several Navigation items."
+                                                fieldLabel="Navigation Items">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./navigation">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <hiddenResourceType
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="softwareag/components/commons/dialog/hiddenResourceType"
+                                                            name="./sling:resourceType"
+                                                            value="softwareag/components/content/article/articlenavigation"/>
+                                                        <text
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Text field to add Navigation Heading."
+                                                            fieldLabel="Heading"
+                                                            name="./heading"
+                                                            removeSingleParagraphContainer="{Boolean}true"
+                                                            required="true"
+                                                            useFixedInlineToolbar="{Boolean}true"/>
+                                                    </items>
+                                                </field>
+                                            </navigation>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </navigationtab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

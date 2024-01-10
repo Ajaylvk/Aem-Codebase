@@ -1,0 +1,46 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test Page",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "copyright": {
+                "jcr:primaryType": "nt:unstructured",
+                "copyrightInformation": "Software AG All Rights Reserved.",
+                "cookieConsentInformation": "Cookie Preferences",
+                "sling:resourceType": "softwareag/components/content/copyright",
+                "linkItems": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/softwareag/test-page",
+                            "text": "Title 01"
+                        }
+                    },
+                    "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/softwareag/test-page",
+                            "text": "Title 02"
+                        }
+                    },
+                    "item2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "link": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "href": "/content/softwareag/test-page",
+                            "text": "Title 03"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

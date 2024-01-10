@@ -1,0 +1,123 @@
+.a-cta {
+    display: inline-block;
+    position: relative;
+    padding: 1.4rem 0;
+    text-transform: uppercase;
+}
+
+.a-cta--design-dark-button {
+    @include link-hover();
+    color: $color-core-black;
+    background-color: $color-bright-sense;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-deep-sense;
+    }
+}
+
+.a-cta--design-light-button {
+    @include link-hover();
+    color: $color-core-black;
+    background-color: $color-white;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-core-black;
+    }
+}
+
+.a-cta--design-link {
+    $arrow-distance: 2.5rem;
+    @include link-hover();
+
+    height: auto;
+
+    .a-cta__button-text {
+        line-height: 1.4;
+        height: auto;
+    }
+
+    .a-cta__button {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 2.5rem 0 0;
+    }
+
+    // CTA Link Design hover colors according to specs:
+    // https://xd.adobe.com/view/4dd4dd03-3d90-4f23-4a56-e7509b54d0c3-3be5/
+    .input__colorselect-font-color0 & {
+        color: $color-core-black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .input__colorselect-font-color1 & {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .input__colorselect-background-color7.input__colorselect-font-color0 & {
+        color: $color-core-black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .input__colorselect-background-color2.input__colorselect-font-color1 &,
+    .input__colorselect-background-color3.input__colorselect-font-color1 &,
+    .input__colorselect-background-color7.input__colorselect-font-color1 & {
+        &:hover {
+            color: $color-core-black;
+            text-decoration: underline;
+        }
+    }
+
+    .input__colorselect-background-color2.input__colorselect-font-color0 &,
+    .input__colorselect-background-color3.input__colorselect-font-color0 & {
+        &:hover {
+            color: $color-white;
+            text-decoration: underline;
+        }
+    }
+}
+
+// the default-link-color modifier is being set by the component surrounding the cta
+.a-cta--default-link-color .a-cta--design-link {
+    @include link-hover();
+    color: $color-core-black;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.a-cta__button {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.a-cta--design-light-button .a-cta__button,
+.a-cta--design-dark-button .a-cta__button {
+    padding: 0 2rem;
+}
+
+.a-cta__button-text {
+    @include base-font-bold();
+    @include font-size-with-rem-line-height(1.6rem, 2rem);
+}
+
+.a-cta__button-icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-left: 1rem;
+    position: absolute;
+    top: 1.4rem;
+    right: 0;
+}

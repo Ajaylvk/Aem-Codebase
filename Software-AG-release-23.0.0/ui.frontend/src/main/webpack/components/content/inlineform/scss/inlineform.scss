@@ -1,0 +1,199 @@
+$color-box-width-max: 75rem;
+
+.inlineform__wrapper {
+  position: relative;
+  width: 100%;
+
+  .inlineform__background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+
+    .s7dm-dynamic-media {
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      min-height: 100%;
+      min-width: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .content-width-v1 {
+    @include spacing(padding-left, newm);
+    @include spacing(padding-right, newm);
+    @include spacing(padding-top, newxxl);
+    @include spacing(padding-bottom, newxxl);
+    @include mq-from-tablet {
+      max-width: 132rem;
+      margin: 0 auto;
+    }
+    margin-bottom: 0;
+
+    .inlineform-divider {
+      border-top: 4px solid $color-bright-pulse;
+
+      @include mq-desktop {
+        width: 30rem;
+      }
+
+      @include mq-tablet {
+        width: 25rem;
+      }
+
+      @include mq-phone {
+        width: 18.4rem;
+      }
+    }
+  }
+}
+
+.inlineform__container {
+  position: relative;
+  margin: auto;
+
+  @include mq-phone {
+    padding: 0;
+  }
+
+  .inlineform__text {
+    position: relative;
+  }
+
+  .links {
+    min-width: 8rem;
+    max-width: max-content;
+    margin-top: 4.8rem;
+    @include mq-tablet {
+      margin-top: 4rem;
+    }
+    padding: 0;
+    .cmp-link {
+      padding: 0 !important;
+    }
+  }
+
+  &[data-position="left"] {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 95rem;
+
+    .inlineform-divider {
+      margin: 3.2rem 0 3.2rem 0;
+      @include mq-tablet {
+        margin: 2.4rem 0 2.4rem 0;
+      }
+      @include mq-phone {
+        margin: 2.4rem 0 2.4rem 0;
+      }
+    }
+
+    .text_v2_standalone {
+      max-width: unset;
+      padding: 2.4rem 0 4.8rem 0;
+      @include mq-phone {
+        padding: 0rem !important;
+      }
+    }
+
+    .text-title-alignment,
+    .textV2-text {
+      text-align: left;
+    }
+
+    .marketoform {
+      @include mq-from-tablet {
+        max-width: max-content !important;
+        margin-left: -1.4rem !important;
+      }
+    }
+
+    .s7dm-dynamic-media {
+      text-align: left;
+    }
+
+    @include mq-until-tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &[data-position="center"] {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 72rem;
+
+    .inlineform-divider {
+      margin: 3.2rem auto;
+      @include mq-tablet {
+        margin: 2.4rem auto 2.4rem auto;
+      }
+      @include mq-phone {
+        margin: 2.4rem auto 2.4rem auto;
+      }
+    }
+
+    .text_v2_standalone {
+      max-width: unset;
+      padding: 2.4rem 0 4.8rem 0;
+    }
+
+    .text-title-alignment,
+    .textV2-text {
+      text-align: center;
+    }
+
+    .marketoform {
+      max-width: max-content !important;
+      margin-left: auto !important;
+    }
+    .links {
+      margin: 4.8rem auto;
+    }
+
+    .s7dm-dynamic-media {
+      text-align: center;
+    }
+  }
+
+  &[data-position="right"] {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+
+    .text_v2_standalone {
+      max-width: unset;
+    }
+
+    .text-title-alignment,
+    .textV2-text {
+      text-align: right;
+    }
+
+    .marketoform {
+      max-width: max-content !important;
+      margin-right: 0 !important;
+    }
+
+    .s7dm-dynamic-media {
+      text-align: right;
+    }
+
+    @include mq-until-tablet {
+      margin: 0 auto;
+    }
+  }
+
+  .s7dm-dynamic-media {
+    height: 100%;
+  }
+}

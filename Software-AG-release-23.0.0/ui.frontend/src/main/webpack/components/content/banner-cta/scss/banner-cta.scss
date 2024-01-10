@@ -1,0 +1,61 @@
+.banner-cta {
+  .bannercta__wrapper {
+    width: 100%;
+
+    .bannercta__grid {
+      display: flex;
+      flex-wrap: wrap;
+      &.center-align {
+        justify-content: center;
+        > div {
+          margin-right: 2.4rem;
+          @include mq-phone {
+            margin-left: 1.6rem;
+            margin-right: 1.6rem;
+          }
+        }
+      }
+
+      &.left-align {
+        justify-content: left;
+        > div {
+          margin-right: 2.4rem;
+        }
+      }
+
+      > div {
+        align-items: center;
+        display: flex;
+        @include spacing(padding-top, newl);
+        @include mq-phone {
+          padding-top: 2.4rem;
+        }
+      }
+
+      .links {
+        min-width: 6rem;
+      }
+
+      .cmp-link {
+        padding: 0;
+      }
+      .cmp-button {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.aem-AuthorLayer-Edit {
+  .button {
+    min-width: 17rem;
+
+    .cmp-button {
+      min-width: 17rem;
+    }
+  }
+
+  .banner-cta .bannercta__wrapper .bannercta__grid > div {
+    margin-top: 3.2rem;
+  }
+}

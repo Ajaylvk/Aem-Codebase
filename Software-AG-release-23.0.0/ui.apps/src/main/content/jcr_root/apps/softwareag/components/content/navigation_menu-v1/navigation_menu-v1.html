@@ -1,0 +1,276 @@
+<sly data-sly-use.navigationMenuModel="com.softwareag.core.models.navigation.NavigationMenuModel"></sly>
+<nav class="headerv1__nav ${navigationMenuModel.siteNavigation.additionalLinks ? 'additionallinks' : ''}"
+    data-sly-use.icons="softwareag/components/commons/svg/icons.html"
+    data-sly-use.navigationMenuModel="com.softwareag.core.models.navigation.NavigationMenuModel"
+    data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+    data-sly-test.hasContent="${!navModel.isEmpty}">
+
+    <ul class="headerv1__nav-1-level">
+        <sly data-sly-list.levelZero="${navigationMenuModel.siteNavigation.levelZero}">
+
+
+            <li class="headerv1__nav-1-level-item headerv1__nav-1-level-item--has-children three-level-layout"
+                tabindex="0">
+
+                <sly data-sly-test="${navigationMenuModel.siteNavigation.siteName=='devcenter'}">
+                    <a class="dev-center-level0-link" href="${levelZero.levelZeroLinkDestination}"
+                        target="${levelZero.levelZeroLinkOpenIn}">
+                </sly>
+
+                <span class="headerv1__nav-1-level-item-title">${levelZero.levelZeroTitle}</span>
+                <span class="headerv1__nav-1-level-item-has-more"
+                    data-sly-call="${icons.getIcon @ name='to-top', width=30, height=30}"></span>
+
+                <sly data-sly-test="${navigationMenuModel.siteNavigation.siteName=='devcenter'}"></a> </sly>
+
+
+
+
+
+                <sly data-sly-test="${navigationMenuModel.siteNavigation.siteName!='devcenter'}">
+                    <!-- level-2 starts here -->
+                    <div class="headerv1__nav-2-container">
+                        <div class="content-width">
+                            <button class="headerv1__nav-2-close a-icon a-icon--hover"
+                                data-sly-call="${icons.getIcon @ name='close', width=30, height=30}">
+
+                            </button>
+                            <button class="headerv1__nav-2-back">
+                                <svg class="a-icon a-icon--to-top">
+                                    <use xlink:href="#to-top"></use>
+                                </svg> Back
+                            </button>
+                            <!--******************************* Platform kind of level starts *******************************-->
+
+                            <ul class="menu-list-selectable ${levelZero.levelOneListSize > 9 ? 'restyledList' : 'defaultMenulist'}"
+                                data-sly-list.levelOneObj="${levelZero.levelOne}">
+                                <!-- Level 2 children iterate this, data-index to be populated serially -->
+                                <li class="menu-list-selectable-item" data-index="${levelOneObjList.count}">
+
+                                    <sly data-sly-test="${!levelOneObj.levelOneDestination}">
+                                        ${levelOneObj.levelOneTitle}
+                                        <span class="menu-list-selectable-item-selected-arrow"
+                                            data-sly-call="${icons.getIcon @ name='to-top', width=30, height=30}"></span>
+                                    </sly>
+
+                                    <sly data-sly-test="${levelOneObj.levelOneDestination}">
+                                        <a href="${levelOneObj.levelOneDestination}"
+                                            target="${levelOneObj.levelOneLinkOpenIn}">
+                                            ${levelOneObj.levelOneTitle}
+                                        </a>
+                                    </sly>
+
+                                </li>
+
+                                <!-- Overview Link-->
+                                <sly data-sly-test="${levelOneObjList.last && levelZero.overviewLinkLabel}">
+                                    <div
+                                        class="overview-border ${levelZero.levelOneListSize > 5 ? 'itemsMoreThanFive': ''} 
+                                ${levelZero.levelOneListSize == 4 ? 'itemsEqualToFour': ''} ${levelZero.levelOneListSize <= 3 ? 'itemsEqualToThree': ''}">
+                                    </div>
+                                    <a class="headerv1__nav-2-level-item-title ${levelZero.levelOneListSize > 5 ? 'itemsMoreThanFive': ''} 
+                                ${levelZero.levelOneListSize == 4 ? 'itemsEqualToFour': ''} ${levelZero.levelOneListSize <= 3 ? 'itemsEqualToThree': ''} list__head"
+                                        href="${levelZero.overviewLinkDestination}"
+                                        target="${levelOneObj.overviewLinkOpenIn}">
+                                        <span class="list__head-title">${levelZero.overviewLinkLabel}</span>
+                                        <span class="list__head-title-selected-arrow"
+                                            data-sly-call="${icons.getIcon @ name='to-top', width=30, height=30}">
+                                        </span>
+                                    </a>
+                                </sly>
+
+
+                            </ul>
+
+
+                            <!-- Level 3 container -->
+                            <ul class="headerv1__nav-2-level content-width">
+
+                                <div class="l3-menu-back">
+
+                                    <svg class="a-icon a-icon--to-top">
+                                        <use xlink:href="#to-top"></use>
+                                    </svg>Back
+
+                                </div>
+                                <!-- Level 3 link container -->
+                                <!--this is level 3 , Iterate for each level 2 item -->
+                                <sly data-sly-list.levelOneTemp="${levelZero.levelOne}">
+
+                                    <div class="list list--single-item list--mobile-only thirdLevelList">
+
+                                        <div class="list__container" data-sly-test="${levelOneTemp.levelTwo}">
+                                            <li class="headerv1__nav-2-level-item">
+
+                                                <ul class="headerv1__nav-3-level list__linklist"
+                                                    data-sly-list.levelTwoObj="${levelOneTemp.levelTwo}">
+
+
+                                                    <!-- Level 3 links iterable -->
+                                                    <li class="headerv1__nav-3-level-item">
+                                                        <a href="${levelTwoObj.levelTwoDestination}"
+                                                            target="${levelTwoObj.levelTwoLinkOpenIn}">
+                                                            ${levelTwoObj.levelTwoTitle}
+                                                        </a> </a>
+                                                    </li>
+                                                    <!-- Level 3 links iterable close-->
+
+
+                                                </ul>
+                                            </li>
+                                        </div>
+                                        <!-- List of promo display for enabled start-->
+                                        <!-- Primary Promo display -->
+                                        <div class="list__aside">
+
+                                            <div class="image-container">
+
+                                                <img src="${levelOneTemp.primaryPromoReference}"
+                                                    alt="${levelOneTemp.altTextPrimary}">
+
+                                            </div>
+
+                                            <div class="text-container">
+
+                                                <div>
+                                                    <h6 class="a-overline"
+                                                        data-sly-test="${levelOneTemp.primaryPromoCaption}">
+                                                        ${levelOneTemp.primaryPromoCaption}</h6>
+                                                    <h5 class="a-h5-new">${levelOneTemp.primaryPromoHeading}</h5>
+                                                </div>
+
+                                                <div class="a-bodycopy">
+                                                    ${levelOneTemp.primaryPromoDescription}
+                                                </div>
+
+                                                <div class="a-cta a-cta--design-link"
+                                                    data-sly-test="${levelOneTemp.primaryPromoLinkLabel}">
+                                                    <a class="a-cta__button at-element-marker"
+                                                        href="${levelOneTemp.primaryPromoLinkDestination}"
+                                                        target="${levelOneTemp.primaryPromoLinkOpenIn}">
+                                                        <span
+                                                            class="a-cta__button-text">${levelOneTemp.primaryPromoLinkLabel}
+
+                                                        </span>
+                                                        <span class="a-cta__button-icon"
+                                                            data-sly-call="${icons.getIcon @ name='to-top', width=30, height=30}">
+
+                                                        </span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Secondary Promo display only when Level3 not available -->
+                                        <sly data-sly-test="${!levelOneTemp.levelTwo}">
+                                            <!-- if LevelTwo not available show Secondary Promo -->
+
+                                            <sly data-sly-test="${levelOneTemp.secondaryPromoReference}">
+
+                                                <div class="list__aside">
+
+                                                    <div class="image-container">
+
+                                                        <img src="${levelOneTemp.secondaryPromoReference}"
+                                                            alt="${levelOneTemp.altTextSecondary}">
+
+                                                    </div>
+
+
+
+                                                    <div class="text-container">
+
+                                                        <div>
+                                                            <h6 class="a-overline"
+                                                                data-sly-test="${levelOneTemp.secondaryPromoCaption}">
+                                                                ${levelOneTemp.secondaryPromoCaption}</h6>
+                                                            <h5 class="a-h5-new">${levelOneTemp.secondaryPromoHeading}
+                                                            </h5>
+                                                        </div>
+
+
+
+                                                        <div class="a-bodycopy"
+                                                            data-sly-test="${levelOneTemp.secondaryPromoDescription}">
+
+
+
+                                                            ${levelOneTemp.secondaryPromoDescription}
+
+
+
+                                                        </div>
+
+
+
+
+                                                        <div class="a-cta a-cta--design-link"
+                                                            data-sly-test="${levelOneTemp.secondaryPromoLinkLabel}">
+                                                            <a class="a-cta__button at-element-marker"
+                                                                href="${levelOneTemp.secondaryPromoLinkDestination}"
+                                                                target="${levelOneTemp.secondaryPromoLinkOpenIn}">
+                                                                <span
+                                                                    class="a-cta__button-text">${levelOneTemp.secondaryPromoLinkLabel}
+                                                                </span>
+                                                                <span class="a-cta__button-icon"
+                                                                    data-sly-call="${icons.getIcon @ name='to-top', width=30, height=30}">
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+
+
+                                                    </div>
+
+
+
+                                                </div>
+                                            </sly>
+
+
+                                        </sly>
+                                    </div>
+                                    <!-- List of promo display for enabled end -->
+
+                                    <!--End this is level 3 , Iterate for each level 2 item -->
+                                </sly>
+                            </ul>
+                            <!-- End -->
+
+                        </div>
+                    </div>
+
+                </sly>
+
+
+
+            </li>
+        </sly>
+    </ul>
+    <!-- brand center level zero Links -->
+    <sly data-sly-test="${navigationMenuModel.combinedLinks}">
+        <ul class="brand-center-navigationset" data-sly-list=${navigationMenuModel.combinedLinks}>
+            <li class="brand-center-link"><a class="brand-center-linkitem" href="${item.linkDestination}"
+                    target="${item.linkOpenIn}">${item.linkLabel}</a></li>
+        </ul>
+    </sly>
+
+    <!-- Extra Links -->
+    <sly data-sly-test="${navigationMenuModel.siteNavigation.additionalLinks}">
+        <div class="navlink-container">
+            <span class="navborder-left"></span>
+            <sly data-sly-list.links="${navigationMenuModel.siteNavigation.additionalLinks}">
+                <div class="navlevel0link cmp-link cmp-link--design-links">
+
+                    <a class="cmp-link__button" href="${links.linkDestination}" title="${links.linkLabel}"
+                        target="${links.linkOpenIn}">
+                        <span class="header-navlink-text">${links.linkLabel}</span>
+                    </a>
+                </div>
+            </sly>
+        </div>
+    </sly>
+</nav>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=hasContent}"></sly>

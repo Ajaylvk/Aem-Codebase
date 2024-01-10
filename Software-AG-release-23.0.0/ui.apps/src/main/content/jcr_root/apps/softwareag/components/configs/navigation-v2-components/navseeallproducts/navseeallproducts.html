@@ -1,0 +1,16 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+	data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+	data-sly-use.navItemModel="com.softwareag.core.models.navigation_v2.NavItem" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+<div class="nav-arrowlink-wrapper ${properties.enableleftpadding ? 'navarrowlink-leftpadding':''}">
+	<a href="${navItemModel.link}" target="${navItemModel.openIn}">${properties.title @ context='html'}
+		<span data-sly-test="${properties.title}" class="cmp-link__button-icon svg-baseline">
+			<svg class="a-icon a-icon--to-top">
+
+				<use xlink:href="#to-top"></use>
+
+			</svg>
+
+		</span>
+	</a>
+</div>

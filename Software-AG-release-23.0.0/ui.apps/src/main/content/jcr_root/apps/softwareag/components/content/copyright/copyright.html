@@ -1,0 +1,20 @@
+<div data-sly-use.templates="softwareag/components/commons/templates.html"
+     data-sly-use.copyrightModel="com.softwareag.core.models.copyright.CopyrightModel"
+     data-sly-test.hasContent="${copyrightModel.copyrightInformation}"
+     class="copyright">
+     <div class="copyright__container">
+         <ul class="copyright__list">
+             <li class="copyright__list__item">&copy; ${copyrightModel.copyrightInformation}</li>
+             <li class="copyright__list__item" data-sly-repeat.link="${copyrightModel.linkItems}" data-sly-test="${copyrightModel.linkItems}">
+                 <a class="a-anchor-text-footer" href="${link.link.href}" data-attrib-type="asset" data-attrib-name="${link.link.text}">${link.link.text}</a>
+             </li>
+             <li class="copyright__list__item">
+                 <div id="teconsent" data-cookie-consent-label="${copyrightModel.cookieConsentInformation}">
+                     <span class="a-anchor-text-footer cookie-consent-initial hide">${copyrightModel.cookieConsentInformation}</span>
+                 </div>
+             </li>
+         </ul>
+     </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>
+

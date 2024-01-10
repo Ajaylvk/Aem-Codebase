@@ -1,0 +1,40 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test",
+        "cq:template": "/conf/softwareag/settings/wcm/templates/base",
+        "pageTitle": "Test Page Title",
+        "sling:resourceType": "softwareag/components/structure/page",
+        "parsys": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "softwareag/components/content/parsys",
+            "cta_with_link": {
+                "jcr:primaryType": "nt:unstructured",
+                "design": "link",
+                "inline": "true",
+                "sling:resourceType": "softwareag/components/content/cta",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "href": "/content/dam/softwareag/test.png",
+                    "text": "Learn more",
+                    "target": "_self",
+                    "utmParameter": "utm"
+                }
+            },
+            "cta_without_link": {
+                "jcr:primaryType": "nt:unstructured",
+                "design": "darkbutton",
+                "sling:resourceType": "softwareag/components/content/cta"
+            },
+            "cta_invalid_link": {
+                "jcr:primaryType": "nt:unstructured",
+                "design": "darkbutton",
+                "sling:resourceType": "softwareag/components/content/cta",
+                "link": {
+                    "jcr:primaryType": "nt:unstructured"
+                }
+            }
+        }
+    }
+}

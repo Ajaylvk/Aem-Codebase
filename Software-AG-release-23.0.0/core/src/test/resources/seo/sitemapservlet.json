@@ -1,0 +1,56 @@
+{
+    "en": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent"
+        },
+        "events": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "hideInNav": false
+            }
+        },
+        "about": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "noIndex": false
+            }
+        },
+        "folder": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "cq:redirectTarget": "/content/softwareag"
+            }
+        },
+        "empty-redirect": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "cq:redirectTarget": ""
+            }
+        },
+        "hiddenPage": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "hideInNav": true
+            }
+        },
+        "shownPage": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent"
+            }
+        },
+        "noIndexPage": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "noIndex": true
+            }
+        }
+    }
+}

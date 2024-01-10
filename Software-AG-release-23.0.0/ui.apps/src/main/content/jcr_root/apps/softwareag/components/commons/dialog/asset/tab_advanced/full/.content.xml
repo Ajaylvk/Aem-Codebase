@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Asset"
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+    margin="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items
+                jcr:primaryType="nt:unstructured"
+                sling:hideChildren="[title,height,width]">
+                <file
+                    granite:id="dmFileReference"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                    autoStart="{Boolean}false"
+                    class="cq-droptarget"
+                    fileNameParameter="./fileName"
+                    fileReferenceParameter="./fileReference"
+                    mimeTypes="[image/.*,video/*,Multipart/Related;type=application/x-SpinSet,Multipart/Related;type=application/x-ImageSet,Multipart/Related;type=application/x-MixedMediaSet]"
+                    fieldDescription="Please add asset here."
+                    fieldLabel="Asset"
+                    multiple="{Boolean}false"
+                    name="./file"
+                    title="Asset"
+                    allowUpload="{Boolean}false"
+                    useHTML5="{Boolean}true" />
+                <alt
+                    granite:id="dmAltText"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                    fieldDescription="Textual alternative of the meaning or function of the image, for visually impaired readers."
+                    fieldLabel="Alternative Text"
+                    validation="imageAlternativeText"
+                    name="./altText" />
+                <linkUrl
+                    granite:id="dmLinkUrl"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                    fieldDescription="Adds a link to the image, if set."
+                    fieldLabel="Link Destination"
+                    rootPath="/content"
+                    name="./href" />
+                <linkTarget
+                    granite:id="dmLinkTarget"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                    class="cq-dialog-dropdown-showhide"
+                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"
+                    fieldDescription="The link target to use."
+                    fieldLabel="Open in"
+                    name="./target">
+                    <items jcr:primaryType="nt:unstructured">
+                        <self jcr:primaryType="nt:unstructured" text="Same Window" value="_self" />
+                        <blank jcr:primaryType="nt:unstructured" text="New Window" value="_blank" />
+                    </items>
+                </linkTarget>
+            </items>
+        </column>
+    </items>
+</jcr:root>

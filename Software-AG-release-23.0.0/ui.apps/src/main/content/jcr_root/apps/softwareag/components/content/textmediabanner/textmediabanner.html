@@ -1,0 +1,49 @@
+<sly data-sly-use.integrationModel="com.softwareag.core.models.IntegrationModel"
+     data-sly-use.campaignModel="com.softwareag.core.models.CampaignModel"
+     data-sly-use.targetscriptTemplateTop="softwareag/components/commons/integration/template.target.top.html"
+     data-sly-call="${targetscriptTemplateTop.targetscript @ integrationModel=integrationModel}"></sly>
+
+<div data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html"
+     data-sly-test.hasContent="${properties.title}"
+     class="textmediabanner__container ${properties.fontStyle}"
+     data-attrib-name="contentsection"
+     data-attrib-value="${campaignModel.title}"
+     data-attrib-campaign="${campaignModel.campaign}">
+
+    <p data-sly-test="${properties.anchorName}" data-sly-attribute.id="${properties.anchorName}" class="jump_to" />
+
+    <div class="wrapper-container">
+        <div class="image-block">
+            <sly data-sly-resource="${ @ resourceType='softwareag/components/commons/widget/asset'}"></sly>
+            <div class="inner-cta-block">
+                <sly class="${properties.design == 'link' ? 'a-cta--default-link-color' : ''}"
+                     data-sly-resource="${ @ resourceType='softwareag/components/content/cta'}" />
+            </div>
+        </div>
+
+        <div class="text-block ${properties.backgroundStyle}">
+            <div class="text-block__inner">
+                <img class="text-block__image"
+                     data-sly-test="${properties.image}"
+                     src="${properties.image}"
+                     title="${properties.logoAltText}"
+                     alt="${properties.logoAltText}" />
+                <h3 class="a-h3">
+                    <pre class="aem__textarea">
+                        ${properties.title  @ context = 'html'}
+                    </pre>
+                </h3>
+                <p class="a-copytext">${properties.copyText}</p>
+            </div>
+        </div>
+
+        <div class="cta-block">
+            <div class="${properties.design == 'link' ? 'a-cta--default-link-color' : ''}"
+                 data-sly-resource="${ @ resourceType='softwareag/components/content/cta'}"></div>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+<sly data-sly-use.targetscriptTemplate="softwareag/components/commons/integration/template.target.html"
+     data-sly-call="${targetscriptTemplate.targetscript @ integrationModel=integrationModel}"></sly>

@@ -1,0 +1,449 @@
+<nav class="navlistcontainer">
+
+
+    <ul class="listitems-container">
+
+        <!-- Iterate level 0 link as many times as authors input -->
+        <sly data-sly-list.levelzero>
+            <li class="listitem">
+                <span class="listlabel">${listlabel}</span>
+
+                <!-- **************Template A********** -->
+                <!-- Inject Templates depending on author input -->
+                <!-- Inject Dynamic Id of template-->
+                <div class="template" id="templateA">
+
+                    <!-- Template A divided into two columns - left and right
+                        left has section a and b, right has section C -->
+                    <div class="leftcolumn">
+
+                        <!-- ********SECTION A********** -->
+                        <section class="sectiona">
+
+                            <!-- section A Label dynamic for each section -->
+                            <div class="section-label">
+                                Section A title - Platform
+                            </div>
+                            <div class="navitem-wrapper">
+
+                                <!-- iterate navitemcol depending on No. of columns input - 1,2,3 -->
+                                <div class="navitemcol">
+                                    <!-- parsys for each column populate below content-->
+                                    <div class="navitema">
+                                        navitemcol1a
+                                    </div>
+
+                                    <!--component specic code gets injected here -->
+                                    <div class="navitemb">
+                                        navitemcol1b
+                                    </div>
+                                </div>
+                                <!-- if 2 columns were selected, another navitemcol below for section a -->
+                                <div class="navitemcol">
+                                    <div class="navitema">
+                                        navitemcol2a
+                                    </div>
+                                    <div class="navitemb">
+                                        navitemcol2b
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <!-- *******SECTION B*********** -->
+                        <section class="sectionb">
+
+                            <div class="section-label a-overline">
+                                Section B title
+                            </div>
+
+                            <div class="linklist-wrapper">
+                                <!-- iterate linklistcol depending on No. of columns input - 1,2,3 -->
+                                <div class="linklistcol">
+                                    <!--component specic code gets injected here -->
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <!--component specic code gets injected here -->
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <!--component specic code gets injected here -->
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                </div>
+                                <div class="linklistcol">
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                </div>
+
+                                <div class="linklistcol">
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                    <div class="linklist-item">
+                                        linklist1
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </section>
+                    </div>
+
+
+                    <!-- Main Right Column for template A which has section C -->
+                    <div class="rightcolumn">
+
+                        <!-- Section C -->
+                        <section class="sectionc">
+                            <div class="section-label">
+                                Section C title
+                            </div>
+
+                            <div class="navteaser-wrapper">
+                                <!--component specic code gets injected here -->
+                                <div class="navteaseritem">
+                                    productteaserlarge
+                                </div>
+                                <!--component specic code gets injected here -->
+                                <div class="navteaseritem">
+                                    productteaserlarge
+                                </div>
+                                <div class="navteaseritem">
+                                    productteasersmall
+                                </div>
+                            </div>
+
+                        </section>
+
+
+                    </div>
+
+
+                </div>
+            </li>
+        </sly>
+
+
+        <li class="listitem">
+            <span class="listlabel">Customer</span>
+            <!-- Template B -->
+            <div class="template" id="templateB">
+
+
+
+
+                <section class="sectiona">
+                    <div class="section-label a-overline">
+                        Section A title - Customer
+                    </div>
+                    <div class="linklist-wrapper">
+                        <!-- Stack all components dragged and dropped in section A parsys -->
+                        <!-- Linklist-item will be replaced by component name -->
+
+
+                    </div>
+
+                </section>
+
+                <!-- Section B Template B -->
+
+                <section class="sectionb">
+
+                    <div class="section-label a-overline">
+                        Section B title
+                    </div>
+
+                    <div class="linklist-wrapper">
+                        <!-- Stack all components dragged and dropped in section A parsys -->
+                        <!-- Linklist-item will be replaced by component name -->
+
+
+
+                    </div>
+
+                </section>
+
+                <!-- Section C Template B -->
+                <section class="sectionc">
+                    <div class="section-label">
+                        Section C title
+                    </div>
+
+                    <div class="navteaser-wrapper">
+                        <!-- Stack all components dragged and dropped in section A parsys -->
+                        <!-- navteaseritem will be replaced by component name -->
+
+                    </div>
+
+                </section>
+
+
+
+
+
+            </div>
+        </li>
+
+
+
+        <!-- 3rd item -->
+        <li class="listitem">
+            <span class="listlabel">Solutions</span>
+            <!-- Template C -->
+            <div class="template" id="templateC">
+                <!-- Entire Template divided into 2 columns visually
+                    left column contains section A and B, Right Column contains Section C -->
+                <div class="template-leftcolumn">
+
+
+                    <section class="sectiona">
+                        <div class="section-label a-overline">
+                            Section A title- Solutions
+                        </div>
+
+
+                        <div class="linklist-wrapper">
+                            <!-- Stack all components dragged and dropped in section A parsys -->
+                            <!-- Linklist-item will be replaced by component name -->
+                        </div>
+
+                    </section>
+
+
+
+
+                    <!-- SECTION B -->
+                    <section class="sectionb">
+
+                        <div class="section-label a-overline">
+                            Section B title
+                        </div>
+
+                        <div class="linklist-wrapper">
+                            <!-- Stack all components dragged and dropped in section A parsys -->
+                            <!-- navitema will be replaced by component name -->
+
+                        </div>
+
+                    </section>
+                </div>
+
+                <div class="template-rightcolumn">
+
+
+                    <section class="sectionc">
+                        <div class="section-label a-overline">
+                            Section C title
+                        </div>
+
+                        <div class="navteaser-wrapper">
+                            <!-- Stack all components dragged and dropped in section A parsys -->
+                            <!-- navteaseritem will be appended as component name -->
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+            </div>
+        </li>
+
+
+
+
+    </ul>
+</nav>
+
+
+
+<style>
+    .listitems-container {
+        display: flex;
+        width: 100%;
+        padding: 10px 20px;
+        background: #000;
+    }
+
+    .listitem {
+        list-style-type: none;
+        padding: 10px 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .template {
+        display: none;
+    }
+
+    .active .template {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+
+
+    .sectiona {
+        background: pink;
+        padding: 10px;
+        border: 3px solid black;
+    }
+
+    .sectionb {
+        padding: 10px;
+        background: green;
+        border: 3px solid black;
+    }
+
+    .sectionc {
+        padding: 10px;
+        background: yellow;
+        color: black;
+        border: 3px solid black;
+    }
+
+    .section-label {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+
+
+
+    .leftcolumn,
+    .rightcolumn {
+        flex: 1;
+        border: 3px solid red;
+    }
+
+    .navitem-wrapper {
+        display: flex;
+
+    }
+
+    .navitemcol {
+        width: 100%;
+    }
+
+    .navitema,
+    .navitemb {
+        min-width: 45%;
+        border: 1px solid black;
+    }
+
+    .linklist-wrapper {
+        display: flex;
+        flex: 1;
+    }
+
+    .linklistcol {
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    .linklist-item {
+        border: 1px solid black;
+    }
+
+    .navteaser-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navteaseritem {
+        border: 1px solid black;
+    }
+
+
+    #template-b .sectiona {
+        flex: 1;
+        width: 30%;
+    }
+
+    #template-b .sectionb {
+        flex: 1;
+        width: 30%;
+    }
+
+    #template-b .sectionc {
+        flex: 1;
+        width: 40%;
+    }
+
+    #template-b .navitem-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #template-b .linklist-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #template-c .leftcolumn {
+        width: 30%;
+        border: 3px solid red;
+    }
+
+    #template-c .rightcolumn {
+        width: 70%;
+        border: 3px solid red;
+    }
+
+    #template-c .sectiona {
+
+        width: 100%;
+    }
+
+    #template-c .sectionb {
+
+        width: 100%;
+    }
+
+    #template-c .sectionc {
+
+        width: 100%;
+    }
+
+    #template-c .navitem-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #template-c .linklist-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+</style>

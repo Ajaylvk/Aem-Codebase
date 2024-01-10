@@ -1,0 +1,18 @@
+<div class="configuration__block" data-sly-use.searchModel="com.softwareag.core.models.search.SearchConfigModel">
+
+    <h2 class="a-h2" id="tabledesc">Search Configuration</h2>
+
+    <div class="property__block">
+        <dl>
+            <dt data-sly-test.searchUiLanguage="${searchModel.searchUiLanguage}">Configured search UI language:</dt>
+            <dd ${searchUiLanguage}>${searchUiLanguage}</dd>
+
+            <dt data-sly-test.searchLanguage="${searchModel.searchLanguage}">Configured search language:</dt>
+            <dd ${searchLanguage}>${searchLanguage}</dd>
+
+            <dt data-sly-test.link="${searchModel.link}">Configured search result page value NEW:</dt>
+            <dd ${link}>${link.href}</dd>
+
+        </dl>
+    </div>
+</div>

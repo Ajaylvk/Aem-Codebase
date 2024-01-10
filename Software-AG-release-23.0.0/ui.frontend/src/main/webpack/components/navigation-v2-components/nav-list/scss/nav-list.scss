@@ -1,0 +1,95 @@
+.nav-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  .navList_col-A {
+    padding-right: 1.6rem;
+  }
+  .navList_col-A {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .svgicon {
+      height: 3.2rem;
+      width: 3.2rem;
+      filter: brightness(0) saturate(100%) invert(58%) sepia(23%) saturate(374%)
+        hue-rotate(169deg) brightness(96%) contrast(92%); //core dark 600
+    }
+  }
+  .navList_col-B {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      div {
+        display: inline;
+      }
+    }
+    .cmp-link__button-icon {
+      display: inline-flex;
+      align-self: center;
+    }
+    .cmp-link__button-icon svg {
+      width: 2.2rem;
+      margin-left: 6px;
+      font-size: 3.2rem;
+      transform: rotate(90deg) !important;
+    }
+    .cmp-link__button-icon.svg-baseline {
+      top: 0.4rem;
+      position: relative;
+      width: 20px;
+      margin-left: -6px;
+    }
+  }
+  .nav-list_title-space {
+    padding-bottom: 0.4rem;
+  }
+}
+.navList_col-B {
+  .navList-headline:hover {
+    color: #8e3cf7;
+    text-decoration: underline;
+    .cmp-link__button-icon {
+      svg {
+        fill: #8e3cf7;
+      }
+    }
+  }
+  .navList_description {
+    color: #537393;
+  }
+}
+.nav-list-with-desc {
+  padding-bottom: 2.4rem;
+  // @include mq-desktop {
+  //   padding-left: 1.6rem;
+  // }
+}
+.nav-list-without-desc {
+  padding-bottom: 2rem;
+  // @include mq-desktop {
+  //   padding-left: 1.6rem;
+  // }
+}
+.nav-list-wrapper.small_size-icon.nav-list-with-desc {
+  // @include mq-desktop {
+  //   padding-left: 2.4rem !important;
+  // }
+  .svgicon {
+    height: 2.4rem !important;
+    width: 2.4rem !important;
+  }
+}
+.nav-list-wrapper.small_size-icon.nav-list-without-desc {
+  .svgicon {
+    height: 2.4rem !important;
+    width: 2.4rem !important;
+  }
+}
+.nav-list-wrapper.small_size-icon.nav-list-without-desc {
+  // @include mq-desktop {
+  //   padding-left: 2.4rem;
+  // }
+}
