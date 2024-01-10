@@ -1,0 +1,33 @@
+.button {
+    margin: 0;
+    padding: 0 2.4rem;
+
+    &.left-align {
+        text-align: left;
+    }
+
+    &.center-align {
+        text-align: center;
+        margin: 0 auto;
+
+        a {
+            padding: 1.2rem 2.4rem;
+            vertical-align: middle;
+            margin: 7.1rem 0 4.1rem 0;
+            cursor: pointer;
+
+            @media screen and (max-width: 767px) {
+                margin: 1.6rem 0;
+            }
+
+            span {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+    &.primary-button,
+        &.primary-bright-pulse-large {
+            padding: 0;
+        }
+} 

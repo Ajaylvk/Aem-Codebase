@@ -1,0 +1,5 @@
+## Put hostnames that would be honored for publish blob matching works.
+#"${PUBLISH_DEFAULT_HOSTNAME}"
+"empower.softwareag.com"
+"empower.dev.sag.adobecqms.net"
+"empower.stage.sag.adobecqms.net"

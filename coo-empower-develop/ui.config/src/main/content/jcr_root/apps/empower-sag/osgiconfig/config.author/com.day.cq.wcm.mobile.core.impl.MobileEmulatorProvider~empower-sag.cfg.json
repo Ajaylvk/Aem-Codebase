@@ -1,0 +1,6 @@
+{
+  "mobile.resourceTypes": [
+    "empower-sag/components/structure/page"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}

@@ -1,0 +1,6 @@
+{
+  "service.url": "https://myaccount-dev.softwareag.com/am/oauth2/alpha/access_token",
+  "client.id": "SAG_InternalPartners",
+  "client.secret": "{ddb658c7145d9c409abd3d5c3c87860dcd239ca374812ee3aa27a1abb1eedd17f30053e63b474f5de0ce7fa9d30f64af937d8539bac421512c1bce2169066f01}",
+  "redirect.uri": "https://empower.dev.sag.adobecqms.net/bin/logincallback"
+}

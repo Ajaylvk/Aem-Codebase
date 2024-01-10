@@ -1,0 +1,392 @@
+.header {
+    padding: 0;
+
+    &.header-v2, .headerV2--sticky.header--sticky {
+
+        .block-inactive {
+            display: none;
+        }
+
+        .block-active {
+            display: block;
+        }
+
+        .logo-v1 {
+            .logoImage {
+                width: 25rem;
+                height: 4rem;
+
+                @media screen and (max-width: 767px) {
+                    height: 2.4rem;
+                }
+    
+                img {
+                    width: 100%;
+                    height: 4rem;
+                    object-fit: contain;
+
+                    @media screen and (max-width: 767px) {
+                        height: 2.4rem;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        
+        #header-v2-parent-Id {
+            .child-div-4 {
+                margin: 0;
+                height: 4rem;
+
+                .searchIcon {
+                    &.emp-search {
+                        height: 4rem;
+
+                        .headerV1__icons {
+                            .headerV1__icons-search {
+                                margin-right: 1.6rem;
+                                padding-right: 0;
+                            }
+                        }
+                        //new searchbar
+                        .emp-searchbar {
+                            margin: 0;
+                            height: 4rem;
+    
+                            .emp-search-wrapper {
+                                padding: 0;
+                                justify-content: flex-start;
+                                height: 4rem;
+    
+                                .emp-search-inner-wrap {
+                                    width: calc(100% - 55px);
+                                    border: none;
+                                    height: 4rem;
+    
+                                    &.block-active {
+                                        border: 1px solid #7e96ae;
+                                        // outline: 2px solid #000;
+                                    }
+    
+                                    div.emp-search-icon { 
+                                        cursor: pointer;
+                                        padding: 0.5rem 1.6rem 0 0;
+                                        
+                                        .search-core-dark120 {
+                                            top: 0;
+                                            // left: -3.6rem;
+                                            // left: -0.6rem;
+                                            left: 0;
+                                            cursor: pointer;
+            
+                                            &:hover{
+                                                fill: #8e3cf7;
+                                            }
+                
+                                            &.block-active {
+                                                // left: 8rem;
+                                                left: 0.5rem;
+                                                width: 2.3rem;
+                                                height: 2.3rem;
+                                                top: 0;
+                
+                                            }
+                                        }
+                                    }
+
+                                    button.emp-search-icon.headerV1__search-form-submit {
+                                        .search-core-dark120, svg {
+                                            left: 0.5rem;
+                                            width: 2.3rem;
+                                            height: 2.3rem;
+                                            top: 0;
+
+                                            &:hover{
+                                                fill: #8e3cf7;
+                                            }
+                                        }
+                                    }
+    
+                                    .emp-input-parent {
+                                        &.block-active {
+                                            // width: 65vw;
+                                            width: 60vw;
+                                            height: 4rem;
+            
+                                            @media screen and (max-width: 1440px) {
+                                                width: 50vw;
+                                            }
+            
+                                            @media screen and (max-width: 991px) {
+                                                width: 40vw;
+                                            }
+                                        }
+            
+                                        input {
+                                            margin: 0;
+                                            display: none;
+                
+                                            &.block-active {
+                                                display: block;
+                                                position: absolute;
+                                                // left: 50%;
+                                                // transform: translateX(-50%);
+                                                // top: -0.6rem;
+                                                padding: 1.4rem 0;
+                                                height: 4rem;
+                                                width: calc(100% - 55px);
+                                                border: none;
+                                            }
+                                        }
+                                    }
+            
+                                    .emp-close-btn {
+                                        &.block-active {
+                                            display: block;
+                                            top: 0.5rem;
+                                            position: absolute;
+                                            right: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .emp-search-results {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .secondary-button {
+            &.login {
+                div {
+                    a, .cmp-button {
+                        background: #8E3CF7;
+                        cursor: pointer;
+
+                        &:hover, &:focus {
+                            background: #fff;
+                            color: #8E3CF7;
+                            border: 2px solid #8E3CF7;
+                        }
+
+                        &:active {
+                            background: #3B2C5E;
+                            color: #fff;
+                            border: 0;
+                        }
+                    }
+                }
+
+                &.block-active {
+                    display: block;
+                }
+                &.block-inactive {
+                    display: none;
+                }
+            }
+        }
+
+        .primary-button {
+            &.request-access {
+                &.block-active {
+                    display: block;
+                }
+                &.block-inactive {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .header-v2-parent {
+                .navigation_v2 {
+                    &.profile {
+                        display: flex;
+
+                        &.non-preview {
+                            &.non-edit {
+                                #profile {
+                                    &.secondary-button-profile {
+                                        height: 4rem;
+                                        display: none;
+
+                                        &.block-active {
+                                            display: block;
+                                        }
+
+                                        &.block-inactive {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.edit {
+                                .request-access , .login , .secondary-button-profile {
+                                    display: block;
+                                }
+                            }
+                        } 
+
+                        &.preview {
+                            &.edit {
+                                #profile {
+                                    &.secondary-button-profile {
+                                        height: 4rem;
+                                        display: block;
+
+                                        &.block-active {
+                                            display: block;
+                                        }
+
+                                        &.block-inactive {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .child-div-2 {
+                    .navigation_v2 {
+                        .navlistcontainer {
+                            .listitems-container {
+                                .listitem {
+                                    &.active {
+                                        .template {
+                                            margin: 0 auto;
+                                            left: 50% !important;
+                                            transform: translateX(-50%);
+                                            min-width: 30.8rem;
+                                        }
+                                    }
+
+                                    #templateB {
+                                        #sectiona {
+                                            padding: 3.5rem 3.5rem 3.2rem;
+
+                                            .linklist-wrapper {
+                                                .linklist-container {
+                                                    .linklistcol {
+                                                        .navlist {
+                                                            .nav-list-wrapper {
+                                                                padding-bottom: 2.4rem;
+
+                                                                .navList_col-B {
+                                                                    .navList-headline  {
+                                                                        a {
+                                                                            font-size: 1.6rem;
+                                                                            font-weight: 400;
+                                                                            line-height: 2.4rem;
+                                                                            font-family: 'RobotoRegular';
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+                #profile {
+                    &.secondary-button-profile {
+                            &.block-active {
+                                display: block;
+                            }
+
+                            .navList-headline {
+                                a {
+                                    font-size: 1.6rem;
+                                    font-weight: 400;
+                                    line-height: 2.4rem;
+                                    font-family: 'RobotoRegular';
+                                }
+                            }
+
+                            .navlistcontainer {
+                                height: 4rem;
+
+                                .listitems-container {
+                                    padding: 0;
+                                    height: auto;
+
+                                    .listitem {
+                                        &.nav-mlink {
+                                            width: auto;
+                                            height: auto;
+
+                                            .listitem-wrapper {
+                                                padding: 0.9rem 1.6rem;
+                                                min-width: 7.4rem;
+                                                height: 4rem;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border: 0;
+                                                background: #8E3CF7;
+                                                cursor: pointer;
+
+                                                .listlabel {
+                                                    color: #fff;
+                                                    line-height: 2.2rem;
+
+                                                    svg {
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+
+                                            &.active {
+                                                .template {
+                                                    &#templateB, #templateA {
+                                                        right: 0;
+                                                        left: -50% !important;
+                                                        width: 308px;
+                                                        transform: translateX(-57%);
+                                                        top: 5.1rem;
+
+                                                        #sectionb, #sectiona {
+                                                            padding: 3.5rem 3.5rem 3.3rem;
+
+                                                            .section-label {
+                                                                &.a-overline {
+                                                                    display: none;
+                                                                }
+                                                            } 
+                                                            
+                                                            .nav-list-without-desc {
+                                                                padding-bottom: 2.4rem;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }  
+                                }
+                            }
+                        
+                    }
+                } 
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .profile {
+                display: none;
+            }
+        }
+       
+    }
+}

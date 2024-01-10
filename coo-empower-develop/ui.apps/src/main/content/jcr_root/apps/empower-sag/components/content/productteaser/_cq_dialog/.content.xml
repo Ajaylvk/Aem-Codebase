@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <layout jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <productTeaserTypes jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <proudctteaserA jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column jcr:primaryType="nt:unstructured">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <iconbgcolor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        name="./iconBackgroundColor">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <white
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    selected="{Boolean}true"
+                                                                    text="White"
+                                                                    value="input__colorselect-icon-color1"/>
+                                                            <brightsense500
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Bright Sense 500"
+                                                                    value="input__colorselect-icon-color3"/>
+                                                            <brightsense300
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Bright Sense 300"
+                                                                    value="input__colorselect-icon-color11"/>
+                                                            <brightpulse600
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Bright Pulse 600"
+                                                                    value="input__colorselect-icon-color2"/>
+                                                            <coredark120
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Core Dark 120"
+                                                                    value="input__colorselect-icon-color8"/>
+                                                        </items>
+                                                    </iconbgcolor>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </proudctteaserA>
+                                </items>
+                            </column>
+                        </items>
+                    </productTeaserTypes>
+                </items>
+            </layout>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,5 @@
+{
+  "service.url": "https://myaccount.softwareag.com/am/oauth2/alpha/access_token",
+  "client.id": "SAG_InternalPartners",
+  "client.secret": "{891e756306dd87e1bf3dec9fb6224083b699ba76d363ab752d7d8a0b6bd470e86dd5c44761b895828141177c9559be6cb04b15f095e7de85f565c14fc3791453}"
+}

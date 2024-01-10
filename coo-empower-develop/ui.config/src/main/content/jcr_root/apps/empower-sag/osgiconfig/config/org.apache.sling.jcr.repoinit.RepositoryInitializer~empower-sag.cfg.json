@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/empower-sag",
+        "create path (nt:unstructured) /content/dam/empower-sag/jcr:content",
+        "set properties on /content/dam/empower-sag/jcr:content\n  set cq:conf{String} to /conf/empower-sag\n  set jcr:title{String} to \"Empower SoftwareAG\"\nend"
+    ]
+}

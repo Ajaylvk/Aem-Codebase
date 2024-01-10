@@ -1,0 +1,84 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<div class="forms-product-details">
+    <table class="desktop-tablet">
+        <tbody>
+            <tr class="table-heading">
+                <sly data-sly-test.productLabel="${properties.product || 'Product'}" class="table-heading">
+                    <th>${productLabel}</th>
+                </sly>
+
+                <sly data-sly-test.versionLabel="${properties.version || 'Product Version'}" class="table-heading">
+                    <th>${versionLabel}</th>
+                </sly>
+
+                <sly data-sly-test.osLabel="${properties.operatingSystem || 'Operating System'}" class="table-heading">
+                    <th>${osLabel}</th>
+                </sly>
+                <sly>
+                    <th></th>
+                </sly>
+            </tr>
+            <tr>
+                <td>
+                    <select name="products" id="products">
+                        <option value="" disabled selected>${properties.selectProduct  || 'Select Product'}</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="products version" id="products-version">
+                        <option value="" disabled selected>${properties.selectVersion  || 'Select Product Version'}</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="operating system" id="operating-system">
+                        <option value="" disabled selected>${properties.selectOs  || 'Select Operating System'}</option>
+                    </select>
+                </td>
+                <td class="add-btn">
+                    <button>
+                        <span>Add</span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="mobile">
+        <tbody>
+            <tr>
+                <th>Product</th>
+                <td>
+                    <select name="products" id="products-mob">
+                        <option value="" disabled selected>${properties.selectProduct}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Product Version</th>
+                <td>
+                    <select name="products version" id="products-version-mob">
+                        <option value="" disabled selected>${properties.selectVersion}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>
+                    <select name="operating system" id="operating-system-mob">
+                        <option value="" disabled selected>${properties.selectOs}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td class="add-btn">
+                    <button>
+                        <span>Add</span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

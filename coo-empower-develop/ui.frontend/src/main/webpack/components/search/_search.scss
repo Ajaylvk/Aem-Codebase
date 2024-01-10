@@ -1,0 +1,961 @@
+// search input css
+.emp-searchbar {
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    position: relative;
+
+    .emp-search-wrapper {
+        display: flex;
+        position: relative;
+        // padding: 3.7rem 0 15.7rem;
+        padding: 3.2rem 0 6.4rem;
+        justify-content: center;
+
+        @media screen and (max-width: 991px) {
+            padding: 2.4rem 0 4.8rem;
+        }
+
+        .emp-search-inner-wrap {
+            display: flex;
+            border: 1px solid #7e96ae;
+            width: 47.5rem;
+            height: 5.2rem;
+
+            @media screen and (max-width: 767px) and (min-width: 414px) {
+                width: 38.6rem;
+            }
+
+            @media screen and (max-width: 413px) {
+                width: 90%;
+            }
+            
+            .emp-input-parent {
+                width: 100%;
+
+                .emp-input-searchbar {
+                    // margin: 3.7rem auto 15.7rem;
+                    margin: 0;
+                    padding: 1.6rem 3.2rem 1.6rem 0;
+                    height: 5.2rem;
+                    width: 100%;
+                    // width: 47.5rem;
+                    // border: 1px solid #7E96AE;
+                    border: none;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    font-weight: 400;
+                    font-family: 'RobotoRegular';
+                    color: #011f3d;
+                    position: relative;
+                    background: transparent;
+    
+                    &:focus, &:focus-visible {
+                        border: none;
+                        outline: none;
+                    }
+            
+                    &::placeholder{
+                        color: #537393;
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                        font-weight: 400;
+                        font-family: 'RobotoRegular';
+                    }
+                }
+            }
+        
+            .emp-search-icon {
+                // width: 100%;
+                height: 100%;
+                position: relative;
+                text-align: center;
+                width: auto;
+                padding: 1rem 2.4rem;
+                margin: 0;
+                
+                &.block-inactive {
+                    display: none;
+                }
+        
+                .search-core-dark120 {
+                    position: relative;
+                    // left: -20rem;
+                    // top: 8rem;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    height: 3.2rem;
+                    width: 3.2rem;
+
+                    &.block-active {
+                        left: 1.6rem;
+                    }
+
+                    &.block-inactive {
+                        display: none;
+                    }
+                }
+            }
+        
+            .emp-close-btn {
+                display: none;
+            }
+        }
+    }
+
+    
+}
+
+// search result css
+.emp-search-results-wrapper {
+
+    //display: none;
+    background: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'RobotoRegular';
+    line-height: 2.4rem;
+    color: #011F3D;
+
+    .emp-search-results,
+    .emp-searchResultsWrapper {
+
+        display: flex;
+
+        @media screen and (min-width: 992px) {
+            max-width: 132rem;
+            margin: 0 auto;
+            padding: 4.9rem 2.4rem 9.6rem;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 2.4rem 4.8rem;
+        }
+    
+        @media screen and (max-width: 767px) and (min-width: 415px) {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 4.9rem 2.4rem 4.9rem;
+        }
+    
+        @media screen and (max-width: 414px) {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 4.9rem 1.6rem 4.9rem;
+        }
+    
+        .emp-facets, .empty-div {
+            width: 25%;
+
+            @media screen and (max-width: 991px) {
+                    display: none;
+            }
+
+            .emp-filter-results {
+                border-top: 1px solid #7E96AE;
+                // border-bottom: 1px solid #7E96AE;
+                padding: 0.8rem 0;
+
+                &:last-child {
+                    border-bottom: 1px solid #7E96AE;
+                }
+
+                .emp-filter-tag {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.8rem 0 1.2rem;
+                    // padding-bottom: 1.2rem;
+
+                    .emp-filter-title {
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        font-family: 'RobotoRegular';
+                        line-height: 2.2rem;
+                        color: #011F3D;
+                    }
+
+                    .emp-icons-wrapper {
+                        display: flex;
+                        align-items: center;
+
+                        .clear-all {
+                            display: none;
+                            background: transparent;
+                            cursor: pointer;
+                            font-size: 1.4rem;
+                            line-height: 2.2rem;
+                            font-weight: 400;
+                            margin-right: 0.8rem;
+                            // display: none;
+
+                            // &.block-active {
+                            //     display: block;
+                            // }
+                        }
+
+                        .emp-expand-icon {
+                            cursor: pointer;
+                            width: 2.4rem;
+                            height: 2.4rem;
+
+                            &.block-inactive {
+                                display: none;
+                            }
+
+                            &.block-active {
+                                display: block;
+                            }
+                        }
+
+                        .emp-collapse-icon {
+                            display: none;
+                            cursor: pointer;
+
+                            &.block-active {
+                                display: block;
+                            }
+
+                            &.block-inactive {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .search-filter-wrapper {
+                    margin: 0.4rem 0;
+                    // display: flex;
+                    align-items: center;
+                    border: 1px solid #36597D;
+                    outline: none;
+                    height: 3.2rem;
+                    padding: 0.4rem;
+                    display: none;
+
+                    &.block-active {
+                        display: flex;
+                    }
+
+                    input {
+                        width: 100%;
+                        border: none;
+
+                        &:focus, &:focus-visible {
+                            outline: none;
+                        }
+                    }
+
+                    .clear-input {
+                        display: none;
+
+                        &.block-active {
+                            display: block;
+                            cursor: pointer;
+                        }
+                    }
+
+                    svg {
+                        margin: 0.4rem 0.4rem 0 0;
+                        // margin-top: 0.4rem;
+                    }
+
+                    &.block-active {
+                        display: flex;
+                    }
+
+                    &.block-inactive {
+                        display: none;
+                    }
+                }
+
+                .emp-filter-options {
+                    display: block;
+                    
+                    &.block-inactive {
+                        display: none;
+                    }
+
+                    .emp-filter-options-parent {
+                        .emp-filter-options-child {
+                            display: flex;
+                            align-items: center;
+                            padding: 0.4rem 0;
+                            margin: 0.4rem 0;
+                            width: 100%;
+                            // padding-bottom: 0.4rem;
+
+                            input {
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                margin-right: 0.8rem;
+                                cursor: pointer;
+                            }
+
+                            label {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                font-family: 'RobotoRegular';
+                                line-height: 2.4rem;
+                                color: #011F3D;
+                                // width: 90%;
+                            }
+                        }
+                    }
+                }
+
+                .view-more-less-wrapper {
+                    .view-less, .view-more {
+                        display: none;
+                        background: transparent;
+                        cursor: pointer;
+
+                        &.block-active {
+                            display: block;
+                        }
+
+                        &.block-inactive {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .emp-results, .emp-filters {
+            width: 75%;
+            padding-left: 6.4rem;
+
+            @media screen and (max-width: 991px) {
+                padding-left: 0;
+                width: 100%;
+            }
+
+            .emp-counts {
+                display: flex;
+                justify-content: space-between;
+
+                .emp-totalCounts {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    font-family: 'RobotoBold';
+                    line-height: 4rem;
+                    color: #000;
+
+                    @media screen and (max-width: 991px) {
+                        font-size: 2.8rem;
+                        line-height: 3.4rem;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        padding: 0.8rem 0;
+                    }
+                }
+
+                .sort-by {
+                    padding: 1.2rem 2.4rem;
+                    position: relative;
+
+                    @media screen and (max-width: 767px) {
+                        padding: 1.2rem 0;
+                    }
+
+                    p {
+                        display: flex;
+                        color: #011F3D;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        line-height: 2.4rem;
+                        font-family: 'RobotoBold';
+
+                        @media screen and (max-width: 991px) {
+                            align-items: center;
+                        }
+
+                        span {
+                            padding-left: 1rem;
+
+                            @media screen and (max-width: 991px) {
+                                padding-top: 0.5rem;
+                            }
+
+                            svg {
+                                cursor: pointer;
+
+                                &.rotate {
+                                    rotate: 180deg;
+                                }
+                            }
+                        }
+                    }
+
+                    .sort-by-filters {
+                        display: none;
+
+                        &.block-active {
+                            display: block;
+                            position: absolute;
+                            width: 16.5rem;
+                            background: #fff;
+                            right: 2rem;
+                            box-shadow: 0px 2px 12px 2px rgba(1, 31, 61, 0.12);
+
+                            li {
+                                padding: 0.9rem 1.2rem;
+                                font-size: 1.4rem;
+                                line-height: 2.2rem;
+                                font-weight: 400;
+                                font-family: 'RobotoRegular';
+                                cursor: pointer;
+                                border: none;
+                                outline: none;
+    
+                                &:focus , &:hover {
+                                    border: none;
+                                    outline: 2px solid #058192;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .emp-facets-filter {
+                    &.mobile {
+                        @media screen and (min-width:992px) {
+                            display: none;
+                        }
+    
+                        @media screen and (max-width: 991px) {
+    
+                            .mob-filter-wrap-btn {
+                                padding: 1.2rem 2.4rem;
+                                border: 2px solid #011F3D;
+                                cursor: pointer;
+                                display: flex;
+                                height: 4.8rem;
+                                background: transparent;
+    
+                                span {
+                                    color: #011F3D;
+                                    padding-left: 1rem;
+                                    font-size: 1.6rem;
+                                    font-weight: 700;
+                                    line-height: 2.4rem;
+                                }
+                            }
+    
+                            .filterSidenav {
+                                height: 100%;
+                                width: 0;
+                                position: fixed;
+                                z-index: 1;
+                                top: 6.4rem;
+                                right: 0;
+                                background-color: #F0F2F4;
+                                overflow-x: hidden;
+                                transition: 0.5s;
+                                color: #011F3D;
+                                // padding-top: 60px;
+
+                                div.emp-filter-results {
+                                    border: 2px solid #D2D9E0;
+                                    border-left: 0;
+                                    border-right: 0;
+                                    border-top: 0;
+                                    padding: 1.2rem 2.4rem;
+
+                                    &.mob {
+                                        .emp-filter-tag {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            padding-bottom: 1.2rem;
+
+                                            .emp-icons-wrapper {
+                                                display: flex;
+                                                align-items: flex-start;
+
+                                                .clear-all {
+                                                    font-size: 1.4rem;
+                                                    font-weight: 400;
+                                                    line-height: 2.2rem;
+                                                    color: #011F3D;
+                                                    display: none;
+                                                    cursor: pointer;
+
+                                                    &.block-inactive {
+                                                        display: none;
+                                                    }
+                        
+                                                    &.block-active {
+                                                        display: block;
+                                                    }
+                                                }
+
+                                                .emp-expand-icon {
+                                                    cursor: pointer;
+                                                    width: 2.4rem;
+                                                    height: 2.4rem;
+
+                                                    &.block-inactive {
+                                                        display: none;
+                                                    }
+                        
+                                                    &.block-active {
+                                                        display: block;
+                                                    }
+                                                }
+
+                                                .emp-collapse-icon {
+                                                    display: none;
+                                                    cursor: pointer;
+                                                    width: 2.4rem;
+                                                    height: 2.4rem;
+
+                                                    &.block-inactive {
+                                                        display: none;
+                                                    }
+                        
+                                                    &.block-active {
+                                                        display: block;
+                                                    }
+                                                }
+                                            }
+
+                                            .emp-filter-title {
+                                                font-size: 1.6rem;
+                                                font-weight: 700;
+                                                line-height: 2.4rem;
+                                                color: #011F3D;
+                                            }
+                                        }
+
+                                        .search-filter-wrapper {
+                                            display: flex;
+                                            align-items: center;
+                                            height: 4rem;
+                                            border: 1px solid #36597D;
+                                            outline: none;
+                                            padding: 0.4rem;
+                                            width: 38.2rem;
+                                            background: #fff;
+                                            justify-content: space-between;
+                                            margin: 0.8rem 0 1.2rem;
+                                            display: none;
+
+                                            &.block-active {
+                                                display: flex;
+                                            }
+
+                                            .mob-icon-input-wrap {
+                                                display: flex;
+                                            }
+
+                                            svg.search-core-dark120 {
+                                                margin-top: 0.5rem;
+                                                margin-right: 0.5rem;
+                                            }
+
+                                            .clear-input {
+                                                display: none;
+                                                margin-top: 0.5rem;
+                                            }
+
+                                            input {
+                                                border: none;
+                                                outline: none;
+                                                background: transparent;
+                                            }
+                                        }
+
+                                        .emp-filter-options {
+                                            ul {
+                                                li {
+                                                    padding: 1.2rem 0;
+                                                    align-items: center;
+                                                    display: flex;
+
+                                                    input {
+                                                        width: 2.4rem;
+                                                        height: 2.4rem;
+                                                        margin-right: 1.6rem;
+                                                        outline: 1px solid #011F3D;
+                                                    }
+
+                                                    label, span {
+                                                        font-size: 1.6rem;
+                                                        font-weight: 400;
+                                                        line-height: 2.4rem;
+                                                        color: #011F3D;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .view-more, .view-less {
+                                            font-size: 1.6rem;
+                                            font-weight: 400;
+                                            line-height: 2.4rem;
+                                            color: #011F3D;
+                                            display: none;
+                                        }
+
+                                        .block-inactive {
+                                            display: none;
+                                        }
+                                        .block-active {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                              }
+                              
+                              .filterSidenav .closeFilterBtn {
+                                position: relative;
+                                padding: 2rem 1.6rem 2.1rem;
+                                border-top: 2px solid #D2D9E0;
+                                border-bottom: 2px solid #D2D9E0;
+                                display: flex;
+
+                                svg {
+                                    width: 2.4rem;
+                                    height: 2.4rem;
+                                }
+                                span {
+                                    margin-left: 1.6rem;
+                                    font-size: 1.6rem;
+                                    font-weight: 700;
+                                    line-height: 2.4rem;
+                                    color: #011F3D;
+                                }
+                              }
+                              
+                              @media screen and (max-height: 450px) {
+                                .filterSidenav {padding-top: 15px;}
+                              }
+                        }
+                    }
+                }
+                .warp-sortBy-facetFilter-mob {
+                    @media screen and (min-width: 992px) {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                    @media screen and (max-width: 991px) {
+                        display: flex;
+                        height: 4.8rem;
+                        align-items: center;
+                        width: 90%;
+                        justify-content: space-between;
+                        padding-right: 1.6rem;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                        height: auto;
+                    }
+                }
+            }
+
+            .emp-search-totalResults-wrapper {
+                margin: 2rem 0 6.4rem;
+
+                @media screen and (max-width: 991px) {
+                    margin-top: 0;
+                }
+
+                .emp-search-totalResults {
+                    padding: 1.6rem 2rem 0 0;
+                    //border-bottom: 1px solid #D2D9E0;
+                    display: flex;
+                    align-items: flex-start;
+
+                    @media screen and (max-width: 991px) {
+                        padding-right: 0;
+                    }
+
+                    &:first-child {
+                        @media screen and (max-width: 991px) {
+                            padding: 0;
+                        }
+                        .emp-resultsInfo-wrap {
+                            padding-top: 0;
+                        }
+                    }
+
+                    &:last-child {
+                        .emp-resultsInfo-wrap {
+                            padding-bottom: 0;
+                            border-bottom: none;
+                        }
+                    }
+
+                    .emp-searchResultsIcons {
+                        margin-top: 0.5rem;
+
+                        svg {
+                            width: 3.2rem;
+                            height: 3.2rem;
+                        }
+                    }
+
+                    .emp-resultsInfo-wrap {
+                        padding-bottom: 1.6rem;
+                        border-bottom: 1px solid #d2d9e0;
+                        margin-left: 1.7rem;
+                        width: 100%;
+
+                        @media screen and (max-width: 991px) {
+                            margin-left: 2.4rem;
+                        }
+                        @media screen and (max-width: 767px) {
+                            width: 90%;
+                        }
+                    }
+
+                    .emp-type-title {
+                        display: flex;
+                        color: #011F3D;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        line-height: 2.4rem;
+                        font-family: 'RobotoRegular';
+
+                        .emp-type {
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    .metaData {
+                        display: flex;
+                        color: #011F3D;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        line-height: 2.4rem;
+                        font-family: 'RobotoRegular';
+
+                        div {
+                            border-right: 1px solid #011F3D;
+                            padding-right: 1rem;
+                            padding-left: 1rem;
+
+                            &:first-child, &:last-child {
+                                border-right: none;
+                            }
+
+                            &:first-child {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    .emp-preview {
+                        color: #011F3D;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        line-height: 2.4rem;
+                        font-family: 'RobotoRegular';
+                    }
+
+                    .emp-date {
+                        color: #011F3D;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 2.2rem;
+                        font-family: 'RobotoRegular';
+                    }
+                }
+            }
+
+            .load-more-btn-wrapper {
+                button, .load-more-btn {
+
+                    display: none;
+                    padding: 1.2rem 2.4rem;
+                    background: transparent;
+                    border: 2px solid #011F3D;
+                    outline: none;
+                    cursor: pointer;
+
+                    &:hover , &:focus {
+                        background: #011F3D;
+
+                        span {
+                            color: #fff;
+                        }
+                    }
+
+                    &:active {
+                        background: #D2D9E0;
+                        border: 2px solid #011F3D;
+                        outline: none;
+
+                        span {
+                            color: #011F3D;
+                        }
+                    }
+
+                    span {
+                        color: #011F3D;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        line-height: 2.4rem;
+                        font-family: 'RobotoRegular';
+                    }
+                }
+            }
+        }
+
+        &.variation2 {
+            .sort-by {
+                display: none;
+            }
+        }
+
+        // &.variation3 {
+        //     .emp-searchResultsWrapper {
+        //         @media screen and (max-width:991px) {
+        //             justify-content: left;
+        //             padding-left: 2.4rem;
+        //         }
+        //     }
+        // }
+    }
+
+    .emp-searchResultsWrapper {
+        &.desktop {
+            @media screen and (min-width:992px) {
+                display: flex;
+                padding-bottom: 0;
+            }
+
+            @media screen and (max-width:991px) {
+                display: none;
+            }
+        }
+
+        &.mob {
+            width: 100%;
+            @media screen and (min-width:992px) {
+                display: none;
+            }
+
+            @media screen and (max-width:991px) {
+                display: flex;
+                padding: 0;
+            }
+            // @media screen and (max-width: 991px) and (min-width: 768px) {
+            //     padding-top: 0;
+            // }
+    
+            // @media screen and (min-width: 768px) {
+            //     padding: 0 2.4rem 0;
+            // }
+        
+            // @media screen and (max-width: 767px) and (min-width: 415px) {
+            //     padding: 4.3rem 2.4rem 0rem;
+            // }
+        
+            // @media screen and (max-width: 414px) {
+            //     padding: 4.3rem 1.6rem 0rem;
+            // }
+        }
+
+        &.block-inactive {
+            display: none;
+        }
+
+        .emp-filters {
+            display: flex;
+            align-items: baseline;
+            font-family: 'RobotoRegular';
+            color: #011F3D;
+
+            @media screen and (max-width:991px) {
+                width: 100%;
+                padding: 3.2rem 0 4.8rem;
+            }
+
+            .emp-filter-label {
+                margin-right: 1.6rem;
+                font-size: 1.4rem;
+                font-weight: 700;
+                line-height: 2.2rem;
+                color: #011F3D;
+            }
+
+            .emp-facetsSelectedFilters {
+                display: flex;
+                flex-wrap: wrap;
+                // display: block;
+                width: 100%;
+
+                div.emp-facetsSelectedFiltersList { 
+                    // width: 100%;
+                    // display: inline-block;
+                    display: inline-flex;
+                    padding: 0.8rem 2.4rem;
+                    border: 1px solid #011F3D;
+                    border-radius: 2.4rem;
+                    height: 4rem;
+                    align-items: center;
+                    margin-right: 1.6rem;
+                    margin-bottom: 1.6rem;
+                    // vertical-align: middle;
+
+                    @media screen and (max-width:991px) {
+                        padding: 0.8rem 1.2rem;
+                    }
+
+                    &.block-inactive {
+                        display: none;
+                    }
+
+                    p {
+                        display: inherit;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        line-height: 2.2rem;
+                        color: #011F3D;
+                        margin-right: 1rem;
+                    }
+
+                    span {
+                        width: 2.4rem;
+                        height: 2.4rem;
+
+                        svg {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .clear-filter {
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    padding: .8rem 2.4rem;
+                    margin-bottom: 1.6rem;
+
+                    @media screen and (max-width: 991px) {
+                        margin-bottom: 0;
+                    }
+
+                    .emp-clear-filter {
+                        font-size: 1.4rem;
+                        line-height: 2.2rem;
+                        font-weight: 400;
+                        background: transparent;
+                        cursor: pointer;
+                        color: #011F3D;
+                    }
+                }
+            }
+        }
+    }
+}

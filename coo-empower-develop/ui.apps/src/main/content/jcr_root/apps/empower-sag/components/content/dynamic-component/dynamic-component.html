@@ -1,0 +1,302 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<section class="dynamic ${properties.variation} loggedIn-user">
+  <div data-sly-test="${properties.variation == 'incidents'}">
+    <div  class="incidents-header" data-sly-resource="${'incidentsheader' @resourceType='empower-sag/components/content/sectionheader'}"></div>
+    <div class="dynamic-wrapper">
+      <div class="count"></div>
+      <table class="open-incident-table desktop">
+        <tr class="table-heading">
+          <th>Reference</th>
+          <th>Summary</th>
+          <th>Product & Version</th>
+          <th>Status</th>
+          <th>Requester</th>
+          <th>Created date</th>
+          <th>Updated date</th>
+          <th>Severity</th>
+        </tr>
+      </table> 
+      <div class="open-incident-table mobile"></div>
+      <div class="btn-link-wrapper">
+        <a data-sly-test="${properties.buttonLabel && properties.buttonLink}" target="_blank" href="${properties.buttonLink}" id="" class="btn-wrapper">
+            <span>${properties.buttonLabel}</span>
+        </a>
+        <a data-sly-test="${properties.linkLabel && properties.link}" target="_blank" href="${properties.link}" id="" class="link-wrapper">
+          <span>${properties.linkLabel}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <g clip-path="url(#clip0_4005_1850)">
+                <path d="M7.60376 15.4779L11.8021 11.2704L7.60376 7.06292L8.89626 5.77042L14.3963 11.2704L8.89626 16.7704L7.60376 15.4779Z" fill="#011F3D"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_4005_1850">
+                  <rect width="22" height="22" fill="white"/>
+                </clipPath>
+              </defs>
+          </svg>
+        </a>
+      </div>         
+    </div>
+  </div>
+  <div data-sly-test="${properties.variation == 'fixes'}" class="fixes-wrap">
+    <div class="fixes-header" data-sly-resource="${'fixesheader' @resourceType='empower-sag/components/content/sectionheader'}"></div>
+      <div class="fixes-table-wrapper">
+        <!-- <table class="fixes-table desktop">
+          <tbody>
+            <tr class="table-heading">
+              <th>Fix ID:</th>
+              <th>Operating System Family</th>
+              <th>Product</th>
+              <th>Version</th>
+              <th>Article Id</th>
+              <th>Last Updated</th>
+              <th>Fix Release Date:</th>
+              <th>Quick Access URL</th>
+            </tr>
+            <tr>
+              <td>IS_10.15_Core_Fix8</td>
+              <td>ALL</td>
+              <td>webMethods Integration Server (PIE)</td>
+              <td>10.15</td>
+              <td>PIE-84183</td>
+              <td>04. Dec 2023, 16:54</td>
+              <td>04. Dec 2023</td>
+              <td><a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?KEY=546121-15071158&DST=UPDATE">Fix - Integration Server Core 10.15 Fix 8 - webMethods Integration Server [PIE] (softwareag.com)</a></td>
+            </tr>
+          </tbody>
+        </table> -->
+  
+        <table class="fixes-details">
+          <tbody>
+            <tr class="name">
+              <th>Fix ID:</th>
+              <td>IS_10.15_Core_Fix8</td>
+            </tr>
+            <tr class="os">
+              <th>Operating System Family</th>
+              <td>ALL</td>
+            </tr>
+            <tr class="product">
+              <th>Product</th>
+              <td>webMethods Integration Server (PIE)</td>
+            </tr>
+            <tr class="version">
+              <th>Version</th>
+              <td>10.15</td>
+            </tr>
+            <tr class="articleId">
+              <th>Article Id</th>
+              <td>PIE-84183</td>
+            </tr>
+            <tr class="updated">
+              <th>Last Updated</th>
+              <td>04. Dec 2023, 16:54</td>
+            </tr>
+            <tr class="releaseDate">
+              <th>Fix Release Date:</th>
+              <td>04. Dec 2023</td>
+            </tr>
+            <tr class="link">
+              <th>Quick Access URL</th>
+              <td><a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?KEY=546121-15071158&DST=UPDATE">Fix - Integration Server Core 10.15 Fix 8 - webMethods Integration Server [PIE] (softwareag.com)</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fixes-installed-wrapper">
+        <h2>All of the following Fixes (Fix) or Service Packs (SP) must be installed to apply this Fix:</h2>
+        <table class="fixes-installed">
+          <tbody>
+            <tr class="table-heading">
+              <th>Fix ID:</th>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=546121-15071158&DST=UPDATE&req=546121-1379281">
+                  IS_10.15_Core_Fix8
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=544453-13009075&DST=UPDATE&req=544453-13601212">
+                  IS_10.15_Database_Fix2
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=544454-14097982&DST=UPDATE&req=544454-14690119">
+                  IS_10.15_EmbeddedDB_Fix2
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=545432-12275821&DST=UPDATE&req=545432-17263513">
+                  TPP_10.15_Parsers_Fix6
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=545422-1367281&DST=UPDATE&req=545422-6354973">
+                  TPP_10.15_SpringFramework_Fix1
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=545433-13366686&DST=UPDATE&req=545433-18354378">
+                  TPP_10.15_Swagger_Fix3
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fixes-replaced-wrapper">
+        <h2>This Fix replaces the following Fixes (Fix) or Service Packs (SP):</h2>
+        <table class="fixes-replaced">
+          <tbody>
+            <tr class="table-heading">
+              <th>Fix ID:</th>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=546121-15071158&DST=UPDATE&req=546121-1379281">
+                  IS_10.15_Core_Fix8
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=544453-13009075&DST=UPDATE&req=544453-13601212">
+                  IS_10.15_Database_Fix2
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=544454-14097982&DST=UPDATE&req=544454-14690119">
+                  IS_10.15_EmbeddedDB_Fix2
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=545432-12275821&DST=UPDATE&req=545432-17263513">
+                  TPP_10.15_Parsers_Fix6
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=545422-1367281&DST=UPDATE&req=545422-6354973">
+                  TPP_10.15_SpringFramework_Fix1
+                </a>
+              </td>
+              <td>
+                <a href="https://empower.softwareag.com/sl24sec/SecuredServices/KCFullTextASP/viewing/view.asp?key=545433-13366686&DST=UPDATE&req=545433-18354378">
+                  TPP_10.15_Swagger_Fix3
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fixes-files-wrapper">
+        <h2>Files for this Fix:</h2>
+        <table class="fixes-files desktop">
+          <tbody>
+            <tr class="table-heading">
+              <th>Operating System</th>
+              <!--
+              <th>Windows OS</th>
+              <th>Mac OS</th>
+              -->
+              <th>Download</th>
+              <th>Readme</th>
+            </tr>
+            <tr>
+              <td>Any Operating System</td>
+              <!--
+              <td>
+                <a href="/content/dam/empower-sag/icon/check-circle.svg" download>
+                  <img src="/content/dam/empower-sag/icon/check-circle.svg" alt="os" width="24" height="24">
+                </a>
+              </td>
+              <td></td>
+              -->
+              <td>
+                <a href="/content/dam/empower-sag/icon/software-download-center.svg" download>
+                  <img src="/content/dam/empower-sag/icon/software-download-center.svg" alt="downloadFile" width="24" height="24">
+                </a>
+              </td>
+              <td>
+                <a href="/content/dam/empower-sag/icon/software-download-center.svg" download>
+                  <img src="/content/dam/empower-sag/icon/software-download-center.svg" alt="downloadFile" width="24" height="24">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <table class="fixes-files mobile">
+          <tbody>
+            <tr class="os">
+              <th>Operating System</th>
+              <td>Any Operating System</td>
+            </tr>
+            <!--
+            <tr>
+              <th>Windows OS</th>
+              <td>
+                <a href="/content/dam/empower-sag/icon/check-circle.svg" download>
+                  <img src="/content/dam/empower-sag/icon/check-circle.svg" alt="os" width="24" height="24">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th>Mac OS</th>
+              <td></td>
+            </tr>
+            -->
+            <tr class="download">
+              <th>Download</th>
+              <td>
+                <a href="/content/dam/empower-sag/icon/software-download-center.svg" download>
+                  <img src="/content/dam/empower-sag/icon/software-download-center.svg" alt="downloadFile" width="24" height="24">
+                </a>
+              </td>
+            </tr>
+            <tr class="readme">
+              <th>Readme</th>
+              <td>
+                <a href="/content/dam/empower-sag/icon/software-download-center.svg" download>
+                  <img src="/content/dam/empower-sag/icon/software-download-center.svg" alt="downloadFile" width="24" height="24">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fixes-description-wrapper">
+        <h2>Description</h2>
+        <div class="description-details">
+          <h2>PIE-71643</h2>
+          <p>A default value specified for a field in a gRPC request is not passed to the
+            input pipeline of the gRPC method flow service.<br>
+            
+            In gRPC, fields have type-specific default values. When a gRPC request included
+            one or more fields set to the default for the field type, Integration Server did
+            not include the value in the data passed to the input pipeline of the gRPC
+            method flow service.<br>
+            
+            This issue is now resolved.</p>
+        </div>
+      </div>
+    <!--</div>-->
+  </div>
+  <div data-sly-test="${properties.variation == 'productDetails'}" class="product-details-wrapper">
+    <div class="product-details-header" data-sly-resource="${'productDetailsheader' @resourceType='empower-sag/components/content/sectionheader'}"></div>
+    <div class="product-details-table-wrapper">
+      <table class="product-details-table desktop">
+        <tr class="table-heading">
+          <th>Product Id</th>
+          <th>Name</th>
+          <th>Version</th>
+          <th>File size</th>
+          <th>Download</th>
+        </tr>
+      </table> 
+      <div class="product-details-table mobile"></div>
+    </div>
+  </div>
+  <div data-sly-test="${properties.variation == 'notifications'}" class="notifications-wrapper">
+    <iframe src="${properties.notificationsBaseUrl}" style="border:none;" title="Notifications"></iframe>
+  </div>
+</section>

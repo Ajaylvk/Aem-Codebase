@@ -1,0 +1,83 @@
+.text_V3-container {
+    .text_V3-overline-text {
+        //text-transform: none;
+        font-family: 'RobotoRegular';
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 2rem;
+        letter-spacing: 0.84px;
+    }
+
+    .text_V3-divider  + .text_V3-headline {
+        padding-top: 4rem;
+
+        @media screen and (max-width: 767px) {
+            //padding-top: 2.4rem;
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+            font-weight: 300;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            font-size: 3.4rem;
+            line-height: 4.2rem;
+            font-weight: 300;
+        }
+
+        + .text_V3-link  {
+            display: none;
+        }
+    }
+
+    .text_V3-headline {
+        &.centered-text {
+            padding: 2.4rem 0 0;
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 5.6rem;
+            font-family: 'RobotoRegular';
+
+            @media screen and (max-width: 991px) and (min-width: 768px) {
+                font-size: 4rem;
+                line-height: 4.8rem;
+                padding-top: 0;
+                margin: 0;
+                padding-bottom: 1.3rem;
+            }
+
+            @media screen and (max-width: 767px) {
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+                padding-bottom: 0.8rem;
+            }
+        }
+    }
+}
+.text {
+    .text__container {
+        &.white {
+            background: #fff;
+        }
+        &.brightpulse {
+            background: #8E3CF7;
+        }
+        &.brightsense {
+            background: #F0F2F4;
+        }
+        &.brightlife {
+            background: #D9EC27;
+        }
+        &.deepPulse {
+            background: #3b2c5e;
+        }
+        &.deepsense {
+            background: #134158;
+        }
+        &.corelight {
+            background: #F2F2EA;
+        }
+        &.coreblack {
+            background: #011F3D;
+        }
+    }
+}

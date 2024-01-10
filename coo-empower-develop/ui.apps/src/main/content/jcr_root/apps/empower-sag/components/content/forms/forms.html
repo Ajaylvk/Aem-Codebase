@@ -1,0 +1,30 @@
+<sly data-sly-use.placeholderTemplate="softwareag/components/commons/templates.html" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty = true}"></sly>
+
+<section class="emp-forms">
+    <div class="emp-forms-wrapper" data-recipientemail="${properties.recipientEmailId}" data-mailsubject="${properties.mailSubject}">
+      <!--<h2 class="forms-heading">Request for Mainframe Software</h2>-->
+      <h2 data-sly-test="${properties.title}" class="forms-heading">${properties.title}</h2>
+      <!--<p class="forms-description">To download mainframe software, please fill in the following fields:</p>-->
+      <div data-sly-test="${properties.description}" class="forms-description">${properties.description  @ context='html'}</div>
+
+      <div data-sly-resource="${'parsys' @ resourceType='wcm/foundation/components/parsys'}"></div>
+
+      <div class="btn-wrapper">
+        <button data-sly-test="${properties.submitLabel}" type="submit" class="form-submit">
+          <!--<span>Submit</span>-->
+          <span>${properties.submitLabel}</span>
+        </button>
+        <button data-sly-test="${properties.resetLabel}" type="reset" class="form-reset">
+          <!--<span>Reset Form</span>-->
+          <span>${properties.resetLabel}</span>
+        </button>
+      </div>
+    </div>
+    <div class="emp-forms-succes-wrapper">
+      <h2 data-sly-test="${properties.successTitle}" class="form-success-heading">${properties.successTitle}</h2>
+      <div data-sly-test="${properties.successDescription}" class="form-success-description">
+        <p>${properties.successDescription  @ context = 'html'}</p>
+      </div>
+    </div>
+</section>

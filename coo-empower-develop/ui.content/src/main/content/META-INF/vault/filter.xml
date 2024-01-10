@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/empower-sag" mode="replace"/>
+    <filter root="/content/empower-sag" mode="merge"/>
+    <filter root="/content/dam/empower-sag" mode="merge">
+        <exclude pattern="/content/dam/empower-sag(/.*)?"/>
+        <include pattern="/content/dam/empower-sag/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/empower-sag/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/empower-sag" mode="merge"/>
+    <filter root="/etc/notification/email/empower" mode="replace"/>
+</workspaceFilter>

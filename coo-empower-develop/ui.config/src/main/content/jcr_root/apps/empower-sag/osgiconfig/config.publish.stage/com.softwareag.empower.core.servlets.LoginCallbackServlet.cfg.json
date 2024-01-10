@@ -1,0 +1,6 @@
+{
+  "service.url": "https://myaccount-dev.softwareag.com/am/oauth2/alpha/access_token",
+  "client.id": "SAG_InternalPartners",
+  "client.secret": "{}",
+  "redirect.uri": "https://empower.stage.sag.adobecqms.net/bin/logincallback"
+}

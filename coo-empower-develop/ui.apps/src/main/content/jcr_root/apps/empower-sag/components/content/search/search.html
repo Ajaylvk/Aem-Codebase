@@ -1,0 +1,538 @@
+<sly data-sly-use.templates="softwareag/components/commons/templates.html"></sly>
+<sly data-sly-use.icons="softwareag/components/commons/svg/icons.html"></sly>
+<sly data-sly-test.variation="${properties.searchVariation || 'variation1'}" />
+<div class="emp-searchbar ${variation}">
+    <form data-sly-unwrap="${variation != 'variation1'}" class="" data-sly-use.searchModel="${'com.softwareag.empower.core.models.SearchModel' @
+   resultsPagePath=inheritedPageProperties.searchResultsPagePath}" action="${searchModel.resultsPagePath}"
+        target="_self">
+        <div class="emp-search-wrapper">
+            <div class="emp-search-inner-wrap">
+                <div class="emp-search-icon headerV1__icons-search-open a-icon a-icon--hover block-inactive"
+                    data-sly-call="${icons.getIcon @ name='search-core-dark120', width=30, height=30}">
+                </div>
+                <button
+                    class="emp-search-icon headerV1__icons-search-open a-icon a-icon--hover headerV1__search-form-submit"
+                    type=submit data-sly-call="${icons.getIcon @ name='search-core-dark120', width=30, height=30}">
+                </button>
+                <div class="emp-input-parent">
+                    <input name="q" pattern='(^(".*")|[^:]+$)' oninput="this.setCustomValidity('')"
+                        oninvalid="this.setCustomValidity(${'search_ui_validation_msg' @ i18n, context='html'})"
+                        type="text" id="emp-input-searchbar" class="emp-input-searchbar"
+                        placeholder="${properties.text}" />
+                </div>
+                <button type="button"
+                    class="emp-close-btn headerV1_Cross_icon a-icon a-icon--hover input-field-search-icon"
+                    data-sly-call="${icons.getIcon @ name='close', width=30, height=30}">
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Docs & Knowledge Base -->
+<div data-sly-test="${variation != 'variation1'}" class="emp-search-results-wrapper">
+    <div class="emp-searchResultsWrapper desktop block-inactive ${variation}">
+        <div class="empty-div"></div>
+        <div class="emp-filters">
+            <h4 class="emp-filter-label">Filters:</h4>
+            <div class="emp-facetsSelectedFilters">
+                <div class="emp-facetsSelectedFiltersWrap">
+
+                    <!-- <div class="emp-facetsSelectedFiltersList">
+                        <p>Download options: Website</p>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_4338_5519)">
+                                  <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#011F3D"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_4338_5519">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                        </span>
+                    </div> -->
+
+                </div>
+                <div class="clear-filter">
+                    <button class="emp-clear-filter">Clear all</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-results-count="${properties.resultsCount || '15'}" class="emp-search-results ${variation}">
+        <div class="emp-facets">
+            <sly data-sly-test="${variation == 'variation2'}" data-sly-include="facets-variation2.html"></sly>
+            <sly data-sly-test="${variation == 'variation3'}" data-sly-include="facets-variation3.html"></sly>
+        </div>
+        <div class="emp-results">
+            <div class="emp-counts">
+                <div class="warp-sortBy-facetFilter-mob">
+                    <h2 class="emp-totalCounts">0 Results </h2>
+                    <div class="sort-by">
+                        <p>
+                            Sort By
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_3297_1027)">
+                                        <path d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"
+                                            fill="#011F3D" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3297_1027">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </p>
+                        <ul class="sort-by-filters">
+                            <li class="">Relevance</li>
+                            <li class="">Date</li>
+                            <li class="">Date descending</li>
+                            <li class="">Title</li>
+                            <li class="">Title descending</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="emp-facets-filter mobile">
+                    <button class="mob-filter-wrap-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M11 20C10.7166 20 10.4791 19.9042 10.2875 19.7125C10.0958 19.5208 9.99996 19.2833 9.99996 19V13L4.19996 5.6C3.94996 5.26667 3.91246 4.91667 4.08746 4.55C4.26246 4.18333 4.56662 4 4.99996 4H19C19.4333 4 19.7375 4.18333 19.9125 4.55C20.0875 4.91667 20.05 5.26667 19.8 5.6L14 13V19C14 19.2833 13.9041 19.5208 13.7125 19.7125C13.5208 19.9042 13.2833 20 13 20H11ZM12 12.3L16.95 6H7.04996L12 12.3Z" fill="black"/>
+                        </svg>
+                        <span>Filter</span>
+                    </button>
+                    <div class="filterSidenav">
+                        <div class="closeFilterBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_4900_15637)">
+                                  <path d="M15.705 7.70492L11.125 12.2949L15.705 16.8849L14.295 18.2949L8.29502 12.2949L14.295 6.29492L15.705 7.70492Z" fill="#011F3D"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_4900_15637">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Filter</span>
+                        </div>
+                        <div class="emp-filter-results emp-source mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">Source</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="Announcements" name="Announcements"
+                                            value="Announcements">
+                                        <label class="" for="Announcements">Announcements (#)</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                        <div class="emp-filter-results emp-date-range mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">Date Range</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="201210|202110" name="201210|202110"
+                                            value="201210|202110">
+                                        <label class="" for="201210|202110">October 2012 - October 2021</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                        <div class="emp-filter-results emp-product-line mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">Product Line</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="Aris" name="Aris" value="Aris">
+                                        <label class="" for="Aris">Aris (#)</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                        <div class="emp-filter-results emp-product-filter mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">Product</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="BigMemoryMax" name="BigMemory Max"
+                                            value="BigMemory Max">
+                                        <label class="" for="BigMemoryMax">BigMemory Max (#)</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                        <div class="emp-filter-results emp-version-filter mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">Version</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="4.3" name="4.3" value="4.3">
+                                        <label class="" for="4.3">4.3 (#)</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                        <div class="emp-filter-results emp-platform-filter mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">Platform</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="WindowsServerx86-642012"
+                                            name="Windows Server x86-64 2012" value="Windows Server x86-64 2012">
+                                        <label class="" for="WindowsServerx86-642012">Windows Server x86-64 2012 (#)</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                        <div class="emp-filter-results emp-fileType-filter mob">
+                            <div class="emp-filter-tag">
+                                <h3 class="emp-filter-title">File Type</h3>
+                                <div class="emp-icons-wrapper">
+                                    <button class="clear-all">Clear all</button>
+                                    <div class="emp-expand-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M5 12.75V11.25H19V12.75H5Z" fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                    <div class="emp-collapse-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none">
+                                            <path d="M11.25 12.75H5V11.25H11.25V5H12.75V11.25H19V12.75H12.75V19H11.25V12.75Z"
+                                                fill="#011F3D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-filter-wrapper">
+                                <div class="mob-icon-input-wrap">
+                                    <div data-sly-call="${icons.getIcon @ name='search-core-dark120', width=24, height=24}"></div>
+                                    <input type="text" id="" class="" placeholder="Search" value="" />
+                                </div>
+                                <div class="clear-input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_2999_17225)">
+                                            <path d="M15.8327 5.34167L14.6577 4.16667L9.99935 8.82501L5.34102 4.16667L4.16602 5.34167L8.82435 10L4.16602 14.6583L5.34102 15.8333L9.99935 11.175L14.6577 15.8333L15.8327 14.6583L11.1743 10L15.8327 5.34167Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2999_17225">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="emp-filter-options">
+                                <ul class="emp-filter-options-parent">
+                                    <!-- <li class="emp-filter-options-child">
+                                        <input class="" type="checkbox" id="PNG" name="PNG" value="PNG">
+                                        <label class="" for="PNG">PNG (#)</label>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="view-more-less-wrapper">
+                                <button class="view-more">View More</button>
+                                <button class="view-less">View Less</button>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="emp-searchResultsWrapper mob block-inactive ${variation}">
+                <div class="emp-filters">
+                    <h4 class="emp-filter-label">Filters:</h4>
+                    <div class="emp-facetsSelectedFilters">
+                        <div class="emp-facetsSelectedFiltersWrap">
+        
+                            <!-- <div class="emp-facetsSelectedFiltersList">
+                                <p>Download options: Website</p>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_4338_5519)">
+                                          <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#011F3D"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_4338_5519">
+                                            <rect width="24" height="24" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </div> -->
+        
+                        </div>
+                        <div class="clear-filter">
+                            <button class="emp-clear-filter">Clear all</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="emp-search-totalResults-wrapper ${variation}" data-detailspagepath="${searchModel.detailsPagePath}">
+                <!-- <div class="emp-search-totalResults">
+                    <div class="emp-type-title">
+                        <div class="emp-type">Type</div>
+                        <div class="emp-title">Title</div>
+                    </div>
+                    <div class="metaData">
+                        <div class="metaData-label">MetaData : </div>
+                        <div class="emp-productLine">Product Line</div>
+                        <div class="emp-product">Product</div>
+                        <div class="emp-version">Version</div>
+                        <div class="emp-platform">Platform</div>
+                    </div>
+                    <div class="emp-preview">Preview snippet text text text text text text text text text text text text
+                        text text text text text text text text text text text text text text text</div>
+                    <div class="emp-date">Date</div>
+                </div> -->
+            </div>
+            <div class="load-more-btn-wrapper">
+                <button type="button" class="load-more-btn"><span>Load more results</span></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+## Redirect to dashboard from landing page or login page if auth cookie exists
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+RewriteCond %{REQUEST_URI} ^/$ [OR]
+RewriteCond %{REQUEST_URI} ^/login.html$
+RewriteCond %{HTTP_COOKIE} isLoggedIn=([^;]+)
+RewriteRule ^(.*?)$ https://%{SERVER_NAME}/dashboard.html [NC,R=301]
+
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+RewriteRule ^/?$ /content/empower-sag/customer/en.html [PT,L]
+RewriteRule ^/content/empower-sag/customer/en/(.*)$ https://%{SERVER_NAME}/$1 [NE,L,R=301]
+
+## Robots file resolution
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+RewriteCond %{REQUEST_URI} ^/robots.txt$
+#Header unset Content-Disposition
+RewriteRule ^(.*?)$ /content/dam/empower-sag/robots/robots.txt [NC,PT]
+
+## Sitemap resolution
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+RewriteCond %{REQUEST_URI} ^/sitemap.xml$
+RewriteRule ^(.*?)$ /content/empower-sag/customer/en.sitemap.xml [PT,L]	
+
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteRule ^/(.*)$ /content/empower-sag/customer/en/$1 [PT,L]
+
+#Handle extensionless URLs + URLs without trailing slash
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+#RewriteCond %{REQUEST_URI} !^/content/dam/.*
+RewriteCond %{REQUEST_URI} !.*\..*$
+RewriteCond %{REQUEST_URI} !.*/$
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteRule (.*)$ https://%{SERVER_NAME}/$1.html [R=301,QSA]
+
+#Resolve URLs ending with trailing slash
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteRule ^/(.*)?/$ /content/empower-sag/customer/en/$1.html [PT,L,QSA,R=301]
+
+#Append .html for URL resolution on Publish
+RewriteCond "%{HTTP_HOST}" "sag\.adobecqms\.net" [NC]
+#RewriteCond %{REQUEST_URI} !^/content/dam/.*
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteRule ^/(.*)?\.(html|jpe?g|JPE?G|png|PNG|gif|GIF)$ /content/empower-sag/customer/en/$1.$2 [PT,L,QSA]
